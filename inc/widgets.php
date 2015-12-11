@@ -45,7 +45,7 @@ function fitclub_widgets_init() {
 		'before_title'  => '<h4 class="widget-title"><span>',
 		'after_title'   => '</span></h4>',
 	) );
-	
+
 	register_sidebar( array(
 		'name'          => esc_html__( 'Front Page Sidebar', 'fitclub' ),
 		'id'            => 'fitclub_frontpage_section',
@@ -919,8 +919,8 @@ class fitclub_featured_posts_widget extends WP_Widget {
 								if( has_post_thumbnail() ) {
 									the_post_thumbnail('fitclub-featured-image');
 								} else { ?>
-									<img src='<?php echo get_template_directory_uri(); ?>/images/placeholder-blog.jpg' alt='<?php esc_htm_e('Blog Image', 'fitclub');?>' />
-								<?php } ?> 
+									<img src='<?php echo get_template_directory_uri(); ?>/images/placeholder-blog.jpg' alt='<?php esc_html_e('Blog Image', 'fitclub');?>' />
+								<?php } ?>
 							</figure>
 
 							<div class="blog-desc-wrap">
