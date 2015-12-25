@@ -27,12 +27,12 @@
 		if ( !empty ( $page_id ) ) $slide++;
 	}
 	if(  ( ( $slide < 1 ) || get_theme_mod( 'fitclub_slider_activation', 0 ) != 1 ) && is_front_page() ) {
-		$class = "no-slider";
+		$class = " no-slider";
 	} else {
 		$class = "";
 	}
 	?>
-	<div id="page" class="hfeed site <?php echo $class; ?>">
+	<div id="page" class="hfeed site<?php echo $class; ?>">
 		<?php do_action( 'fitclub_before_header' ); ?>
 		<header id="masthead" class="site-header" role="banner">
 			<div class="header-wrapper clearfix">
@@ -44,12 +44,12 @@
 						</div> <!-- logo end -->
 					<?php }
 					$screen_reader = '';
-					if( get_theme_mod( 'fitclub_logo_placement', 'header_text_only' ) == 'header_logo_only' || get_theme_mod( 'fitclub_logo_placement', 'header_text_only' ) == 'disable' ) { 
-						$screen_reader = 'screen-reader-text';
+					if( get_theme_mod( 'fitclub_logo_placement', 'header_text_only' ) == 'header_logo_only' || get_theme_mod( 'fitclub_logo_placement', 'header_text_only' ) == 'disable' ) {
+						$screen_reader = ' screen-reader-text';
 					}
 					?>
 
-					<div id="header-text <?php echo $screen_reader; ?>">
+					<div id="header-text" class="<?php echo $screen_reader; ?>">
 					<?php if ( is_front_page() || is_home() ) : ?>
 						<h1 id="site-title">
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
