@@ -72,6 +72,7 @@ table, caption, tbody, tfoot, thead, tr, th, td{
     padding: 0;
     vertical-align: baseline;
 }
+
 html {
     font-size: 62.5%;
     /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
@@ -2006,6 +2007,19 @@ body {
     color: #fff;
 }
 
+.tribe-events-list-widget .no-event {
+    float: left;
+    padding: 38px 50px;
+    width: 78%;
+    margin: 0;
+}
+
+.tribe-events-list-widget::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
 
 /*--------------------------------------------------------------
 22.0 class section CSS
@@ -2411,11 +2425,11 @@ body {
     background: rgba(181, 208, 67, 0.85);
     width: 100%;
     height: 100%;
-    -webkit-transition: opacity 0.5s ease;
-    -moz-transition: opacity 0.5s ease;
-    -ms-transition: opacity 0.5s ease;
-    -o-transition: opacity 0.5s ease;
-    transition: opacity 0.5s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
     color: #fff;
     padding: 30px;
     text-align: center;
@@ -3460,7 +3474,8 @@ ul.tribe-events-sub-nav a:hover {
     width: 40px;
 }
 
-.scrollup:hover,.scrollup:focus {
+.scrollup:hover,
+.scrollup:focus {
     color: #ffffff;
 }
 
@@ -3528,6 +3543,9 @@ ul.tribe-events-sub-nav a:hover {
     .tribe-events-list-widget .duration {
         font-size: 12px;
     }
+    .tribe-events-list-widget .no-event {
+  width: 60%;
+}
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
@@ -3697,7 +3715,8 @@ ul.tribe-events-sub-nav a:hover {
         margin-top: 21px;
     }
     #masthead,
-    .home #masthead {
+    .home #masthead,
+    .home .no-slider #masthead {
         background: #000000;
         padding: 20px 0 0;
         position: relative;
@@ -4062,6 +4081,10 @@ ul.tribe-events-sub-nav a:hover {
     }
     .page-template-template-team-collection .trainer-collecton-wrapper .clearfix {
         display: none;
+    }
+    .tribe-events-list-widget .no-event{
+    	width: 100%;
+    	text-align: center;
     }
 }
 
