@@ -319,15 +319,16 @@ class fitclub_about_us_widget extends WP_Widget {
 			<label for="<?php echo $this->get_field_id( 'button_icon' ); ?>"><?php esc_html_e( 'Button Icon Class:', 'fitclub' ); ?></label>
 			<input id="<?php echo $this->get_field_id( 'button_icon' ); ?>" name="<?php echo $this->get_field_name( 'button_icon' ); ?>" placeholder="fa-cog" type="text" value="<?php echo $button_icon; ?>" />
 		</p>
+
 		<p>
 		<?php
-			$url = 'http://fontawesome.io/icons/';
-			$link = sprintf( __( '<a href="%s" target="_blank">Refer here</a> For Icon Class', 'fitclub' ), esc_url( $url ) );
-			echo $link;
+		$url = 'http://fontawesome.io/icons/';
+		$link = sprintf( wp_kses( __( '<a href="%s" target="_blank">Refer here</a> For Icon Class', 'fitclub' ), array(  'a' => array( 'href' => array() ) ) ), esc_url( $url ) );
+		echo $link;
 		?>
 		</p>
-		<?php }
-
+		<?php
+	}
 	function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 		$instance[ 'background_color'] = esc_attr($new_instance['background_color']);
