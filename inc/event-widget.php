@@ -29,9 +29,9 @@ class TG_Tribe__Events__List_Widget extends Tribe__Events__List_Widget {
 	 * @param array  $widget_options
 	 * @param array  $control_options
 	 */
-	public function __construct( 
-		$id_base = 'tribe-events-list-widget clearfix', 
-		$name = 'TG: Events Slider', 
+	public function __construct(
+		$id_base = 'tribe-events-list-widget clearfix',
+		$name = 'TG: Events Slider',
 		$widget_options = array(
 								'classname' => 'tribe-events-list-widget clearfix',
 								'description' => 'A Slider Widget that displays events from The Event Calendar Plugin'
@@ -170,7 +170,7 @@ class TG_Tribe__Events__List_Widget extends Tribe__Events__List_Widget {
 	public function form( $instance ) {
 		/* Set up default widget settings. */
 		$defaults  = array(
-			'title'              => __( 'Upcoming Events', 'fitclub' ),
+			'title'              => esc_html__( 'Upcoming Events', 'fitclub' ),
 			'limit'              => '5',
 			'no_upcoming_events' => false,
 		);

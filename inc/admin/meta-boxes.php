@@ -13,11 +13,11 @@ add_action( 'add_meta_boxes', 'fitclub_add_custom_box' );
  */
 function fitclub_add_custom_box() {
 	// Adding layout meta box for Page
-	add_meta_box( 'page-layout', __( 'Select Layout', 'fitclub' ), 'fitclub_layout_call', 'page', 'side', 'default' );
+	add_meta_box( 'page-layout', esc_html__( 'Select Layout', 'fitclub' ), 'fitclub_layout_call', 'page', 'side', 'default' );
 	// Adding layout meta box for Post
-	add_meta_box( 'page-layout', __( 'Select Layout', 'fitclub' ), 'fitclub_layout_call', 'post', 'side', 'default' );
+	add_meta_box( 'page-layout', esc_html__( 'Select Layout', 'fitclub' ), 'fitclub_layout_call', 'post', 'side', 'default' );
 	//Adding designation meta box
-	add_meta_box( 'team-designation', __( 'Our Team Designation', 'fitclub' ), 'fitclub_designation_call', 'page', 'side'	);
+	add_meta_box( 'team-designation', esc_html__( 'Our Team Designation', 'fitclub' ), 'fitclub_designation_call', 'page', 'side'	);
 }
 
 /****************************************************************************************/
@@ -27,34 +27,34 @@ $fitclub_page_layout = array(
 							'default-layout' 	=> array(
 														'id'			=> 'fitclub_page_layout',
 														'value' 		=> 'default_layout',
-														'label' 		=> __( 'Default Layout', 'fitclub' )
+														'label' 		=> esc_html__( 'Default Layout', 'fitclub' )
 														),
 							'right-sidebar' 	=> array(
 														'id'			=> 'fitclub_page_layout',
 														'value' 		=> 'right_sidebar',
-														'label' 		=> __( 'Right Sidebar', 'fitclub' )
+														'label' 		=> esc_html__( 'Right Sidebar', 'fitclub' )
 														),
 							'left-sidebar' 	=> array(
 														'id'			=> 'fitclub_page_layout',
 														'value' 		=> 'left_sidebar',
-														'label' 		=> __( 'Left Sidebar', 'fitclub' )
+														'label' 		=> esc_html__( 'Left Sidebar', 'fitclub' )
 														),
 							'no-sidebar-full-width' => array(
 															'id'			=> 'fitclub_page_layout',
 															'value' 		=> 'no_sidebar_full_width',
-															'label' 		=> __( 'No Sidebar Full Width', 'fitclub' )
+															'label' 		=> esc_html__( 'No Sidebar Full Width', 'fitclub' )
 															),
 							'no-sidebar-content-centered' => array(
 															'id'			=> 'fitclub_page_layout',
 															'value' 		=> 'no_sidebar_content_centered',
-															'label' 		=> __( 'No Sidebar Content Centered', 'fitclub' )
+															'label' 		=> esc_html__( 'No Sidebar Content Centered', 'fitclub' )
 															)
 						);
 
 $fitclub_metabox_field_designation = array(
 	array(
 		'id'			=> 'fitclub_designation',
-		'label' 		=> __( 'Team designation', 'fitclub' )
+		'label' 		=> esc_html__( 'Team designation', 'fitclub' )
 	)
 );
 
@@ -96,7 +96,7 @@ function fitclub_meta_form( $fitclub_metabox_field ) {
 
 			// Team Designation
 			case 'fitclub_designation':
-				_e( 'Show designation in Our Team Widget. </br>', 'fitclub' );
+				esc_html_e( 'Show designation in Our Team Widget. </br>', 'fitclub' );
 				echo '<input type="text" name="'.$field['id'].'" value="'.esc_html($layout_meta).'"/><br>';
 
 			break;
@@ -131,7 +131,7 @@ function fitclub_save_custom_meta( $post_id ) {
 	foreach ( $fitclub_page_layout as $field ) {
 		//Execute this saving function
 		$old = get_post_meta( $post_id, $field['id'], true);
-		$new = $_POST[$field['id']];
+		$new = sanitize_key($_POST[$field['id']]);
 		if ($new && $new != $old) {
 			update_post_meta($post_id, $field['id'], $new);
 		} elseif ('' == $new && $old) {
@@ -144,7 +144,7 @@ function fitclub_save_custom_meta( $post_id ) {
 		// loop through fields and save the data
 		foreach ( $fitclub_metabox_field_designation as $field ) {
 			$old = get_post_meta( $post_id, $field['id'], true );
-			$new = $_POST[$field['id']];
+			$new = sanitize_key($_POST[$field['id']]);
 			if ($new && $new != $old) {
 				update_post_meta( $post_id,$field['id'],$new );
 			} elseif ('' == $new && $old) {

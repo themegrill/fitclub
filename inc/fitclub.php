@@ -21,7 +21,7 @@ function fitclub_entry_meta() {
 		<?php }
 
 		if ( ! post_password_required() && comments_open() && get_theme_mod('fitclub_postmeta_comment', '') == '' ) { ?>
-		<span class="comments-link"><i class="fa fa-comments-o"></i><?php comments_popup_link( __( '0 Comment', 'fitclub' ), __( '1 Comment', 'fitclub' ), __( ' % Comments', 'fitclub' ) ); ?></span>
+		<span class="comments-link"><i class="fa fa-comments-o"></i><?php comments_popup_link( esc_html__( '0 Comment', 'fitclub' ), esc_html__( '1 Comment', 'fitclub' ), esc_html__( ' % Comments', 'fitclub' ) ); ?></span>
 		<?php }
 
 		if( has_category() && get_theme_mod('fitclub_postmeta_category', '') == '' ){ ?>
@@ -167,7 +167,7 @@ add_action( 'wp_head', 'fitclub_custom_css' );
  * Hooks the Custom Internal CSS to head section
  */
 function fitclub_custom_css() {
-	
+
 	$primary_color   = get_theme_mod( 'fitclub_primary_color', '#32c4d1' );
 	$primary_opacity = fitclub_hex2rgb($primary_color);
 	$primary_dark    = fitclub_darkcolor($primary_color, 20);
@@ -222,7 +222,7 @@ function fitclub_custom_css() {
 		#tribe-events-content .tribe-events-calendar td.tribe-events-othermonth.mobile-active div[id*="tribe-events-daynum-"] a,
 		.tribe-events-calendar .mobile-active div[id*="tribe-events-daynum-"],
 		.tribe-events-calendar .mobile-active div[id*="tribe-events-daynum-"] a,
-		.tribe-events-calendar td.mobile-active, 
+		.tribe-events-calendar td.mobile-active,
 		.class-title:before,
 		.class-title:hover:before,
 		.widget_service_block .class-read-more:hover,
@@ -235,7 +235,7 @@ function fitclub_custom_css() {
 		.posted-on:hover .month,
 		.blog-content-wrapper .post-date,
 		.page-header,
-		.previous a::after, 
+		.previous a::after,
 		.next a::after  {
 		    background: '.$primary_color.'
 		}
@@ -277,7 +277,7 @@ function fitclub_custom_css() {
 		.blog-title a:hover,
 		.blog-readmore:hover,
 		.blog-wrapper .bx-controls a i:hover,
-		#top-footer .widget-title span:before, 
+		#top-footer .widget-title span:before,
 		#top-footer .widget-title span::after,
 		#top-footer .footer-block li:hover a,
 		#top-footer .footer-block li:hover:before,
@@ -304,8 +304,8 @@ function fitclub_custom_css() {
 		#home-slider #bx-pager a.active,
 		#home-slider #bx-pager a:hover,
 		.widget_about_block .about-btn:hover,
-		.widget_testimonial_block .bx-controls a:hover, 
-		.widget_call_to_action_block .cta-readmore:hover, 
+		.widget_testimonial_block .bx-controls a:hover,
+		.widget_call_to_action_block .cta-readmore:hover,
 		.blog-wrapper .bx-controls a i:hover,
 		.testimonial-image,
 		.page-template-template-team .entry-thumbnail,
@@ -329,7 +329,7 @@ function fitclub_custom_css() {
 		.posted-on:hover .date,
 		.navigation .nav-links a:hover,
 		.bttn:hover, button:hover, input[type="button"]:hover,
-		input[type="reset"]:hover, 
+		input[type="reset"]:hover,
  		input[type="submit"]:hover,
  		.sub-toggle,
  		#site-navigation ul.sub-menu li.current-menu-item >a,
@@ -337,9 +337,9 @@ function fitclub_custom_css() {
         #site-navigation ul.sub-menu > li:hover > a {
  			background: '.$primary_dark.'
  		}
- 		a:hover, 
- 		a:focus, 
- 		a:active, 
+ 		a:hover,
+ 		a:focus,
+ 		a:active,
  		#site-title a:hover{
  			color: '.$primary_dark.';
 		}
@@ -349,7 +349,7 @@ function fitclub_custom_css() {
 
 		@media (max-width: 767px) {
 			#site-navigation ul li:hover a,
-			#site-navigation ul li.current-menu-item a, 
+			#site-navigation ul li.current-menu-item a,
 			#site-navigation ul li.current-menu-ancestor a,
 			.scrollup,
 			.scrollup:hover,
@@ -357,11 +357,11 @@ function fitclub_custom_css() {
 			.scrollup:focus {
 				color:#ffffff;
 			}
-			#site-navigation ul li:hover, 
-			#site-navigation ul li.current-menu-item, 
-			#site-navigation ul li.current-menu-ancestor, 
-			#site-navigation ul.sub-menu li.current-menu-item, 
-			#site-navigation ul.sub-menu li.current-menu-ancestor, 
+			#site-navigation ul li:hover,
+			#site-navigation ul li.current-menu-item,
+			#site-navigation ul li.current-menu-ancestor,
+			#site-navigation ul.sub-menu li.current-menu-item,
+			#site-navigation ul.sub-menu li.current-menu-ancestor,
 			#site-navigation ul.sub-menu > li:hover {
   				background:'.$primary_color.'
 			}
@@ -391,9 +391,9 @@ if ( ! function_exists( 'fitclub_footer_copyright_info' ) ) :
 function fitclub_footer_copyright_info() {
    $site_link = '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" >' . get_bloginfo( 'name', 'display' ) . '</a>';
 
-   $tg_link =  '<a href="'. 'http://themegrill.com/themes/fitclub' .'" target="_blank" title="'.esc_attr__( 'ThemeGrill', 'fitclub' ).'" rel="designer">'.__( 'ThemeGrill', 'fitclub') .'</a>';
+   $tg_link =  '<a href="'. 'http://themegrill.com/themes/fitclub' .'" target="_blank" title="'.esc_attr__( 'ThemeGrill', 'fitclub' ).'" rel="designer">'.esc_html__( 'ThemeGrill', 'fitclub') .'</a>';
 
-   $default_footer_value = '<span class="copyright-text">' . sprintf( __( 'Copyright &copy; %1$s %2$s.', 'fitclub' ), date( 'Y' ), $site_link ).' '.sprintf( __( 'Design By: %1$s', 'fitclub' ), $tg_link ) . '</span>';
+   $default_footer_value = '<span class="copyright-text">' . sprintf( esc_html__( 'Copyright &copy; %1$s %2$s.', 'fitclub' ), date( 'Y' ), $site_link ).' '.sprintf( esc_html__( 'Design By: %1$s', 'fitclub' ), $tg_link ) . '</span>';
 
    $fitclub_footer_copyright_info = '<div class="copyright">'.$default_footer_value.'</div>';
    echo $fitclub_footer_copyright_info;
@@ -410,10 +410,10 @@ function fitclub_header_title() {
 	}
 	// Checking this condition to make sure archive title won't replace this
 	if( fitclub_is_tribe_page() ){
-		$fitclub_header_title = tribe_get_events_title(); 		
+		$fitclub_header_title = tribe_get_events_title();
 	}
 	elseif( is_404() ) {
-		$fitclub_header_title = __( 'Page NOT Found', 'fitclub' );
+		$fitclub_header_title = esc_html__( 'Page NOT Found', 'fitclub' );
 	}
 	elseif ( is_search() ) {
 		$search_title         = sprintf(esc_html__( 'Search Results for: %s', 'fitclub' ), '<span>' . get_search_query() . '</span>');
@@ -446,13 +446,13 @@ function fitclub_tribe_alter_event_archive_titles ( $depth ) {
 
 	// Modify the titles here
 	// Some of these include %1$s and %2$s, these will be replaced with relevant dates
-	$title_upcoming =   'Upcoming Events'; // List View: Upcoming events
-	$title_past =       'Past Events'; // List view: Past events
-	$title_range =      'Events for %1$s - %2$s'; // List view: range of dates being viewed
-	$title_month =      'Events for %1$s'; // Month View, %1$s = the name of the month
-	$title_day =        'Events for %1$s'; // Day View, %1$s = the day
-	$title_all =        'All events for %s'; // showing all recurrences of an event, %s = event title
-	$title_week =       'Events for week of %s'; // Week view
+	$title_upcoming =   esc_html__('Upcoming Events', 'fitclub'); // List View: Upcoming events
+	$title_past =       esc_html__('Past Events', 'fitclub' ); // List view: Past events
+	$title_range =      esc_html__('Events for %1$s - %2$s', 'fitclub' ); // List view: range of dates being viewed
+	$title_month =      esc_html__('Events for %1$s', 'fitclub' ); // Month View, %1$s = the name of the month
+	$title_day =        esc_html__('Events for %1$s', 'fitclub' ); // Day View, %1$s = the day
+	$title_all =        esc_html__('All events for %s', 'fitclub' ); // showing all recurrences of an event, %s = event title
+	$title_week =       esc_html__('Events for week of %s', 'fitclub' ); // Week view
 
 	// Don't modify anything below this unless you know what it does
 	global $wp_query;
@@ -525,32 +525,32 @@ if ( ! function_exists( 'fitclub_is_tribe_page' ) ) :
 function fitclub_is_tribe_page(){
 	wp_reset_postdata();//reset custom query
 	if(class_exists('TRIBE__EVENTS__MAIN')){
-		if( tribe_is_month() && !is_tax() ) { // Month View Page 
-			return true;		 
+		if( tribe_is_month() && !is_tax() ) { // Month View Page
+			return true;
 		} elseif( tribe_is_month() && is_tax() ) { // Month View Category Page
-		
+
 			return true;
-		
+
 		} elseif( tribe_is_past() || tribe_is_upcoming() && !is_tax() ) { // List View Page
-		
+
 			return true;
-		
+
 		} elseif( tribe_is_past() || tribe_is_upcoming() && is_tax() ) { // List View Category Page
-		
+
 			return true;
-		
+
 		} elseif( tribe_is_day() && !is_tax() ) { // Day View Page
-		
+
 			return true;
-		
+
 		} elseif( tribe_is_day() && is_tax() ) { // Day View Category Page
-		
+
 			return true;
-		
+
 		}elseif( tribe_is_event() && is_single() ) { // Single Events
-		
+
 			return true;
-		
+
 		}
 	}
 	return false;

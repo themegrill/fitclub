@@ -21,8 +21,8 @@ if( is_archive() || is_home() || is_search() ) {
 		if ( $wp_query->max_num_pages > 1 ) :
 		?>
 		<ul class="default-wp-page clearfix">
-			<li class="previous"><?php next_posts_link( __( '&larr; Previous', 'fitclub' ) ); ?></li>
-			<li class="next"><?php previous_posts_link( __( 'Next &rarr;', 'fitclub' ) ); ?></li>
+			<li class="previous"><?php next_posts_link( esc_html__( '&larr; Previous', 'fitclub' ) ); ?></li>
+			<li class="next"><?php previous_posts_link( esc_html__( 'Next &rarr;', 'fitclub' ) ); ?></li>
 		</ul>
 		<?php
 		endif;
@@ -33,8 +33,8 @@ if ( is_single() ) {
 	if( is_attachment() ) {
 	?>
 		<ul class="default-wp-page clearfix">
-			<li class="previous"><?php previous_image_link( false, __( '&larr; Previous', 'fitclub' ) ); ?></li>
-			<li class="next"><?php next_image_link( false, __( 'Next &rarr;', 'fitclub' ) ); ?></li>
+			<li class="previous"><?php previous_image_link( false, esc_html__( '&larr; Previous', 'fitclub' ) ); ?></li>
+			<li class="next"><?php next_image_link( false, esc_html__( 'Next &rarr;', 'fitclub' ) ); ?></li>
 		</ul>
 	<?php
 	}

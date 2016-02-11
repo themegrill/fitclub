@@ -33,9 +33,9 @@ function fitclub_customize_register( $wp_customize ) {
 		'fitclub_header_options',
 		array(
 			'capabitity'  => 'edit_theme_options',
-			'description' => __( 'Change Header Settings here', 'fitclub' ),
+			'description' => esc_html__( 'Change Header Settings here', 'fitclub' ),
 			'priority'    => 160,
-			'title'       => __( 'Header Options', 'fitclub' )
+			'title'       => esc_html__( 'Header Options', 'fitclub' )
 			)
 		);
 
@@ -44,7 +44,7 @@ function fitclub_customize_register( $wp_customize ) {
 		'fitclub_header_logo',
 		array(
 			'priority'   => 10,
-			'title'      => __( 'Header Logo', 'fitclub' ),
+			'title'      => esc_html__( 'Header Logo', 'fitclub' ),
 			'panel'      => 'fitclub_header_options'
 		)
 	);
@@ -64,7 +64,7 @@ function fitclub_customize_register( $wp_customize ) {
 			$wp_customize,
 			'fitclub_logo',
 			array(
-				'label'    => __( 'Upload logo' , 'fitclub' ),
+				'label'    => esc_html__( 'Upload logo' , 'fitclub' ),
 				'section'  => 'fitclub_header_logo',
 				'setting'  => 'fitclub_logo'
 			)
@@ -84,14 +84,14 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'fitclub_logo_placement',
 		array(
-			'label'    => __( 'Choose the required option', 'fitclub' ),
+			'label'    => esc_html__( 'Choose the required option', 'fitclub' ),
 			'section'  => 'fitclub_header_logo',
 			'type'     => 'radio',
 			'choices'  => array(
-				'header_logo_only' => __( 'Header Logo Only', 'fitclub' ),
-				'header_text_only' => __( 'Header Text Only', 'fitclub' ),
-				'show_both'        => __( 'Show both header logo and text', 'fitclub' ),
-				'disable'          => __( 'Disable', 'fitclub' )
+				'header_logo_only' => esc_html__( 'Header Logo Only', 'fitclub' ),
+				'header_text_only' => esc_html__( 'Header Text Only', 'fitclub' ),
+				'show_both'        => esc_html__( 'Show both header logo and text', 'fitclub' ),
+				'disable'          => esc_html__( 'Disable', 'fitclub' )
 			)
 		)
 	);
@@ -101,9 +101,9 @@ function fitclub_customize_register( $wp_customize ) {
 		'fitclub_slider_options',
 		array(
 			'capabitity'  => 'edit_theme_options',
-			'description' => __( 'Change Slider Settings here', 'fitclub' ),
+			'description' => esc_html__( 'Change Slider Settings here', 'fitclub' ),
 			'priority'    => 180,
-			'title'       => __( 'Slider Options', 'fitclub' )
+			'title'       => esc_html__( 'Slider Options', 'fitclub' )
 			)
 		);
 
@@ -112,7 +112,7 @@ function fitclub_customize_register( $wp_customize ) {
 		'fitclub_header_slider',
 		array(
 			'priority'    => 10,
-			'title'       => __( 'Slider Settings', 'fitclub' ),
+			'title'       => esc_html__( 'Slider Settings', 'fitclub' ),
 			'description' => '<strong>'.__( 'Note', 'fitclub').'</strong><br/>'.__( '1. To display the Slider first check Enable the slider below. Now create the page for each slider and enter title, text and featured image. Choose that pages in the dropdown options.', 'fitclub').'<br/>'.__( '2. The recommended size for the slider image is 1920 x 1000 pixels. For better functioning of slider use equal size images for each slide.', 'fitclub' ).'<br/>'.__( '3. If page do not have featured Image than that page will not included in slider show.', 'fitclub' ),
 			'panel'       => 'fitclub_slider_options'
 		)
@@ -131,7 +131,7 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'fitclub_slider_activation',
 		array(
-			'label'    => __( 'Enable Slider' , 'fitclub' ),
+			'label'    => esc_html__( 'Enable Slider' , 'fitclub' ),
 			'section'  => 'fitclub_header_slider',
 			'type'     => 'checkbox',
 			'priority' => 10
@@ -152,7 +152,7 @@ function fitclub_customize_register( $wp_customize ) {
 		$wp_customize->add_control(
 			'fitclub_slide'.$i,
 			array(
-				'label'    => __( 'Slide ' , 'fitclub' ).$i,
+				'label'    => esc_html__( 'Slide ' , 'fitclub' ).$i,
 				'section'  => 'fitclub_header_slider',
 				'type'     => 'dropdown-pages',
 				'priority' =>  $i+10
@@ -165,9 +165,9 @@ function fitclub_customize_register( $wp_customize ) {
 		'fitclub_design_options',
 		array(
 			'capability'  => 'edit_theme_options',
-			'description' => __( 'Design Related Settings', 'fitclub' ),
+			'description' => esc_html__( 'Design Related Settings', 'fitclub' ),
 			'priority'    => 180,
-			'title'       => __( 'Design Options', 'fitclub' )
+			'title'       => esc_html__( 'Design Options', 'fitclub' )
 		)
 	);
 
@@ -176,7 +176,7 @@ function fitclub_customize_register( $wp_customize ) {
 		'fitclub_default_layout_section',
 		array(
 			'priority'  => 10,
-			'title'     => __( 'Default Layout', 'fitclub' ),
+			'title'     => esc_html__( 'Default Layout', 'fitclub' ),
 			'panel'     => 'fitclub_design_options'
 		)
 	);
@@ -195,7 +195,7 @@ function fitclub_customize_register( $wp_customize ) {
 			$wp_customize,
 			'fitclub_default_layout',
 			array(
-				'label'   => __( 'Select default layout. This layout will be reflected in whole site archives, categories, search page etc. The layout for a single post and page can be controlled from below options', 'fitclub' ),
+				'label'   => esc_html__( 'Select default layout. This layout will be reflected in whole site archives, categories, search page etc. The layout for a single post and page can be controlled from below options', 'fitclub' ),
 				'section' => 'fitclub_default_layout_section',
 				'type'    => 'radio',
 				'choices' => array(
@@ -213,7 +213,7 @@ function fitclub_customize_register( $wp_customize ) {
 		'fitclub_default_page_layout_section',
 		array(
 			'priority'  => 20,
-			'title'     => __( 'Default Page Layout', 'fitclub' ),
+			'title'     => esc_html__( 'Default Page Layout', 'fitclub' ),
 			'panel'     => 'fitclub_design_options'
 		)
 	);
@@ -232,7 +232,7 @@ function fitclub_customize_register( $wp_customize ) {
 			$wp_customize,
 			'fitclub_default_page_layout',
 			array(
-				'label'   => __( 'Select default layout for pages. This layout will be reflected in all pages unless unique layout is set for specific page', 'fitclub' ),
+				'label'   => esc_html__( 'Select default layout for pages. This layout will be reflected in all pages unless unique layout is set for specific page', 'fitclub' ),
 				'section' => 'fitclub_default_page_layout_section',
 				'type'    => 'radio',
 				'choices' => array(
@@ -250,7 +250,7 @@ function fitclub_customize_register( $wp_customize ) {
 		'fitclub_default_single_post_layout_section',
 		array(
 			'priority'  => 30,
-			'title'     => __( 'Default Single Post Layout', 'fitclub' ),
+			'title'     => esc_html__( 'Default Single Post Layout', 'fitclub' ),
 			'panel'     => 'fitclub_design_options'
 		)
 	);
@@ -269,7 +269,7 @@ function fitclub_customize_register( $wp_customize ) {
 			$wp_customize,
 			'fitclub_default_single_post_layout',
 			array(
-				'label'   => __( 'Select default layout for single posts. This layout will be reflected in all single posts unless unique layout is set for specific post', 'fitclub' ),
+				'label'   => esc_html__( 'Select default layout for single posts. This layout will be reflected in all single posts unless unique layout is set for specific post', 'fitclub' ),
 				'section' => 'fitclub_default_single_post_layout_section',
 				'type'    => 'radio',
 				'choices' => array(
@@ -287,7 +287,7 @@ function fitclub_customize_register( $wp_customize ) {
 		'fitclub_primary_color_section',
 		array(
 			'priority'   => 40,
-			'title'      => __( 'Primary Color Option', 'fitclub' ),
+			'title'      => esc_html__( 'Primary Color Option', 'fitclub' ),
 			'panel'      => 'fitclub_design_options'
 		)
 	);
@@ -307,7 +307,7 @@ function fitclub_customize_register( $wp_customize ) {
 			$wp_customize,
 			'fitclub_primary_color',
 			array(
-				'label'    => __( 'This will reflect in links, buttons and many others. Choose a color to match your site', 'fitclub' ),
+				'label'    => esc_html__( 'This will reflect in links, buttons and many others. Choose a color to match your site', 'fitclub' ),
 				'section'  => 'fitclub_primary_color_section'
 			)
 		)
@@ -318,7 +318,7 @@ function fitclub_customize_register( $wp_customize ) {
 		'fitclub_custom_css_section',
 		array(
 			'priority'  => 50,
-			'title'     => __( 'Custom CSS', 'fitclub' ),
+			'title'     => esc_html__( 'Custom CSS', 'fitclub' ),
 			'panel'     => 'fitclub_design_options'
 		)
 	);
@@ -338,7 +338,7 @@ function fitclub_customize_register( $wp_customize ) {
 			$wp_customize,
 			'fitclub_custom_css',
 			array(
-				'label'   => __( 'Write your Custom CSS here', 'fitclub' ),
+				'label'   => esc_html__( 'Write your Custom CSS here', 'fitclub' ),
 				'section' => 'fitclub_custom_css_section'
 			)
 		)
@@ -349,7 +349,7 @@ function fitclub_customize_register( $wp_customize ) {
 		'fitclub_footer_widget_section',
 		array(
 			'priority'   => 60,
-			'title'      => __( 'Footer Widgets', 'fitclub' ),
+			'title'      => esc_html__( 'Footer Widgets', 'fitclub' ),
 			'panel'      => 'fitclub_design_options'
 		)
 	);
@@ -366,14 +366,14 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'fitclub_footer_widgets',
 		array(
-			'label'    => __( 'Choose the number of widget area you want in footer', 'fitclub' ),
+			'label'    => esc_html__( 'Choose the number of widget area you want in footer', 'fitclub' ),
 			'section'  => 'fitclub_footer_widget_section',
 			'type'     => 'select',
 			'choices'    => array(
-            	'1' => __('1 Footer Widget Area', 'fitclub'),
-            	'2' => __('2 Footer Widget Area', 'fitclub'),
-            	'3' => __('3 Footer Widget Area', 'fitclub'),
-            	'4' => __('4 Footer Widget Area', 'fitclub')
+            	'1' => esc_html__('1 Footer Widget Area', 'fitclub'),
+            	'2' => esc_html__('2 Footer Widget Area', 'fitclub'),
+            	'3' => esc_html__('3 Footer Widget Area', 'fitclub'),
+            	'4' => esc_html__('4 Footer Widget Area', 'fitclub')
         	),
  		)
 	);
@@ -383,9 +383,9 @@ function fitclub_customize_register( $wp_customize ) {
 		'fitclub_additional_options',
 		array(
 			'capability'  => 'edit_theme_options',
-			'description' => __( 'Some additional settings.', 'fitclub' ),
+			'description' => esc_html__( 'Some additional settings.', 'fitclub' ),
 			'priority'    => 180,
-			'title'       => __( 'Additional Options', 'fitclub' )
+			'title'       => esc_html__( 'Additional Options', 'fitclub' )
 			)
 		);
 
@@ -394,7 +394,7 @@ function fitclub_customize_register( $wp_customize ) {
 		'fitclub_content_setting',
 		array(
 			'priority'   => 10,
-			'title'      => __( 'Excerpt/Full Content Option', 'fitclub' ),
+			'title'      => esc_html__( 'Excerpt/Full Content Option', 'fitclub' ),
 			'panel'      => 'fitclub_additional_options'
 		)
 	);
@@ -412,13 +412,13 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'fitclub_content_show',
 		array(
-			'label'    => __( 'Toggle between displaying excerpts and full posts on your blog and archives.' , 'fitclub' ),
+			'label'    => esc_html__( 'Toggle between displaying excerpts and full posts on your blog and archives.' , 'fitclub' ),
 			'section'  => 'fitclub_content_setting',
 			'priority' => 10,
 			'type'     => 'radio',
 			'choices'  => array(
-				'show_fullcontent' => __( 'Show Full Post Content', 'fitclub' ),
-				'show_excerpt'     => __( 'Show Excerpt', 'fitclub' )
+				'show_fullcontent' => esc_html__( 'Show Full Post Content', 'fitclub' ),
+				'show_excerpt'     => esc_html__( 'Show Excerpt', 'fitclub' )
 			)
 		)
 	);
@@ -428,7 +428,7 @@ function fitclub_customize_register( $wp_customize ) {
 		'fitclub_frontpage_content_section',
 		array(
 			'priority'   => '20',
-			'title'      => __( 'Hide Content in Front/Blog Page', 'fitclub' ),
+			'title'      => esc_html__( 'Hide Content in Front/Blog Page', 'fitclub' ),
 			'panel'      => 'fitclub_additional_options'
 		)
 	);
@@ -446,7 +446,7 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'fitclub_frontpage_content',
 		array(
-			'label'    => __( 'Check to hide blog posts/static page on front page.' , 'fitclub' ),
+			'label'    => esc_html__( 'Check to hide blog posts/static page on front page.' , 'fitclub' ),
 			'section'  => 'fitclub_frontpage_content_section',
 			'priority' => 10,
 			'type'     => 'checkbox'
@@ -458,7 +458,7 @@ function fitclub_customize_register( $wp_customize ) {
 		'fitclub_postmeta_section',
 		array(
 			'priority'   => 30,
-			'title'      => __( 'Post Meta Settings', 'fitclub'),
+			'title'      => esc_html__( 'Post Meta Settings', 'fitclub'),
 			'panel'      => 'fitclub_additional_options'
 		)
 	);
@@ -476,7 +476,7 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'fitclub_postmeta',
 		array(
-			'label'    => __( 'Hide all post meta data under post title.' , 'fitclub' ),
+			'label'    => esc_html__( 'Hide all post meta data under post title.' , 'fitclub' ),
 			'section'  => 'fitclub_postmeta_section',
 			'priority' => 10,
 			'type'     => 'checkbox'
@@ -496,7 +496,7 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'fitclub_postmeta_date',
 		array(
-			'label'    => __( 'Hide date under post title.' , 'fitclub' ),
+			'label'    => esc_html__( 'Hide date under post title.' , 'fitclub' ),
 			'section'  => 'fitclub_postmeta_section',
 			'priority' => 20,
 			'type'     => 'checkbox'
@@ -516,7 +516,7 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'fitclub_postmeta_author',
 		array(
-			'label'    => __( 'Hide author under post title.' , 'fitclub' ),
+			'label'    => esc_html__( 'Hide author under post title.' , 'fitclub' ),
 			'section'  => 'fitclub_postmeta_section',
 			'priority' => 30,
 			'type'     => 'checkbox'
@@ -536,7 +536,7 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'fitclub_postmeta_comment',
 		array(
-			'label'    => __( 'Hide comment count under post title.' , 'fitclub' ),
+			'label'    => esc_html__( 'Hide comment count under post title.' , 'fitclub' ),
 			'section'  => 'fitclub_postmeta_section',
 			'priority' => 40,
 			'type'     => 'checkbox'
@@ -556,7 +556,7 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'fitclub_postmeta_category',
 		array(
-			'label'    => __( 'Hide category under post title.' , 'fitclub' ),
+			'label'    => esc_html__( 'Hide category under post title.' , 'fitclub' ),
 			'section'  => 'fitclub_postmeta_section',
 			'priority' => 50,
 			'type'     => 'checkbox'
@@ -576,7 +576,7 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'fitclub_postmeta_tags',
 		array(
-			'label'    => __( 'Hide tags under post title.' , 'fitclub' ),
+			'label'    => esc_html__( 'Hide tags under post title.' , 'fitclub' ),
 			'section'  => 'fitclub_postmeta_tags',
 			'priority' => 60,
 			'type'     => 'checkbox'

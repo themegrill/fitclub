@@ -36,7 +36,7 @@
 
 				$fitclub_slider_thumbnail .= '<a data-slide-index="' . $j . '" href="#">' . get_the_post_thumbnail( $post->ID, 'fitclub-slider-thumb', array( 'title' => esc_attr( $title_attribute ), 'alt' => esc_attr( $title_attribute ) ) ) . '</a>';
 
-				$fitclub_slide_list       .= '<li><div class="parallax-overlay"></div>'.$fitclub_slider_image.'<div class="slider-caption-wrapper">'.'<div class="tg-container">'.'<div class="caption-title">'.get_the_title().'</div>'.'<div class="caption-sub">'.get_the_excerpt().'</div>'.'<a class="slider-readmore" href="'.get_permalink().'">'.__( 'Read More', 'fitclub' ).'</a>'.'</div></div></li>';
+				$fitclub_slide_list       .= '<li><div class="parallax-overlay"></div>'.$fitclub_slider_image.'<div class="slider-caption-wrapper">'.'<div class="tg-container">'.'<div class="caption-title">'.get_the_title().'</div>'.'<div class="caption-sub">'.get_the_excerpt().'</div>'.'<a class="slider-readmore" href="'.esc_url (get_permalink()).'">'.esc_html__( 'Read More', 'fitclub' ).'</a>'.'</div></div></li>';
 
 				if ( $i == $post_count ) {
 				?>

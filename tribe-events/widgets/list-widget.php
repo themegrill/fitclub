@@ -58,13 +58,13 @@ if ( $posts ) : ?>
 	</div>
 
 	<p class="tribe-events-widget-link">
-		<a href="<?php echo esc_url( tribe_get_events_link() ); ?>" rel="bookmark"><?php printf( __( 'View All %s', 'fitclub' ), $events_label_plural ); ?></a>
+		<a href="<?php echo esc_url( tribe_get_events_link() ); ?>" rel="bookmark"><?php printf( esc_html__( 'View All %s', 'fitclub' ), $events_label_plural ); ?></a>
 	</p>
 
 <?php
 // No events were found.
 else : ?>
-	<p class="no-event"><?php printf( __( 'There are no upcoming %s at this time.', 'fitclub' ), strtolower( $events_label_plural ) ); ?></p>
+	<p class="no-event"><?php printf( esc_html__( 'There are no upcoming %s at this time.', 'fitclub' ), strtolower( $events_label_plural ) ); ?></p>
 <?php
 endif;
 ?>

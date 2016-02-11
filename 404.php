@@ -26,16 +26,16 @@
 
 						<?php if ( ! dynamic_sidebar( 'fitclub_error_404_page_sidebar' ) ) : ?>
 							<header class="page-header tg-column-2">
-								<h1 class="page-title"><?php _e( '<span class="Oops">Oops!</span> That page can&rsquo;t be found.' , 'fitclub' ); ?></h1>
+								<h1 class="page-title"><span class="Oops"><?php esc_html_e( 'Oops!', 'fitclub'); ?></span><?php esc_html_e( 'That page can&rsquo;t be found.' , 'fitclub' ); ?></h1>
 							</header>
 
-							<p class="message"><?php _e( 'It looks like nothing was found at this location. Try the search below.', 'fitclub' ); ?></p>
+							<p class="message"><?php esc_html_e( 'It looks like nothing was found at this location. Try the search below.', 'fitclub' ); ?></p>
 
 							<div class="error-wrap tg-column-2">
 								<span class="num-404">
-									<?php _e( '404', 'fitclub' ); ?>
+									<?php esc_html_e( '404', 'fitclub' ); ?>
 								</span>
-								<span class="error"><?php _e( 'error', 'fitclub' ); ?></span>
+								<span class="error"><?php esc_html_e( 'error', 'fitclub' ); ?></span>
 							</div>
 							<div class="form-wrapper">
 							<?php get_search_form(); ?>

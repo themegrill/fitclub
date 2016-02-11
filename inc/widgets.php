@@ -19,7 +19,7 @@ function fitclub_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Right Sidebar', 'fitclub' ),
 		'id'            => 'fitclub_right_sidebar',
-		'description'   => __( 'Show widgets at Right side', 'fitclub' ),
+		'description'   => esc_html__( 'Show widgets at Right side', 'fitclub' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h4 class="widget-title"><span>',
@@ -29,7 +29,7 @@ function fitclub_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Left Sidebar', 'fitclub' ),
 		'id'            => 'fitclub_left_sidebar',
-		'description'   => __( 'Show widgets at Left side', 'fitclub' ),
+		'description'   => esc_html__( 'Show widgets at Left side', 'fitclub' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h4 class="widget-title"><span>',
@@ -39,7 +39,7 @@ function fitclub_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( '404 Page Sidebar', 'fitclub' ),
 		'id'            => 'fitclub_error_404_page_sidebar',
-		'description'   => __( 'Show widgets at 404 Error Page', 'fitclub' ),
+		'description'   => esc_html__( 'Show widgets at 404 Error Page', 'fitclub' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h4 class="widget-title"><span>',
@@ -49,7 +49,7 @@ function fitclub_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Front Page Sidebar', 'fitclub' ),
 		'id'            => 'fitclub_frontpage_section',
-		'description'   => __( 'Show widgets at Front Page Content Section', 'fitclub'),
+		'description'   => esc_html__( 'Show widgets at Front Page Content Section', 'fitclub'),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h3 class="section-title">',
@@ -61,7 +61,7 @@ function fitclub_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer Sidebar 1', 'fitclub' ),
 		'id'            => 'fitclub_footer_sidebar1',
-		'description'   => __( 'Show widgets at Footer section', 'fitclub' ),
+		'description'   => esc_html__( 'Show widgets at Footer section', 'fitclub' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h4 class="widget-title"><span>',
@@ -72,7 +72,7 @@ function fitclub_widgets_init() {
 		register_sidebar( array(
 			'name'          => esc_html__( 'Footer Sidebar 2', 'fitclub' ),
 			'id'            => 'fitclub_footer_sidebar2',
-			'description'   => __( 'Show widgets at Footer section', 'fitclub' ),
+			'description'   => esc_html__( 'Show widgets at Footer section', 'fitclub' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</aside>',
 			'before_title'  => '<h4 class="widget-title"><span>',
@@ -84,7 +84,7 @@ function fitclub_widgets_init() {
 		register_sidebar( array(
 			'name'          => esc_html__( 'Footer Sidebar 3', 'fitclub' ),
 			'id'            => 'fitclub_footer_sidebar3',
-			'description'   => __( 'Show widgets at Footer section', 'fitclub' ),
+			'description'   => esc_html__( 'Show widgets at Footer section', 'fitclub' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</aside>',
 			'before_title'  => '<h4 class="widget-title"><span>',
@@ -96,7 +96,7 @@ function fitclub_widgets_init() {
 		register_sidebar( array(
 			'name'          => esc_html__( 'Footer Sidebar 4', 'fitclub' ),
 			'id'            => 'fitclub_footer_sidebar4',
-			'description'   => __( 'Show widgets at Footer section', 'fitclub' ),
+			'description'   => esc_html__( 'Show widgets at Footer section', 'fitclub' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</aside>',
 			'before_title'  => '<h4 class="widget-title"><span>',
@@ -118,13 +118,13 @@ class fitclub_service_widget extends WP_Widget {
 	function __construct() {
 		$widget_ops = array(
 			'classname'   => 'widget_service_block',
-			'description' => __( 'Display some pages as services.', 'fitclub' )
+			'description' => esc_html__( 'Display some pages as services.', 'fitclub' )
 		);
 		$control_ops = array(
 			'width'  => 200,
 			'height' => 250
 		);
-		parent::__construct( false, $name = __( 'TG: Service Widget', 'fitclub' ), $widget_ops, $control_ops);
+		parent::__construct( false, $name = esc_html__( 'TG: Service Widget', 'fitclub' ), $widget_ops, $control_ops);
 	}
 
 	function form( $instance ) {
@@ -137,16 +137,16 @@ class fitclub_service_widget extends WP_Widget {
 		$number          =  absint( $instance[ 'number' ] ); ?>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'fitclub' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'fitclub' ); ?></label>
 			<input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of pages to display:', 'fitclub' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of pages to display:', 'fitclub' ); ?></label>
 			<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" size="3" />
 		</p>
 
-		<p><?php _e( 'Note: Create the pages and select Service Template to display Services pages.', 'fitclub' ); ?></p>
+		<p><?php esc_html_e( 'Note: Create the pages and select Service Template to display Services pages.', 'fitclub' ); ?></p>
 	<?php
 	}
 
@@ -220,7 +220,7 @@ class fitclub_service_widget extends WP_Widget {
 										<?php the_excerpt(); ?>
 									</div>
 
-									<a class="class-read-more" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"> <?php  _e( 'Learn More', 'fitclub' ) ?></a>
+									<a class="class-read-more" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"> <?php esc_html_e( 'Learn More', 'fitclub' ) ?></a>
 								</div>
 							</div>
 						<?php $count++;
@@ -243,13 +243,13 @@ class fitclub_about_us_widget extends WP_Widget {
 	function __construct() {
 		$widget_ops = array(
 			'classname'   => 'widget_about_block',
-			'description' => __( 'Show your about page.', 'fitclub' )
+			'description' => esc_html__( 'Show your about page.', 'fitclub' )
 		);
 		$control_ops = array(
 			'width'  => 200,
 			'height' => 250
 		);
-		parent::__construct( false, $name = __( 'TG: About Widget', 'fitclub' ), $widget_ops, $control_ops);
+		parent::__construct( false, $name = esc_html__( 'TG: About Widget', 'fitclub' ), $widget_ops, $control_ops);
 	}
 
 	function form( $instance ) {
@@ -272,13 +272,13 @@ class fitclub_about_us_widget extends WP_Widget {
 		$button_icon      = esc_attr( $instance[ 'button_icon' ] );
 		?>
 		<p>
-		<strong><?php _e( 'Design Settings:', 'fitclub' ); ?></strong><br />
+		<strong><?php esc_html_e( 'Design Settings:', 'fitclub' ); ?></strong><br />
 
-		<label for="<?php echo $this->get_field_id( 'background_color' ); ?>"><?php _e( 'Background Color:', 'fitclub' ); ?></label><br />
+		<label for="<?php echo $this->get_field_id( 'background_color' ); ?>"><?php esc_html_e( 'Background Color:', 'fitclub' ); ?></label><br />
 			<input class="my-color-picker" type="text" data-default-color="#575757" id="<?php echo $this->get_field_id( 'background_color' ); ?>" name="<?php echo $this->get_field_name( 'background_color' ); ?>" value="<?php echo  $background_color; ?>" />
 		</p>
 		<p>
-		<label for="<?php echo $this->get_field_id( 'background_image' ); ?>"> <?php _e( 'Background Image:', 'fitclub' ); ?> </label> <br />
+		<label for="<?php echo $this->get_field_id( 'background_image' ); ?>"> <?php esc_html_e( 'Background Image:', 'fitclub' ); ?> </label> <br />
 
 		<?php
 		if ( $instance[ 'background_image' ]  != '' ) :
@@ -291,12 +291,12 @@ class fitclub_about_us_widget extends WP_Widget {
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'fitclub' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'fitclub' ); ?></label>
 			<input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
 		</p>
 
-		<p><?php _e('Select a page to display Title, Excerpt and Featured image.', 'fitclub') ?></p>
-		<label for="<?php echo $this->get_field_id( 'page_id' ); ?>"><?php _e( 'Page', 'fitclub' ); ?>:</label>
+		<p><?php esc_html_e('Select a page to display Title, Excerpt and Featured image.', 'fitclub') ?></p>
+		<label for="<?php echo $this->get_field_id( 'page_id' ); ?>"><?php esc_html_e( 'Page', 'fitclub' ); ?>:</label>
 
 		<?php wp_dropdown_pages( array(
 			'show_option_none'  => ' ',
@@ -306,23 +306,23 @@ class fitclub_about_us_widget extends WP_Widget {
 		?>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'button_text' ); ?>"><?php _e( 'Button Text:', 'fitclub' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'button_text' ); ?>"><?php esc_html_e( 'Button Text:', 'fitclub' ); ?></label>
 			<input id="<?php echo $this->get_field_id( 'button_text' ); ?>" name="<?php echo $this->get_field_name( 'button_text' ); ?>" type="text" value="<?php echo $button_text; ?>" />
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'button_url' ); ?>"><?php _e( 'Button Redirect Link:', 'fitclub' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'button_url' ); ?>"><?php esc_html_e( 'Button Redirect Link:', 'fitclub' ); ?></label>
 			<input id="<?php echo $this->get_field_id( 'button_url' ); ?>" name="<?php echo $this->get_field_name( 'button_url' ); ?>" type="text" value="<?php echo $button_url; ?>" />
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'button_icon' ); ?>"><?php _e( 'Button Icon Class:', 'fitclub' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'button_icon' ); ?>"><?php esc_html_e( 'Button Icon Class:', 'fitclub' ); ?></label>
 			<input id="<?php echo $this->get_field_id( 'button_icon' ); ?>" name="<?php echo $this->get_field_name( 'button_icon' ); ?>" placeholder="fa-cog" type="text" value="<?php echo $button_icon; ?>" />
 		</p>
 		<p>
 		<?php
 			$url = 'http://fontawesome.io/icons/';
-			$link = sprintf( __( '<a href="%s" target="_blank">Refer here</a> For Icon Class', 'fitclub' ), esc_url( $url ) );
+			$link = sprintf( esc_html__( '<a href="%s" target="_blank">Refer here</a> For Icon Class', 'fitclub' ), esc_url( $url ) );
 			echo $link;
 		?>
 		</p>
@@ -376,7 +376,7 @@ class fitclub_about_us_widget extends WP_Widget {
 
 						$output .= '<div class="about-btn-wrapper">';
 
-						$output .= '<a class="about-btn" href="'. get_permalink() . '">' . __( 'Read more', 'fitclub' ) . '</a>';
+						$output .= '<a class="about-btn" href="'. get_permalink() . '">' . esc_html__( 'Read more', 'fitclub' ) . '</a>';
 
 						if ( !empty ( $button_text ) ) {
 							$output .= '<a class="about-btn" href="' . $button_url . '">' . esc_html( $button_text ) . ' <i class="fa ' . $button_icon . '"></i></a>';
@@ -407,13 +407,13 @@ class fitclub_call_to_action_widget extends WP_Widget {
 	function __construct() {
 		$widget_ops = array(
 			'classname'   => 'widget_call_to_action_block',
-			'description' => __( 'Use this widget to show the call to action section.', 'fitclub' )
+			'description' => esc_html__( 'Use this widget to show the call to action section.', 'fitclub' )
 		);
 		$control_ops = array(
 			'width'  => 200,
 			'height' => 250
 		);
-		parent::__construct( false, $name = __( 'TG: Call To Action Widget', 'fitclub' ), $widget_ops, $control_ops);
+		parent::__construct( false, $name = esc_html__( 'TG: Call To Action Widget', 'fitclub' ), $widget_ops, $control_ops);
 	}
 
 	function form( $instance ) {
@@ -432,12 +432,12 @@ class fitclub_call_to_action_widget extends WP_Widget {
 		$button_url       = esc_url( $instance[ 'button_url' ] );
 		?>
 		<p>
-			<strong><?php _e( 'Design Settings:', 'fitclub' ); ?></strong><br />
-			<label for="<?php echo $this->get_field_id( 'background_color' ); ?>"><?php _e( 'Background Color:', 'fitclub' ); ?></label><br />
+			<strong><?php esc_html_e( 'Design Settings:', 'fitclub' ); ?></strong><br />
+			<label for="<?php echo $this->get_field_id( 'background_color' ); ?>"><?php esc_html_e( 'Background Color:', 'fitclub' ); ?></label><br />
 			<input class="my-color-picker" type="text" data-default-color="#32c4d1" id="<?php echo $this->get_field_id( 'background_color' ); ?>" name="<?php echo $this->get_field_name( 'background_color' ); ?>" value="<?php echo  $background_color; ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'background_image' ); ?>"> <?php _e( 'Image:', 'fitclub' ); ?> </label> <br />
+			<label for="<?php echo $this->get_field_id( 'background_image' ); ?>"> <?php esc_html_e( 'Image:', 'fitclub' ); ?> </label> <br />
 
 			<?php
 			if ( $instance[ 'background_image' ]  != '' ) :
@@ -449,16 +449,16 @@ class fitclub_call_to_action_widget extends WP_Widget {
 			<input type="button" class="button button-primary custom_media_button" id="custom_media_button_action" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="Upload Image" style="margin-top: 5px; margin-right: 30px;" onclick="imageWidget.uploader( '<?php echo $this->get_field_id( 'background_image' ); ?>' ); return false;"/>
 		</p>
 
-		<strong><?php _e( 'Other Settings :', 'fitclub' ); ?></strong><br />
+		<strong><?php esc_html_e( 'Other Settings :', 'fitclub' ); ?></strong><br />
 
-		<?php _e( 'Call to Action Main Text','fitclub' ); ?>
+		<?php esc_html_e( 'Call to Action Main Text','fitclub' ); ?>
 		<textarea class="widefat" rows="3" cols="20" id="<?php echo $this->get_field_id('text'); ?>" name="<?php echo $this->get_field_name('text'); ?>"><?php echo $text; ?></textarea>
 		<p>
-			<label for="<?php echo $this->get_field_id('button_text'); ?>"><?php _e( 'Button Text:', 'fitclub' ); ?></label>
+			<label for="<?php echo $this->get_field_id('button_text'); ?>"><?php esc_html_e( 'Button Text:', 'fitclub' ); ?></label>
 			<input id="<?php echo $this->get_field_id('button_text'); ?>" name="<?php echo $this->get_field_name('button_text'); ?>" type="text" value="<?php echo $button_text; ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id('button_url'); ?>"><?php _e( 'Button Redirect Link:', 'fitclub' ); ?></label>
+			<label for="<?php echo $this->get_field_id('button_url'); ?>"><?php esc_html_e( 'Button Redirect Link:', 'fitclub' ); ?></label>
 			<input id="<?php echo $this->get_field_id('button_url'); ?>" name="<?php echo $this->get_field_name('button_url'); ?>" type="text" value="<?php echo $button_url; ?>" />
 		</p>
 	<?php
@@ -523,13 +523,13 @@ class fitclub_testimonial_widget extends WP_Widget {
 	function __construct() {
 		$widget_ops = array(
 			'classname'   => 'widget_testimonial_block',
-			'description' => __( 'Display some pages as testimonial.', 'fitclub' )
+			'description' => esc_html__( 'Display some pages as testimonial.', 'fitclub' )
 		);
 		$control_ops = array(
 			'width'  => 200,
 			'height' => 250
 		);
-		parent::__construct( false, $name = __( 'TG: Testimonial Widget', 'fitclub' ), $widget_ops, $control_ops);
+		parent::__construct( false, $name = esc_html__( 'TG: Testimonial Widget', 'fitclub' ), $widget_ops, $control_ops);
 	}
 
 	function form( $instance ) {
@@ -547,12 +547,12 @@ class fitclub_testimonial_widget extends WP_Widget {
 		?>
 
 		<p>
-			<strong><?php _e( 'Design Settings:', 'fitclub' ); ?></strong><br />
-			<label for="<?php echo $this->get_field_id( 'background_color' ); ?>"><?php _e( 'Background Color:', 'fitclub' ); ?></label><br />
+			<strong><?php esc_html_e( 'Design Settings:', 'fitclub' ); ?></strong><br />
+			<label for="<?php echo $this->get_field_id( 'background_color' ); ?>"><?php esc_html_e( 'Background Color:', 'fitclub' ); ?></label><br />
 			<input class="my-color-picker" type="text" data-default-color="#32c4d1" id="<?php echo $this->get_field_id( 'background_color' ); ?>" name="<?php echo $this->get_field_name( 'background_color' ); ?>" value="<?php echo  $background_color; ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'background_image' ); ?>"> <?php _e( 'Image:', 'fitclub' ); ?> </label> <br />
+			<label for="<?php echo $this->get_field_id( 'background_image' ); ?>"> <?php esc_html_e( 'Image:', 'fitclub' ); ?> </label> <br />
 
 			<?php
 			if ( $instance[ 'background_image' ]  != '' ) :
@@ -564,16 +564,16 @@ class fitclub_testimonial_widget extends WP_Widget {
 			<input type="button" class="button button-primary custom_media_button" id="custom_media_button_action" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="Upload Image" style="margin-top: 5px; margin-right: 30px;" onclick="imageWidget.uploader( '<?php echo $this->get_field_id( 'background_image' ); ?>' ); return false;"/>
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'fitclub' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'fitclub' ); ?></label>
 			<input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of pages to display:', 'fitclub' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of pages to display:', 'fitclub' ); ?></label>
 			<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" size="3" />
 		</p>
 
-		<p><?php _e( 'Note: Create the pages and select Testimonial Template to display Testimonial pages.', 'fitclub' ); ?></p>
+		<p><?php esc_html_e( 'Note: Create the pages and select Testimonial Template to display Testimonial pages.', 'fitclub' ); ?></p>
 	<?php
 	}
 
@@ -678,14 +678,14 @@ class fitclub_team_widget extends WP_Widget {
 	function __construct() {
 		$widget_ops = array(
 			'classname'   => 'widget_team_block',
-			'description' => __( 'Show your Team Members.', 'fitclub' )
+			'description' => esc_html__( 'Show your Team Members.', 'fitclub' )
 		);
 		$control_ops = array(
 			'width'  => 200,
 			'height' => 250
 		);
 
-		parent::__construct( false, $name = __( 'TG: Our Team Widget', 'fitclub' ), $widget_ops, $control_ops);
+		parent::__construct( false, $name = esc_html__( 'TG: Our Team Widget', 'fitclub' ), $widget_ops, $control_ops);
 	}
 
 	function form( $instance ) {
@@ -698,15 +698,15 @@ class fitclub_team_widget extends WP_Widget {
 		?>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'fitclub' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'fitclub' ); ?></label>
 			<input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of pages to display:', 'fitclub' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of pages to display:', 'fitclub' ); ?></label>
 			<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" size="3" />
 		</p>
-		<p><?php _e( 'Note: Create the pages and select Team Template to display Our Team pages.', 'fitclub' ); ?></p>
+		<p><?php esc_html_e( 'Note: Create the pages and select Team Template to display Our Team pages.', 'fitclub' ); ?></p>
 		<?php }
 
 	function update( $new_instance, $old_instance ) {
@@ -804,13 +804,13 @@ class fitclub_featured_posts_widget extends WP_Widget {
 	function __construct() {
 		$widget_ops = array(
 			'classname'   => 'widget_featured_posts_block',
-			'description' => __( 'Display latest posts or posts of specific category', 'fitclub')
+			'description' => esc_html__( 'Display latest posts or posts of specific category', 'fitclub')
 		);
 		$control_ops = array(
 			'width'  => 200,
 			'height' => 250
 		);
-		parent::__construct( false,$name= __( 'TG: Featured Posts', 'fitclub' ),$widget_ops);
+		parent::__construct( false,$name= esc_html__( 'TG: Featured Posts', 'fitclub' ),$widget_ops);
 	}
 
 	function form( $instance ) {
@@ -832,21 +832,21 @@ class fitclub_featured_posts_widget extends WP_Widget {
 		$button_url  = esc_url( $instance[ 'button_url' ] ); ?>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'fitclub' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'fitclub' ); ?></label>
 			<input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to display:', 'fitclub' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts to display:', 'fitclub' ); ?></label>
 			<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" size="3" />
 		</p>
 
 		<p>
-			<input type="radio" <?php checked( $type, 'latest' ) ?> id="<?php echo $this->get_field_id( 'type' ); ?>" name="<?php echo $this->get_field_name( 'type' ); ?>" value="latest"/><?php _e( 'Show latest Posts', 'fitclub' );?><br />
-			<input type="radio" <?php checked( $type,'category' ) ?> id="<?php echo $this->get_field_id( 'type' ); ?>" name="<?php echo $this->get_field_name( 'type' ); ?>" value="category"/><?php _e( 'Show posts from a category', 'fitclub' );?><br />
+			<input type="radio" <?php checked( $type, 'latest' ) ?> id="<?php echo $this->get_field_id( 'type' ); ?>" name="<?php echo $this->get_field_name( 'type' ); ?>" value="latest"/><?php esc_html_e( 'Show latest Posts', 'fitclub' );?><br />
+			<input type="radio" <?php checked( $type,'category' ) ?> id="<?php echo $this->get_field_id( 'type' ); ?>" name="<?php echo $this->get_field_name( 'type' ); ?>" value="category"/><?php esc_html_e( 'Show posts from a category', 'fitclub' );?><br />
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php _e( 'Select category', 'fitclub' ); ?>:</label>
+			<label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php esc_html_e( 'Select category', 'fitclub' ); ?>:</label>
 			<?php wp_dropdown_categories( array( 'show_option_none' =>' ','name' => $this->get_field_name( 'category' ), 'selected' => $category ) ); ?>
 		</p>
 
@@ -931,7 +931,7 @@ class fitclub_featured_posts_widget extends WP_Widget {
 									<?php the_excerpt(); ?>
 								</div>
 
-								<a class="blog-readmore" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"> <?php echo __( 'Read more' , 'fitclub' ) ?></a>
+								<a class="blog-readmore" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"> <?php echo esc_html__( 'Read more' , 'fitclub' ) ?></a>
 							</div>
 						</div>
 					</li>

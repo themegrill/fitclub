@@ -32,7 +32,7 @@
 		<?php
 			edit_post_link(
 				sprintf(
-					/* translators: %s: Name of current post */
+					/* translators: %s: Name of current page */
 					esc_html__( 'Edit %s', 'fitclub' ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				),

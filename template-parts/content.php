@@ -24,7 +24,7 @@
 		<div class="entry-content-text-wrapper clearfix">
 			<?php
 			$class = 'no-date';
-			if ( get_theme_mod('fitclub_postmeta', '') == '' && get_theme_mod('fitclub_postmeta_date', '') == '' ): 
+			if ( get_theme_mod('fitclub_postmeta', '') == '' && get_theme_mod('fitclub_postmeta_date', '') == '' ):
 				$class = '';
 			?>
 			<span class="posted-on">
@@ -47,12 +47,12 @@
 					if( get_theme_mod( 'fitclub_content_show', 'show_fullcontent' ) == 'show_excerpt' ) {
 						the_excerpt(); ?>
 					<div class="entry-btn">
-						<a class="btn" title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php _e( 'Read more', 'fitclub' ); ?>
+						<a class="btn" title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>"><?php esc_html_e( 'Read more', 'fitclub' ); ?>
 						</a>
 					</div>
 					<?php }
 					else {
-						the_content( '<span>'. __( 'Read more', 'fitclub' ) .'</span>' );
+						the_content( '<span>'. esc_html__( 'Read more', 'fitclub' ) .'</span>' );
 					} ?>
 				</div>
 			</div>
