@@ -153,7 +153,7 @@ class fitclub_service_widget extends WP_Widget {
 	function update( $new_instance, $old_instance ) {
 		$instance                      = $old_instance;
 		$instance[ 'title' ]           = strip_tags( $new_instance[ 'title' ] );
-		$instance[ 'number' ]   = absint( $new_instance[ 'number' ] );
+		$instance[ 'number' ]          = absint( $new_instance[ 'number' ] );
 
 		return $instance;
 	}
@@ -163,8 +163,8 @@ class fitclub_service_widget extends WP_Widget {
 		extract( $instance );
 
 		global $post;
-		$title           = apply_filters( 'widget_title', isset( $instance[ 'title' ] ) ? $instance[ 'title' ] : '');
-		$number          = empty( $instance[ 'number' ] ) ? 6 : $instance[ 'number' ];
+		$title           = apply_filters( 'widget_title', isset( $instance[ 'title' ] ) ? esc_html( $instance[ 'title' ] ) : '');
+		$number          = isset( $instance[ 'number' ] ) ? absint( $instance[ 'number' ] ) : 5;
 
 		$page_array = array();
 		$pages = get_pages();
@@ -189,7 +189,7 @@ class fitclub_service_widget extends WP_Widget {
 		<div  class="section-wrapper">
 			<div class="tg-container">
 				<div class="classes-wrapper">
-					<?php if( !empty( $title ) ) echo $before_title .'<span>'. esc_html( $title ) .'</span>'. $after_title; ?>
+					<?php if( !empty( $title ) ) echo $before_title .'<span>'. $title .'</span>'. $after_title; ?>
 
 					<?php
 					if( !empty( $page_array ) ) {
@@ -229,7 +229,7 @@ class fitclub_service_widget extends WP_Widget {
 					</div>
 					<?php
 					// Reset Post Data
-					wp_reset_query();
+					wp_reset_postdata();
 					} ?>
 				</div>
 			</div>
@@ -319,24 +319,25 @@ class fitclub_about_us_widget extends WP_Widget {
 			<label for="<?php echo $this->get_field_id( 'button_icon' ); ?>"><?php esc_html_e( 'Button Icon Class:', 'fitclub' ); ?></label>
 			<input id="<?php echo $this->get_field_id( 'button_icon' ); ?>" name="<?php echo $this->get_field_name( 'button_icon' ); ?>" placeholder="fa-cog" type="text" value="<?php echo $button_icon; ?>" />
 		</p>
+
 		<p>
 		<?php
-			$url = 'http://fontawesome.io/icons/';
-			$link = sprintf( esc_html__( '<a href="%s" target="_blank">Refer here</a> For Icon Class', 'fitclub' ), esc_url( $url ) );
-			echo $link;
+		$url = 'http://fontawesome.io/icons/';
+		$link = sprintf( wp_kses( __( '<a href="%s" target="_blank">Refer here</a> For Icon Class', 'fitclub' ), array(  'a' => array( 'href' => array() ) ) ), esc_url( $url ) );
+		echo $link;
 		?>
 		</p>
-		<?php }
-
+		<?php
+	}
 	function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
-		$instance['background_color'] = $new_instance['background_color'];
-		$instance['background_image'] = esc_url_raw( $new_instance['background_image'] );
-		$instance[ 'title' ]          = strip_tags( $new_instance[ 'title' ] );
-		$instance[ 'page_id' ]        = absint( $new_instance[ 'page_id' ] );
-		$instance[ 'button_text' ]    = strip_tags( $new_instance[ 'button_text' ] );
-		$instance[ 'button_url' ]     = esc_url_raw( $new_instance[ 'button_url' ] );
-		$instance[ 'button_icon' ]    = strip_tags( $new_instance[ 'button_icon' ] );
+		$instance[ 'background_color'] = esc_attr($new_instance['background_color']);
+		$instance[ 'background_image'] = esc_url_raw( $new_instance['background_image'] );
+		$instance[ 'title' ]           = strip_tags( $new_instance[ 'title' ] );
+		$instance[ 'page_id' ]         = absint( $new_instance[ 'page_id' ] );
+		$instance[ 'button_text' ]     = strip_tags( $new_instance[ 'button_text' ] );
+		$instance[ 'button_url' ]      = esc_url_raw( $new_instance[ 'button_url' ] );
+		$instance[ 'button_icon' ]     = strip_tags( $new_instance[ 'button_icon' ] );
 
 		return $instance;
 	}
@@ -346,13 +347,13 @@ class fitclub_about_us_widget extends WP_Widget {
 		extract( $instance );
 
 		global $post;
-		$background_color = isset( $instance[ 'background_color' ] ) ? $instance[ 'background_color' ] : '';
-		$background_image = isset( $instance[ 'background_image' ] ) ? $instance[ 'background_image' ] : '';
-		$title            = apply_filters( 'widget_title', isset( $instance[ 'title' ] ) ? $instance[ 'title' ] : '');
-		$page_id          = isset( $instance[ 'page_id' ] ) ? $instance[ 'page_id' ] : '';
-		$button_text      = isset( $instance[ 'button_text' ] ) ? $instance[ 'button_text' ] : '';
-		$button_url       = empty( $instance[ 'button_url' ] ) ? '#' : $instance[ 'button_url' ];
-		$button_icon      = isset( $instance[ 'button_icon' ] ) ? $instance[ 'button_icon' ] : '';
+		$background_color = isset( $instance[ 'background_color' ] ) ? esc_attr( $instance[ 'background_color' ] ) : '';
+		$background_image = isset( $instance[ 'background_image' ] ) ? esc_url( $instance[ 'background_image' ] ) : '';
+		$title            = apply_filters( 'widget_title', isset( $instance[ 'title' ] ) ? esc_html($instance[ 'title' ] ) : '');
+		$page_id          = isset( $instance[ 'page_id' ] ) ? absint( $instance[ 'page_id' ] ) : '';
+		$button_text      = isset( $instance[ 'button_text' ] ) ? esc_html( $instance[ 'button_text' ] ) : '';
+		$button_url       = isset( $instance[ 'button_url' ] ) ?  esc_url( $instance[ 'button_url' ] ) : '#';
+		$button_icon      = isset( $instance[ 'button_icon' ] ) ? esc_html( $instance[ 'button_icon' ] ) : '';
 
 		if ( !empty( $background_image ) ) {
 			$bg_image_style = 'background:url(' . $background_image . ') scroll no-repeat center top/cover;';
@@ -376,7 +377,7 @@ class fitclub_about_us_widget extends WP_Widget {
 
 						$output .= '<div class="about-btn-wrapper">';
 
-						$output .= '<a class="about-btn" href="'. get_permalink() . '">' . esc_html__( 'Read more', 'fitclub' ) . '</a>';
+						$output .= '<a class="about-btn" href="'. esc_url (get_permalink()) . '">' . esc_html__( 'Read more', 'fitclub' ) . '</a>';
 
 						if ( !empty ( $button_text ) ) {
 							$output .= '<a class="about-btn" href="' . $button_url . '">' . esc_html( $button_text ) . ' <i class="fa ' . $button_icon . '"></i></a>';
@@ -394,7 +395,7 @@ class fitclub_about_us_widget extends WP_Widget {
 					<?php endwhile;
 
 					// Reset Post Data
-					wp_reset_query(); ?>
+					wp_reset_postdata(); ?>
 			</div><!-- .about-content-wrapper -->
 				<?php endif; ?>
 		</div><!-- .tg-container -->
@@ -467,13 +468,10 @@ class fitclub_call_to_action_widget extends WP_Widget {
 	function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 
-		$instance['background_color'] =  $new_instance['background_color'];
+		$instance['background_color'] =  esc_attr( $new_instance['background_color'] );
 		$instance['background_image'] =  esc_url_raw( $new_instance['background_image'] );
 
-		if ( current_user_can('unfiltered_html') )
-			$instance['text'] =  $new_instance['text'];
-		else
-			$instance['text'] = stripslashes( wp_filter_post_kses( addslashes($new_instance['text']) ) ); // wp_filter_post_kses() expects slashed
+		$instance['text'] = stripslashes( wp_filter_post_kses( addslashes($new_instance['text']) ) ); // wp_filter_post_kses() expects slashed
 
 		$instance[ 'button_text' ] = strip_tags( $new_instance[ 'button_text' ] );
 		$instance[ 'button_url' ]  = esc_url_raw( $new_instance[ 'button_url' ] );
@@ -485,11 +483,11 @@ class fitclub_call_to_action_widget extends WP_Widget {
 		extract( $instance );
 
 		global $post;
-		$background_color = isset( $instance[ 'background_color' ] ) ? $instance[ 'background_color' ] : '';
-		$background_image = isset( $instance[ 'background_image' ] ) ? $instance[ 'background_image' ] : '';
-		$text             = empty( $instance[ 'text' ] ) ? '' : $instance[ 'text' ];
-		$button_text      = isset( $instance[ 'button_text' ] ) ? $instance[ 'button_text' ] : '';
-		$button_url       = empty( $instance[ 'button_url' ] ) ? '#' : $instance[ 'button_url' ];
+		$background_color = isset( $instance[ 'background_color' ] ) ? esc_attr( $instance[ 'background_color' ] ) : '';
+		$background_image = isset( $instance[ 'background_image' ] ) ? esc_url( $instance[ 'background_image' ] ) : '';
+		$text             = isset( $instance[ 'text' ] ) ? esc_html( $instance[ 'text' ] ) : '';
+		$button_text      = isset( $instance[ 'button_text' ] ) ? esc_html( $instance[ 'button_text' ] ) : '';
+		$button_url       = isset( $instance[ 'button_url' ] ) ? esc_url( $instance[ 'button_url' ] ) : '';
 
 		echo $before_widget;
 		$bg_style = '';
@@ -506,10 +504,10 @@ class fitclub_call_to_action_widget extends WP_Widget {
 			<div class="tg-container">
 				<div class="cta-wrapper">
 					<?php if( !empty( $text ) ) { ?>
-						<h3 class="cta-title"><?php echo esc_html( $text ); ?></h3>
+						<h3 class="cta-title"><?php echo $text; ?></h3>
 					<?php } ?>
 					<?php if( !empty( $button_text ) ) { ?>
-					<a class="cta-readmore" href="<?php echo $button_url; ?>" title="<?php echo esc_attr( $button_text ); ?>"><?php echo esc_html( $button_text ); ?></a>
+					<a class="cta-readmore" href="<?php echo $button_url; ?>"><?php echo $button_text; ?></a>
 					<?php } ?>
 				</div>
 			</div>
@@ -593,10 +591,10 @@ class fitclub_testimonial_widget extends WP_Widget {
 		extract( $instance );
 
 		global $post;
-		$background_color = isset( $instance[ 'background_color' ] ) ? $instance[ 'background_color' ] : '';
-		$background_image = isset( $instance[ 'background_image' ] ) ? $instance[ 'background_image' ] : '';
-		$title            = apply_filters( 'widget_title', isset( $instance[ 'title' ] ) ? $instance[ 'title' ] : '');
-		$number           = empty( $instance[ 'number' ] ) ? 6 : $instance[ 'number' ];
+		$background_color = isset( $instance[ 'background_color' ] ) ? esc_attr( $instance[ 'background_color' ] ) : '';
+		$background_image = isset( $instance[ 'background_image' ] ) ? esc_url( $instance[ 'background_image' ] ) : '';
+		$title            = apply_filters( 'widget_title', isset( $instance[ 'title' ] ) ? esc_html( $instance[ 'title' ] ) : '');
+		$number           = isset( $instance[ 'number' ] ) ? absint( $instance[ 'number' ] ) : 3;
 
 		$page_array = array();
 		$pages = get_pages();
@@ -630,7 +628,7 @@ class fitclub_testimonial_widget extends WP_Widget {
 			<div class="bg-overlay"></div>
 			<div class="tg-container">
 				<div class="testimonial-wrapper">
-					<?php if( !empty( $title ) ) echo $before_title .'<span>'. esc_html( $title ) .'</span>'. $after_title; ?>
+					<?php if( !empty( $title ) ) echo $before_title .'<span>'.$title.'</span>'. $after_title; ?>
 
 					<?php
 					if( !empty( $page_array ) ) {
@@ -664,7 +662,7 @@ class fitclub_testimonial_widget extends WP_Widget {
 						</ul>
 					<?php
 					// Reset Post Data
-					wp_reset_query();
+					wp_reset_postdata();
 					} ?>
 				</div>
 			</div>
@@ -722,8 +720,8 @@ class fitclub_team_widget extends WP_Widget {
 		extract( $instance );
 
 		global $post;
-		$title  = apply_filters( 'widget_title', isset( $instance[ 'title' ] ) ? $instance[ 'title' ] : '');
-		$number = empty( $instance[ 'number' ] ) ? 3 : $instance[ 'number' ];
+		$title  = apply_filters( 'widget_title', isset( $instance[ 'title' ] ) ? esc_html( $instance[ 'title' ] ) : '');
+		$number = isset( $instance[ 'number' ] ) ? absint( $instance[ 'number' ] ) : 3;
 
 		$page_array = array();
 		$pages = get_pages();
@@ -747,7 +745,7 @@ class fitclub_team_widget extends WP_Widget {
 		<div class="section-wrapper">
 			<div class="tg-container">
 				<div class="trainer-wrapper tg-column-wrapper">
-					<?php if( !empty( $title ) ) echo $before_title .'<span>'. esc_html( $title ) .'</span>'. $after_title; ?>
+					<?php if( !empty( $title ) ) echo $before_title .'<span>'. $title .'</span>'. $after_title; ?>
 
 					<?php if( !empty ( $page_array ) ) : ?>
 					<?php while( $get_featured_pages->have_posts() ):$get_featured_pages->the_post();
@@ -787,7 +785,7 @@ class fitclub_team_widget extends WP_Widget {
 						endwhile;
 
 						// Reset Post Data
-						wp_reset_query();
+						wp_reset_postdata();
 						endif; ?>
 				</div>
 			</div><!-- .tg-container -->
@@ -858,8 +856,8 @@ class fitclub_featured_posts_widget extends WP_Widget {
 
 		$instance[ 'title' ]       = strip_tags( $new_instance[ 'title' ] );
 		$instance[ 'number' ]      = absint( $new_instance[ 'number' ] );
-		$instance[ 'type' ]        = $new_instance[ 'type' ];
-		$instance[ 'category' ]    = $new_instance[ 'category' ];
+		$instance[ 'type' ]        = sanitize_text_field( $new_instance[ 'type' ] );
+		$instance[ 'category' ]    = absint( $new_instance[ 'category' ] );
 		$instance[ 'button_text' ] = strip_tags( $new_instance[ 'button_text' ] );
 		$instance[ 'button_url' ]  = esc_url_raw( $new_instance[ 'button_url' ] );
 
@@ -871,12 +869,12 @@ class fitclub_featured_posts_widget extends WP_Widget {
 		extract( $instance );
 
 		global $post;
-		$title       = apply_filters( 'widget_title', isset( $instance[ 'title' ] ) ? $instance[ 'title' ] : '');
-		$number      = empty( $instance[ 'number' ] ) ? 3 : $instance[ 'number' ];
-		$type        = isset( $instance[ 'type' ] ) ? $instance[ 'type' ] : 'latest' ;
-		$category    = isset( $instance[ 'category' ] ) ? $instance[ 'category' ] : '';
-		$button_text = isset( $instance[ 'button_text' ] ) ? $instance[ 'button_text' ] : '';
-		$button_url  = empty( $instance[ 'button_url' ] ) ? '#' : $instance[ 'button_url' ];
+		$title       = apply_filters( 'widget_title', isset( $instance[ 'title' ] ) ? esc_html( $instance[ 'title' ] ) : '');
+		$number      = isset( $instance[ 'number' ] ) ?  absint( $instance[ 'number' ] ) : 3;
+		$type        = isset( $instance[ 'type' ] ) ? sanitize_text_field( $instance[ 'type' ] ) : 'latest' ;
+		$category    = isset( $instance[ 'category' ] ) ? absint( $instance[ 'category' ] ) : '';
+		$button_text = isset( $instance[ 'button_text' ] ) ? esc_html( $instance[ 'button_text' ] ) : '';
+		$button_url  = isset( $instance[ 'button_url' ] ) ? esc_url( $instance[ 'button_url' ] ) : '#';
 
 		if( $type == 'latest' ) {
 			$get_featured_posts = new WP_Query( array(
@@ -897,7 +895,7 @@ class fitclub_featured_posts_widget extends WP_Widget {
 
 	<div class="section-wrapper">
 		<div class="tg-container">
-			<?php if ( !empty( $title ) ) { echo $before_title .'<span>'. esc_html( $title ) .'</span>'. $after_title; } ?>
+			<?php if ( !empty( $title ) ) { echo $before_title .'<span>'. $title .'</span>'. $after_title; } ?>
 
 			<div class="blog-wrapper">
 				<ul class="blog-slider">
@@ -944,7 +942,7 @@ class fitclub_featured_posts_widget extends WP_Widget {
 	</div><!-- .section-wrapper -->
 	<?php
 		// Reset Post Data
-		wp_reset_query();
+		wp_reset_postdata();
 		echo $after_widget;
 	}
 }
