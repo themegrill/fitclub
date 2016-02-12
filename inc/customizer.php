@@ -423,36 +423,6 @@ function fitclub_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Front/Blog Page Content Section
-	$wp_customize->add_section(
-		'fitclub_frontpage_content_section',
-		array(
-			'priority'   => '20',
-			'title'      => esc_html__( 'Hide Content in Front/Blog Page', 'fitclub' ),
-			'panel'      => 'fitclub_additional_options'
-		)
-	);
-
-	// Front/Blog Page Content Setting
-	$wp_customize->add_setting(
-		'fitclub_frontpage_content',
-		array(
-			'default'            => '',
-			'capability'         => 'edit_theme_options',
-			'sanitize_callback'  => 'fitclub_sanitize_checkbox'
-		)
-	);
-
-	$wp_customize->add_control(
-		'fitclub_frontpage_content',
-		array(
-			'label'    => esc_html__( 'Check to hide blog posts/static page on front page.' , 'fitclub' ),
-			'section'  => 'fitclub_frontpage_content_section',
-			'priority' => 10,
-			'type'     => 'checkbox'
-		)
-	);
-
 	// Post Meta Section
 	$wp_customize->add_section(
 		'fitclub_postmeta_section',
