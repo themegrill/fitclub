@@ -170,7 +170,7 @@ function fitclub_custom_css() {
 
 	$primary_color   = get_theme_mod( 'fitclub_primary_color', '#32c4d1' );
 	$primary_opacity = fitclub_hex2rgb($primary_color);
-	$primary_dark    = fitclub_darkcolor($primary_color, 20);
+	$primary_dark    = fitclub_darkcolor($primary_color, -20);
 
 	$fitclub_internal_css = '';
 	if( $primary_color != '#32c4d1' ) {
