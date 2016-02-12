@@ -617,7 +617,7 @@ a:active {
     display: none;
 }
 
-.home section.widget {
+.page-template-template-front-page section.widget {
     margin: 0;
     padding: 0;
 }
@@ -1350,7 +1350,7 @@ body {
 18.0 top-header css
 --------------------------------------------------------------*/
 
-.home #masthead {
+.page-template-template-front-page #masthead {
     left: 0;
     position: absolute;
     top: 0;
@@ -1361,7 +1361,7 @@ body {
 }
 
 #masthead,
-.home .no-slider #masthead {
+.page-template-template-front-page .no-slider #masthead {
     background: #16171b none repeat scroll 0 0;
     margin: 0;
     padding: 20px 0;
@@ -1784,7 +1784,7 @@ body {
     margin: 0;
 }
 
-.home section.widget.tribe-events-list-widget {
+.page-template-template-front-page section.widget.tribe-events-list-widget {
     background: #f5f5f5 none repeat scroll 0 0;
 }
 
@@ -3489,7 +3489,7 @@ ul.tribe-events-sub-nav a:hover {
         padding: 0 1%;
         width: 98%;
     }
-    .home #masthead {
+    .page-template-template-front-page #masthead {
         padding-top: 10px;
     }
     .slider-caption-wrapper {
@@ -3517,7 +3517,7 @@ ul.tribe-events-sub-nav a:hover {
         font-size: 15px;
         padding: 10px 30px;
     }
-    .home section.widget.tribe-events-list-widget {
+    .page-template-template-front-page section.widget.tribe-events-list-widget {
         width: 100%;
     }
     .trainer-block:hover .trainer-title {
@@ -3562,7 +3562,7 @@ ul.tribe-events-sub-nav a:hover {
         width: 50px;
     }
     #masthead,
-    .home .no-slider #masthead {
+    .page-template-template-front-page .no-slider #masthead {
         padding: 10px 0;
     }
     .slider-caption-wrapper .caption-title {
@@ -3715,8 +3715,8 @@ ul.tribe-events-sub-nav a:hover {
         margin-top: 21px;
     }
     #masthead,
-    .home #masthead,
-    .home .no-slider #masthead {
+    .page-template-template-front-page #masthead,
+    .page-template-template-front-page .no-slider #masthead {
         background: #000000;
         padding: 20px 0 0;
         position: relative;

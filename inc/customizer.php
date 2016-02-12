@@ -113,7 +113,7 @@ function fitclub_customize_register( $wp_customize ) {
 		array(
 			'priority'    => 10,
 			'title'       => esc_html__( 'Slider Settings', 'fitclub' ),
-			'description' => '<strong>'.__( 'Note', 'fitclub').'</strong><br/>'.__( '1. To display the Slider first check Enable the slider below. Now create the page for each slider and enter title, text and featured image. Choose that pages in the dropdown options.', 'fitclub').'<br/>'.__( '2. The recommended size for the slider image is 1920 x 1000 pixels. For better functioning of slider use equal size images for each slide.', 'fitclub' ).'<br/>'.__( '3. If page do not have featured Image than that page will not included in slider show.', 'fitclub' ),
+			'description' => '<strong>'.esc_html__( 'Note', 'fitclub').'</strong><br/>'.esc_html__( '1. To display the Slider first check Enable the slider below. Now create the page for each slider and enter title, text and featured image. Choose that pages in the dropdown options.', 'fitclub').'<br/>'.esc_html__( '2. The recommended size for the slider image is 1920 x 1000 pixels. For better functioning of slider use equal size images for each slide.', 'fitclub' ).'<br/>'.esc_html__( '3. If page do not have featured Image than that page will not included in slider show.', 'fitclub' ),
 			'panel'       => 'fitclub_slider_options'
 		)
 	);
@@ -420,36 +420,6 @@ function fitclub_customize_register( $wp_customize ) {
 				'show_fullcontent' => esc_html__( 'Show Full Post Content', 'fitclub' ),
 				'show_excerpt'     => esc_html__( 'Show Excerpt', 'fitclub' )
 			)
-		)
-	);
-
-	// Front/Blog Page Content Section
-	$wp_customize->add_section(
-		'fitclub_frontpage_content_section',
-		array(
-			'priority'   => '20',
-			'title'      => esc_html__( 'Hide Content in Front/Blog Page', 'fitclub' ),
-			'panel'      => 'fitclub_additional_options'
-		)
-	);
-
-	// Front/Blog Page Content Setting
-	$wp_customize->add_setting(
-		'fitclub_frontpage_content',
-		array(
-			'default'            => '',
-			'capability'         => 'edit_theme_options',
-			'sanitize_callback'  => 'fitclub_sanitize_checkbox'
-		)
-	);
-
-	$wp_customize->add_control(
-		'fitclub_frontpage_content',
-		array(
-			'label'    => esc_html__( 'Check to hide blog posts/static page on front page.' , 'fitclub' ),
-			'section'  => 'fitclub_frontpage_content_section',
-			'priority' => 10,
-			'type'     => 'checkbox'
 		)
 	);
 

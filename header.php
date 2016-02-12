@@ -26,7 +26,7 @@
 		$page_id = get_theme_mod( 'fitclub_slide'.$i );
 		if ( !empty ( $page_id ) ) $slide++;
 	}
-	if(  ( ( $slide < 1 ) || get_theme_mod( 'fitclub_slider_activation', 0 ) != 1 ) && is_front_page() ) {
+	if(  ( ( $slide < 1 ) || get_theme_mod( 'fitclub_slider_activation', 0 ) != 1 ) && is_front_page() && !is_home() ) {
 		$class = " no-slider";
 	} else {
 		$class = "";
@@ -83,7 +83,7 @@
 					<div class="header-menu-wrapper clearfix">
 						<nav id="site-navigation" class="main-navigation" role="navigation">
 							<!--<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php //esc_html_e( 'Primary Menu', 'fitclub' ); ?></button>-->
-							<div class="menu-toggle hide">Menu</div>
+							<div class="menu-toggle hide"><?php esc_html_e( 'Menu', 'fitclub' ); ?></div>
 							<?php
 							wp_nav_menu(
 								array(
@@ -115,7 +115,7 @@
 <div class="body-content-wrapper">
 
 <?php
-if( get_theme_mod( 'fitclub_slider_activation' ) == '1' && is_front_page() ){
+if( get_theme_mod( 'fitclub_slider_activation' ) == '1' && is_front_page() && !is_home() ){
 	get_template_part( 'template-parts/content', 'slider' );
 }
 

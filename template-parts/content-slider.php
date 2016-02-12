@@ -16,18 +16,18 @@
 				'orderby'            => 'post__in'
 		) );
 
-		$fitclub_slider_image = '';
+		$fitclub_slider_image       = '';
 		$fitclub_slider_description = '';
-		$fitclub_slide_list = '';
-		$fitclub_slider_thumbnail = '';
-		$post_count = $get_featured_posts->post_count;
+		$fitclub_slide_list         = '';
+		$fitclub_slider_thumbnail   = '';
+		$post_count                 = $get_featured_posts->post_count;
 
 		$i = 1;
 		while( $get_featured_posts->have_posts() ) : $get_featured_posts->the_post();
-			$fitclub_slider_title        = get_the_title();
+			$fitclub_slider_title        = esc_html( get_the_title() );
 			$fitclub_slider_description  = get_the_excerpt();
-			$title_attribute             = get_the_title( $post->ID );
-			$fitclub_slider_image        = get_the_post_thumbnail($post->ID, '', array( 'title' => esc_attr( $title_attribute ), 'alt' => esc_attr( $title_attribute ) ));
+			$title_attribute             = esc_attr( get_the_title( $post->ID ) );
+			$fitclub_slider_image        = get_the_post_thumbnail($post->ID, '', array( 'title' => $title_attribute, 'alt' => $title_attribute ));
 
 			if( !empty ( $fitclub_slider_image ) ): // Only continue if feature image is present
 
@@ -36,7 +36,7 @@
 
 				$fitclub_slider_thumbnail .= '<a data-slide-index="' . $j . '" href="#">' . get_the_post_thumbnail( $post->ID, 'fitclub-slider-thumb', array( 'title' => esc_attr( $title_attribute ), 'alt' => esc_attr( $title_attribute ) ) ) . '</a>';
 
-				$fitclub_slide_list       .= '<li><div class="parallax-overlay"></div>'.$fitclub_slider_image.'<div class="slider-caption-wrapper">'.'<div class="tg-container">'.'<div class="caption-title">'.get_the_title().'</div>'.'<div class="caption-sub">'.get_the_excerpt().'</div>'.'<a class="slider-readmore" href="'.esc_url (get_permalink()).'">'.esc_html__( 'Read More', 'fitclub' ).'</a>'.'</div></div></li>';
+				$fitclub_slide_list       .= '<li><div class="parallax-overlay"></div>'.$fitclub_slider_image.'<div class="slider-caption-wrapper">'.'<div class="tg-container">'.'<div class="caption-title">'.get_the_title().'</div>'.'<div class="caption-sub">'.get_the_excerpt().'</div>'.'<a class="slider-readmore" href="'.esc_url( get_permalink() ).'">'.esc_html__( 'Read More', 'fitclub' ).'</a>'.'</div></div></li>';
 
 				if ( $i == $post_count ) {
 				?>
