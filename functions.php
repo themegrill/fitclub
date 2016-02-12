@@ -113,9 +113,9 @@ function fitclub_scripts() {
 
 	wp_enqueue_style( 'fitclub-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'fitclub-fontawesome', get_template_directory_uri().'/fontawesome/css/font-awesome.css', array(), '4.2.1' );
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri().'/fontawesome/css/font-awesome.css', array(), '4.2.1' );
 
-	wp_enqueue_script( 'fitclub-bxslider', get_template_directory_uri() . '/js/jquery.bxslider.min.js', array('jquery'), true );
+	wp_enqueue_script( 'bxslider', get_template_directory_uri() . '/js/jquery.bxslider.min.js', array('jquery'), true );
 
 	wp_enqueue_script( 'fitclub-custom', get_template_directory_uri() . '/js/fitclub-custom.js', array('jquery'), true );
 
