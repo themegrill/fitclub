@@ -113,7 +113,7 @@ function fitclub_customize_register( $wp_customize ) {
 		array(
 			'priority'    => 10,
 			'title'       => esc_html__( 'Slider Settings', 'fitclub' ),
-			'description' => '<strong>'.__( 'Note', 'fitclub').'</strong><br/>'.__( '1. To display the Slider first check Enable the slider below. Now create the page for each slider and enter title, text and featured image. Choose that pages in the dropdown options.', 'fitclub').'<br/>'.__( '2. The recommended size for the slider image is 1920 x 1000 pixels. For better functioning of slider use equal size images for each slide.', 'fitclub' ).'<br/>'.__( '3. If page do not have featured Image than that page will not included in slider show.', 'fitclub' ),
+			'description' => '<strong>'.esc_html__( 'Note', 'fitclub').'</strong><br/>'.esc_html__( '1. To display the Slider first check Enable the slider below. Now create the page for each slider and enter title, text and featured image. Choose that pages in the dropdown options.', 'fitclub').'<br/>'.esc_html__( '2. The recommended size for the slider image is 1920 x 1000 pixels. For better functioning of slider use equal size images for each slide.', 'fitclub' ).'<br/>'.esc_html__( '3. If page do not have featured Image than that page will not included in slider show.', 'fitclub' ),
 			'panel'       => 'fitclub_slider_options'
 		)
 	);
