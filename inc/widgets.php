@@ -164,7 +164,7 @@ class fitclub_service_widget extends WP_Widget {
 
 		global $post;
 		$title           = apply_filters( 'widget_title', isset( $instance[ 'title' ] ) ? esc_html( $instance[ 'title' ] ) : '');
-		$number          = isset( $instance[ 'number' ] ) ? absint( $instance[ 'number' ] ) : 5;
+		$number          = isset( $instance[ 'number' ] ) ? absint( $instance[ 'number' ] ) : 3;
 
 		$page_array = array();
 		$pages = get_pages();
@@ -287,7 +287,7 @@ class fitclub_about_us_widget extends WP_Widget {
 		?>
 		<input type="text" class="widefat custom_media_url" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo $instance[ 'background_image' ]; ?>" style="margin-top: 5px;"/>
 
-		<input type="button" class="button button-primary custom_media_button" id="custom_media_button_action" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="Upload Image" style="margin-top: 5px; margin-right: 30px;" onclick="imageWidget.uploader( '<?php echo $this->get_field_id( 'background_image' ); ?>' ); return false;"/>
+		<input type="button" class="button button-primary custom_media_button" id="custom_media_button_action" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php esc_attr_e( 'Upload Image', 'fitclub' ); ?>" style="margin-top: 5px; margin-right: 30px;" onclick="imageWidget.uploader( '<?php echo $this->get_field_id( 'background_image' ); ?>' ); return false;"/>
 		</p>
 
 		<p>
@@ -447,7 +447,7 @@ class fitclub_call_to_action_widget extends WP_Widget {
 			?>
 			<input type="text" class="widefat custom_media_url" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo $instance[ 'background_image' ]; ?>" style="margin-top: 5px;"/>
 
-			<input type="button" class="button button-primary custom_media_button" id="custom_media_button_action" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="Upload Image" style="margin-top: 5px; margin-right: 30px;" onclick="imageWidget.uploader( '<?php echo $this->get_field_id( 'background_image' ); ?>' ); return false;"/>
+			<input type="button" class="button button-primary custom_media_button" id="custom_media_button_action" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php esc_attr_e( 'Upload Image', 'fitclub' ); ?>" style="margin-top: 5px; margin-right: 30px;" onclick="imageWidget.uploader( '<?php echo $this->get_field_id( 'background_image' ); ?>' ); return false;"/>
 		</p>
 
 		<strong><?php esc_html_e( 'Other Settings :', 'fitclub' ); ?></strong><br />
@@ -534,7 +534,7 @@ class fitclub_testimonial_widget extends WP_Widget {
 		$defaults[ 'background_color' ] = '#575757';
 		$defaults[ 'background_image' ] = '';
 		$defaults['title']              = '';
-		$defaults['number']             = '3';
+		$defaults['number']             = 3;
 
 		$instance = wp_parse_args( (array) $instance, $defaults );
 
@@ -559,7 +559,7 @@ class fitclub_testimonial_widget extends WP_Widget {
 			?>
 			<input type="text" class="widefat custom_media_url" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo $instance[ 'background_image' ]; ?>" style="margin-top: 5px;"/>
 
-			<input type="button" class="button button-primary custom_media_button" id="custom_media_button_action" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="Upload Image" style="margin-top: 5px; margin-right: 30px;" onclick="imageWidget.uploader( '<?php echo $this->get_field_id( 'background_image' ); ?>' ); return false;"/>
+			<input type="button" class="button button-primary custom_media_button" id="custom_media_button_action" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php esc_attr_e( 'Upload Image', 'fitclub' ); ?>" style="margin-top: 5px; margin-right: 30px;" onclick="imageWidget.uploader( '<?php echo $this->get_field_id( 'background_image' ); ?>' ); return false;"/>
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'fitclub' ); ?></label>
@@ -578,7 +578,7 @@ class fitclub_testimonial_widget extends WP_Widget {
 	function update( $new_instance, $old_instance ) {
 		$instance                      = $old_instance;
 
-		$instance['background_color']  =  $new_instance['background_color'];
+		$instance['background_color']  =  esc_attr($new_instance['background_color']);
 		$instance['background_image']  =  esc_url_raw( $new_instance['background_image'] );
 		$instance[ 'title' ]           = strip_tags( $new_instance[ 'title' ] );
 		$instance[ 'number' ]          = absint( $new_instance[ 'number' ] );
@@ -688,7 +688,7 @@ class fitclub_team_widget extends WP_Widget {
 
 	function form( $instance ) {
 		$defaults['title']              = '';
-		$defaults['number']             = '3';
+		$defaults['number']             = 3;
 
 		$instance         = wp_parse_args( (array) $instance, $defaults );
 		$title            = esc_attr( $instance[ 'title' ] );
