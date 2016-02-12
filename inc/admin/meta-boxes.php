@@ -96,8 +96,8 @@ function fitclub_meta_form( $fitclub_metabox_field ) {
 
 			// Team Designation
 			case 'fitclub_designation':
-				esc_html_e( 'Show designation in Our Team Widget. </br>', 'fitclub' );
-				echo '<input type="text" name="'.$field['id'].'" value="'.esc_html($layout_meta).'"/><br>';
+				esc_html_e( 'Show designation in Our Team Widget.', 'fitclub' );
+				echo '<input type="text" name="'.$field['id'].'" value="'.esc_attr($layout_meta).'"/><br>';
 
 			break;
 		}
@@ -131,7 +131,7 @@ function fitclub_save_custom_meta( $post_id ) {
 	foreach ( $fitclub_page_layout as $field ) {
 		//Execute this saving function
 		$old = get_post_meta( $post_id, $field['id'], true);
-		$new = sanitize_key($_POST[$field['id']]);
+		$new = sanitize_text_field($_POST[$field['id']]);
 		if ($new && $new != $old) {
 			update_post_meta($post_id, $field['id'], $new);
 		} elseif ('' == $new && $old) {
@@ -144,7 +144,7 @@ function fitclub_save_custom_meta( $post_id ) {
 		// loop through fields and save the data
 		foreach ( $fitclub_metabox_field_designation as $field ) {
 			$old = get_post_meta( $post_id, $field['id'], true );
-			$new = sanitize_key($_POST[$field['id']]);
+			$new = sanitize_text_field($_POST[$field['id']]);
 			if ($new && $new != $old) {
 				update_post_meta( $post_id,$field['id'],$new );
 			} elseif ('' == $new && $old) {
