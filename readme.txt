@@ -47,8 +47,12 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == CHANGE LOG ==
-= Version 1.0 =
-* All brand new.
+
+= Version 1.0.2 =
+Tweaks:
+* Minify primary color output css
+* Added template to handle frontpage and blog page
+* Fix escaping on customizer settings and widgets
 
 = Version 1.0.1 =
 Feature:
@@ -58,3 +62,6 @@ Fix:
 * Multiple h1 tags issue
 Tweaks:
 * New Screenshot
+
+= Version 1.0 =
+* All brand new.
