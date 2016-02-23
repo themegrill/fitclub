@@ -17,7 +17,7 @@
 	$fitclub_layout = fitclub_layout_class();
 	?>
 	<div id="content" class="site-content">
-		<main id="main" class="clearfix <?php echo $fitclub_layout; ?>">
+		<main id="main" class="clearfix <?php echo esc_url($fitclub_layout); ?>">
 			<div class="tg-container">
 				<div id="primary">
 					<?php
