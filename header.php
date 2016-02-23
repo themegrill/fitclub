@@ -99,7 +99,7 @@
 								<i class="fa fa-search"> </i>
 							</div> <!-- search-icon end -->
 							<div class="header-search-box">
-								<div class="close"> × </div>
+								<div class="close"><i class="fa fa-close"></i></div>
 								<?php get_search_form(); ?>
 							</div> <!-- header-search-box end -->
 						</div> <!-- search-wrapper end -->
