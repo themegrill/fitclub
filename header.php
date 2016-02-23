@@ -82,7 +82,6 @@
 
 					<div class="header-menu-wrapper clearfix">
 						<nav id="site-navigation" class="main-navigation" role="navigation">
-							<!--<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php //esc_html_e( 'Primary Menu', 'fitclub' ); ?></button>-->
 							<div class="menu-toggle hide"><?php esc_html_e( 'Menu', 'fitclub' ); ?></div>
 							<?php
 							wp_nav_menu(
