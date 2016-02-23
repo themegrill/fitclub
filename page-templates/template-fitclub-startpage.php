@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Front Page Template
+ * Template Name: FitClub Startpage
  *
  * @package ThemeGrill
  * @subpackage fitclub
