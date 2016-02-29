@@ -48,7 +48,14 @@ and we will include it within the theme from next version update.
 
 == CHANGE LOG ==
 
-= Version 1.0.2 =
+
+= Version 1.0.4 =
+Tweaks:
+* Handle IE script properly
+* Remove customizer js
+* Other minor escaping fixes
+
+= Version 1.0.3 =
 Tweaks:
 * Removed commented code
 * Escapes layout class
