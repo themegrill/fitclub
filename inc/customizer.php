@@ -552,46 +552,42 @@ function fitclub_customize_register( $wp_customize ) {
 			'type'     => 'checkbox'
 		)
 	);
-}
 
-
-// Checkbox sanitization
-function fitclub_sanitize_checkbox($input) {
-	if ( $input == 1 ) {
-		return 1;
-	} else {
-		return '';
+	// Checkbox sanitization
+	function fitclub_sanitize_checkbox($input) {
+		if ( $input == 1 ) {
+			return 1;
+		} else {
+			return '';
+		}
 	}
-}
-// Sanitize Integer
-function fitclub_sanitize_integer( $input ) {
-	if( is_numeric( $input ) ) {
-		return intval( $input );
+	// Sanitize Integer
+	function fitclub_sanitize_integer( $input ) {
+		if( is_numeric( $input ) ) {
+			return intval( $input );
+		}
 	}
-}
-// Sanitize Radio Button
-function fitclub_radio_sanitize( $input, $setting ) {
+	// Sanitize Radio Button
+	function fitclub_radio_sanitize( $input, $setting ) {
 
-	// Ensure input is a slug.
-	$input = sanitize_key( $input );
+		// Ensure input is a slug.
+		$input = sanitize_key( $input );
 
-	// Get list of choices from the control associated with the setting.
-	$choices = $setting->manager->get_control( $setting->id )->choices;
+		// Get list of choices from the control associated with the setting.
+		$choices = $setting->manager->get_control( $setting->id )->choices;
 
-	// If the input is a valid key, return it; otherwise, return the default.
-	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
-}
-// Sanitize Color
-function fitclub_hex_color_sanitize( $color ) {
-	if ($unhashed = sanitize_hex_color_no_hash($color))
-		return '#' . $unhashed;
-
-	return $color;
-}
-// Escape Color
-function fitclub_color_escaping_sanitize( $input ) {
-	$input = esc_attr($input);
-	return $input;
+		// If the input is a valid key, return it; otherwise, return the default.
+		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+	}
+	// Sanitize Color
+	function fitclub_hex_color_sanitize( $color ) {
+		return sanitize_hex_color( $color );
+	}
+	// Escape Color
+	function fitclub_color_escaping_sanitize( $input ) {
+		$input = esc_attr($input);
+		return $input;
+	}
 }
 
 add_action( 'customize_register', 'fitclub_customize_register' );
