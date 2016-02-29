@@ -595,11 +595,3 @@ function fitclub_color_escaping_sanitize( $input ) {
 }
 
 add_action( 'customize_register', 'fitclub_customize_register' );
-
-/**
- * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
- */
-function fitclub_customize_preview_js() {
-	wp_enqueue_script( 'fitclub_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
-}
-add_action( 'customize_preview_init', 'fitclub_customize_preview_js' );
