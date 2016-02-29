@@ -50,6 +50,12 @@ and we will include it within the theme from next version update.
 
 = Version 1.0.2 =
 Tweaks:
+* Removed commented code
+* Escapes layout class
+* Changed template name to handle starting page
+
+= Version 1.0.2 =
+Tweaks:
 * Minify primary color output css
 * Added template to handle frontpage and blog page
 * Fix escaping on customizer settings and widgets
