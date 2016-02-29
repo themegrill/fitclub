@@ -168,7 +168,7 @@ add_action( 'wp_head', 'fitclub_custom_css' );
  */
 function fitclub_custom_css() {
 
-	$primary_color   = get_theme_mod( 'fitclub_primary_color', '#32c4d1' );
+	$primary_color   = esc_attr( get_theme_mod( 'fitclub_primary_color', '#32c4d1' ) );
 	$primary_opacity = fitclub_hex2rgb($primary_color);
 	$primary_dark    = fitclub_darkcolor($primary_color, -20);
 
