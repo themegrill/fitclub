@@ -176,9 +176,9 @@ require get_template_directory() . '/inc/admin/meta-boxes.php';
 
 /* Add Support for The Event Calendar Plugin by Modern Tribe */
 if( class_exists( 'Tribe__Events__Main' ) ) {
-	add_action( 'wp_footer', 'fitclub_events_scripts' );
+	add_action( 'wp_footer', 'fitclub_events_scripts', 100 );
 	add_action( 'tribe_events_before_list_widget', 'fitclub_events_opening_div');
-	add_action( 'tribe_events_before_list_widget', 'fitclub_events_closing_div');
+	add_action( 'tribe_events_after_list_widget', 'fitclub_events_closing_div');
 	// Loads custom widget for events
 	require get_template_directory() . '/inc/event-widget.php';
 }
@@ -188,7 +188,7 @@ if( class_exists( 'Tribe__Events__Main' ) ) {
 function fitclub_events_scripts(){ ?>
 <script type="text/javascript">
 if ( typeof jQuery.fn.bxSlider !== 'undefined' ) {
-	jQuery('.tg-events-wrapper').bxSlider({
+	jQuery('.tg-tribe-events-list-widget .tg-events-wrapper').bxSlider({
 		auto: true,
 		pager: false,
 		caption: true,

@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php
 $events_label_plural = tribe_get_event_label_plural();
 
-$posts = tribe_get_list_widget_events();
+$posts = apply_filters( 'tg_tribe_get_list_widget_events', TG_Tribe__Events__List_Widget::$posts );
 
 // Check if any event posts are found.
 if ( $posts ) : ?>

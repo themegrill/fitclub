@@ -30,13 +30,14 @@ class TG_Tribe__Events__List_Widget extends Tribe__Events__List_Widget {
 	 * @param array  $control_options
 	 */
 	public function __construct(
-		$id_base = 'tribe-events-list-widget clearfix',
+		$id_base = 'tg-tribe-events-list-widget',
 		$name = 'TG: Events Slider',
 		$widget_options = array(
-								'classname' => 'tribe-events-list-widget clearfix',
+								'classname' => 'tg-tribe-events-list-widget',
 								'description' => 'A Slider Widget that displays events from The Event Calendar Plugin'
 							),
-		$control_options = array( 'id_base' => 'tribe-events-list-widget' ) ) {
+		$control_options = array( 'id_base' => 'tg-tribe-events-list-widget' )
+		){
 
 		parent::__construct( $id_base, $name, $widget_options, $control_options );
 	}
@@ -63,7 +64,7 @@ class TG_Tribe__Events__List_Widget extends Tribe__Events__List_Widget {
 	 * @param string $namespace     The namespace for the widget template stuff.
 	 * @param string $pluginPath    The pluginpath so we can locate the template stuff.
 	 */
-	public function widget_output( $args, $instance, $template_name = 'widgets/list-widget' ) {
+	public function widget_output( $args, $instance, $template_name = 'widgets/tg-list-widget' ) {
 		global $wp_query, $tribe_ecp, $post;
 
 		$instance = wp_parse_args(
