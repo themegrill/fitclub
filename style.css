@@ -1784,11 +1784,11 @@ body {
     margin: 0;
 }
 
-.page-template-template-fitclub-startpage section.widget.tribe-events-list-widget {
+.page-template-template-fitclub-startpage section.widget.tg-tribe-events-list-widget {
     background: #f5f5f5 none repeat scroll 0 0;
 }
 
-.tribe-events-list-widget .section-title {
+.tg-tribe-events-list-widget .section-title {
     background: #b5d043 none repeat scroll 0 0;
     color: #ffffff;
     float: left;
@@ -1804,7 +1804,7 @@ body {
     width: 22%;
 }
 
-.tribe-events-list-widget .section-title::before {
+.tg-tribe-events-list-widget .section-title::before {
     border-bottom: 49px solid transparent;
     border-left: 32px solid #b5d043;
     border-top: 49px solid transparent;
@@ -1816,7 +1816,7 @@ body {
     width: 0;
 }
 
-.tribe-events-list-widget .section-title::after {
+.tg-tribe-events-list-widget .section-title::after {
     background: #b5d043 none repeat scroll 0 0;
     bottom: 0;
     content: "";
@@ -1826,7 +1826,7 @@ body {
     width: 1000%;
 }
 
-.tribe-events-list-widget .entry-title {
+.tg-tribe-events-list-widget .entry-title {
     color: #333333;
     font-size: 16px;
     font-weight: 600;
@@ -1835,7 +1835,7 @@ body {
     text-transform: capitalize;
 }
 
-.tribe-events-list-widget .tg-events {
+.tg-tribe-events-list-widget .tg-events {
     content: "";
     display: table;
     float: left;
@@ -1845,19 +1845,19 @@ body {
     width: 42%;
 }
 
-.tribe-events-list-widget .bx-viewport {
+.tg-tribe-events-list-widget .bx-viewport {
     height: auto !important;
 }
 
-.tribe-events-list-widget ol {
+.tg-tribe-events-list-widget ol {
     margin: 0 0 0 20px;
 }
 
-.tribe-events-list-widget ol li {
+.tg-tribe-events-list-widget ol li {
     margin: 0;
 }
 
-.tribe-events-list-widget .duration,
+.tg-tribe-events-list-widget .duration,
 .tribe-events-tooltip .duration {
     color: #a8a5a5;
     font-size: 14px;
@@ -1865,7 +1865,7 @@ body {
     font-weight: 400;
 }
 
-.tribe-events-list-widget .tribe-events-widget-link {
+.tg-tribe-events-list-widget .tribe-events-widget-link {
     background: #b5d043 none repeat scroll 0 0;
     border-radius: 4px;
     float: right;
@@ -1875,7 +1875,7 @@ body {
     width: 130px;
 }
 
-.tribe-events-list-widget .tribe-events-widget-link a {
+.tg-tribe-events-list-widget .tribe-events-widget-link a {
     color: #fff;
     font-size: 14px;
     height: 30px;
@@ -1946,11 +1946,11 @@ body {
     vertical-align: top;
 }
 
-.tribe-events-list-widget .bx-controls.bx-has-controls-direction {
+.tg-tribe-events-list-widget .bx-controls.bx-has-controls-direction {
     display: none;
 }
 
-.tribe-events-list-widget .tg-container .no-event {
+.tg-tribe-events-list-widget .tg-container .no-event {
     float: left;
     font-size: 18px;
     line-height: 26px;
@@ -2007,14 +2007,14 @@ body {
     color: #fff;
 }
 
-.tribe-events-list-widget .no-event {
+.tg-tribe-events-list-widget .no-event {
     float: left;
     padding: 38px 50px;
     width: 78%;
     margin: 0;
 }
 
-.tribe-events-list-widget::after {
+.tg-tribe-events-list-widget::after {
     clear: both;
     content: "";
     display: table;
@@ -3517,7 +3517,7 @@ ul.tribe-events-sub-nav a:hover {
         font-size: 15px;
         padding: 10px 30px;
     }
-    .page-template-template-fitclub-startpage section.widget.tribe-events-list-widget {
+    .page-template-template-fitclub-startpage section.widget.tg-tribe-events-list-widget {
         width: 100%;
     }
     .trainer-block:hover .trainer-title {
@@ -3536,14 +3536,14 @@ ul.tribe-events-sub-nav a:hover {
         position: absolute;
         width: 90%;
     }
-    .tribe-events-list-widget .section-title {
+    .tg-tribe-events-list-widget .section-title {
         font-size: 20px;
         width: 25%;
     }
-    .tribe-events-list-widget .duration {
+    .tg-tribe-events-list-widget .duration {
         font-size: 12px;
     }
-    .tribe-events-list-widget .no-event {
+    .tg-tribe-events-list-widget .no-event {
   width: 60%;
 }
 }
@@ -3606,15 +3606,15 @@ ul.tribe-events-sub-nav a:hover {
     .widget_service_block .tg-column-wrapper {
         text-align: center;
     }
-    .tribe-events-list-widget .section-title {
+    .tg-tribe-events-list-widget .section-title {
         font-size: 20px;
         width: 32%;
     }
-    .tribe-events-list-widget .tg-events {
+    .tg-tribe-events-list-widget .tg-events {
         margin-left: 30px;
         width: 40%;
     }
-    .tribe-events-list-widget .tg-container .no-event {
+    .tg-tribe-events-list-widget .tg-container .no-event {
         font-size: 15px;
     }
     .section-wrapper {
@@ -3894,41 +3894,41 @@ ul.tribe-events-sub-nav a:hover {
     #home-slider #bx-pager {
         width: 47px;
     }
-    .tribe-events-list-widget .section-title {
+    .tg-tribe-events-list-widget .section-title {
         font-size: 16px;
         line-height: 19px;
         padding: 23px 25px 23px 0;
         width: 30%;
     }
-    .tribe-events-list-widget .section-title::before {
+    .tg-tribe-events-list-widget .section-title::before {
         border-bottom: 32px solid transparent;
         border-left: 22px solid #b5d043;
         border-top: 32px solid transparent;
         right: -22px;
     }
-    .tribe-events-list-widget .entry-title {
+    .tg-tribe-events-list-widget .entry-title {
         font-size: 12px;
         line-height: 17px;
         margin: 15px 0 0;
     }
-    .tribe-events-list-widget .tg-events {
+    .tg-tribe-events-list-widget .tg-events {
         margin: 0 0 0 20px;
         padding: 0;
         width: 42%;
     }
-    .tribe-events-list-widget .duration {
+    .tg-tribe-events-list-widget .duration {
         font-size: 9px;
     }
-    .tribe-events-list-widget .tribe-events-widget-link {
+    .tg-tribe-events-list-widget .tribe-events-widget-link {
         padding: 5px;
         width: 100px;
         margin: 18px 0 0;
     }
-    .tribe-events-list-widget .tribe-events-widget-link a {
+    .tg-tribe-events-list-widget .tribe-events-widget-link a {
         font-size: 11px;
         line-height: 26px;
     }
-    .tribe-events-list-widget .tg-container .no-event {
+    .tg-tribe-events-list-widget .tg-container .no-event {
         font-size: 13px;
         padding: 14px 0 0 60px;
     }
@@ -4082,7 +4082,7 @@ ul.tribe-events-sub-nav a:hover {
     .page-template-template-team-collection .trainer-collecton-wrapper .clearfix {
         display: none;
     }
-    .tribe-events-list-widget .no-event{
+    .tg-tribe-events-list-widget .no-event{
     	width: 100%;
     	text-align: center;
     }
@@ -4200,30 +4200,30 @@ ul.tribe-events-sub-nav a:hover {
         display: block;
         margin: 0 auto 25px;
     }
-    .tribe-events-list-widget .section-title::after,
-    .tribe-events-list-widget .section-title::before {
+    .tg-tribe-events-list-widget .section-title::after,
+    .tg-tribe-events-list-widget .section-title::before {
         display: none;
     }
-    .tribe-events-list-widget .section-title {
+    .tg-tribe-events-list-widget .section-title {
         border-radius: 3px;
         padding: 10px 0;
         text-align: center;
         width: 100%;
     }
-    .tribe-events-list-widget .tg-events {
+    .tg-tribe-events-list-widget .tg-events {
         float: none;
         padding: 0;
         text-align: center;
         width: 80%;
         margin: 0 auto;
     }
-    .tribe-events-list-widget .tribe-events-widget-link {
+    .tg-tribe-events-list-widget .tribe-events-widget-link {
         float: none;
         margin: 10px auto 15px;
         padding: 5px;
         width: 100px;
     }
-    .tribe-events-list-widget .tg-container .no-event {
+    .tg-tribe-events-list-widget .tg-container .no-event {
         content: "";
         display: table;
         float: none;
@@ -4308,7 +4308,7 @@ ul.tribe-events-sub-nav a:hover {
     .page-template-template-team .entry-thumbnail {
         width: 100%;
     }
-    .tribe-events-list-widget .bx-wrapper {
+    .tg-tribe-events-list-widget .bx-wrapper {
         width: 100%;
     }
 }
