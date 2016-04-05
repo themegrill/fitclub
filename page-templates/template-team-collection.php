@@ -70,12 +70,12 @@
 							</figure>
 							<div class="trainer-page-content-wrapper">
 								<h3 class="trainer-page-title">
-									<a href="<?php echo get_permalink() ?>" title="<?php echo $title_attribute; ?>" alt ="<?php echo $title_attribute; ?>"><?php the_title(); ?></a>
+									<a href="<?php echo esc_url( get_permalink() ); ?>" title="<?php echo $title_attribute; ?>" alt ="<?php echo $title_attribute; ?>"><?php the_title(); ?></a>
 								</h3>
 								<div class="trainer-page-content">
 									<?php the_excerpt(); ?>
 								</div>
-								<a href="<?php echo get_permalink(); ?>" title="<?php echo $title_attribute; ?>" class="trainer-readmore"> Read More </a>
+								<a href="<?php echo esc_url( get_permalink() ); ?>" title="<?php echo $title_attribute; ?>" class="trainer-readmore"><?php esc_html_e('Read More', 'fitclub'); ?></a>
 							</div>
 
 						</div><!-- .tg-column-3 -->

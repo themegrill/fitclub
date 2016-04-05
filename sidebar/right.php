@@ -9,7 +9,7 @@
 ?>
 
 <div id="secondary">
-	<?php do_action( 'fitclub_before_sidebar' ); ?>
+	<?php do_action( 'fitclub_before_right_sidebar' ); ?>
 
 		<?php if ( ! dynamic_sidebar( 'fitclub_right_sidebar' ) ) :
 
@@ -28,5 +28,5 @@
 			);
 		endif;
 
-	do_action( 'fitclub_after_sidebar' ); ?>
+	do_action( 'fitclub_after_right_sidebar' ); ?>
 </div>
