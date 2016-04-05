@@ -25,7 +25,7 @@
 			<?php
 			$class = 'no-date';
 			if ( get_theme_mod('fitclub_postmeta', '') == '' && get_theme_mod('fitclub_postmeta_date', '') == '' ):
-				$class = '';
+				$class = 'with-date';
 			?>
 			<span class="posted-on">
 				<a href="<?php esc_url( get_permalink() ); ?>">

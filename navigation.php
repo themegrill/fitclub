@@ -41,8 +41,8 @@ if ( is_single() ) {
 	else {
 	?>
 		<ul class="default-wp-page clearfix">
-			<li class="previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'fitclub' ) . '</span> %title' ); ?></li>
-			<li class="next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'fitclub' ) . '</span>' ); ?></li>
+			<li class="previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . esc_html_x( '&larr;', 'Previous post link', 'fitclub' ) . '</span> %title' ); ?></li>
+			<li class="next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . esc_html_x( '&rarr;', 'Next post link', 'fitclub' ) . '</span>' ); ?></li>
 		</ul>
 	<?php
 	}

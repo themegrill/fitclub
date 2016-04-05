@@ -88,8 +88,8 @@ function fitclub_meta_form( $fitclub_metabox_field ) {
 			case 'fitclub_page_layout':
 				if( empty( $layout_meta ) ) { $layout_meta = 'default_layout'; } ?>
 
-				<input class="post-format" type="radio" name="<?php echo $field['id']; ?>" value="<?php echo $field['value']; ?>" <?php checked( $field['value'], $layout_meta ); ?>/>
-				<label class="post-format-icon"><?php echo $field['label']; ?></label><br/>
+				<input class="post-format" type="radio" name="<?php echo esc_attr($field['id']); ?>" value="<?php echo esc_attr($field['value']); ?>" <?php checked( $field['value'], $layout_meta ); ?>/>
+				<label class="post-format-icon"><?php echo esc_html($field['label']); ?></label><br/>
 				<?php
 
 			break;

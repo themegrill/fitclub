@@ -27,12 +27,12 @@
 		if ( !empty ( $page_id ) ) $slide++;
 	}
 	if(  ( ( $slide < 1 ) || get_theme_mod( 'fitclub_slider_activation', 0 ) != 1 ) && is_front_page() && !is_home() ) {
-		$class = " no-slider";
+		$class = "no-slider";
 	} else {
-		$class = "";
+		$class = "slider-active";
 	}
 	?>
-	<div id="page" class="hfeed site<?php echo $class; ?>">
+	<div id="page" class="hfeed site <?php echo esc_attr($class); ?>">
 		<?php do_action( 'fitclub_before_header' ); ?>
 		<header id="masthead" class="site-header" role="banner">
 			<div class="header-wrapper clearfix">

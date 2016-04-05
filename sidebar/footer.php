@@ -26,12 +26,12 @@ if( !is_active_sidebar( 'fitclub_footer_sidebar1' ) &&
 			<div class="tg-column-wrapper">
 				<?php
 
-				$footer_sidebar_count = get_theme_mod('fitclub_footer_widgets', '4');
+				$footer_sidebar_count = absint(get_theme_mod('fitclub_footer_widgets', '4'));
 				$footer_sidebar_class = 'tg-column-'. $footer_sidebar_count;
 
 				for ($i = 1; $i <= $footer_sidebar_count; $i++ ) {
 					?>
-					<div class="<?php echo $footer_sidebar_class; ?> footer-block">
+					<div class="<?php echo esc_attr($footer_sidebar_class); ?> footer-block">
 
 					<?php
 					if ( is_active_sidebar( 'fitclub_footer_sidebar'.$i) ) {

@@ -30,7 +30,7 @@ FitClub is distributed under the terms of the GNU GPL
 == THEME USAGE ==
 
 = Theme Instruction =
-Get theme instruction at http://themegrill.com/theme-instruction/fitclub
+Get theme instruction at http://docs.themegrill.com/fitclub/
 
 = Free Support =
 Get free support at http://themegrill.com/support-forum
@@ -48,6 +48,9 @@ and we will include it within the theme from next version update.
 
 == CHANGE LOG ==
 
+= Version 1.0.5 =
+Tweaks:
+* Update proper escaping function for layout class
 
 = Version 1.0.4 =
 Tweaks:
