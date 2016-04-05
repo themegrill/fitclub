@@ -51,7 +51,6 @@ and we will include it within the theme from next version update.
 = Version 1.0.5 =
 Tweaks:
 * Update proper escaping function for layout class
-* Minify Output CSS
 
 = Version 1.0.4 =
 Tweaks:
