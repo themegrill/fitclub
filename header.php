@@ -109,7 +109,6 @@
 		</header>
 
 	<?php do_action( 'fitclub_after_header' ); ?>
-	<?php do_action( 'fitclub_before_main' ); ?>
 
 <div class="body-content-wrapper">
 

@@ -10,13 +10,13 @@
 
 <?php get_header(); ?>
 
-	<?php do_action( 'fitclub_before_content' ); ?>
+	<?php do_action( 'fitclub_before_body_content' ); ?>
 
 	<?php if( is_active_sidebar( 'fitclub_frontpage_section' ) ) {
 		if( !dynamic_sidebar( 'fitclub_frontpage_section' ) ):
 		endif;
 	} ?>
 
-	<?php do_action( 'fitclub_after_content' ); ?>
+	<?php do_action( 'fitclub_before_body_content' ); ?>
 
 <?php get_footer(); ?>
