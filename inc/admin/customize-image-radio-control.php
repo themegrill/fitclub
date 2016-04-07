@@ -37,7 +37,7 @@ class FitClub_Image_Radio_Control extends WP_Customize_Control {
 					<li style="display: inline;">
 					<label>
 						<input <?php $this->link(); ?>style = 'display:none' type="radio" value="<?php echo esc_attr( $value ); ?>" name="<?php echo esc_attr( $name ); ?>" <?php $this->link(); checked( $this->value(), $value ); ?> />
-						<img src = '<?php echo esc_html( $label ); ?>' class = '<?php echo $class; ?>' />
+						<img src = '<?php echo esc_html( $label ); ?>' class = '<?php echo esc_attr($class); ?>' />
 					</label>
 					</li>
 					<?php

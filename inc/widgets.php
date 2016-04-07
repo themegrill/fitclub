@@ -133,18 +133,18 @@ class fitclub_service_widget extends WP_Widget {
 
 		$instance = wp_parse_args( (array) $instance, $defaults );
 
-		$title           =  esc_attr( $instance['title'] );
-		$number          =  absint( $instance[ 'number' ] );
+		$title           =  $instance['title'];
+		$number          =  $instance[ 'number' ];
 		?>
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'fitclub' ); ?></label>
-			<input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
+			<input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
 		</p>
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of pages to display:', 'fitclub' ); ?></label>
-			<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" size="3" />
+			<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo absint($number); ?>" size="3" />
 		</p>
 
 		<p><?php esc_html_e( 'Note: Create the pages and select Service Template to display Services pages.', 'fitclub' ); ?></p>
@@ -164,7 +164,7 @@ class fitclub_service_widget extends WP_Widget {
 		extract( $instance );
 
 		global $post;
-		$title           = apply_filters( 'widget_title', isset( $instance[ 'title' ] ) ? esc_html( $instance[ 'title' ]) : '');
+		$title           = apply_filters( 'widget_title', isset( $instance[ 'title' ] ) ? $instance[ 'title' ] : '');
 		$number          = isset( $instance[ 'number' ] ) ? absint( $instance[ 'number' ] ) : 3;
 
 		$page_array = array();
@@ -190,7 +190,7 @@ class fitclub_service_widget extends WP_Widget {
 		<div  class="section-wrapper">
 			<div class="tg-container">
 				<div class="classes-wrapper">
-					<?php if( !empty( $title ) ) echo $before_title .'<span>'. $title .'</span>'. $after_title; ?>
+					<?php if( !empty( $title ) ) echo $before_title .'<span>'. esc_html($title) .'</span>'. $after_title; ?>
 
 					<?php
 					if( !empty( $page_array ) ) {
@@ -264,36 +264,36 @@ class fitclub_about_us_widget extends WP_Widget {
 
 		$instance = wp_parse_args( (array) $instance, $defaults );
 
-		$title            = esc_attr( $instance[ 'title' ] );
-		$background_color = esc_attr( $instance[ 'background_color' ] );
-		$background_image = esc_url( $instance[ 'background_image' ] );
-		$page_id          = absint( $instance[ 'page_id' ] );
-		$button_text      = esc_attr( $instance[ 'button_text' ] );
-		$button_url       = esc_url( $instance[ 'button_url' ] );
-		$button_icon      = esc_attr( $instance[ 'button_icon' ] );
+		$title            = $instance[ 'title' ];
+		$background_color = $instance[ 'background_color' ];
+		$background_image = $instance[ 'background_image' ];
+		$page_id          = $instance[ 'page_id' ];
+		$button_text      = $instance[ 'button_text' ];
+		$button_url       = $instance[ 'button_url' ];
+		$button_icon      = $instance[ 'button_icon' ];
 		?>
 		<p>
 		<strong><?php esc_html_e( 'Design Settings:', 'fitclub' ); ?></strong><br />
 
 		<label for="<?php echo $this->get_field_id( 'background_color' ); ?>"><?php esc_html_e( 'Background Color:', 'fitclub' ); ?></label><br />
-			<input class="my-color-picker" type="text" data-default-color="#575757" id="<?php echo $this->get_field_id( 'background_color' ); ?>" name="<?php echo $this->get_field_name( 'background_color' ); ?>" value="<?php echo $background_color; ?>" />
+			<input class="my-color-picker" type="text" data-default-color="#575757" id="<?php echo $this->get_field_id( 'background_color' ); ?>" name="<?php echo $this->get_field_name( 'background_color' ); ?>" value="<?php echo esc_attr($background_color); ?>" />
 		</p>
 		<p>
 		<label for="<?php echo $this->get_field_id( 'background_image' ); ?>"> <?php esc_html_e( 'Background Image:', 'fitclub' ); ?> </label> <br />
 
 		<?php
 		if ( $background_image  != '' ) :
-			echo '<img id="' . $this->get_field_id( 'background_image' . 'preview') . '"src="' . $background_image . '"style="max-width: 250px;" /><br />';
+			echo '<img id="' . $this->get_field_id( 'background_image' . 'preview') . '"src="' . esc_url($background_image) . '"style="max-width: 250px;" /><br />';
 		endif;
 		?>
-		<input type="text" class="widefat custom_media_url" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo $background_image; ?>" style="margin-top: 5px;"/>
+		<input type="text" class="widefat custom_media_url" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo esc_url($background_image); ?>" style="margin-top: 5px;"/>
 
 		<input type="button" class="button button-primary custom_media_button" id="custom_media_button_action" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php esc_attr_e( 'Upload Image', 'fitclub' ); ?>" style="margin-top: 5px; margin-right: 30px;" onclick="imageWidget.uploader( '<?php echo $this->get_field_id( 'background_image' ); ?>' ); return false;"/>
 		</p>
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'fitclub' ); ?></label>
-			<input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
+			<input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
 		</p>
 
 		<p><?php esc_html_e('Select a page to display Title, Excerpt and Featured image.', 'fitclub') ?></p>
@@ -302,23 +302,23 @@ class fitclub_about_us_widget extends WP_Widget {
 		<?php wp_dropdown_pages( array(
 			'show_option_none'  => ' ',
 			'name'              => $this->get_field_name( 'page_id' ),
-			'selected'          => $page_id
+			'selected'          => absint($page_id)
 			) );
 		?>
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'button_text' ); ?>"><?php esc_html_e( 'Button Text:', 'fitclub' ); ?></label>
-			<input id="<?php echo $this->get_field_id( 'button_text' ); ?>" name="<?php echo $this->get_field_name( 'button_text' ); ?>" type="text" value="<?php echo $button_text; ?>" />
+			<input id="<?php echo $this->get_field_id( 'button_text' ); ?>" name="<?php echo $this->get_field_name( 'button_text' ); ?>" type="text" value="<?php echo esc_attr($button_text); ?>" />
 		</p>
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'button_url' ); ?>"><?php esc_html_e( 'Button Redirect Link:', 'fitclub' ); ?></label>
-			<input id="<?php echo $this->get_field_id( 'button_url' ); ?>" name="<?php echo $this->get_field_name( 'button_url' ); ?>" type="text" value="<?php echo $button_url; ?>" />
+			<input id="<?php echo $this->get_field_id( 'button_url' ); ?>" name="<?php echo $this->get_field_name( 'button_url' ); ?>" type="text" value="<?php echo esc_url($button_url); ?>" />
 		</p>
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'button_icon' ); ?>"><?php esc_html_e( 'Button Icon Class:', 'fitclub' ); ?></label>
-			<input id="<?php echo $this->get_field_id( 'button_icon' ); ?>" name="<?php echo $this->get_field_name( 'button_icon' ); ?>" placeholder="fa-cog" type="text" value="<?php echo $button_icon; ?>" />
+			<input id="<?php echo $this->get_field_id( 'button_icon' ); ?>" name="<?php echo $this->get_field_name( 'button_icon' ); ?>" placeholder="fa-cog" type="text" value="<?php echo esc_attr($button_icon); ?>" />
 		</p>
 
 		<p>
@@ -348,20 +348,23 @@ class fitclub_about_us_widget extends WP_Widget {
 		extract( $instance );
 
 		global $post;
-		$background_color = isset( $instance[ 'background_color' ] ) ? esc_attr( $instance[ 'background_color' ] ) : '';
-		$background_image = isset( $instance[ 'background_image' ] ) ? esc_url( $instance[ 'background_image' ] ) : '';
+		$background_color = isset( $instance[ 'background_color' ] ) ? $instance[ 'background_color' ] : '';
+		$background_image = isset( $instance[ 'background_image' ] ) ? $instance[ 'background_image' ] : '';
 		$page_id          = isset( $instance[ 'page_id' ] ) ? absint( $instance[ 'page_id' ] ) : '';
-		$button_text      = isset( $instance[ 'button_text' ] ) ? esc_html( $instance[ 'button_text' ] ) : '';
-		$button_url       = isset( $instance[ 'button_url' ] ) ?  esc_url( $instance[ 'button_url' ] ) : '#';
-		$button_icon      = isset( $instance[ 'button_icon' ] ) ? esc_attr( $instance[ 'button_icon' ] ) : '';
+		$button_text      = isset( $instance[ 'button_text' ] ) ?  $instance[ 'button_text' ] : '';
+		$button_url       = isset( $instance[ 'button_url' ] ) ?  $instance[ 'button_url' ] : '#';
+		$button_icon      = isset( $instance[ 'button_icon' ] ) ? $instance[ 'button_icon' ] : '';
 
+		$bg_style = '';
+		$bg_class = 'image-background';
 		if ( !empty( $background_image ) ) {
-			$bg_image_style = 'background:url(' . $background_image . ') scroll no-repeat center top/cover;';
+			$bg_style = 'background:url(' . esc_url($background_image) . ') scroll no-repeat center top/cover;';
 		} else {
-			$bg_image_style = 'background-color:' . $background_color . ';';
+			$bg_style = 'background-color:' . esc_attr($background_color) . ';';
+			$bg_class = 'no-image';
 		}
 		echo $before_widget; ?>
-		<div class="section-wrapper" style="<?php echo $bg_image_style; ?>">
+		<div class="section-wrapper <?php echo esc_attr($bg_class); ?>" style="<?php echo $bg_image_style; ?>">
 			<div class="tg-container">
 
 				<?php if( $page_id ) : ?>
@@ -380,7 +383,7 @@ class fitclub_about_us_widget extends WP_Widget {
 						$output .= '<a class="about-btn" href="'. esc_url( get_permalink() ) . '">' . esc_html__( 'Read more', 'fitclub' ) . '</a>';
 
 						if ( !empty ( $button_text ) ) {
-							$output .= '<a class="about-btn" href="' . $button_url . '">' .$button_text. ' <i class="fa ' . $button_icon . '"></i></a>';
+							$output .= '<a class="about-btn" href="' . esc_url($button_url) . '">' .esc_html($button_text). ' <i class="fa ' . esc_attr($button_icon) . '"></i></a>';
 						}
 
 						$output .= '</div>';
@@ -426,26 +429,26 @@ class fitclub_call_to_action_widget extends WP_Widget {
 
 		$instance = wp_parse_args( (array) $instance, $defaults );
 
-		$background_color = esc_attr( $instance[ 'background_color' ] );
-		$background_image = esc_url( $instance[ 'background_image' ] );
-		$text             = esc_textarea( $instance[ 'text' ] );
-		$button_text      = esc_attr( $instance[ 'button_text' ] );
-		$button_url       = esc_url( $instance[ 'button_url' ] );
+		$background_color = $instance[ 'background_color' ];
+		$background_image = $instance[ 'background_image' ];
+		$text             = $instance[ 'text' ];
+		$button_text      = $instance[ 'button_text' ];
+		$button_url       = $instance[ 'button_url' ];
 		?>
 		<p>
 			<strong><?php esc_html_e( 'Design Settings:', 'fitclub' ); ?></strong><br />
 			<label for="<?php echo $this->get_field_id( 'background_color' ); ?>"><?php esc_html_e( 'Background Color:', 'fitclub' ); ?></label><br />
-			<input class="my-color-picker" type="text" data-default-color="#32c4d1" id="<?php echo $this->get_field_id( 'background_color' ); ?>" name="<?php echo $this->get_field_name( 'background_color' ); ?>" value="<?php echo  $background_color; ?>" />
+			<input class="my-color-picker" type="text" data-default-color="#32c4d1" id="<?php echo $this->get_field_id( 'background_color' ); ?>" name="<?php echo $this->get_field_name( 'background_color' ); ?>" value="<?php echo esc_attr($background_color); ?>" />
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'background_image' ); ?>"> <?php esc_html_e( 'Image:', 'fitclub' ); ?> </label> <br />
 
 			<?php
 			if ( $background_image  != '' ) :
-				echo '<img id="' . $this->get_field_id( 'background_image' . 'preview') . '"src="' . $background_image . '"style="max-width: 250px;" /><br />';
+				echo '<img id="' . $this->get_field_id( 'background_image' . 'preview') . '"src="' . esc_url($background_image) . '"style="max-width: 250px;" /><br />';
 			endif;
 			?>
-			<input type="text" class="widefat custom_media_url" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo $background_image; ?>" style="margin-top: 5px;"/>
+			<input type="text" class="widefat custom_media_url" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo esc_url($background_image); ?>" style="margin-top: 5px;"/>
 
 			<input type="button" class="button button-primary custom_media_button" id="custom_media_button_action" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php esc_attr_e( 'Upload Image', 'fitclub' ); ?>" style="margin-top: 5px; margin-right: 30px;" onclick="imageWidget.uploader( '<?php echo $this->get_field_id( 'background_image' ); ?>' ); return false;"/>
 		</p>
@@ -453,14 +456,14 @@ class fitclub_call_to_action_widget extends WP_Widget {
 		<strong><?php esc_html_e( 'Other Settings :', 'fitclub' ); ?></strong><br />
 
 		<?php esc_html_e( 'Call to Action Main Text','fitclub' ); ?>
-		<textarea class="widefat" rows="3" cols="20" id="<?php echo $this->get_field_id('text'); ?>" name="<?php echo $this->get_field_name('text'); ?>"><?php echo $text; ?></textarea>
+		<textarea class="widefat" rows="3" cols="20" id="<?php echo $this->get_field_id('text'); ?>" name="<?php echo $this->get_field_name('text'); ?>"><?php echo esc_textarea($text); ?></textarea>
 		<p>
 			<label for="<?php echo $this->get_field_id('button_text'); ?>"><?php esc_html_e( 'Button Text:', 'fitclub' ); ?></label>
-			<input id="<?php echo $this->get_field_id('button_text'); ?>" name="<?php echo $this->get_field_name('button_text'); ?>" type="text" value="<?php echo $button_text; ?>" />
+			<input id="<?php echo $this->get_field_id('button_text'); ?>" name="<?php echo $this->get_field_name('button_text'); ?>" type="text" value="<?php echo esc_attr($button_text); ?>" />
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id('button_url'); ?>"><?php esc_html_e( 'Button Redirect Link:', 'fitclub' ); ?></label>
-			<input id="<?php echo $this->get_field_id('button_url'); ?>" name="<?php echo $this->get_field_name('button_url'); ?>" type="text" value="<?php echo $button_url; ?>" />
+			<input id="<?php echo $this->get_field_id('button_url'); ?>" name="<?php echo $this->get_field_name('button_url'); ?>" type="text" value="<?php echo esc_url($button_url); ?>" />
 		</p>
 	<?php
 	}
@@ -483,31 +486,31 @@ class fitclub_call_to_action_widget extends WP_Widget {
 		extract( $instance );
 
 		global $post;
-		$background_color = isset( $instance[ 'background_color' ] ) ? esc_attr( $instance[ 'background_color' ] ) : '';
-		$background_image = isset( $instance[ 'background_image' ] ) ? esc_url( $instance[ 'background_image' ] ) : '';
-		$text             = isset( $instance[ 'text' ] ) ? esc_html( $instance[ 'text' ] ) : '';
-		$button_text      = isset( $instance[ 'button_text' ] ) ? esc_html( $instance[ 'button_text' ] ) : '';
-		$button_url       = isset( $instance[ 'button_url' ] ) ? esc_url( $instance[ 'button_url' ] ) : '';
+		$background_color = isset( $instance[ 'background_color' ] ) ? $instance[ 'background_color' ] : '';
+		$background_image = isset( $instance[ 'background_image' ] ) ? $instance[ 'background_image' ] : '';
+		$text             = isset( $instance[ 'text' ] ) ? $instance[ 'text' ] : '';
+		$button_text      = isset( $instance[ 'button_text' ] ) ? $instance[ 'button_text' ] : '';
+		$button_url       = isset( $instance[ 'button_url' ] ) ?  $instance[ 'button_url' ] : '';
 
 		echo $before_widget;
 		$bg_style = '';
-		$bg_class = '';
+		$bg_class = 'image-background';
 		if ( !empty( $background_image ) ) {
-			$bg_style = 'background:url(' . $background_image . ') scroll no-repeat center top/cover;';
+			$bg_style = 'background:url(' . esc_url($background_image) . ') scroll no-repeat center top/cover;';
 		} else {
-			$bg_style = 'background-color:' . $background_color . ';';
+			$bg_style = 'background-color:' . esc_attr($background_color) . ';';
 			$bg_class = 'no-image';
 		}
 		?>
-		<div class="section-wrapper <?php echo $bg_class; ?>" style="<?php echo $bg_style; ?>">
+		<div class="section-wrapper <?php echo esc_attr($bg_class); ?>" style="<?php echo $bg_style; ?>">
 			<div class="bg-overlay"></div>
 			<div class="tg-container">
 				<div class="cta-wrapper">
 					<?php if( !empty( $text ) ) { ?>
-						<h3 class="cta-title"><?php echo $text; ?></h3>
+						<h3 class="cta-title"><?php echo esc_html($text); ?></h3>
 					<?php } ?>
 					<?php if( !empty( $button_text ) ) { ?>
-					<a class="cta-readmore" href="<?php echo $button_url; ?>"><?php echo $button_text; ?></a>
+					<a class="cta-readmore" href="<?php echo esc_url($button_url); ?>"><?php echo esc_html($button_text); ?></a>
 					<?php } ?>
 				</div>
 			</div>
@@ -538,37 +541,37 @@ class fitclub_testimonial_widget extends WP_Widget {
 
 		$instance = wp_parse_args( (array) $instance, $defaults );
 
-		$background_color = esc_attr( $instance[ 'background_color' ] );
-		$background_image = esc_url_raw( $instance[ 'background_image' ] );
-		$title            = esc_attr( $instance['title'] );
-		$number           = absint( $instance[ 'number' ] );
+		$background_color = $instance[ 'background_color' ];
+		$background_image = $instance[ 'background_image' ];
+		$title            = $instance['title'];
+		$number           = $instance[ 'number' ];
 		?>
 
 		<p>
 			<strong><?php esc_html_e( 'Design Settings:', 'fitclub' ); ?></strong><br />
 			<label for="<?php echo $this->get_field_id( 'background_color' ); ?>"><?php esc_html_e( 'Background Color:', 'fitclub' ); ?></label><br />
-			<input class="my-color-picker" type="text" data-default-color="#32c4d1" id="<?php echo $this->get_field_id( 'background_color' ); ?>" name="<?php echo $this->get_field_name( 'background_color' ); ?>" value="<?php echo  $background_color; ?>" />
+			<input class="my-color-picker" type="text" data-default-color="#32c4d1" id="<?php echo $this->get_field_id( 'background_color' ); ?>" name="<?php echo $this->get_field_name( 'background_color' ); ?>" value="<?php echo esc_attr($background_color); ?>" />
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'background_image' ); ?>"> <?php esc_html_e( 'Image:', 'fitclub' ); ?> </label> <br />
 
 			<?php
 			if ( $background_image  != '' ) :
-				echo '<img id="' . $this->get_field_id( 'background_image' . 'preview') . '"src="' . $background_image . '"style="max-width: 250px;" /><br />';
+				echo '<img id="' . $this->get_field_id( 'background_image' . 'preview') . '"src="' . esc_url($background_image) . '"style="max-width: 250px;" /><br />';
 			endif;
 			?>
-			<input type="text" class="widefat custom_media_url" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo $background_image; ?>" style="margin-top: 5px;"/>
+			<input type="text" class="widefat custom_media_url" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo esc_url($background_image); ?>" style="margin-top: 5px;"/>
 
 			<input type="button" class="button button-primary custom_media_button" id="custom_media_button_action" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php esc_attr_e( 'Upload Image', 'fitclub' ); ?>" style="margin-top: 5px; margin-right: 30px;" onclick="imageWidget.uploader( '<?php echo $this->get_field_id( 'background_image' ); ?>' ); return false;"/>
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'fitclub' ); ?></label>
-			<input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
+			<input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
 		</p>
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of pages to display:', 'fitclub' ); ?></label>
-			<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" size="3" />
+			<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo absint($number); ?>" size="3" />
 		</p>
 
 		<p><?php esc_html_e( 'Note: Create the pages and select Testimonial Template to display Testimonial pages.', 'fitclub' ); ?></p>
@@ -591,9 +594,9 @@ class fitclub_testimonial_widget extends WP_Widget {
 		extract( $instance );
 
 		global $post;
-		$background_color = isset( $instance[ 'background_color' ] ) ? esc_attr( $instance[ 'background_color' ] ) : '';
-		$background_image = isset( $instance[ 'background_image' ] ) ? esc_url( $instance[ 'background_image' ] ) : '';
-		$title            = apply_filters( 'widget_title', isset( $instance[ 'title' ] ) ? esc_html( $instance[ 'title' ] ) : '');
+		$background_color = isset( $instance[ 'background_color' ] ) ? $instance[ 'background_color' ] : '';
+		$background_image = isset( $instance[ 'background_image' ] ) ? $instance[ 'background_image' ] : '';
+		$title            = apply_filters( 'widget_title', isset( $instance[ 'title' ] ) ? $instance[ 'title' ] : '');
 		$number           = isset( $instance[ 'number' ] ) ? absint( $instance[ 'number' ] ) : 3;
 
 		$page_array = array();
@@ -616,19 +619,19 @@ class fitclub_testimonial_widget extends WP_Widget {
 		) );
 
 		$bg_style = '';
-		$bg_class = '';
+		$bg_class = 'image-background';
 		if ( !empty( $background_image ) ) {
-			$bg_style = 'background-image:url(' . $background_image . ');scroll no-repeat center top/cover;';
+			$bg_style = 'background-image:url(' . esc_url($background_image) . ');scroll no-repeat center top/cover;';
 		} else {
-			$bg_style = 'background-color:' . $background_color . ';';
+			$bg_style = 'background-color:' . esc_attr($background_color) . ';';
 			$bg_class = 'no-image';
 		}
 		echo $before_widget; ?>
-		<div  class="section-wrapper <?php echo $bg_class; ?>" style="<?php echo $bg_style; ?>">
+		<div  class="section-wrapper <?php echo esc_attr($bg_class); ?>" style="<?php echo $bg_style; ?>">
 			<div class="bg-overlay"></div>
 			<div class="tg-container">
 				<div class="testimonial-wrapper">
-					<?php if( !empty( $title ) ) echo $before_title .'<span>'.$title.'</span>'. $after_title; ?>
+					<?php if( !empty( $title ) ) echo $before_title .'<span>'.esc_html($title).'</span>'. $after_title; ?>
 
 					<?php
 					if( !empty( $page_array ) ) {
@@ -644,7 +647,7 @@ class fitclub_testimonial_widget extends WP_Widget {
 											$image_class = 'testimonial-image';
 											$testimonial_top = get_the_post_thumbnail( $post->ID, 'fitclub-testimonial' );
 										?>
-											<figure class="<?php echo $image_class; ?>">
+											<figure class="<?php echo esc_attr($image_class); ?>">
 												<?php echo $testimonial_top; ?>
 											</figure>
 										<?php } ?>
@@ -692,18 +695,18 @@ class fitclub_team_widget extends WP_Widget {
 
 		$instance         = wp_parse_args( (array) $instance, $defaults );
 
-		$title            = esc_attr( $instance[ 'title' ] );
-		$number           = absint( $instance[ 'number' ] );
+		$title            = $instance[ 'title' ];
+		$number           = $instance[ 'number' ];
 		?>
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'fitclub' ); ?></label>
-			<input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
+			<input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
 		</p>
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of pages to display:', 'fitclub' ); ?></label>
-			<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" size="3" />
+			<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo absint($number); ?>" size="3" />
 		</p>
 		<p><?php esc_html_e( 'Note: Create the pages and select Team Template to display Our Team pages.', 'fitclub' ); ?></p>
 		<?php }
@@ -721,7 +724,7 @@ class fitclub_team_widget extends WP_Widget {
 		extract( $instance );
 
 		global $post;
-		$title  = apply_filters( 'widget_title', isset( $instance[ 'title' ] ) ? esc_html( $instance[ 'title' ] ) : '');
+		$title  = apply_filters( 'widget_title', isset( $instance[ 'title' ] ) ? $instance[ 'title' ] : '');
 		$number = isset( $instance[ 'number' ] ) ? absint( $instance[ 'number' ] ) : 3;
 
 		$page_array = array();
@@ -746,7 +749,7 @@ class fitclub_team_widget extends WP_Widget {
 		<div class="section-wrapper">
 			<div class="tg-container">
 				<div class="trainer-wrapper tg-column-wrapper">
-					<?php if( !empty( $title ) ) echo $before_title .'<span>'. $title .'</span>'. $after_title; ?>
+					<?php if( !empty( $title ) ) echo $before_title .'<span>'. esc_html($title) .'</span>'. $after_title; ?>
 
 					<?php if( !empty ( $page_array ) ) : ?>
 					<?php while( $get_featured_pages->have_posts() ):$get_featured_pages->the_post();
@@ -817,36 +820,32 @@ class fitclub_featured_posts_widget extends WP_Widget {
 		$defaults[ 'number' ]     = 3;
 		$defaults[ 'type' ]       = 'latest';
 		$defaults[ 'category' ]   = '';
-		$defaults[ 'button_text'] = '';
-		$defaults[ 'button_url' ] = '';
 
 		$instance = wp_parse_args( (array) $instance, $defaults );
 
 
-		$title       = esc_attr( $instance[ 'title' ] );
-		$number      = absint( $instance[ 'number' ] );
-		$type        = sanitize_text_field( $instance[ 'type' ] );
-		$category    = absint( $instance[ 'category' ] );
-		$button_text = esc_attr( $instance[ 'button_text' ] );
-		$button_url  = esc_url( $instance[ 'button_url' ] ); ?>
-
+		$title       = $instance[ 'title' ];
+		$number      = $instance[ 'number' ];
+		$type        = $instance[ 'type' ];
+		$category    = $instance[ 'category' ];
+		?>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'fitclub' ); ?></label>
-			<input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
+			<input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts to display:', 'fitclub' ); ?></label>
-			<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" size="3" />
+			<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo absint($number); ?>" size="3" />
 		</p>
 
 		<p>
-			<input type="radio" <?php checked( $type, 'latest' ) ?> id="<?php echo $this->get_field_id( 'type' ); ?>" name="<?php echo $this->get_field_name( 'type' ); ?>" value="latest"/><?php esc_html_e( 'Show latest Posts', 'fitclub' );?><br />
-			<input type="radio" <?php checked( $type,'category' ) ?> id="<?php echo $this->get_field_id( 'type' ); ?>" name="<?php echo $this->get_field_name( 'type' ); ?>" value="category"/><?php esc_html_e( 'Show posts from a category', 'fitclub' );?><br />
+			<input type="radio" <?php checked( sanitize_text_field($type), 'latest' ) ?> id="<?php echo $this->get_field_id( 'type' ); ?>" name="<?php echo $this->get_field_name( 'type' ); ?>" value="latest"/><?php esc_html_e( 'Show latest Posts', 'fitclub' );?><br />
+			<input type="radio" <?php checked( sanitize_text_field($type),'category' ) ?> id="<?php echo $this->get_field_id( 'type' ); ?>" name="<?php echo $this->get_field_name( 'type' ); ?>" value="category"/><?php esc_html_e( 'Show posts from a category', 'fitclub' );?><br />
 		</p>
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php esc_html_e( 'Select category', 'fitclub' ); ?>:</label>
-			<?php wp_dropdown_categories( array( 'show_option_none' =>' ','name' => $this->get_field_name( 'category' ), 'selected' => $category ) ); ?>
+			<?php wp_dropdown_categories( array( 'show_option_none' =>' ','name' => $this->get_field_name( 'category' ), 'selected' => absint($category) ) ); ?>
 		</p>
 
 		<?php
@@ -870,12 +869,10 @@ class fitclub_featured_posts_widget extends WP_Widget {
 		extract( $instance );
 
 		global $post;
-		$title       = apply_filters( 'widget_title', isset( $instance[ 'title' ] ) ? esc_html( $instance[ 'title' ] ) : '');
+		$title       = apply_filters( 'widget_title', isset( $instance[ 'title' ] ) ? $instance[ 'title' ] : '');
 		$number      = isset( $instance[ 'number' ] ) ?  absint( $instance[ 'number' ] ) : 3;
 		$type        = isset( $instance[ 'type' ] ) ? sanitize_text_field( $instance[ 'type' ] ) : 'latest' ;
 		$category    = isset( $instance[ 'category' ] ) ? absint( $instance[ 'category' ] ) : '';
-		$button_text = isset( $instance[ 'button_text' ] ) ? esc_html( $instance[ 'button_text' ] ) : '';
-		$button_url  = isset( $instance[ 'button_url' ] ) ? esc_url( $instance[ 'button_url' ] ) : '#';
 
 		if( $type == 'latest' ) {
 			$get_featured_posts = new WP_Query( array(
@@ -896,7 +893,7 @@ class fitclub_featured_posts_widget extends WP_Widget {
 
 	<div class="section-wrapper">
 		<div class="tg-container">
-			<?php if ( !empty( $title ) ) { echo $before_title .'<span>'. $title .'</span>'. $after_title; } ?>
+			<?php if ( !empty( $title ) ) { echo $before_title .'<span>'. esc_html($title) .'</span>'. $after_title; } ?>
 
 			<div class="blog-wrapper">
 				<ul class="blog-slider">

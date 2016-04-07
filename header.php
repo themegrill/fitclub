@@ -43,13 +43,13 @@
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo esc_url(get_theme_mod('fitclub_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" /></a>
 						</div> <!-- logo end -->
 					<?php }
-					$screen_reader = '';
+					$screen_reader = 'logo';
 					if( get_theme_mod( 'fitclub_logo_placement', 'header_text_only' ) == 'header_logo_only' || get_theme_mod( 'fitclub_logo_placement', 'header_text_only' ) == 'disable' ) {
-						$screen_reader = ' screen-reader-text';
+						$screen_reader = 'screen-reader-text';
 					}
 					?>
 
-					<div id="header-text" class="<?php echo $screen_reader; ?>">
+					<div id="header-text" class="<?php echo esc_attr($screen_reader); ?>">
 					<?php if ( is_front_page() || is_home() ) : ?>
 						<h1 id="site-title">
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>

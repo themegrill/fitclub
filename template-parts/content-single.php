@@ -41,7 +41,7 @@
 			</a>
 		</span>
 		<?php endif; ?>
-		<div class="entry-content-wrapper <?php echo $class; ?>">
+		<div class="entry-content-wrapper <?php echo esc_attr($class); ?>">
 			<?php fitclub_entry_meta(); ?>
 			<div class="entry-content">
 				<?php the_content(); ?>

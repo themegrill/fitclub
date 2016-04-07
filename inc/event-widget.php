@@ -123,7 +123,7 @@ class TG_Tribe__Events__List_Widget extends Tribe__Events__List_Widget {
 
 		if ( $title ){
 			do_action( 'tribe_events_list_widget_before_the_title' );
-			echo $before_title . $title . $after_title;
+			echo $before_title . esc_html($title) . $after_title;
 			do_action( 'tribe_events_list_widget_after_the_title' );
 		}
 
