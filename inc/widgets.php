@@ -364,7 +364,7 @@ class fitclub_about_us_widget extends WP_Widget {
 			$bg_class = 'no-image';
 		}
 		echo $before_widget; ?>
-		<div class="section-wrapper <?php echo esc_attr($bg_class); ?>" style="<?php echo $bg_image_style; ?>">
+		<div class="section-wrapper <?php echo esc_attr($bg_class); ?>" style="<?php echo $bg_style; ?>">
 			<div class="tg-container">
 
 				<?php if( $page_id ) : ?>
