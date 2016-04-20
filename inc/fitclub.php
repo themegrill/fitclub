@@ -217,6 +217,11 @@ if ( ! function_exists( 'fitclub_header_title' ) ) :
  * Render header title for the header bar
  */
 function fitclub_header_title() {
+	// Adding earlier so is_archive won't replace
+	// get_the_archive_title is not fetching the title for tag pages
+	if( is_tag() ) {
+		$fitclub_header_title = single_tag_title();
+	}
 	if( is_archive() ) {
 		$fitclub_header_title = get_the_archive_title();
 	}
