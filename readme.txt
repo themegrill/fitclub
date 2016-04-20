@@ -48,6 +48,13 @@ and we will include it within the theme from next version update.
 
 == CHANGE LOG ==
 
+
+= Version 1.0.6 =
+Tweaks:
+* Fixed the titles for The Event Calendar pages
+New:
+* Added the upsell button
+
 = Version 1.0.5 =
 Tweaks:
 * Update proper escaping function for layout class
