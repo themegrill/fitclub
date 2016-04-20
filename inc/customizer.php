@@ -28,6 +28,66 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
+	// Theme important links
+	class FitClub_Important_Links extends WP_Customize_Control {
+
+		public $type = "fitclub-important-links";
+
+		public function render_content() {
+			//Add Theme instruction, Support Forum, Demo Link, Rating Link
+			$important_links = array(
+			'theme-info' => array(
+				'link' => esc_url('http://themegrill.com/themes/fitclub/'),
+				'text' => esc_html__('Theme Info', 'fitclub'),
+			),
+			'support' => array(
+				'link' => esc_url('http://themegrill.com/support-forum/'),
+				'text' => esc_html__('Support', 'fitclub'),
+			),
+			'documentation' => array(
+				'link' => esc_url('http://themegrill.com/theme-instruction/fitclub/'),
+				'text' => esc_html__('Documentation', 'fitclub'),
+			),
+			'demo' => array(
+				'link' => esc_url('http://demo.themegrill.com/fitclub/'),
+				'text' => esc_html__('View Demo', 'fitclub'),
+			),
+			'rating' => array(
+				'link' => esc_url('http://wordpress.org/support/view/theme-reviews/fitclub?filter=5'),
+				'text' => esc_html__('Rate this theme', 'fitclub'),
+			),
+			);
+			foreach ($important_links as $important_link) {
+				echo '<p><a target="_blank" href="' . $important_link['link'] . '" >' . esc_attr($important_link['text']) . ' </a></p>';
+			}
+		}
+	}
+
+	$wp_customize->add_section('fitclub_important_links',
+		array(
+			'priority' => 1,
+			'title'    => esc_html__('FitClub Important Links', 'fitclub'),
+		)
+	);
+
+	$wp_customize->add_setting('fitclub_important_links',
+		array(
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'fitclub_links_sanitize'
+		)
+	);
+
+	$wp_customize->add_control(
+		new fitclub_Important_Links($wp_customize,
+			'important_links',
+			array(
+				'label'    => esc_html__('Important Links', 'fitclub'),
+				'section'  => 'fitclub_important_links',
+				'settings' => 'fitclub_important_links'
+			)
+		)
+	);
+
 	// Header Options
 	$wp_customize->add_panel(
 		'fitclub_header_options',
@@ -370,12 +430,12 @@ function fitclub_customize_register( $wp_customize ) {
 			'section'  => 'fitclub_footer_widget_section',
 			'type'     => 'select',
 			'choices'    => array(
-            	'1' => esc_html__('1 Footer Widget Area', 'fitclub'),
-            	'2' => esc_html__('2 Footer Widget Area', 'fitclub'),
-            	'3' => esc_html__('3 Footer Widget Area', 'fitclub'),
-            	'4' => esc_html__('4 Footer Widget Area', 'fitclub')
-        	),
- 		)
+				'1' => esc_html__('1 Footer Widget Area', 'fitclub'),
+				'2' => esc_html__('2 Footer Widget Area', 'fitclub'),
+				'3' => esc_html__('3 Footer Widget Area', 'fitclub'),
+				'4' => esc_html__('4 Footer Widget Area', 'fitclub')
+			),
+		)
 	);
 
 	// Additional Options
@@ -588,6 +648,58 @@ function fitclub_customize_register( $wp_customize ) {
 		$input = esc_attr($input);
 		return $input;
 	}
+
+	// Fake sanitize function
+	function fitclub_sanitize_important_links() {
+		return false;
+	}
 }
 
 add_action( 'customize_register', 'fitclub_customize_register' );
+
+/**
+ * Enqueue scripts for customizer
+ */
+function fitclub_customizer_js() {
+	wp_enqueue_script( 'fitclub_customizer_script', get_template_directory_uri() . '/js/customizer.js', array("jquery"), 'false', true  );
+;
+}
+add_action( 'customize_controls_enqueue_scripts', 'fitclub_customizer_js' );
+
+/*
+ * Custom Scripts
+ */
+add_action( 'customize_controls_print_footer_scripts', 'fitclub_customizer_custom_scripts' );
+
+function fitclub_customizer_custom_scripts() { ?>
+<style>
+	/* Theme Instructions Panel CSS */
+	li#accordion-section-fitclub_important_links h3.accordion-section-title, li#accordion-section-fitclub_important_links h3.accordion-section-title:focus { background-color: #289DCC !important; color: #fff !important; }
+	li#accordion-section-fitclub_important_links h3.accordion-section-title:hover { background-color: #289DCC !important; color: #fff !important; }
+	li#accordion-section-fitclub_important_links h3.accordion-section-title:after { color: #fff !important; }
+	/* Upsell button CSS */
+	.themegrill-pro-info,
+	.customize-control-fitclub-important-links a {
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8fc800+0,8fc800+100;Green+Flat+%232 */
+		background: #008EC2;
+		color: #fff;
+		display: block;
+		margin: 15px 0 0;
+		padding: 5px 0;
+		text-align: center;
+		font-weight: 600;
+	}
+
+	.customize-control-fitclub-important-links a{
+		padding: 8px 0;
+	}
+
+	.themegrill-pro-info:hover,
+	.customize-control-fitclub-important-links a:hover {
+		color: #ffffff;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006e2e+0,006e2e+100;Green+Flat+%233 */
+		background:#2380BA;
+	}
+</style>
+<?php
+}
