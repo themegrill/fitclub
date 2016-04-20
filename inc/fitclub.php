@@ -326,9 +326,8 @@ function fitclub_tribe_alter_event_archive_titles ( $depth ) {
 	}
 
 	if ( is_tax( $tribe_ecp->get_event_taxonomy() ) && $depth ) {
-		$cat = get_queried_object();
-		$title = '<a href="' . esc_url( tribe_get_events_link() ) . '">' . $title . '</a>';
-		$title .= ' &#8250; ' . $cat->name;
+		$cat   = get_queried_object();
+		$title = $cat->name;
 	}
 
 	return $title;
