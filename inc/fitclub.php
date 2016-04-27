@@ -217,17 +217,13 @@ if ( ! function_exists( 'fitclub_header_title' ) ) :
  * Render header title for the header bar
  */
 function fitclub_header_title() {
-	// Adding earlier so is_archive won't replace
-	// get_the_archive_title is not fetching the title for tag pages
-	if( is_tag() ) {
-		$fitclub_header_title = single_tag_title();
-	}
 	if( is_archive() ) {
-		$fitclub_header_title = get_the_archive_title();
-	}
-	// Checking this condition to make sure archive title won't replace this
-	if( fitclub_is_tribe_page() ){
-		$fitclub_header_title = tribe_get_events_title();
+		if( fitclub_is_tribe_page() ){
+			$fitclub_header_title = tribe_get_events_title();
+		}
+		else {
+			$fitclub_header_title = get_the_archive_title();
+		}
 	}
 	elseif( is_404() ) {
 		$fitclub_header_title = esc_html__( 'Page NOT Found', 'fitclub' );
