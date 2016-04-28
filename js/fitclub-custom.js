@@ -6,7 +6,7 @@ jQuery(document).ready(function() {
 	jQuery('.search-wrapper .header-search-box .close').click(function() {
 		jQuery('.search-wrapper .header-search-box').removeClass('active');
 	});
-	
+
 	jQuery('#site-navigation .menu-toggle').click(function() {
 	  jQuery('#site-navigation .menu').slideToggle('slow');
 	});
@@ -27,7 +27,7 @@ jQuery(document).ready(function() {
 
 	if ( typeof jQuery.fn.bxSlider !== 'undefined' ) {
 	   jQuery('#home-slider .bxslider').bxSlider({
-			auto: false,
+			auto: true,
 			mode: 'fade',
 			caption: true,
 			pagerCustom: '#bx-pager',
