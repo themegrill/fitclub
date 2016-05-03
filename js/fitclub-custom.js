@@ -19,7 +19,7 @@ jQuery(document).ready(function() {
 	});
 
 	jQuery('.scrollup').click(function() {
-		jQuery("html, body").animate({
+		jQuery('html, body').animate({
 			scrollTop: 0
 		}, 2000);
 		return false;
@@ -31,13 +31,13 @@ jQuery(document).ready(function() {
 			mode: 'fade',
 			caption: true,
 			pagerCustom: '#bx-pager',
-			controls: false,
+			controls: false
 		});
 
 		jQuery('.widget_testimonial_block .bxslider').bxSlider({
 			auto: false,
 			pager: false,
-			caption: true,
+			caption: true
 		});
 
 		jQuery('.blog-slider').bxSlider({
