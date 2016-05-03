@@ -1,46 +1,37 @@
+# Copyright (C) 2016 ThemeGrill
+# This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: FitClub\n"
-"POT-Creation-Date: 2015-12-03 17:21+0545\n"
-"PO-Revision-Date: 2015-12-03 17:22+0545\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: en\n"
+"Project-Id-Version: FitClub 1.0.6\n"
+"Report-Msgid-Bugs-To: themegrill@gmail.com\n"
+"POT-Creation-Date: 2016-05-03 09:02:06+00:00\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-SearchPath-0: .\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+
+#: 404.php:36
+msgid "404"
+msgstr ""
 
 #: 404.php:29
-msgid "<span class=\"Oops\">Oops!</span> That page can&rsquo;t be found."
+msgid "Oops!"
+msgstr ""
+
+#: 404.php:29
+msgid "That page can&rsquo;t be found."
 msgstr ""
 
 #: 404.php:32
 msgid "It looks like nothing was found at this location. Try the search below."
 msgstr ""
 
-#: 404.php:36
-msgid "404"
-msgstr ""
-
 #: 404.php:38
 msgid "error"
 msgstr ""
-
-#: comments.php:31
-#, php-format
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
 
 #: comments.php:40 comments.php:61
 msgid "Comment navigation"
@@ -70,6 +61,10 @@ msgstr ""
 msgid "Footer Menu"
 msgstr ""
 
+#: header.php:85
+msgid "Menu"
+msgstr ""
+
 #: inc/admin/meta-boxes.php:16 inc/admin/meta-boxes.php:18
 msgid "Select Layout"
 msgstr ""
@@ -78,7 +73,7 @@ msgstr ""
 msgid "Our Team Designation"
 msgstr ""
 
-#: inc/admin/meta-boxes.php:30 inc/customizer.php:179
+#: inc/admin/meta-boxes.php:30 inc/customizer.php:239
 msgid "Default Layout"
 msgstr ""
 
@@ -103,227 +98,246 @@ msgid "Team designation"
 msgstr ""
 
 #: inc/admin/meta-boxes.php:99
-msgid "Show designation in Our Team Widget. </br>"
+msgid "Show designation in Our Team Widget."
 msgstr ""
 
-#: inc/customizer.php:36
+#: inc/customizer.php:41
+msgid "Theme Info"
+msgstr ""
+
+#: inc/customizer.php:45
+msgid "Support"
+msgstr ""
+
+#: inc/customizer.php:49
+msgid "Documentation"
+msgstr ""
+
+#: inc/customizer.php:53
+msgid "View Demo"
+msgstr ""
+
+#: inc/customizer.php:57
+msgid "Rate this theme"
+msgstr ""
+
+#: inc/customizer.php:69
+msgid "FitClub Important Links"
+msgstr ""
+
+#: inc/customizer.php:84
+msgid "Important Links"
+msgstr ""
+
+#: inc/customizer.php:96
 msgid "Change Header Settings here"
 msgstr ""
 
-#: inc/customizer.php:38
+#: inc/customizer.php:98
 msgid "Header Options"
 msgstr ""
 
-#: inc/customizer.php:47
+#: inc/customizer.php:107
 msgid "Header Logo"
 msgstr ""
 
-#: inc/customizer.php:67
+#: inc/customizer.php:127
 msgid "Upload logo"
 msgstr ""
 
-#: inc/customizer.php:87
+#: inc/customizer.php:147
 msgid "Choose the required option"
 msgstr ""
 
-#: inc/customizer.php:91
+#: inc/customizer.php:151
 msgid "Header Logo Only"
 msgstr ""
 
-#: inc/customizer.php:92
+#: inc/customizer.php:152
 msgid "Header Text Only"
 msgstr ""
 
-#: inc/customizer.php:93
+#: inc/customizer.php:153
 msgid "Show both header logo and text"
 msgstr ""
 
-#: inc/customizer.php:94
+#: inc/customizer.php:154
 msgid "Disable"
 msgstr ""
 
-#: inc/customizer.php:104
+#: inc/customizer.php:164
 msgid "Change Slider Settings here"
 msgstr ""
 
-#: inc/customizer.php:106
+#: inc/customizer.php:166
 msgid "Slider Options"
 msgstr ""
 
-#: inc/customizer.php:115
+#: inc/customizer.php:175
 msgid "Slider Settings"
 msgstr ""
 
-#: inc/customizer.php:116
+#: inc/customizer.php:176
 msgid "Note"
 msgstr ""
 
-#: inc/customizer.php:116
+#: inc/customizer.php:176
 msgid ""
-"1. To display the Slider first check Enable the slider below. Now create the "
-"page for each slider and enter title, text and featured image. Choose that "
-"pages in the dropdown options."
+"1. To display the Slider first check Enable the slider below. Now create "
+"the page for each slider and enter title, text and featured image. Choose "
+"that pages in the dropdown options."
 msgstr ""
 
-#: inc/customizer.php:116
+#: inc/customizer.php:176
 msgid ""
 "2. The recommended size for the slider image is 1920 x 1000 pixels. For "
 "better functioning of slider use equal size images for each slide."
 msgstr ""
 
-#: inc/customizer.php:116
+#: inc/customizer.php:176
 msgid ""
 "3. If page do not have featured Image than that page will not included in "
 "slider show."
 msgstr ""
 
-#: inc/customizer.php:134
+#: inc/customizer.php:194
 msgid "Enable Slider"
 msgstr ""
 
-#: inc/customizer.php:155
+#: inc/customizer.php:215
 msgid "Slide "
 msgstr ""
 
-#: inc/customizer.php:168
+#: inc/customizer.php:228
 msgid "Design Related Settings"
 msgstr ""
 
-#: inc/customizer.php:170
+#: inc/customizer.php:230
 msgid "Design Options"
 msgstr ""
 
-#: inc/customizer.php:198
+#: inc/customizer.php:258
 msgid ""
-"Select default layout. This layout will be reflected in whole site archives, "
-"categories, search page etc. The layout for a single post and page can be "
-"controlled from below options"
+"Select default layout. This layout will be reflected in whole site "
+"archives, categories, search page etc. The layout for a single post and "
+"page can be controlled from below options"
 msgstr ""
 
-#: inc/customizer.php:216
+#: inc/customizer.php:276
 msgid "Default Page Layout"
 msgstr ""
 
-#: inc/customizer.php:235
+#: inc/customizer.php:295
 msgid ""
 "Select default layout for pages. This layout will be reflected in all pages "
 "unless unique layout is set for specific page"
 msgstr ""
 
-#: inc/customizer.php:253
+#: inc/customizer.php:313
 msgid "Default Single Post Layout"
 msgstr ""
 
-#: inc/customizer.php:272
+#: inc/customizer.php:332
 msgid ""
-"Select default layout for single posts. This layout will be reflected in all "
-"single posts unless unique layout is set for specific post"
+"Select default layout for single posts. This layout will be reflected in "
+"all single posts unless unique layout is set for specific post"
 msgstr ""
 
-#: inc/customizer.php:290
+#: inc/customizer.php:350
 msgid "Primary Color Option"
 msgstr ""
 
-#: inc/customizer.php:310
+#: inc/customizer.php:370
 msgid ""
-"This will reflect in links, buttons and many others. Choose a color to match "
-"your site"
+"This will reflect in links, buttons and many others. Choose a color to "
+"match your site"
 msgstr ""
 
-#: inc/customizer.php:321
+#: inc/customizer.php:381
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:341
+#: inc/customizer.php:401
 msgid "Write your Custom CSS here"
 msgstr ""
 
-#: inc/customizer.php:352
+#: inc/customizer.php:412
 msgid "Footer Widgets"
 msgstr ""
 
-#: inc/customizer.php:369
+#: inc/customizer.php:429
 msgid "Choose the number of widget area you want in footer"
 msgstr ""
 
-#: inc/customizer.php:373
+#: inc/customizer.php:433
 msgid "1 Footer Widget Area"
 msgstr ""
 
-#: inc/customizer.php:374
+#: inc/customizer.php:434
 msgid "2 Footer Widget Area"
 msgstr ""
 
-#: inc/customizer.php:375
+#: inc/customizer.php:435
 msgid "3 Footer Widget Area"
 msgstr ""
 
-#: inc/customizer.php:376
+#: inc/customizer.php:436
 msgid "4 Footer Widget Area"
 msgstr ""
 
-#: inc/customizer.php:386
+#: inc/customizer.php:446
 msgid "Some additional settings."
 msgstr ""
 
-#: inc/customizer.php:388
+#: inc/customizer.php:448
 msgid "Additional Options"
 msgstr ""
 
-#: inc/customizer.php:397
+#: inc/customizer.php:457
 msgid "Excerpt/Full Content Option"
 msgstr ""
 
-#: inc/customizer.php:415
-msgid ""
-"Toggle between displaying excerpts and full posts on your blog and archives."
+#: inc/customizer.php:475
+msgid "Toggle between displaying excerpts and full posts on your blog and archives."
 msgstr ""
 
-#: inc/customizer.php:420
+#: inc/customizer.php:480
 msgid "Show Full Post Content"
 msgstr ""
 
-#: inc/customizer.php:421
+#: inc/customizer.php:481
 msgid "Show Excerpt"
 msgstr ""
 
-#: inc/customizer.php:431
-msgid "Hide Content in Front/Blog Page"
-msgstr ""
-
-#: inc/customizer.php:449
-msgid "Check to hide blog posts/static page on front page."
-msgstr ""
-
-#: inc/customizer.php:461
+#: inc/customizer.php:491
 msgid "Post Meta Settings"
 msgstr ""
 
-#: inc/customizer.php:479
+#: inc/customizer.php:509
 msgid "Hide all post meta data under post title."
 msgstr ""
 
-#: inc/customizer.php:499
+#: inc/customizer.php:529
 msgid "Hide date under post title."
 msgstr ""
 
-#: inc/customizer.php:519
+#: inc/customizer.php:549
 msgid "Hide author under post title."
 msgstr ""
 
-#: inc/customizer.php:539
+#: inc/customizer.php:569
 msgid "Hide comment count under post title."
 msgstr ""
 
-#: inc/customizer.php:559
+#: inc/customizer.php:589
 msgid "Hide category under post title."
 msgstr ""
 
-#: inc/customizer.php:579
+#: inc/customizer.php:609
 msgid "Hide tags under post title."
 msgstr ""
 
-#: inc/event-widget.php:173
+#: inc/event-widget.php:174 inc/fitclub.php:262
 msgid "Upcoming Events"
 msgstr ""
 
@@ -339,27 +353,44 @@ msgstr ""
 msgid " % Comments"
 msgstr ""
 
-#: inc/fitclub.php:394
+#. Author of the plugin/theme
 msgid "ThemeGrill"
 msgstr ""
 
-#: inc/fitclub.php:396
-#, php-format
+#: inc/fitclub.php:208
 msgid "Copyright &copy; %1$s %2$s."
 msgstr ""
 
-#: inc/fitclub.php:396
-#, php-format
+#: inc/fitclub.php:208
 msgid "Design By: %1$s"
 msgstr ""
 
-#: inc/fitclub.php:416
+#: inc/fitclub.php:229
 msgid "Page NOT Found"
 msgstr ""
 
-#: inc/fitclub.php:419
-#, php-format
+#: inc/fitclub.php:232
 msgid "Search Results for: %s"
+msgstr ""
+
+#: inc/fitclub.php:263
+msgid "Past Events"
+msgstr ""
+
+#: inc/fitclub.php:264
+msgid "Events for %1$s - %2$s"
+msgstr ""
+
+#: inc/fitclub.php:265 inc/fitclub.php:266
+msgid "Events for %1$s"
+msgstr ""
+
+#: inc/fitclub.php:267
+msgid "All events for %s"
+msgstr ""
+
+#: inc/fitclub.php:268
+msgid "Events for week of %s"
 msgstr ""
 
 #: inc/widgets.php:22
@@ -414,143 +445,150 @@ msgstr ""
 msgid "TG: Service Widget"
 msgstr ""
 
-#: inc/widgets.php:140 inc/widgets.php:294 inc/widgets.php:567
-#: inc/widgets.php:701 inc/widgets.php:835
+#: inc/widgets.php:141 inc/widgets.php:295 inc/widgets.php:568
+#: inc/widgets.php:703 inc/widgets.php:833
 msgid "Title:"
 msgstr ""
 
-#: inc/widgets.php:145 inc/widgets.php:572 inc/widgets.php:706
+#: inc/widgets.php:146 inc/widgets.php:573 inc/widgets.php:708
 msgid "Number of pages to display:"
 msgstr ""
 
-#: inc/widgets.php:149
+#: inc/widgets.php:150
 msgid ""
-"Note: Create the pages and select Service Template to display Services pages."
+"Note: Create the pages and select Service Template to display Services "
+"pages."
 msgstr ""
 
-#: inc/widgets.php:223
+#: inc/widgets.php:224
 msgid "Learn More"
 msgstr ""
 
-#: inc/widgets.php:246
+#: inc/widgets.php:247
 msgid "Show your about page."
 msgstr ""
 
-#: inc/widgets.php:252
+#: inc/widgets.php:253
 msgid "TG: About Widget"
 msgstr ""
 
-#: inc/widgets.php:275 inc/widgets.php:435 inc/widgets.php:550
+#: inc/widgets.php:276 inc/widgets.php:439 inc/widgets.php:551
 msgid "Design Settings:"
 msgstr ""
 
-#: inc/widgets.php:277 inc/widgets.php:436 inc/widgets.php:551
+#: inc/widgets.php:278 inc/widgets.php:440 inc/widgets.php:552
 msgid "Background Color:"
 msgstr ""
 
-#: inc/widgets.php:281
+#: inc/widgets.php:282
 msgid "Background Image:"
 msgstr ""
 
-#: inc/widgets.php:298
-msgid "Select a page to display Title, Excerpt and Featured image."
+#: inc/widgets.php:291 inc/widgets.php:453 inc/widgets.php:565
+msgid "Upload Image"
 msgstr ""
 
 #: inc/widgets.php:299
+msgid "Select a page to display Title, Excerpt and Featured image."
+msgstr ""
+
+#: inc/widgets.php:300
 msgid "Page"
 msgstr ""
 
-#: inc/widgets.php:309 inc/widgets.php:457
+#: inc/widgets.php:310 inc/widgets.php:461
 msgid "Button Text:"
 msgstr ""
 
-#: inc/widgets.php:314 inc/widgets.php:461
+#: inc/widgets.php:315 inc/widgets.php:465
 msgid "Button Redirect Link:"
 msgstr ""
 
-#: inc/widgets.php:319
+#: inc/widgets.php:320
 msgid "Button Icon Class:"
 msgstr ""
 
-#: inc/widgets.php:325
-#, php-format
+#: inc/widgets.php:327
 msgid "<a href=\"%s\" target=\"_blank\">Refer here</a> For Icon Class"
 msgstr ""
 
-#: inc/widgets.php:379 inc/widgets.php:934 template-parts/content.php:50
+#: inc/widgets.php:383 inc/widgets.php:930 template-parts/content.php:50
 #: template-parts/content.php:55
 msgid "Read more"
 msgstr ""
 
-#: inc/widgets.php:410
+#: inc/widgets.php:414
 msgid "Use this widget to show the call to action section."
 msgstr ""
 
-#: inc/widgets.php:416
+#: inc/widgets.php:420
 msgid "TG: Call To Action Widget"
 msgstr ""
 
-#: inc/widgets.php:440 inc/widgets.php:555
+#: inc/widgets.php:444 inc/widgets.php:556
 msgid "Image:"
 msgstr ""
 
-#: inc/widgets.php:452
+#: inc/widgets.php:456
 msgid "Other Settings :"
 msgstr ""
 
-#: inc/widgets.php:454
+#: inc/widgets.php:458
 msgid "Call to Action Main Text"
 msgstr ""
 
-#: inc/widgets.php:526
+#: inc/widgets.php:527
 msgid "Display some pages as testimonial."
 msgstr ""
 
-#: inc/widgets.php:532
+#: inc/widgets.php:533
 msgid "TG: Testimonial Widget"
 msgstr ""
 
-#: inc/widgets.php:576
+#: inc/widgets.php:577
 msgid ""
 "Note: Create the pages and select Testimonial Template to display "
 "Testimonial pages."
 msgstr ""
 
-#: inc/widgets.php:681
+#: inc/widgets.php:682
 msgid "Show your Team Members."
 msgstr ""
 
-#: inc/widgets.php:688
+#: inc/widgets.php:689
 msgid "TG: Our Team Widget"
 msgstr ""
 
-#: inc/widgets.php:709
-msgid ""
-"Note: Create the pages and select Team Template to display Our Team pages."
+#: inc/widgets.php:711
+msgid "Note: Create the pages and select Team Template to display Our Team pages."
 msgstr ""
 
-#: inc/widgets.php:807
+#: inc/widgets.php:809
 msgid "Display latest posts or posts of specific category"
 msgstr ""
 
-#: inc/widgets.php:813
+#: inc/widgets.php:815
 msgid "TG: Featured Posts"
 msgstr ""
 
-#: inc/widgets.php:839
+#: inc/widgets.php:837
 msgid "Number of posts to display:"
 msgstr ""
 
-#: inc/widgets.php:844
+#: inc/widgets.php:842
 msgid "Show latest Posts"
 msgstr ""
 
-#: inc/widgets.php:845
+#: inc/widgets.php:843
 msgid "Show posts from a category"
 msgstr ""
 
-#: inc/widgets.php:849
+#: inc/widgets.php:847
 msgid "Select category"
+msgstr ""
+
+#: inc/widgets.php:918
+msgid "Blog Image"
 msgstr ""
 
 #: navigation.php:24 navigation.php:36
@@ -561,42 +599,25 @@ msgstr ""
 msgid "Next &rarr;"
 msgstr ""
 
-#: navigation.php:44
-msgctxt "Previous post link"
-msgid "&larr;"
-msgstr ""
-
-#: navigation.php:45
-msgctxt "Next post link"
-msgid "&rarr;"
-msgstr ""
-
 #: no-results.php:18 template-parts/content-none.php:22
-#, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: no-results.php:22 template-parts/content-none.php:26
+#: no-results.php:23 template-parts/content-none.php:26
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 
-#: no-results.php:27 template-parts/content-none.php:31
+#: no-results.php:28 template-parts/content-none.php:31
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
 
-#: searchform.php:11
-msgctxt "placeholder"
-msgid "Search &hellip;"
-msgstr ""
-
-#: searchform.php:12
-msgctxt "submit button"
-msgid "Search"
+#: page-templates/template-team-collection.php:78
+#: template-parts/content-slider.php:39
+msgid "Read More"
 msgstr ""
 
 #: sidebar/left.php:18 sidebar/right.php:18
@@ -604,15 +625,13 @@ msgid "Example Widget"
 msgstr ""
 
 #: sidebar/left.php:19
-#, php-format
 msgid ""
-"This is an example widget to show how the Left Sidebar looks by default. You "
-"can add custom widgets from the %swidgets screen%s in the admin. If custom "
-"widgets is added than this will be replaced by those widgets."
+"This is an example widget to show how the Left Sidebar looks by default. "
+"You can add custom widgets from the %swidgets screen%s in the admin. If "
+"custom widgets is added than this will be replaced by those widgets."
 msgstr ""
 
 #: sidebar/right.php:19
-#, php-format
 msgid ""
 "This is an example widget to show how the Right Sidebar looks by default. "
 "You can add custom widgets from the %swidgets screen%s in the admin. If "
@@ -628,22 +647,82 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#. translators: %s: Name of current post
 #: template-parts/content-page.php:36 template-parts/content-team.php:49
-#, php-format
+#. translators: %s: Name of current page
+#. translators: %s: Name of current post
 msgid "Edit %s"
 msgstr ""
 
-#: template-parts/content-slider.php:39
-msgid "Read More"
-msgstr ""
-
-#: tribe-events/widgets/list-widget.php:61
-#, php-format
+#: tribe-events/widgets/tg-list-widget.php:61
 msgid "View All %s"
 msgstr ""
 
-#: tribe-events/widgets/list-widget.php:67
-#, php-format
+#: tribe-events/widgets/tg-list-widget.php:67
 msgid "There are no upcoming %s at this time."
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "FitClub"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://themegrill.com/themes/fitclub/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"FitClub specially focuses on creating fitness, gym type of websites. "
+"However, due to its flexibility and easiness it can be used to create any "
+"types of sites."
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://themegrill.com"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "FitClub Startpage"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Service Template"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Team Collection Template"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Team Template"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Testimonial Template"
+msgstr ""
+
+#: comments.php:31
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: navigation.php:44
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr ""
+
+#: navigation.php:45
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr ""
+
+#: searchform.php:11
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:12
+msgctxt "submit button"
+msgid "Search"
 msgstr ""
