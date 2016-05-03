@@ -19,30 +19,23 @@ module.exports = function( grunt ){
 				'Gruntfile.js',
 				'<%= dirs.js %>/*.js',
 				'!<%= dirs.js %>/*.min.js',
-            '!<%= dirs.js %>/color-picker.js',
-            '!<%= dirs.js %>/html5shiv.js',
-            '!<%= dirs.js %>/image-uploader.js',
-            '!<%= dirs.js %>/jquery.bxslider.js',
-            '!<%= dirs.js %>/metabox-toggle.js'
+				'!<%= dirs.js %>/html5shiv.js',
+				'!<%= dirs.js %>/image-uploader.js',
+				'!<%= dirs.js %>/jquery.bxslider.js'
 			]
 		},
 
 		// Generate POT files.
 		makepot: {
-			options: {
-				type: 'wp-theme',
-				domainPath: 'languages',
-				potHeaders: {
-					'report-msgid-bugs-to': 'themegrill@gmail.com',
-					'language-team': 'LANGUAGE <EMAIL@ADDRESS>'
-				}
-			},
 			dist: {
 				options: {
+					type: 'wp-theme',
+					domainPath: 'languages',
 					potFilename: 'fitclub.pot',
-					exclude: [
-						'deploy/.*' // Exclude deploy directory
-					]
+					potHeaders: {
+						'report-msgid-bugs-to': 'themegrill@gmail.com',
+						'language-team': 'LANGUAGE <EMAIL@ADDRESS>'
+					}
 				}
 			}
 		},
@@ -75,13 +68,34 @@ module.exports = function( grunt ){
 				],
 				expand: true
 			}
-		}
+		},
 
+		// Compress files and folders.
+		compress: {
+			options: {
+				archive: 'fitclub.zip'
+			},
+			files: {
+				src: [
+					'**',
+					'!.*',
+					'!*.md',
+					'!*.zip',
+					'!.*/**',
+					'!Gruntfile.js',
+					'!package.json',
+					'!node_modules/**'
+				],
+				dest: 'fitclub',
+				expand: true
+			}
+		}
 	});
 
 	// Load NPM tasks to be used here
 	grunt.loadNpmTasks( 'grunt-wp-i18n' );
 	grunt.loadNpmTasks( 'grunt-checktextdomain' );
+	grunt.loadNpmTasks( 'grunt-contrib-compress' );
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 
 	// Register tasks
@@ -92,5 +106,10 @@ module.exports = function( grunt ){
 	grunt.registerTask( 'dev', [
 		'default',
 		'makepot'
+	]);
+
+	grunt.registerTask( 'zip', [
+		'dev',
+		'compress'
 	]);
 };
