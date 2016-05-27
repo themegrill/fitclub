@@ -46,8 +46,7 @@ and we will include it within the theme from next version update.
 
 /**********************************************************/
 
-== CHANGE LOG ==
-
+== Changelog ==
 
 = Version 1.0.6 =
 Tweaks:
