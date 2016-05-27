@@ -159,7 +159,7 @@ class FitClub_Admin {
 					<div class="col">
 						<h3><?php echo esc_html_e( 'Documentation', 'fitclub' ); ?></h3>
 						<p><?php esc_html_e( 'Please view our documentation page to setup the theme.', 'fitclub' ) ?></p>
-						<p><a href="<?php echo esc_url( 'http://themegrill.com/theme-instruction/fitclub/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Documentation', 'fitclub' ); ?></a></p>
+						<p><a href="<?php echo esc_url( 'http://docs.themegrill.com/fitclub/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Documentation', 'fitclub' ); ?></a></p>
 					</div>
 
 					<div class="col">
