@@ -279,7 +279,11 @@ class FitClub_Admin {
 			<ol>
 				<li><?php printf(__('<a href="%s" target="_blank">Contact Form 7</a>', 'fitclub'), esc_url('https://wordpress.org/plugins/contact-form-7/')); ?></li>
 				<li><?php printf(__('<a href="%s" target="_blank">WP-PageNavi</a>', 'fitclub'), esc_url('https://wordpress.org/plugins/wp-pagenavi/')); ?></li>
-				<li><?php printf(__('<a href="%s" target="_blank">The Events Calendar</a>', 'fitclub'), esc_url('https://wordpress.org/plugins/the-events-calendar/')); ?></li>
+				<li><?php printf(__('<a href="%s" target="_blank">Social Icons</a>', 'spacious'), esc_url('https://wordpress.org/plugins/social-icons/')); ?>
+				</li>
+				<li><?php printf(__('<a href="%s" target="_blank">Easy Social Sharing</a>', 'spacious'), esc_url('https://wordpress.org/plugins/easy-social-sharing/')); ?>
+				</li>
+				<li><?php printf(__('<a href="%s" target="_blank">Social Icons</a>', 'fitclub'), esc_url('https://wordpress.org/plugins/the-events-calendar/')); ?></li>
 				<li>
 					<?php printf(__('<a href="%s" target="_blank">WMPL</a>', 'fitclub'), esc_url('https://wpml.org/')); ?>
 					<?php esc_html_e('Fully Compatible in Pro Version', 'fitclub'); ?>
