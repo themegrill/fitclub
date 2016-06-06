@@ -279,16 +279,17 @@ class fitclub_about_us_widget extends WP_Widget {
 			<input class="my-color-picker" type="text" data-default-color="#575757" id="<?php echo $this->get_field_id( 'background_color' ); ?>" name="<?php echo $this->get_field_name( 'background_color' ); ?>" value="<?php echo esc_attr($background_color); ?>" />
 		</p>
 		<p>
-		<label for="<?php echo $this->get_field_id( 'background_image' ); ?>"> <?php esc_html_e( 'Background Image:', 'fitclub' ); ?> </label> <br />
+			<label for="<?php echo $this->get_field_id( 'background_image' ); ?>"> <?php esc_html_e( 'Background Image:', 'fitclub' ); ?> </label> <br />
 
-		<?php
-		if ( $background_image  != '' ) :
-			echo '<img id="' . $this->get_field_id( 'background_image' . 'preview') . '"src="' . esc_url($background_image) . '"style="max-width: 250px;" /><br />';
-		endif;
-		?>
-		<input type="text" class="widefat custom_media_url" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo esc_url($background_image); ?>" style="margin-top: 5px;"/>
-
-		<input type="button" class="button button-primary custom_media_button" id="custom_media_button_action" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php esc_attr_e( 'Upload Image', 'fitclub' ); ?>" style="margin-top: 5px; margin-right: 30px;" onclick="imageWidget.uploader( '<?php echo $this->get_field_id( 'background_image' ); ?>' ); return false;"/>
+			<div class="media-uploader" id="<?php echo $this->get_field_id( 'background_image' ); ?>">
+				<div class="custom_media_preview">
+					<?php if ( $background_image != '' ) : ?>
+						<img class="custom_media_preview_default" src="<?php echo esc_url( $background_image ); ?>" style="max-width:100%;" />
+					<?php endif; ?>
+				</div>
+				<input type="text" class="widefat custom_media_input" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo esc_url( $background_image ); ?>" style="margin-top:5px;" />
+				<button class="custom_media_upload button button-secondary button-large" id="<?php echo $this->get_field_id( 'background_image' ); ?>" data-choose="<?php echo esc_attr( 'Choose an image', 'fitclub' ); ?>" data-update="<?php echo esc_attr( 'Use image', 'fitclub' ); ?>" style="width:100%;margin-top:6px;margin-right:30px;"><?php echo esc_html( 'Select an Image', 'fitclub' ); ?></button>
+			</div>
 		</p>
 
 		<p>
@@ -443,14 +444,15 @@ class fitclub_call_to_action_widget extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id( 'background_image' ); ?>"> <?php esc_html_e( 'Image:', 'fitclub' ); ?> </label> <br />
 
-			<?php
-			if ( $background_image  != '' ) :
-				echo '<img id="' . $this->get_field_id( 'background_image' . 'preview') . '"src="' . esc_url($background_image) . '"style="max-width: 250px;" /><br />';
-			endif;
-			?>
-			<input type="text" class="widefat custom_media_url" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo esc_url($background_image); ?>" style="margin-top: 5px;"/>
-
-			<input type="button" class="button button-primary custom_media_button" id="custom_media_button_action" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php esc_attr_e( 'Upload Image', 'fitclub' ); ?>" style="margin-top: 5px; margin-right: 30px;" onclick="imageWidget.uploader( '<?php echo $this->get_field_id( 'background_image' ); ?>' ); return false;"/>
+			<div class="media-uploader" id="<?php echo $this->get_field_id( 'background_image' ); ?>">
+				<div class="custom_media_preview">
+					<?php if ( $background_image != '' ) : ?>
+						<img class="custom_media_preview_default" src="<?php echo esc_url( $background_image ); ?>" style="max-width:100%;" />
+					<?php endif; ?>
+				</div>
+				<input type="text" class="widefat custom_media_input" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo esc_url( $background_image ); ?>" style="margin-top:5px;" />
+				<button class="custom_media_upload button button-secondary button-large" id="<?php echo $this->get_field_id( 'background_image' ); ?>" data-choose="<?php echo esc_attr( 'Choose an image', 'fitclub' ); ?>" data-update="<?php echo esc_attr( 'Use image', 'fitclub' ); ?>" style="width:100%;margin-top:6px;margin-right:30px;"><?php echo esc_html( 'Select an Image', 'fitclub' ); ?></button>
+			</div>
 		</p>
 
 		<strong><?php esc_html_e( 'Other Settings :', 'fitclub' ); ?></strong><br />
@@ -555,14 +557,15 @@ class fitclub_testimonial_widget extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id( 'background_image' ); ?>"> <?php esc_html_e( 'Image:', 'fitclub' ); ?> </label> <br />
 
-			<?php
-			if ( $background_image  != '' ) :
-				echo '<img id="' . $this->get_field_id( 'background_image' . 'preview') . '"src="' . esc_url($background_image) . '"style="max-width: 250px;" /><br />';
-			endif;
-			?>
-			<input type="text" class="widefat custom_media_url" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo esc_url($background_image); ?>" style="margin-top: 5px;"/>
-
-			<input type="button" class="button button-primary custom_media_button" id="custom_media_button_action" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php esc_attr_e( 'Upload Image', 'fitclub' ); ?>" style="margin-top: 5px; margin-right: 30px;" onclick="imageWidget.uploader( '<?php echo $this->get_field_id( 'background_image' ); ?>' ); return false;"/>
+			<div class="media-uploader" id="<?php echo $this->get_field_id( 'background_image' ); ?>">
+				<div class="custom_media_preview">
+					<?php if ( $background_image != '' ) : ?>
+						<img class="custom_media_preview_default" src="<?php echo esc_url( $background_image ); ?>" style="max-width:100%;" />
+					<?php endif; ?>
+				</div>
+				<input type="text" class="widefat custom_media_input" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo esc_url( $background_image ); ?>" style="margin-top:5px;" />
+				<button class="custom_media_upload button button-secondary button-large" id="<?php echo $this->get_field_id( 'background_image' ); ?>" data-choose="<?php echo esc_attr( 'Choose an image', 'fitclub' ); ?>" data-update="<?php echo esc_attr( 'Use image', 'fitclub' ); ?>" style="width:100%;margin-top:6px;margin-right:30px;"><?php echo esc_html( 'Select an Image', 'fitclub' ); ?></button>
+			</div>
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'fitclub' ); ?></label>
