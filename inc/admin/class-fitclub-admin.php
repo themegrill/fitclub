@@ -164,31 +164,31 @@ class FitClub_Admin {
 			<div class="changelog point-releases">
 				<div class="under-the-hood two-col">
 					<div class="col">
-						<h3><?php echo esc_html_e( 'Theme Customizer', 'fitclub' ); ?></h3>
+						<h3><?php esc_html_e( 'Theme Customizer', 'fitclub' ); ?></h3>
 						<p><?php esc_html_e( 'All Theme Options are available via Customize screen.', 'fitclub' ) ?></p>
 						<p><a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-secondary"><?php esc_html_e( 'Customize', 'fitclub' ); ?></a></p>
 					</div>
 
 					<div class="col">
-						<h3><?php echo esc_html_e( 'Documentation', 'fitclub' ); ?></h3>
+						<h3><?php esc_html_e( 'Documentation', 'fitclub' ); ?></h3>
 						<p><?php esc_html_e( 'Please view our documentation page to setup the theme.', 'fitclub' ) ?></p>
 						<p><a href="<?php echo esc_url( 'http://docs.themegrill.com/fitclub/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Documentation', 'fitclub' ); ?></a></p>
 					</div>
 
 					<div class="col">
-						<h3><?php echo esc_html_e( 'Got theme support question?', 'fitclub' ); ?></h3>
+						<h3><?php esc_html_e( 'Got theme support question?', 'fitclub' ); ?></h3>
 						<p><?php esc_html_e( 'Please put it in our dedicated support forum.', 'fitclub' ) ?></p>
 						<p><a href="<?php echo esc_url( 'http://themegrill.com/support-forum/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Support Forum', 'fitclub' ); ?></a></p>
 					</div>
 
 					<div class="col">
-						<h3><?php echo esc_html_e( 'Need more features?', 'fitclub' ); ?></h3>
+						<h3><?php esc_html_e( 'Need more features?', 'fitclub' ); ?></h3>
 						<p><?php esc_html_e( 'Upgrade to PRO version for more exciting features.', 'fitclub' ) ?></p>
 						<p><a href="<?php echo esc_url( 'http://themegrill.com/themes/fitclub-pro/' ); ?>" class="button button-secondary"><?php esc_html_e( 'View Pro', 'fitclub' ); ?></a></p>
 					</div>
 
 					<div class="col">
-						<h3><?php echo esc_html_e( 'Got sales related question?', 'fitclub' ); ?></h3>
+						<h3><?php esc_html_e( 'Got sales related question?', 'fitclub' ); ?></h3>
 						<p><?php esc_html_e( 'Please send it via our sales contact page.', 'fitclub' ) ?></p>
 						<p><a href="<?php echo esc_url( 'http://themegrill.com/contact/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Contact Page', 'fitclub' ); ?></a></p>
 					</div>
@@ -196,7 +196,7 @@ class FitClub_Admin {
 					<div class="col">
 						<h3>
 							<?php
-							echo esc_html_e( 'Translate', 'fitclub' );
+							esc_html_e( 'Translate', 'fitclub' );
 							echo ' ' . $theme->display( 'Name' );
 							?>
 						</h3>
@@ -290,17 +290,16 @@ class FitClub_Admin {
 
 			<p class="about-description"><?php esc_html_e( 'This theme recommends following plugins.', 'fitclub' ); ?></p>
 			<ol>
-				<li><?php printf(__('<a href="%s" target="_blank">Contact Form 7</a>', 'fitclub'), esc_url('https://wordpress.org/plugins/contact-form-7/')); ?></li>
-				<li><?php printf(__('<a href="%s" target="_blank">WP-PageNavi</a>', 'fitclub'), esc_url('https://wordpress.org/plugins/wp-pagenavi/')); ?></li>
-				<li><?php printf(__('<a href="%s" target="_blank">Social Icons</a>', 'spacious'), esc_url('https://wordpress.org/plugins/social-icons/')); ?>
+				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/social-icons/' ); ?>" target="_blank"><?php esc_html_e( 'Social Icons', 'fitclub' ); ?></a>
+					<?php esc_html_e(' by ThemeGrill', 'fitclub'); ?>
 				</li>
-				<li><?php printf(__('<a href="%s" target="_blank">Easy Social Sharing</a>', 'spacious'), esc_url('https://wordpress.org/plugins/easy-social-sharing/')); ?>
+				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/easy-social-sharing/' ); ?>" target="_blank"><?php esc_html_e( 'Easy Social Sharing', 'fitclub' ); ?></a>
+					<?php esc_html_e(' by ThemeGrill', 'fitclub'); ?>
 				</li>
-				<li><?php printf(__('<a href="%s" target="_blank">The Events Calendar</a>', 'fitclub'), esc_url('https://wordpress.org/plugins/the-events-calendar/')); ?></li>
-				<li>
-					<?php printf(__('<a href="%s" target="_blank">WMPL</a>', 'fitclub'), esc_url('https://wpml.org/')); ?>
-					<?php esc_html_e('Fully Compatible in Pro Version', 'fitclub'); ?>
-				</li>
+				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/contact-form-7/' ); ?>" target="_blank"><?php esc_html_e( 'Contact Form 7', 'fitclub' ); ?></a></li>
+				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/wp-pagenavi/' ); ?>" target="_blank"><?php esc_html_e( 'WP-PageNavi', 'fitclub' ); ?></a></li>
+				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/the-events-calendar/' ); ?>" target="_blank"><?php esc_html_e( 'The Events Calendar', 'fitclub' ); ?></a></li>
+				<li><a href="<?php echo esc_url( 'https://wpml.org/' ); ?>" target="_blank"><?php esc_html_e( 'WPML', 'fitclub' ); ?></a></li>
 			</ol>
 
 		</div>
@@ -339,48 +338,48 @@ class FitClub_Admin {
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Font Size options', 'fitclub'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Color Palette', 'fitclub'); ?></h3></td>
-						<td><?php esc_html_e('Primary Color Option', 'fitclub'); ?></span></td>
-						<td><?php esc_html_e('Multiple Color Options', 'fitclub'); ?></span></td>
+						<td><?php esc_html_e('Primary Color Option', 'fitclub'); ?></td>
+						<td><?php esc_html_e('Multiple Color Options', 'fitclub'); ?></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Social Icons Menu', 'fitclub'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Woocommerce Compatible', 'fitclub'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('YITH Wishlist Compatible', 'fitclub'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Translation Ready', 'fitclub'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('WPML Compatible', 'fitclub'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('The Events Calendar Compatible', 'fitclub'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Footer Copyright Editor', 'fitclub'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Footer Widgets Column', 'fitclub'); ?></h3></td>
@@ -399,73 +398,73 @@ class FitClub_Admin {
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('TG: About Widget', 'fitclub'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('TG: Call to Action Widget', 'fitclub'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('TG: Events Calendar', 'fitclub'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('TG: Featured Posts', 'fitclub'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('TG: Our Team Widget', 'fitclub'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('TG: Service Widget', 'fitclub'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('TG: Testimonial Widget', 'fitclub'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('TG: Call to Action Video Widget', 'fitclub'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('TG: Contact Widget', 'fitclub'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('TG: FAQ Widget', 'fitclub'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('TG: Logos', 'fitclub'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('TG: Opening Hours Widget', 'fitclub'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('TG: Products Widget', 'fitclub'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('TG: Stats Counter Widget', 'fitclub'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td></td>
