@@ -1,73 +1,87 @@
+
 <?php
 /**
  * FitClub Admin Class.
  *
  * @author  ThemeGrill
- * @package fitclub
- * @since   1.3.8
+ * @package FitClub
+ * @since   1.0.7
  */
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
 if ( ! class_exists( 'FitClub_Admin' ) ) :
-
 /**
  * FitClub_Admin Class.
  */
 class FitClub_Admin {
-
 	/**
 	 * Constructor.
 	 */
 	public function __construct() {
 		add_action( 'admin_menu', array( $this, 'admin_menu' ) );
+		add_action( 'wp_loaded', array( __CLASS__, 'hide_notices' ) );
 		add_action( 'load-themes.php', array( $this, 'admin_notice' ) );
 	}
-
 	/**
 	 * Add admin menu.
 	 */
 	public function admin_menu() {
 		$theme = wp_get_theme( get_template() );
-
 		$page = add_theme_page( esc_html__( 'About', 'fitclub' ) . ' ' . $theme->display( 'Name' ), esc_html__( 'About', 'fitclub' ) . ' ' . $theme->display( 'Name' ), 'activate_plugins', 'fitclub-welcome', array( $this, 'welcome_screen' ) );
 		add_action( 'admin_print_styles-' . $page, array( $this, 'enqueue_styles' ) );
 	}
-
 	/**
 	 * Enqueue styles.
 	 */
 	public function enqueue_styles() {
 		global $fitclub_version;
-
 		wp_enqueue_style( 'fitclub-welcome', get_template_directory_uri() . '/css/admin/welcome.css', array(), $fitclub_version );
 	}
-
 	/**
 	 * Add admin notice.
 	 */
 	public function admin_notice() {
-		global $pagenow;
-
+		global $fitclub_version, $pagenow;
+		wp_enqueue_style( 'fitclub-message', get_template_directory_uri() . '/css/admin/message.css', array(), $fitclub_version );
+		// Let's bail on theme activation.
 		if ( 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) {
+			add_action( 'admin_notices', array( $this, 'welcome_notice' ) );
+			update_option( 'fitclub_admin_notice_welcome', 1 );
+		// No option? Let run the notice wizard again..
+		} elseif( ! get_option( 'fitclub_admin_notice_welcome' ) ) {
 			add_action( 'admin_notices', array( $this, 'welcome_notice' ) );
 		}
 	}
-
+	/**
+	 * Hide a notice if the GET variable is set.
+	 */
+	public static function hide_notices() {
+		if ( isset( $_GET['fitclub-hide-notice'] ) && isset( $_GET['_fitclub_notice_nonce'] ) ) {
+			if ( ! wp_verify_nonce( $_GET['_fitclub_notice_nonce'], 'fitclub_hide_notices_nonce' ) ) {
+				wp_die( __( 'Action failed. Please refresh the page and retry.', 'fitclub' ) );
+			}
+			if ( ! current_user_can( 'manage_options' ) ) {
+				wp_die( __( 'Cheatin&#8217; huh?', 'fitclub' ) );
+			}
+			$hide_notice = sanitize_text_field( $_GET['fitclub-hide-notice'] );
+			update_option( 'fitclub_admin_notice_' . $hide_notice, 1 );
+		}
+	}
 	/**
 	 * Show welcome notice.
 	 */
 	public function welcome_notice() {
 		?>
-		<div class="updated notice is-dismissible">
-			<p><?php echo sprintf( esc_html__( 'Welcome! Thank you for choosing FitClub! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'fitclub' ), '<a href="' . esc_url( admin_url( 'themes.php?page=fitclub-welcome' ) ) . '">', '</a>' ); ?></p>
-			<p><a href="<?php echo esc_url( admin_url( 'themes.php?page=fitclub-welcome' ) ); ?>" class="button" style="text-decoration: none;"><?php esc_html_e( 'Get started with FitClub', 'fitclub' ); ?></a></p>
+		<div id="message" class="updated fitclub-message">
+			<a class="fitclub-message-close notice-dismiss" href="<?php echo esc_url( wp_nonce_url( remove_query_arg( array( 'activated' ), add_query_arg( 'fitclub-hide-notice', 'welcome' ) ), 'fitclub_hide_notices_nonce', '_fitclub_notice_nonce' ) ); ?>"><?php _e( 'Dismiss', 'fitclub' ); ?></a>
+			<p><?php printf( esc_html__( 'Welcome! Thank you for choosing fitclub! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'fitclub' ), '<a href="' . esc_url( admin_url( 'themes.php?page=fitclub-welcome' ) ) . '">', '</a>' ); ?></p>
+			<p class="submit">
+				<a class="button-secondary" href="<?php echo esc_url( admin_url( 'themes.php?page=fitclub-welcome' ) ); ?>"><?php esc_html_e( 'Get started with fitclub', 'fitclub' ); ?></a>
+			</p>
 		</div>
 		<?php
 	}
-
 	/**
 	 * Intro text/links shown to all about pages.
 	 *
@@ -76,7 +90,6 @@ class FitClub_Admin {
 	private function intro() {
 		global $fitclub_version;
 		$theme = wp_get_theme( get_template() );
-
 		// Drop minor version if 0
 		$major_version = substr( $fitclub_version, 0, 3 );
 		?>
@@ -101,7 +114,7 @@ class FitClub_Admin {
 
 			<a href="<?php echo esc_url( apply_filters( 'fitclub_pro_theme_url', 'http://demo.themegrill.com/fitclub/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'fitclub' ); ?></a>
 
-			<a href="<?php echo esc_url( apply_filters( 'fitclub_pro_theme_url', 'http://themegrill.com/themes/fitclub-pro/' ) ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View PRO version', 'fitclub' ); ?></a>
+			<a href="<?php echo esc_url( apply_filters( 'fitclub_pro_theme_url', 'http://themegrill.com/themes/fitclub-pro/' ) ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View Pro', 'fitclub' ); ?></a>
 
 			<a href="<?php echo esc_url( apply_filters( 'fitclub_pro_theme_url', 'http://wordpress.org/support/view/theme-reviews/fitclub?filter=5' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'fitclub' ); ?></a>
 		</p>
@@ -257,7 +270,7 @@ class FitClub_Admin {
 			$changelog .= '<pre class="changelog">';
 
 			foreach ( $changes as $index => $line ) {
-				$changelog .= wp_kses_post( preg_replace( '~(=\s*Version\s*(\d+(?:\.\d+)+)\s*=|$)~Uis', '<span class="title">${1}</span>', $line ) );
+				$changelog .= wp_kses_post( preg_replace( '~(=\s*Version\s*(\d(?:\.\d))\s*=|$)~Uis', '<span class="title">${1}</span>', $line ) );
 			}
 
 			$changelog .= '</pre>';
@@ -322,7 +335,7 @@ class FitClub_Admin {
 					<tr>
 						<td><h3><?php esc_html_e('Google Fonts Option', 'fitclub'); ?></h3></td>
 						<td><span class="dashicons dashicons-no"></span></td>
-						<td><?php esc_html_e('600+', 'fitclub'); ?></td>
+						<td><?php esc_html_e('600', 'fitclub'); ?></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Font Size options', 'fitclub'); ?></h3></td>
