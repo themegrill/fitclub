@@ -4,17 +4,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FitClub 1.0.6\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2016-05-03 09:02:06+00:00\n"
+"POT-Creation-Date: 2016-07-14 10:03:15+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"Language-Team: ThemeGrill <themegrill@gmail.com>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
+
+#: inc/admin/class-fitclub-admin.php:331
+msgid "4"
+msgstr ""
 
 #: 404.php:36
 msgid "404"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:337
+msgid "600"
 msgstr ""
 
 #: 404.php:29
@@ -65,6 +73,326 @@ msgstr ""
 msgid "Menu"
 msgstr ""
 
+#: inc/admin/class-fitclub-admin.php:31 inc/admin/class-fitclub-admin.php:98
+msgid "About"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:62
+msgid "Action failed. Please refresh the page and retry."
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:65
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:77
+msgid "Dismiss"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:78
+msgid ""
+"Welcome! Thank you for choosing fitclub! To fully take advantage of the "
+"best our theme can offer please make sure you visit our %swelcome page%s."
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:80
+msgid "Get started with fitclub"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:100
+msgid "%s"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:113 inc/customizer.php:41
+msgid "Theme Info"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:115 inc/customizer.php:53
+msgid "View Demo"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:117 inc/admin/class-fitclub-admin.php:187
+#: inc/admin/class-fitclub-admin.php:473
+msgid "View Pro"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:119 inc/customizer.php:57
+msgid "Rate this theme"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:127
+msgid "Supported Plugins"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:130
+msgid "Free Vs Pro"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:133
+msgid "Changelog"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:167
+msgid "Theme Customizer"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:168
+msgid "All Theme Options are available via Customize screen."
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:169
+msgid "Customize"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:173 inc/admin/class-fitclub-admin.php:175
+#: inc/customizer.php:49
+msgid "Documentation"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:174
+msgid "Please view our documentation page to setup the theme."
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:179
+msgid "Got theme support question?"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:180
+msgid "Please put it in our dedicated support forum."
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:181
+msgid "Support Forum"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:185
+msgid "Need more features?"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:186 inc/admin/class-fitclub-admin.php:318
+msgid "Upgrade to PRO version for more exciting features."
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:191
+msgid "Got sales related question?"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:192
+msgid "Please send it via our sales contact page."
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:193
+msgid "Contact Page"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:199 inc/admin/class-fitclub-admin.php:207
+msgid "Translate"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:203
+msgid "Click below to translate this theme into your own language."
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:219
+msgid "Return to Updates"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:219
+msgid "Return to Dashboard &rarr; Updates"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:222
+msgid "Go to Dashboard &rarr; Home"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:222
+msgid "Go to Dashboard"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:239
+msgid "View changelog below."
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:291
+msgid "This theme recommends following plugins."
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:293
+msgid "Social Icons"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:294 inc/admin/class-fitclub-admin.php:297
+msgid " by ThemeGrill"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:296
+msgid "Easy Social Sharing"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:299
+msgid "Contact Form 7"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:300
+msgid "WP-PageNavi"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:301
+msgid "The Events Calendar"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:302
+msgid "WPML"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:323
+msgid "Features"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "FitClub"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:325
+msgid "FitClub Pro"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:330
+msgid "Slider"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:332
+msgid "Unlimited Slides"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:335
+msgid "Google Fonts Option"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:340
+msgid "Font Size options"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:345
+msgid "Color Palette"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:346 inc/customizer.php:350
+msgid "Primary Color Option"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:347
+msgid "Multiple Color Options"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:350
+msgid "Social Icons Menu"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:355
+msgid "Woocommerce Compatible"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:360
+msgid "YITH Wishlist Compatible"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:365
+msgid "Translation Ready"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:370
+msgid "WPML Compatible"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:375
+msgid "The Events Calendar Compatible"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:380
+msgid "Footer Copyright Editor"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:385
+msgid "Footer Widgets Column"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:386 inc/admin/class-fitclub-admin.php:387
+msgid "1,2,3,4 Columns"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:390
+msgid "Demo Content"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:395 inc/customizer.php:45
+msgid "Support"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:396
+msgid "Forum"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:397
+msgid "Forum Emails/Support Ticket"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:400 inc/widgets.php:253
+msgid "TG: About Widget"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:405
+msgid "TG: Call to Action Widget"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:410
+msgid "TG: Events Calendar"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:415 inc/widgets.php:815
+msgid "TG: Featured Posts"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:420 inc/widgets.php:689
+msgid "TG: Our Team Widget"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:425 inc/widgets.php:127
+msgid "TG: Service Widget"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:430 inc/widgets.php:533
+msgid "TG: Testimonial Widget"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:435
+msgid "TG: Call to Action Video Widget"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:440
+msgid "TG: Contact Widget"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:445
+msgid "TG: FAQ Widget"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:450
+msgid "TG: Logos"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:455
+msgid "TG: Opening Hours Widget"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:460
+msgid "TG: Products Widget"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:465
+msgid "TG: Stats Counter Widget"
+msgstr ""
+
 #: inc/admin/meta-boxes.php:16 inc/admin/meta-boxes.php:18
 msgid "Select Layout"
 msgstr ""
@@ -99,26 +427,6 @@ msgstr ""
 
 #: inc/admin/meta-boxes.php:99
 msgid "Show designation in Our Team Widget."
-msgstr ""
-
-#: inc/customizer.php:41
-msgid "Theme Info"
-msgstr ""
-
-#: inc/customizer.php:45
-msgid "Support"
-msgstr ""
-
-#: inc/customizer.php:49
-msgid "Documentation"
-msgstr ""
-
-#: inc/customizer.php:53
-msgid "View Demo"
-msgstr ""
-
-#: inc/customizer.php:57
-msgid "Rate this theme"
 msgstr ""
 
 #: inc/customizer.php:69
@@ -241,10 +549,6 @@ msgstr ""
 msgid ""
 "Select default layout for single posts. This layout will be reflected in "
 "all single posts unless unique layout is set for specific post"
-msgstr ""
-
-#: inc/customizer.php:350
-msgid "Primary Color Option"
 msgstr ""
 
 #: inc/customizer.php:370
@@ -441,10 +745,6 @@ msgstr ""
 msgid "Display some pages as services."
 msgstr ""
 
-#: inc/widgets.php:127
-msgid "TG: Service Widget"
-msgstr ""
-
 #: inc/widgets.php:141 inc/widgets.php:295 inc/widgets.php:568
 #: inc/widgets.php:703 inc/widgets.php:833
 msgid "Title:"
@@ -466,10 +766,6 @@ msgstr ""
 
 #: inc/widgets.php:247
 msgid "Show your about page."
-msgstr ""
-
-#: inc/widgets.php:253
-msgid "TG: About Widget"
 msgstr ""
 
 #: inc/widgets.php:276 inc/widgets.php:439 inc/widgets.php:551
@@ -541,10 +837,6 @@ msgstr ""
 msgid "Display some pages as testimonial."
 msgstr ""
 
-#: inc/widgets.php:533
-msgid "TG: Testimonial Widget"
-msgstr ""
-
 #: inc/widgets.php:577
 msgid ""
 "Note: Create the pages and select Testimonial Template to display "
@@ -555,20 +847,12 @@ msgstr ""
 msgid "Show your Team Members."
 msgstr ""
 
-#: inc/widgets.php:689
-msgid "TG: Our Team Widget"
-msgstr ""
-
 #: inc/widgets.php:711
 msgid "Note: Create the pages and select Team Template to display Our Team pages."
 msgstr ""
 
 #: inc/widgets.php:809
 msgid "Display latest posts or posts of specific category"
-msgstr ""
-
-#: inc/widgets.php:815
-msgid "TG: Featured Posts"
 msgstr ""
 
 #: inc/widgets.php:837
@@ -659,10 +943,6 @@ msgstr ""
 
 #: tribe-events/widgets/tg-list-widget.php:67
 msgid "There are no upcoming %s at this time."
-msgstr ""
-
-#. Theme Name of the plugin/theme
-msgid "FitClub"
 msgstr ""
 
 #. Theme URI of the plugin/theme

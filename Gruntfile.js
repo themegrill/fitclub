@@ -34,7 +34,7 @@ module.exports = function( grunt ){
 					potFilename: 'fitclub.pot',
 					potHeaders: {
 						'report-msgid-bugs-to': 'themegrill@gmail.com',
-						'language-team': 'LANGUAGE <EMAIL@ADDRESS>'
+						'language-team': 'ThemeGrill <themegrill@gmail.com>'
 					}
 				}
 			}
