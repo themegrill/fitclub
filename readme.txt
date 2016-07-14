@@ -48,6 +48,10 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 
+= Version 1.0.7 - TBD =
+New:
+* Added the about page for theme information
+
 = Version 1.0.6 =
 Tweaks:
 * Fixed the titles for The Event Calendar pages

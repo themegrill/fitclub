@@ -299,7 +299,8 @@ class FitClub_Admin {
 				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/contact-form-7/' ); ?>" target="_blank"><?php esc_html_e( 'Contact Form 7', 'fitclub' ); ?></a></li>
 				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/wp-pagenavi/' ); ?>" target="_blank"><?php esc_html_e( 'WP-PageNavi', 'fitclub' ); ?></a></li>
 				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/the-events-calendar/' ); ?>" target="_blank"><?php esc_html_e( 'The Events Calendar', 'fitclub' ); ?></a></li>
-				<li><a href="<?php echo esc_url( 'https://wpml.org/' ); ?>" target="_blank"><?php esc_html_e( 'WPML', 'fitclub' ); ?></a></li>
+				<li><a href="<?php echo esc_url( 'https://wpml.org/' ); ?>" target="_blank"><?php esc_html_e( 'WPML', 'fitclub' ); ?></a>
+				<?php esc_html_e(' Fully Compatible in Pro', 'fitclub'); ?></li>
 			</ol>
 
 		</div>
