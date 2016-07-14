@@ -118,6 +118,22 @@ tr:nth-child(2n) {
     color: #24B37E;
 }
 
+table tr .btn-wrapper {
+	padding: 10px 0;
+}
+table tr .btn-wrapper .button {
+	background-color: #228b9b;
+	color: #fff;
+	font-size: 14px;
+	line-height: 0;
+	padding: 27px 0;
+	width: 59%;
+}
+table tr .btn-wrapper .button:hover {
+	background: #097282 none repeat scroll 0 0;
+	color: #fff;
+}
+
 @media (max-width: 1400px) {
 .about-wrap h1{
     font-size: 30px;

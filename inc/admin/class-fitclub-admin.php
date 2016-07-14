@@ -382,7 +382,7 @@ class FitClub_Admin {
 					<tr>
 						<td><h3><?php esc_html_e('Support', 'fitclub'); ?></h3></td>
 						<td><?php esc_html_e('Forum', 'fitclub'); ?></td>
-						<td><?php esc_html_e('Forum + Emails/Support Ticket', 'fitclub'); ?></td>
+						<td><?php esc_html_e('Forum Emails/Support Ticket', 'fitclub'); ?></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('TG: About Widget', 'fitclub'); ?></h3></td>
@@ -453,6 +453,13 @@ class FitClub_Admin {
 						<td><h3><?php esc_html_e('TG: Stats Counter Widget', 'fitclub'); ?></h3></td>
 						<td><span class="dashicons dashicons-no"></td>
 						<td><span class="dashicons dashicons-yes"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td class="btn-wrapper">
+							<a href="<?php echo esc_url( apply_filters( 'fitclub_pro_theme_url', 'http://themegrill.com/themes/fitclub-pro/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php _e( 'View Pro', 'fitclub' ); ?></a>
+						</td>
 					</tr>
 				</tbody>
 			</table>
