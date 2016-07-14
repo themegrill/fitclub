@@ -216,10 +216,10 @@ class FitClub_Admin {
 			<div class="return-to-dashboard fitclub">
 				<?php if ( current_user_can( 'update_core' ) && isset( $_GET['updated'] ) ) : ?>
 					<a href="<?php echo esc_url( self_admin_url( 'update-core.php' ) ); ?>">
-						<?php is_multisite() ? esc_html_e( 'Return to Updates' ) : esc_html_e( 'Return to Dashboard &rarr; Updates' ); ?>
+						<?php is_multisite() ? esc_html_e( 'Return to Updates', 'fitclub' ) : esc_html_e( 'Return to Dashboard &rarr; Updates', 'fitclub' ); ?>
 					</a> |
 				<?php endif; ?>
-				<a href="<?php echo esc_url( self_admin_url() ); ?>"><?php is_blog_admin() ? esc_html_e( 'Go to Dashboard &rarr; Home' ) : esc_html_e( 'Go to Dashboard' ); ?></a>
+				<a href="<?php echo esc_url( self_admin_url() ); ?>"><?php is_blog_admin() ? esc_html_e( 'Go to Dashboard &rarr; Home', 'fitclub' ) : esc_html_e( 'Go to Dashboard', 'fitclub' ); ?></a>
 			</div>
 		</div>
 		<?php
