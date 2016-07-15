@@ -48,7 +48,7 @@ and we will include it within the theme from next version update.
 
 == CHANGE LOG ==
 
-= Version 1.0.7 =
+= Version TBD =
 * Tweaks - Enhancement for the media uploader scripts used in widgets.
 
 = Version 1.0.6 =
