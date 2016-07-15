@@ -20,7 +20,6 @@ module.exports = function( grunt ){
 				'<%= dirs.js %>/*.js',
 				'!<%= dirs.js %>/*.min.js',
 				'!<%= dirs.js %>/html5shiv.js',
-				'!<%= dirs.js %>/image-uploader.js',
 				'!<%= dirs.js %>/jquery.bxslider.js'
 			]
 		},
