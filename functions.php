@@ -173,6 +173,13 @@ define( 'FitClub_ADMIN_IMAGES_URL', get_template_directory_uri() . '/inc/admin/i
  */
 require get_template_directory() . '/inc/admin/meta-boxes.php';
 
+/**
+ * FitClub About Page
+ */
+if ( is_admin() ) {
+	require get_template_directory() . '/inc/admin/class-fitclub-admin.php';
+}
+
 
 /* Add Support for The Event Calendar Plugin by Modern Tribe */
 if( class_exists( 'Tribe__Events__Main' ) ) {

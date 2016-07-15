@@ -46,8 +46,11 @@ and we will include it within the theme from next version update.
 
 /**********************************************************/
 
-== CHANGE LOG ==
+== Changelog ==
 
+= Version 1.0.7 - TBD =
+New:
+* Added the about page for theme information
 
 = Version 1.0.6 =
 Tweaks:
