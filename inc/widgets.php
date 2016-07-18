@@ -288,7 +288,7 @@ class fitclub_about_us_widget extends WP_Widget {
 					<?php endif; ?>
 				</div>
 				<input type="text" class="widefat custom_media_input" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo esc_url( $background_image ); ?>" style="margin-top:5px;" />
-				<button class="custom_media_upload button button-secondary button-large" id="<?php echo $this->get_field_id( 'background_image' ); ?>" data-choose="<?php echo esc_attr( 'Choose an image', 'fitclub' ); ?>" data-update="<?php echo esc_attr( 'Use image', 'fitclub' ); ?>" style="width:100%;margin-top:6px;margin-right:30px;"><?php echo esc_html( 'Select an Image', 'fitclub' ); ?></button>
+				<button class="custom_media_upload button button-secondary button-large" id="<?php echo $this->get_field_id( 'background_image' ); ?>" data-choose="<?php esc_attr_e( 'Choose an image', 'fitclub' ); ?>" data-update="<?php esc_attr_e( 'Use image', 'fitclub' ); ?>" style="width:100%;margin-top:6px;margin-right:30px;"><?php esc_html_e( 'Select an Image', 'fitclub' ); ?></button>
 			</div>
 		</p>
 
@@ -451,7 +451,7 @@ class fitclub_call_to_action_widget extends WP_Widget {
 					<?php endif; ?>
 				</div>
 				<input type="text" class="widefat custom_media_input" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo esc_url( $background_image ); ?>" style="margin-top:5px;" />
-				<button class="custom_media_upload button button-secondary button-large" id="<?php echo $this->get_field_id( 'background_image' ); ?>" data-choose="<?php echo esc_attr( 'Choose an image', 'fitclub' ); ?>" data-update="<?php echo esc_attr( 'Use image', 'fitclub' ); ?>" style="width:100%;margin-top:6px;margin-right:30px;"><?php echo esc_html( 'Select an Image', 'fitclub' ); ?></button>
+				<button class="custom_media_upload button button-secondary button-large" id="<?php echo $this->get_field_id( 'background_image' ); ?>" data-choose="<?php esc_attr_e( 'Choose an image', 'fitclub' ); ?>" data-update="<?php esc_attr_e( 'Use image', 'fitclub' ); ?>" style="width:100%;margin-top:6px;margin-right:30px;"><?php esc_html_e( 'Select an Image', 'fitclub' ); ?></button>
 			</div>
 		</p>
 
@@ -564,7 +564,7 @@ class fitclub_testimonial_widget extends WP_Widget {
 					<?php endif; ?>
 				</div>
 				<input type="text" class="widefat custom_media_input" id="<?php echo $this->get_field_id( 'background_image' ); ?>" name="<?php echo $this->get_field_name( 'background_image' ); ?>" value="<?php echo esc_url( $background_image ); ?>" style="margin-top:5px;" />
-				<button class="custom_media_upload button button-secondary button-large" id="<?php echo $this->get_field_id( 'background_image' ); ?>" data-choose="<?php echo esc_attr( 'Choose an image', 'fitclub' ); ?>" data-update="<?php echo esc_attr( 'Use image', 'fitclub' ); ?>" style="width:100%;margin-top:6px;margin-right:30px;"><?php echo esc_html( 'Select an Image', 'fitclub' ); ?></button>
+				<button class="custom_media_upload button button-secondary button-large" id="<?php echo $this->get_field_id( 'background_image' ); ?>" data-choose="<?php esc_attr_e( 'Choose an image', 'fitclub' ); ?>" data-update="<?php esc_attr_e( 'Use image', 'fitclub' ); ?>" style="width:100%;margin-top:6px;margin-right:30px;"><?php esc_html_e( 'Select an Image', 'fitclub' ); ?></button>
 			</div>
 		</p>
 		<p>
