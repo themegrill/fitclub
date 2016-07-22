@@ -46,8 +46,12 @@ and we will include it within the theme from next version update.
 
 /**********************************************************/
 
-== CHANGE LOG ==
+== Changelog ==
 
+= Version 1.0.7 - TBD =
+* Tweaks - Enhancement for the media uploader scripts used in widgets.
+New:
+* Added the about page for theme information
 
 = Version 1.0.6 =
 Tweaks:
