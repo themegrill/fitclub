@@ -41,8 +41,7 @@ All available options can be used from Appearance-> Customize
 /**********************************************************/
 
 == TRANSLATIONS ==
-If you've translated this theme into your language, feel free to send the translation over to themegrill@gmail.com
-and we will include it within the theme from next version update.
+IF you want to translate the theme to your language, please refer here: https://translate.wordpress.org/projects/wp-themes/fitclub
 
 /**********************************************************/
 

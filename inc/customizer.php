@@ -36,16 +36,16 @@ function fitclub_customize_register( $wp_customize ) {
 		public function render_content() {
 			//Add Theme instruction, Support Forum, Demo Link, Rating Link
 			$important_links = array(
-			'theme-info' => array(
+			'view-pro' => array(
 				'link' => esc_url('http://themegrill.com/themes/fitclub/'),
-				'text' => esc_html__('Theme Info', 'fitclub'),
+				'text' => esc_html__('View Pro', 'fitclub'),
 			),
 			'support' => array(
 				'link' => esc_url('http://themegrill.com/support-forum/'),
 				'text' => esc_html__('Support', 'fitclub'),
 			),
 			'documentation' => array(
-				'link' => esc_url('http://themegrill.com/theme-instruction/fitclub/'),
+				'link' => esc_url('http://docs.themegrill.com/fitclub/'),
 				'text' => esc_html__('Documentation', 'fitclub'),
 			),
 			'demo' => array(
@@ -657,15 +657,6 @@ function fitclub_customize_register( $wp_customize ) {
 
 add_action( 'customize_register', 'fitclub_customize_register' );
 
-/**
- * Enqueue scripts for customizer
- */
-function fitclub_customizer_js() {
-	wp_enqueue_script( 'fitclub_customizer_script', get_template_directory_uri() . '/js/customizer.js', array("jquery"), 'false', true  );
-;
-}
-add_action( 'customize_controls_enqueue_scripts', 'fitclub_customizer_js' );
-
 /*
  * Custom Scripts
  */
@@ -678,7 +669,6 @@ function fitclub_customizer_custom_scripts() { ?>
 	li#accordion-section-fitclub_important_links h3.accordion-section-title:hover { background-color: #289DCC !important; color: #fff !important; }
 	li#accordion-section-fitclub_important_links h3.accordion-section-title:after { color: #fff !important; }
 	/* Upsell button CSS */
-	.themegrill-pro-info,
 	.customize-control-fitclub-important-links a {
 		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8fc800+0,8fc800+100;Green+Flat+%232 */
 		background: #008EC2;
@@ -694,7 +684,6 @@ function fitclub_customizer_custom_scripts() { ?>
 		padding: 8px 0;
 	}
 
-	.themegrill-pro-info:hover,
 	.customize-control-fitclub-important-links a:hover {
 		color: #ffffff;
 		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006e2e+0,006e2e+100;Green+Flat+%233 */
