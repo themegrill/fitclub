@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FitClub 1.0.6\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2016-07-14 10:03:15+00:00\n"
+"POT-Creation-Date: 2016-09-02 04:56:11+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: ThemeGrill <themegrill@gmail.com>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
 
-#: inc/admin/class-fitclub-admin.php:331
+#: inc/admin/class-fitclub-admin.php:332
 msgid "4"
 msgstr ""
 
@@ -21,7 +21,7 @@ msgstr ""
 msgid "404"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:337
+#: inc/admin/class-fitclub-admin.php:338
 msgid "600"
 msgstr ""
 
@@ -103,7 +103,7 @@ msgstr ""
 msgid "%s"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:113 inc/customizer.php:41
+#: inc/admin/class-fitclub-admin.php:113
 msgid "Theme Info"
 msgstr ""
 
@@ -112,7 +112,7 @@ msgid "View Demo"
 msgstr ""
 
 #: inc/admin/class-fitclub-admin.php:117 inc/admin/class-fitclub-admin.php:187
-#: inc/admin/class-fitclub-admin.php:473
+#: inc/admin/class-fitclub-admin.php:474 inc/customizer.php:41
 msgid "View Pro"
 msgstr ""
 
@@ -169,7 +169,7 @@ msgstr ""
 msgid "Need more features?"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:186 inc/admin/class-fitclub-admin.php:318
+#: inc/admin/class-fitclub-admin.php:186 inc/admin/class-fitclub-admin.php:319
 msgid "Upgrade to PRO version for more exciting features."
 msgstr ""
 
@@ -245,7 +245,11 @@ msgstr ""
 msgid "WPML"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:323
+#: inc/admin/class-fitclub-admin.php:303
+msgid " Fully Compatible in Pro"
+msgstr ""
+
+#: inc/admin/class-fitclub-admin.php:324
 msgid "Features"
 msgstr ""
 
@@ -253,143 +257,143 @@ msgstr ""
 msgid "FitClub"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:325
+#: inc/admin/class-fitclub-admin.php:326
 msgid "FitClub Pro"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:330
+#: inc/admin/class-fitclub-admin.php:331
 msgid "Slider"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:332
+#: inc/admin/class-fitclub-admin.php:333
 msgid "Unlimited Slides"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:335
+#: inc/admin/class-fitclub-admin.php:336
 msgid "Google Fonts Option"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:340
+#: inc/admin/class-fitclub-admin.php:341
 msgid "Font Size options"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:345
+#: inc/admin/class-fitclub-admin.php:346
 msgid "Color Palette"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:346 inc/customizer.php:350
+#: inc/admin/class-fitclub-admin.php:347 inc/customizer.php:350
 msgid "Primary Color Option"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:347
+#: inc/admin/class-fitclub-admin.php:348
 msgid "Multiple Color Options"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:350
+#: inc/admin/class-fitclub-admin.php:351
 msgid "Social Icons Menu"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:355
+#: inc/admin/class-fitclub-admin.php:356
 msgid "Woocommerce Compatible"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:360
+#: inc/admin/class-fitclub-admin.php:361
 msgid "YITH Wishlist Compatible"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:365
+#: inc/admin/class-fitclub-admin.php:366
 msgid "Translation Ready"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:370
+#: inc/admin/class-fitclub-admin.php:371
 msgid "WPML Compatible"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:375
+#: inc/admin/class-fitclub-admin.php:376
 msgid "The Events Calendar Compatible"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:380
+#: inc/admin/class-fitclub-admin.php:381
 msgid "Footer Copyright Editor"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:385
+#: inc/admin/class-fitclub-admin.php:386
 msgid "Footer Widgets Column"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:386 inc/admin/class-fitclub-admin.php:387
+#: inc/admin/class-fitclub-admin.php:387 inc/admin/class-fitclub-admin.php:388
 msgid "1,2,3,4 Columns"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:390
+#: inc/admin/class-fitclub-admin.php:391
 msgid "Demo Content"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:395 inc/customizer.php:45
+#: inc/admin/class-fitclub-admin.php:396 inc/customizer.php:45
 msgid "Support"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:396
+#: inc/admin/class-fitclub-admin.php:397
 msgid "Forum"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:397
+#: inc/admin/class-fitclub-admin.php:398
 msgid "Forum Emails/Support Ticket"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:400 inc/widgets.php:253
+#: inc/admin/class-fitclub-admin.php:401 inc/widgets.php:253
 msgid "TG: About Widget"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:405
+#: inc/admin/class-fitclub-admin.php:406
 msgid "TG: Call to Action Widget"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:410
+#: inc/admin/class-fitclub-admin.php:411
 msgid "TG: Events Calendar"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:415 inc/widgets.php:815
+#: inc/admin/class-fitclub-admin.php:416 inc/widgets.php:818
 msgid "TG: Featured Posts"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:420 inc/widgets.php:689
+#: inc/admin/class-fitclub-admin.php:421 inc/widgets.php:692
 msgid "TG: Our Team Widget"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:425 inc/widgets.php:127
+#: inc/admin/class-fitclub-admin.php:426 inc/widgets.php:127
 msgid "TG: Service Widget"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:430 inc/widgets.php:533
+#: inc/admin/class-fitclub-admin.php:431 inc/widgets.php:535
 msgid "TG: Testimonial Widget"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:435
+#: inc/admin/class-fitclub-admin.php:436
 msgid "TG: Call to Action Video Widget"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:440
+#: inc/admin/class-fitclub-admin.php:441
 msgid "TG: Contact Widget"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:445
+#: inc/admin/class-fitclub-admin.php:446
 msgid "TG: FAQ Widget"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:450
+#: inc/admin/class-fitclub-admin.php:451
 msgid "TG: Logos"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:455
+#: inc/admin/class-fitclub-admin.php:456
 msgid "TG: Opening Hours Widget"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:460
+#: inc/admin/class-fitclub-admin.php:461
 msgid "TG: Products Widget"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:465
+#: inc/admin/class-fitclub-admin.php:466
 msgid "TG: Stats Counter Widget"
 msgstr ""
 
@@ -745,12 +749,12 @@ msgstr ""
 msgid "Display some pages as services."
 msgstr ""
 
-#: inc/widgets.php:141 inc/widgets.php:295 inc/widgets.php:568
-#: inc/widgets.php:703 inc/widgets.php:833
+#: inc/widgets.php:141 inc/widgets.php:296 inc/widgets.php:571
+#: inc/widgets.php:706 inc/widgets.php:836
 msgid "Title:"
 msgstr ""
 
-#: inc/widgets.php:146 inc/widgets.php:573 inc/widgets.php:708
+#: inc/widgets.php:146 inc/widgets.php:576 inc/widgets.php:711
 msgid "Number of pages to display:"
 msgstr ""
 
@@ -768,11 +772,11 @@ msgstr ""
 msgid "Show your about page."
 msgstr ""
 
-#: inc/widgets.php:276 inc/widgets.php:439 inc/widgets.php:551
+#: inc/widgets.php:276 inc/widgets.php:440 inc/widgets.php:553
 msgid "Design Settings:"
 msgstr ""
 
-#: inc/widgets.php:278 inc/widgets.php:440 inc/widgets.php:552
+#: inc/widgets.php:278 inc/widgets.php:441 inc/widgets.php:554
 msgid "Background Color:"
 msgstr ""
 
@@ -780,98 +784,106 @@ msgstr ""
 msgid "Background Image:"
 msgstr ""
 
-#: inc/widgets.php:291 inc/widgets.php:453 inc/widgets.php:565
-msgid "Upload Image"
+#: inc/widgets.php:291 inc/widgets.php:454 inc/widgets.php:567
+msgid "Choose an image"
 msgstr ""
 
-#: inc/widgets.php:299
-msgid "Select a page to display Title, Excerpt and Featured image."
+#: inc/widgets.php:291 inc/widgets.php:454 inc/widgets.php:567
+msgid "Use image"
+msgstr ""
+
+#: inc/widgets.php:291 inc/widgets.php:454 inc/widgets.php:567
+msgid "Select an Image"
 msgstr ""
 
 #: inc/widgets.php:300
+msgid "Select a page to display Title, Excerpt and Featured image."
+msgstr ""
+
+#: inc/widgets.php:301
 msgid "Page"
 msgstr ""
 
-#: inc/widgets.php:310 inc/widgets.php:461
+#: inc/widgets.php:311 inc/widgets.php:463
 msgid "Button Text:"
 msgstr ""
 
-#: inc/widgets.php:315 inc/widgets.php:465
+#: inc/widgets.php:316 inc/widgets.php:467
 msgid "Button Redirect Link:"
 msgstr ""
 
-#: inc/widgets.php:320
+#: inc/widgets.php:321
 msgid "Button Icon Class:"
 msgstr ""
 
-#: inc/widgets.php:327
+#: inc/widgets.php:328
 msgid "<a href=\"%s\" target=\"_blank\">Refer here</a> For Icon Class"
 msgstr ""
 
-#: inc/widgets.php:383 inc/widgets.php:930 template-parts/content.php:50
+#: inc/widgets.php:384 inc/widgets.php:933 template-parts/content.php:50
 #: template-parts/content.php:55
 msgid "Read more"
 msgstr ""
 
-#: inc/widgets.php:414
+#: inc/widgets.php:415
 msgid "Use this widget to show the call to action section."
 msgstr ""
 
-#: inc/widgets.php:420
+#: inc/widgets.php:421
 msgid "TG: Call To Action Widget"
 msgstr ""
 
-#: inc/widgets.php:444 inc/widgets.php:556
+#: inc/widgets.php:445 inc/widgets.php:558
 msgid "Image:"
 msgstr ""
 
-#: inc/widgets.php:456
+#: inc/widgets.php:458
 msgid "Other Settings :"
 msgstr ""
 
-#: inc/widgets.php:458
+#: inc/widgets.php:460
 msgid "Call to Action Main Text"
 msgstr ""
 
-#: inc/widgets.php:527
+#: inc/widgets.php:529
 msgid "Display some pages as testimonial."
 msgstr ""
 
-#: inc/widgets.php:577
+#: inc/widgets.php:580
 msgid ""
 "Note: Create the pages and select Testimonial Template to display "
 "Testimonial pages."
 msgstr ""
 
-#: inc/widgets.php:682
+#: inc/widgets.php:685
 msgid "Show your Team Members."
 msgstr ""
 
-#: inc/widgets.php:711
+#: inc/widgets.php:714
 msgid "Note: Create the pages and select Team Template to display Our Team pages."
 msgstr ""
 
-#: inc/widgets.php:809
+#: inc/widgets.php:812
 msgid "Display latest posts or posts of specific category"
 msgstr ""
 
-#: inc/widgets.php:837
+#: inc/widgets.php:840
 msgid "Number of posts to display:"
 msgstr ""
 
-#: inc/widgets.php:842
+#: inc/widgets.php:845
 msgid "Show latest Posts"
 msgstr ""
 
-#: inc/widgets.php:843
+#: inc/widgets.php:846
 msgid "Show posts from a category"
 msgstr ""
 
-#: inc/widgets.php:847
+#: inc/widgets.php:850
 msgid "Select category"
 msgstr ""
 
-#: inc/widgets.php:918
+#: inc/widgets.php:921
 msgid "Blog Image"
 msgstr ""
 
