@@ -47,10 +47,13 @@ IF you want to translate the theme to your language, please refer here: https://
 
 == Changelog ==
 
-= Version 1.0.7 - TBD =
-* Tweaks - Enhancement for the media uploader scripts used in widgets.
+= Version 1.0.7 - 2016-09-02 =
+Tweaks:
+* Enhancement for the media uploader scripts used in widgets.
+* Fix the page header on category and other archive page
 New:
 * Added the about page for theme information
+* RTL Support
 
 = Version 1.0.6 =
 Tweaks:
