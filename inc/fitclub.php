@@ -373,3 +373,15 @@ function fitclub_is_tribe_page(){
 	return false;
 }
 endif;
+
+// Displays the site logo
+if ( ! function_exists( 'fitclub_the_custom_logo' ) ) {
+  /**
+   * Displays the optional custom logo.
+   */
+  function fitclub_the_custom_logo() {
+    if ( function_exists( 'the_custom_logo' )  && ( get_theme_mod( 'fitclub_logo','' ) == '') ) {
+      the_custom_logo();
+    }
+  }
+}

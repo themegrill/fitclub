@@ -41,6 +41,11 @@ function fitclub_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+	// Adds the support for the Custom Logo introduced in WordPress 4.5
+	add_theme_support( 'custom-logo', array(
+		'flex-width' => true,
+		'flex-height' => true,
+	));
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
