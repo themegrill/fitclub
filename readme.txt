@@ -47,6 +47,10 @@ IF you want to translate the theme to your language, please refer here: https://
 
 == Changelog ==
 
+= Version 1.0.8 TBD =
+Feature:
+* Added the Custom Site Logo feature introduced in WordPress 4.5
+
 = Version 1.0.7 - 2016-09-02 =
 Tweaks:
 * Enhancement for the media uploader scripts used in widgets.

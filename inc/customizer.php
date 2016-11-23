@@ -125,6 +125,7 @@ function fitclub_customize_register( $wp_customize ) {
 				'fitclub_logo',
 				array(
 					'label'    => esc_html__( 'Upload logo' , 'fitclub' ),
+					'description' => sprintf(__( '%sInfo:%s This option will be removed in upcoming update. Please go to Site Identity section to upload the theme logo.', 'fitclub'  ), '<strong>', '</strong>'),
 					'section'  => 'fitclub_header_logo',
 					'setting'  => 'fitclub_logo'
 				)
