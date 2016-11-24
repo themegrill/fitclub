@@ -108,29 +108,30 @@ function fitclub_customize_register( $wp_customize ) {
 			'panel'      => 'fitclub_header_options'
 		)
 	);
-
-	// Logo Upload
-	$wp_customize->add_setting(
-		'fitclub_logo',
-		array(
-			'default'            => '',
-			'capability'         => 'edit_theme_options',
-			'sanitize_callback'  => 'esc_url_raw'
-		)
-	);
-
-	$wp_customize->add_control(
-		new WP_Customize_Image_Control(
-			$wp_customize,
+	if ( !function_exists('the_custom_logo') || ( get_theme_mod('fitclub_logo', '') != '' ) ) {
+		// Logo Upload
+		$wp_customize->add_setting(
 			'fitclub_logo',
 			array(
-				'label'    => esc_html__( 'Upload logo' , 'fitclub' ),
-				'section'  => 'fitclub_header_logo',
-				'setting'  => 'fitclub_logo'
+				'default'            => '',
+				'capability'         => 'edit_theme_options',
+				'sanitize_callback'  => 'esc_url_raw'
 			)
-		)
-	);
+		);
 
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'fitclub_logo',
+				array(
+					'label'    => esc_html__( 'Upload logo' , 'fitclub' ),
+					'description' => sprintf(__( '%sInfo:%s This option will be removed in upcoming update. Please go to Site Identity section to upload the theme logo.', 'fitclub'  ), '<strong>', '</strong>'),
+					'section'  => 'fitclub_header_logo',
+					'setting'  => 'fitclub_logo'
+				)
+			)
+		);
+	}
 	// Logo Placement
 	$wp_customize->add_setting(
 		'fitclub_logo_placement',
