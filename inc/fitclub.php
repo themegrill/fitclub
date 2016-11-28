@@ -187,7 +187,7 @@ function fitclub_custom_css() {
 	}
 
 	$fitclub_custom_css = get_theme_mod( 'fitclub_custom_css', '' );
-	if( !empty( $fitclub_custom_css ) ) {
+	if( !empty( $fitclub_custom_css ) && ! function_exists( 'wp_update_custom_css_post' ) ) {
 		echo '<!-- '.get_bloginfo('name').' Custom Styles -->';
 	?>
 		<style type="text/css"><?php echo esc_html( $fitclub_custom_css ); ?></style>

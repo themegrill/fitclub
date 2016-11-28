@@ -375,6 +375,7 @@ function fitclub_customize_register( $wp_customize ) {
 	);
 
 	// Custom CSS Section
+	if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
 	$wp_customize->add_section(
 		'fitclub_custom_css_section',
 		array(
@@ -404,6 +405,7 @@ function fitclub_customize_register( $wp_customize ) {
 			)
 		)
 	);
+}
 
 	// Footer Widget Section
 	$wp_customize->add_section(
