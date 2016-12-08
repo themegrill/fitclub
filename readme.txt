@@ -48,6 +48,8 @@ IF you want to translate the theme to your language, please refer here: https://
 == Changelog ==
 
 = Version 1.0.8 TBD =
+Tweaks:
+* Updated Font Awessome to `v.4.7.0` for new icon  support.
 Feature:
 * Added the Custom Site Logo feature introduced in WordPress 4.5
 * Migrated the Custom CSS code added in theme settings to Additional CSS section introduced in WordPress 4.7
