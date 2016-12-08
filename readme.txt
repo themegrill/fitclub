@@ -50,6 +50,7 @@ IF you want to translate the theme to your language, please refer here: https://
 = Version 1.0.8 TBD =
 Feature:
 * Added the Custom Site Logo feature introduced in WordPress 4.5
+* Migrated the Custom CSS code added in theme settings to Additional CSS section introduced in WordPress 4.7
 
 = Version 1.0.7 - 2016-09-02 =
 Tweaks:
