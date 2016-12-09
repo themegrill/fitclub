@@ -47,7 +47,7 @@ IF you want to translate the theme to your language, please refer here: https://
 
 == Changelog ==
 
-= Version 1.0.8  2016-12-08 =
+= Version 1.0.8  2016-12-09 =
 Tweaks:
 * Updated Font Awessome to `v.4.7.0` for new icon  support.
 Feature:
