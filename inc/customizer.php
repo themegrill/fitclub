@@ -108,7 +108,7 @@ function fitclub_customize_register( $wp_customize ) {
 			'panel'      => 'fitclub_header_options'
 		)
 	);
-	if ( !function_exists('the_custom_logo') || ( get_theme_mod('fitclub_logo', '') != '' ) ) {
+	if ( ! function_exists('the_custom_logo') ) {
 		// Logo Upload
 		$wp_customize->add_setting(
 			'fitclub_logo',
