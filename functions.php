@@ -7,6 +7,31 @@
  * @package FitClub
  */
 
+/**
+ * Set the content width based on the theme's design and stylesheet.
+ */
+if ( ! isset( $content_width ) )
+   $content_width = 870;
+/**
+ * $content_width global variable adjustment as per layout option.
+ */
+function fitclub_content_width() {
+   global $post;
+   global $content_width;
+   if( $post ) { $layout_meta = get_post_meta( $post->ID, 'fitclub_page_layout', true ); }
+   if( empty( $layout_meta ) || is_archive() || is_search() ) { $layout_meta = 'default_layout'; }
+   $fitclub_default_layout = get_theme_mod( 'fitclub_default_layout', 'right_sidebar' );
+   if( $layout_meta == 'default_layout' ) {
+      if ( $fitclub_default_layout == 'no_sidebar_full_width' ) { $content_width = 1200; /* pixels */ }
+      else { $content_width = 870; /* pixels */ }
+   }
+   elseif ( $layout_meta == 'no_sidebar_full_width' ) { $content_width = 1200; /* pixels */ }
+   else { $content_width = 870; /* pixels */ }
+}
+add_action( 'template_redirect', 'fitclub_content_width' );
+
+
+
 if ( ! function_exists( 'fitclub_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -97,18 +122,6 @@ function fitclub_setup() {
 }
 endif; // fitclub_setup
 add_action( 'after_setup_theme', 'fitclub_setup' );
-
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function fitclub_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'fitclub_content_width', 640 );
-}
-add_action( 'after_setup_theme', 'fitclub_content_width', 0 );
 
 /**
  * Enqueue scripts and styles.
