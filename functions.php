@@ -119,6 +119,15 @@ function fitclub_setup() {
 
 	// Add excerpt field for page
 	add_post_type_support( 'page', 'excerpt' );
+
+	// Add Image Headers / Video Headers in 4.7
+	add_theme_support( 'custom-header', array(
+		'width'                => 2000,
+		'height'               => 400,
+		'flex-height'          => true,
+		'header-text'          => true,
+		'video'                => true,
+	) );
 }
 endif; // fitclub_setup
 add_action( 'after_setup_theme', 'fitclub_setup' );

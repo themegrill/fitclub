@@ -116,6 +116,12 @@
 			</div> <!-- header-wrapper end -->
 		</header>
 
+		<?php if ( function_exists('the_custom_header_markup') ) {
+			the_custom_header_markup();
+		} else {
+			the_header_image_tag();
+		} ?>
+
 	<?php do_action( 'fitclub_after_header' ); ?>
 
 <div class="body-content-wrapper">
