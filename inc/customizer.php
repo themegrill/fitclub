@@ -161,7 +161,7 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'fitclub_header_media',
 		array(
-			'priority'   => 10,
+			'priority'   => 20,
 			'title'      => esc_html__( 'Header Media Position', 'fitclub' ),
 			'panel'      => 'fitclub_header_options'
 		)
