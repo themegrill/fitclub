@@ -424,11 +424,11 @@ function fitclub_site_logo_migrate() {
 add_action( 'after_setup_theme', 'fitclub_site_logo_migrate' );
 
 // Video Header introduced in WordPress 4.7
-if ( ! function_exists( 'fitclube_the_custom_header_markup' ) ) {
+if ( ! function_exists( 'fitclub_the_custom_header_markup' ) ) {
 	/**
 	* Displays the optional custom media headers.
 	*/
-	function fitclube_the_custom_header_markup() {
+	function fitclub_the_custom_header_markup() {
 		if ( function_exists('the_custom_header_markup') ) {
 			the_custom_header_markup();
 		} else {

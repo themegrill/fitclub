@@ -36,7 +36,7 @@
 		<?php do_action( 'fitclub_before_header' ); ?>
 
 		<?php if ( get_theme_mod( 'fitclub_header_media_placement', 'header_media_blow_main_manu' ) == 'header_media_above_site_title') {
-			fitclube_the_custom_header_markup();
+			fitclub_the_custom_header_markup();
 		} ?>
 
 		<header id="masthead" class="site-header" role="banner">
@@ -122,7 +122,7 @@
 		</header>
 
 		<?php if ( get_theme_mod( 'fitclub_header_media_placement', 'header_media_blow_main_manu' ) == 'header_media_blow_main_manu') {
-			fitclube_the_custom_header_markup();
+			fitclub_the_custom_header_markup();
 		} ?>
 
 		<?php do_action( 'fitclub_after_header' ); ?>
