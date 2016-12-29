@@ -127,6 +127,7 @@ function fitclub_setup() {
 		'flex-height'          => true,
 		'header-text'          => true,
 		'video'                => true,
+		'header-text'          => false,
 	) );
 }
 endif; // fitclub_setup
