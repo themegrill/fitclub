@@ -88,6 +88,29 @@ function fitclub_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Header Media Placement
+	$wp_customize->add_setting(
+		'fitclub_header_media_placement',
+		array(
+			'default'            => 'header_media_below_main_menu',
+			'capability'         => 'edit_theme_options',
+			'sanitize_callback'  => 'fitclub_radio_sanitize'
+		)
+	);
+
+	$wp_customize->add_control(
+		'fitclub_header_media_placement',
+		array(
+			'label'    => esc_html__( 'Choose the required option for Header Media placement', 'fitclub' ),
+			'section'  => 'header_image',
+			'type'     => 'radio',
+			'choices'  => array(
+				'header_media_above_site_title' => esc_html__( 'Position One: Display Header Media just above the site Title/Text', 'fitclub' ),
+				'header_media_below_main_menu' => esc_html__( 'Postion Two: Display Header Media just below the Main/Primary Menu', 'fitclub' ),
+			)
+		)
+	);
+
 	// Header Options
 	$wp_customize->add_panel(
 		'fitclub_header_options',
@@ -153,39 +176,6 @@ function fitclub_customize_register( $wp_customize ) {
 				'header_text_only' => esc_html__( 'Header Text Only', 'fitclub' ),
 				'show_both'        => esc_html__( 'Show both header logo and text', 'fitclub' ),
 				'disable'          => esc_html__( 'Disable', 'fitclub' )
-			)
-		)
-	);
-
-	// Media Section
-	$wp_customize->add_section(
-		'fitclub_header_media',
-		array(
-			'priority'   => 20,
-			'title'      => esc_html__( 'Header Media Position', 'fitclub' ),
-			'panel'      => 'fitclub_header_options'
-		)
-	);
-
-	// Header Media Placement
-	$wp_customize->add_setting(
-		'fitclub_header_media_placement',
-		array(
-			'default'            => 'header_media_blow_main_menu',
-			'capability'         => 'edit_theme_options',
-			'sanitize_callback'  => 'fitclub_radio_sanitize'
-		)
-	);
-
-	$wp_customize->add_control(
-		'fitclub_header_media_placement',
-		array(
-			'label'    => esc_html__( 'Choose the required option', 'fitclub' ),
-			'section'  => 'fitclub_header_media',
-			'type'     => 'radio',
-			'choices'  => array(
-				'header_media_above_site_title' => esc_html__( 'Position One: Display Header Media just above the site Title/Text', 'fitclub' ),
-				'header_media_blow_main_menu' => esc_html__( 'Postion Two: Dispaly Header Media just below the Main/Primary Menu', 'fitclub' ),
 			)
 		)
 	);

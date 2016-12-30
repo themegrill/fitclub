@@ -35,7 +35,7 @@
 	<div id="page" class="hfeed site <?php echo esc_attr($class); ?>">
 		<?php do_action( 'fitclub_before_header' ); ?>
 
-		<?php if ( get_theme_mod( 'fitclub_header_media_placement', 'header_media_blow_main_menu' ) == 'header_media_above_site_title') {
+		<?php if ( get_theme_mod( 'fitclub_header_media_placement', 'header_media_below_main_menu' ) == 'header_media_above_site_title') {
 			fitclub_the_custom_header_markup();
 		} ?>
 
@@ -121,7 +121,7 @@
 			</div> <!-- header-wrapper end -->
 		</header>
 
-		<?php if ( get_theme_mod( 'fitclub_header_media_placement', 'header_media_blow_main_menu' ) == 'header_media_blow_main_menu') {
+		<?php if ( get_theme_mod( 'fitclub_header_media_placement', 'header_media_below_main_menu' ) == 'header_media_below_main_menu') {
 			fitclub_the_custom_header_markup();
 		} ?>
 
