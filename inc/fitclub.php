@@ -420,3 +420,4 @@ function fitclub_site_logo_migrate() {
 		}
 	}
 }
+add_action( 'after_setup_theme', 'fitclub_site_logo_migrate' );

@@ -59,4 +59,3 @@ if ( ! function_exists( 'fitclub_the_custom_header_markup' ) ) {
 		}
 	}
 }
-add_action( 'after_setup_theme', 'fitclub_site_logo_migrate' );
