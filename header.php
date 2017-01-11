@@ -26,13 +26,6 @@
 		$page_id = get_theme_mod( 'fitclub_slide'.$i );
 		if ( !empty ( $page_id ) ) $slide++;
 	}
-	// if(  ( ( $slide < 1 ) || get_theme_mod( 'fitclub_slider_activation', 0 ) != 1 ) && is_front_page() && !is_home() ) {
-	// 	$class = "no-slider";
-	// } elseif ( function_exists('the_custom_header_markup' ) && ( get_theme_mod( 'fitclub_slider_activation', 0 ) == 1 ) ) {
-	// 	$class = "slider-active";
-	// } else {
-	// 	$class = "slider-active";
-	// }
 
 	if ( function_exists( 'the_custom_header_markup' ) && has_header_video() || ( get_theme_mod( 'fitclub_slider_activation', 0 ) == 1 ) ) {
 		$class = "slider-active";
