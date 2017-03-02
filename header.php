@@ -26,7 +26,10 @@
 		$page_id = get_theme_mod( 'fitclub_slide'.$i );
 		if ( !empty ( $page_id ) ) $slide++;
 	}
-	if(  ( ( $slide < 1 ) || get_theme_mod( 'fitclub_slider_activation', 0 ) != 1 ) && is_front_page() && !is_home() ) {
+
+	if ( function_exists( 'the_custom_header_markup' ) && has_header_video() || ( get_theme_mod( 'fitclub_slider_activation', 0 ) == 1 ) ) {
+		$class = "slider-active";
+	} elseif (  ( ( $slide < 1 ) || get_theme_mod( 'fitclub_slider_activation', 0 ) != 1 ) && is_front_page() && !is_home() ) {
 		$class = "no-slider";
 	} else {
 		$class = "slider-active";
@@ -34,6 +37,7 @@
 	?>
 	<div id="page" class="hfeed site <?php echo esc_attr($class); ?>">
 		<?php do_action( 'fitclub_before_header' ); ?>
+
 		<header id="masthead" class="site-header" role="banner">
 			<div class="header-wrapper clearfix">
 				<div class="tg-container">
@@ -116,7 +120,21 @@
 			</div> <!-- header-wrapper end -->
 		</header>
 
-	<?php do_action( 'fitclub_after_header' ); ?>
+		<?php if ( function_exists( 'the_custom_header_markup' ) && ( get_theme_mod( 'fitclub_slider_activation', '' ) == 0 ) || ( ( get_theme_mod( 'fitclub_slider_activation', '' ) == 1 ) && ! is_front_page() ) || ( function_exists( 'the_custom_header_markup' ) && is_home() ) ) :
+			do_action( 'himalayas_header_image_markup_render' );
+			the_custom_header_markup();
+		else :
+			if ( get_theme_mod( 'fitclub_slider_activation' ) == 0 ) {
+				$header_image = get_header_image();
+			?>
+				<div class="header-image-wrap"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+				</div>
+			<?php
+			}
+
+		endif; ?>
+
+		<?php do_action( 'fitclub_after_header' ); ?>
 
 <div class="body-content-wrapper">
 
