@@ -2166,6 +2166,13 @@ body {
 /*--------------------------------------------------------------
 23.0 About us CSS
 --------------------------------------------------------------*/
+.image-background {
+    background-repeat: no-repeat;
+    background-position: center top;
+    -o-background-size: cover;
+    -moz-background-size: cover;    
+    -webkit-background-size:cover;
+}
 
 #about .section-wrapper {
     background: none scroll no-repeat center top/cover;

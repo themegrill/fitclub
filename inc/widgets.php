@@ -359,7 +359,7 @@ class fitclub_about_us_widget extends WP_Widget {
 		$bg_style = '';
 		$bg_class = 'image-background';
 		if ( !empty( $background_image ) ) {
-			$bg_style = 'background:url(' . esc_url($background_image) . ') scroll no-repeat center top/cover;';
+			$bg_style = 'background-image:url(' . esc_url($background_image) . ');';
 		} else {
 			$bg_style = 'background-color:' . esc_attr($background_color) . ';';
 			$bg_class = 'no-image';
@@ -498,7 +498,7 @@ class fitclub_call_to_action_widget extends WP_Widget {
 		$bg_style = '';
 		$bg_class = 'image-background';
 		if ( !empty( $background_image ) ) {
-			$bg_style = 'background:url(' . esc_url($background_image) . ') scroll no-repeat center top/cover;';
+			$bg_style = 'background-image:url(' . esc_url($background_image) . ');';
 		} else {
 			$bg_style = 'background-color:' . esc_attr($background_color) . ';';
 			$bg_class = 'no-image';
