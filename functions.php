@@ -119,6 +119,7 @@ function fitclub_setup() {
 
 	// Add excerpt field for page
 	add_post_type_support( 'page', 'excerpt' );
+
 }
 endif; // fitclub_setup
 add_action( 'after_setup_theme', 'fitclub_setup' );
@@ -190,6 +191,11 @@ define( 'FitClub_ADMIN_IMAGES_URL', get_template_directory_uri() . '/inc/admin/i
  * Design Related Metaboxes
  */
 require get_template_directory() . '/inc/admin/meta-boxes.php';
+
+/**
+ * Custom Header
+ */
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * FitClub About Page
