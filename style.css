@@ -606,7 +606,7 @@ a:active {
 
 /* Make sure select elements fit in widgets */
 
-.widget select {
+.select {
     max-width: 100%;
 }
 
@@ -1150,10 +1150,10 @@ object {
 .widget_recent_comments ul,
 .widget_rss ul,
 .widget_pages ul,
-.widget_nav_menu ul {
+.widget_nav_menu ul,
+.widget_text ul {
     list-style: outside none none;
     margin: 0;
-    padding-left: 10px;
 }
 
 .widget_archive li,
@@ -2613,7 +2613,7 @@ body {
     height: 50px;
     left: 0;
     line-height: 20px;
-    padding: 4px 0 0;
+    padding: 4px 10px 0;
     position: absolute;
     text-align: center;
     top: 0;
@@ -2830,7 +2830,9 @@ body {
     padding: 0 0 10px 25px;
     position: relative;
 }
-
+#top-footer .footer-block .widget_text li{
+    padding-left: 0;
+}
 #top-footer .footer-block.widget_nav_menu li:before {
     color: #888888;
 }
@@ -3479,6 +3481,7 @@ ul.tribe-events-sub-nav a:hover {
     right: 20px;
     text-align: center;
     width: 40px;
+    z-index: 99;
 }
 
 .scrollup:hover,
@@ -3705,6 +3708,20 @@ ul.tribe-events-sub-nav a:hover {
         margin: 0 auto 20px;
         text-align: center;
     }
+    #header-text {
+        display: block;
+    }
+    #header-text #site-description {
+        border-left: none;
+        display: block;
+        margin: 0;
+        padding-left: 0;
+    }
+    .social-icons-wrapper {
+        float: none;
+        margin: 0 auto 20px;
+        display: table;
+    }
     .header-search-box .search-field {
         font-size: 18px;
         height: 40px;
@@ -3901,6 +3918,9 @@ ul.tribe-events-sub-nav a:hover {
     #home-slider #bx-pager {
         width: 47px;
     }
+    .about-content {
+        padding-bottom: 30px;
+    }
     .tg-tribe-events-list-widget .section-title {
         font-size: 16px;
         line-height: 19px;
@@ -4037,8 +4057,8 @@ ul.tribe-events-sub-nav a:hover {
     #bottom-footer .footer-menu {
         float: none;
         margin: 10px auto 0;
-        width: 240px;
         text-align: center;
+        display: table;
     }
     .entry-content-wrapper {
         display: block;
@@ -4089,10 +4109,6 @@ ul.tribe-events-sub-nav a:hover {
     .page-template-template-team-collection .trainer-collecton-wrapper .clearfix {
         display: none;
     }
-    .tg-tribe-events-list-widget .no-event{
-    	width: 100%;
-    	text-align: center;
-    }
 }
 
 @media (max-width: 600px) {
@@ -4133,7 +4149,6 @@ ul.tribe-events-sub-nav a:hover {
     .social-icons-wrapper {
         clear: both;
         float: none;
-        width: 130px;
         margin: 0 auto;
     }
     .slider-caption-wrapper .caption-title {
@@ -4177,10 +4192,7 @@ ul.tribe-events-sub-nav a:hover {
     }
     .testimonial-author {
         font-size: 15px;
-    }
-    .blog-content-wrapper .post-date {
-        width: 35px;
-    }
+    }    
     .section-wrapper {
         padding: 40px 0;
     }
