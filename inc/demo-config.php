@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 function fitclub_demo_importer_packages( $packages ) {
 	$new_packages = array(
 		'fitclub-free' => array(
-			'name'    => __( 'FitClub', 'fitclub' ),
+			'name'    => esc_html__( 'FitClub', 'fitclub' ),
 			'preview' => 'https://demo.themegrill.com/fitclub/',
 		),
 	);

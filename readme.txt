@@ -51,6 +51,7 @@ IF you want to translate the theme to your language, please refer here: https://
 Feature:
 * Adds Support for Video Header introduced in WordPress 4.7
 * Fixed: Background image on safari on about and call to action widget.
+* Feature - Added compatibility for ThemeGrill Demo Importer plugin
 
 
 = Version 1.0.8 - 2016-12-23 =
