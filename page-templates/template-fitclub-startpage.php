@@ -6,9 +6,8 @@
  * @subpackage fitclub
  * @since 1.0.2
  */
-?>
 
-<?php get_header(); ?>
+get_header(); ?>
 
 	<?php do_action( 'fitclub_before_body_content' ); ?>
 

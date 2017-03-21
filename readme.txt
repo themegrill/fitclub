@@ -1,6 +1,6 @@
 == FitClub ==
 
-FitClub is a multi purpose theme suitable for fitness clubs and gyms. With its robust features, this theme can also be used for many other purposes. You can get free support in http://themegrill.com/support-forum/ and check the demo at http://demo.themegrill.com/fitclub/.
+FitClub is a multi purpose theme suitable for fitness clubs and gyms. With its robust features, this theme can also be used for many other purposes. You can get free support in https://themegrill.com/support-forum/ and check the demo at https://demo.themegrill.com/fitclub/.
 
 /**********************************************************/
 
@@ -30,10 +30,10 @@ FitClub is distributed under the terms of the GNU GPL
 == THEME USAGE ==
 
 = Theme Instruction =
-Get theme instruction at http://docs.themegrill.com/fitclub/
+Get theme instruction at https://docs.themegrill.com/fitclub/
 
 = Free Support =
-Get free support at http://themegrill.com/support-forum
+Get free support at https://themegrill.com/support-forum
 
 = Theme Features Usage =
 All available options can be used from Appearance-> Customize

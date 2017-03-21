@@ -37,19 +37,19 @@ function fitclub_customize_register( $wp_customize ) {
 			//Add Theme instruction, Support Forum, Demo Link, Rating Link
 			$important_links = array(
 			'view-pro' => array(
-				'link' => esc_url('http://themegrill.com/themes/fitclub/'),
+				'link' => esc_url('https://themegrill.com/themes/fitclub/'),
 				'text' => esc_html__('View Pro', 'fitclub'),
 			),
 			'support' => array(
-				'link' => esc_url('http://themegrill.com/support-forum/'),
+				'link' => esc_url('https://themegrill.com/support-forum/'),
 				'text' => esc_html__('Support', 'fitclub'),
 			),
 			'documentation' => array(
-				'link' => esc_url('http://docs.themegrill.com/fitclub/'),
+				'link' => esc_url('https://docs.themegrill.com/fitclub/'),
 				'text' => esc_html__('Documentation', 'fitclub'),
 			),
 			'demo' => array(
-				'link' => esc_url('http://demo.themegrill.com/fitclub/'),
+				'link' => esc_url('https://demo.themegrill.com/fitclub/'),
 				'text' => esc_html__('View Demo', 'fitclub'),
 			),
 			'rating' => array(

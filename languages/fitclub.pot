@@ -958,7 +958,7 @@ msgid "There are no upcoming %s at this time."
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://themegrill.com/themes/fitclub/"
+msgid "https://themegrill.com/themes/fitclub/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -969,7 +969,7 @@ msgid ""
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://themegrill.com"
+msgid "https://themegrill.com"
 msgstr ""
 
 #. Template Name of the plugin/theme
