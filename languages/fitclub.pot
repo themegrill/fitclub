@@ -1,43 +1,43 @@
-# Copyright (C) 2016 ThemeGrill
+# Copyright (C) 2017 ThemeGrill
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: FitClub 1.0.6\n"
+"Project-Id-Version: FitClub 1.0.9\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2016-09-02 04:56:11+00:00\n"
+"POT-Creation-Date: 2017-04-28 08:53:28+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: ThemeGrill <themegrill@gmail.com>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
 
-#: inc/admin/class-fitclub-admin.php:332
+#: inc/admin/class-fitclub-admin.php:331
 msgid "4"
 msgstr ""
 
-#: 404.php:36
+#: 404.php:35
 msgid "404"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:338
+#: inc/admin/class-fitclub-admin.php:337
 msgid "600"
 msgstr ""
 
-#: 404.php:29
+#: 404.php:28
 msgid "Oops!"
 msgstr ""
 
-#: 404.php:29
+#: 404.php:28
 msgid "That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:32
+#: 404.php:31
 msgid "It looks like nothing was found at this location. Try the search below."
 msgstr ""
 
-#: 404.php:38
+#: 404.php:37
 msgid "error"
 msgstr ""
 
@@ -57,199 +57,199 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: functions.php:47
+#: functions.php:77
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:48
+#: functions.php:78
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:49
+#: functions.php:79
 msgid "Footer Menu"
 msgstr ""
 
-#: header.php:85
+#: header.php:97
 msgid "Menu"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:31 inc/admin/class-fitclub-admin.php:98
+#: inc/admin/class-fitclub-admin.php:30 inc/admin/class-fitclub-admin.php:97
 msgid "About"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:62
+#: inc/admin/class-fitclub-admin.php:61
 msgid "Action failed. Please refresh the page and retry."
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:65
+#: inc/admin/class-fitclub-admin.php:64
 msgid "Cheatin&#8217; huh?"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:77
+#: inc/admin/class-fitclub-admin.php:76
 msgid "Dismiss"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:78
+#: inc/admin/class-fitclub-admin.php:77
 msgid ""
 "Welcome! Thank you for choosing fitclub! To fully take advantage of the "
 "best our theme can offer please make sure you visit our %swelcome page%s."
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:80
+#: inc/admin/class-fitclub-admin.php:79
 msgid "Get started with fitclub"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:100
+#: inc/admin/class-fitclub-admin.php:99
 msgid "%s"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:113
+#: inc/admin/class-fitclub-admin.php:112
 msgid "Theme Info"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:115 inc/customizer.php:53
+#: inc/admin/class-fitclub-admin.php:114 inc/customizer.php:53
 msgid "View Demo"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:117 inc/admin/class-fitclub-admin.php:187
-#: inc/admin/class-fitclub-admin.php:474 inc/customizer.php:41
+#: inc/admin/class-fitclub-admin.php:116 inc/admin/class-fitclub-admin.php:186
+#: inc/admin/class-fitclub-admin.php:473 inc/customizer.php:41
 msgid "View Pro"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:119 inc/customizer.php:57
+#: inc/admin/class-fitclub-admin.php:118 inc/customizer.php:57
 msgid "Rate this theme"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:127
+#: inc/admin/class-fitclub-admin.php:126
 msgid "Supported Plugins"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:130
+#: inc/admin/class-fitclub-admin.php:129
 msgid "Free Vs Pro"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:133
+#: inc/admin/class-fitclub-admin.php:132
 msgid "Changelog"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:167
+#: inc/admin/class-fitclub-admin.php:166
 msgid "Theme Customizer"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:168
+#: inc/admin/class-fitclub-admin.php:167
 msgid "All Theme Options are available via Customize screen."
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:169
+#: inc/admin/class-fitclub-admin.php:168
 msgid "Customize"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:173 inc/admin/class-fitclub-admin.php:175
+#: inc/admin/class-fitclub-admin.php:172 inc/admin/class-fitclub-admin.php:174
 #: inc/customizer.php:49
 msgid "Documentation"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:174
+#: inc/admin/class-fitclub-admin.php:173
 msgid "Please view our documentation page to setup the theme."
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:179
+#: inc/admin/class-fitclub-admin.php:178
 msgid "Got theme support question?"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:180
+#: inc/admin/class-fitclub-admin.php:179
 msgid "Please put it in our dedicated support forum."
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:181
+#: inc/admin/class-fitclub-admin.php:180
 msgid "Support Forum"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:185
+#: inc/admin/class-fitclub-admin.php:184
 msgid "Need more features?"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:186 inc/admin/class-fitclub-admin.php:319
+#: inc/admin/class-fitclub-admin.php:185 inc/admin/class-fitclub-admin.php:318
 msgid "Upgrade to PRO version for more exciting features."
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:191
+#: inc/admin/class-fitclub-admin.php:190
 msgid "Got sales related question?"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:192
+#: inc/admin/class-fitclub-admin.php:191
 msgid "Please send it via our sales contact page."
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:193
+#: inc/admin/class-fitclub-admin.php:192
 msgid "Contact Page"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:199 inc/admin/class-fitclub-admin.php:207
+#: inc/admin/class-fitclub-admin.php:198 inc/admin/class-fitclub-admin.php:206
 msgid "Translate"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:203
+#: inc/admin/class-fitclub-admin.php:202
 msgid "Click below to translate this theme into your own language."
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:219
+#: inc/admin/class-fitclub-admin.php:218
 msgid "Return to Updates"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:219
+#: inc/admin/class-fitclub-admin.php:218
 msgid "Return to Dashboard &rarr; Updates"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:222
+#: inc/admin/class-fitclub-admin.php:221
 msgid "Go to Dashboard &rarr; Home"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:222
+#: inc/admin/class-fitclub-admin.php:221
 msgid "Go to Dashboard"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:239
+#: inc/admin/class-fitclub-admin.php:238
 msgid "View changelog below."
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:291
+#: inc/admin/class-fitclub-admin.php:290
 msgid "This theme recommends following plugins."
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:293
+#: inc/admin/class-fitclub-admin.php:292
 msgid "Social Icons"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:294 inc/admin/class-fitclub-admin.php:297
+#: inc/admin/class-fitclub-admin.php:293 inc/admin/class-fitclub-admin.php:296
 msgid " by ThemeGrill"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:296
+#: inc/admin/class-fitclub-admin.php:295
 msgid "Easy Social Sharing"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:299
+#: inc/admin/class-fitclub-admin.php:298
 msgid "Contact Form 7"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:300
+#: inc/admin/class-fitclub-admin.php:299
 msgid "WP-PageNavi"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:301
+#: inc/admin/class-fitclub-admin.php:300
 msgid "The Events Calendar"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:302
+#: inc/admin/class-fitclub-admin.php:301
 msgid "WPML"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:303
+#: inc/admin/class-fitclub-admin.php:302
 msgid " Fully Compatible in Pro"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:324
+#: inc/admin/class-fitclub-admin.php:323
 msgid "Features"
 msgstr ""
 
@@ -257,143 +257,143 @@ msgstr ""
 msgid "FitClub"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:326
+#: inc/admin/class-fitclub-admin.php:325
 msgid "FitClub Pro"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:331
+#: inc/admin/class-fitclub-admin.php:330
 msgid "Slider"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:333
+#: inc/admin/class-fitclub-admin.php:332
 msgid "Unlimited Slides"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:336
+#: inc/admin/class-fitclub-admin.php:335
 msgid "Google Fonts Option"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:341
+#: inc/admin/class-fitclub-admin.php:340
 msgid "Font Size options"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:346
+#: inc/admin/class-fitclub-admin.php:345
 msgid "Color Palette"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:347 inc/customizer.php:350
+#: inc/admin/class-fitclub-admin.php:346 inc/customizer.php:351
 msgid "Primary Color Option"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:348
+#: inc/admin/class-fitclub-admin.php:347
 msgid "Multiple Color Options"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:351
+#: inc/admin/class-fitclub-admin.php:350
 msgid "Social Icons Menu"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:356
+#: inc/admin/class-fitclub-admin.php:355
 msgid "Woocommerce Compatible"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:361
+#: inc/admin/class-fitclub-admin.php:360
 msgid "YITH Wishlist Compatible"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:366
+#: inc/admin/class-fitclub-admin.php:365
 msgid "Translation Ready"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:371
+#: inc/admin/class-fitclub-admin.php:370
 msgid "WPML Compatible"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:376
+#: inc/admin/class-fitclub-admin.php:375
 msgid "The Events Calendar Compatible"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:381
+#: inc/admin/class-fitclub-admin.php:380
 msgid "Footer Copyright Editor"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:386
+#: inc/admin/class-fitclub-admin.php:385
 msgid "Footer Widgets Column"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:387 inc/admin/class-fitclub-admin.php:388
+#: inc/admin/class-fitclub-admin.php:386 inc/admin/class-fitclub-admin.php:387
 msgid "1,2,3,4 Columns"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:391
+#: inc/admin/class-fitclub-admin.php:390
 msgid "Demo Content"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:396 inc/customizer.php:45
+#: inc/admin/class-fitclub-admin.php:395 inc/customizer.php:45
 msgid "Support"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:397
+#: inc/admin/class-fitclub-admin.php:396
 msgid "Forum"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:398
+#: inc/admin/class-fitclub-admin.php:397
 msgid "Forum Emails/Support Ticket"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:401 inc/widgets.php:253
+#: inc/admin/class-fitclub-admin.php:400 inc/widgets.php:253
 msgid "TG: About Widget"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:406
+#: inc/admin/class-fitclub-admin.php:405
 msgid "TG: Call to Action Widget"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:411
+#: inc/admin/class-fitclub-admin.php:410
 msgid "TG: Events Calendar"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:416 inc/widgets.php:818
+#: inc/admin/class-fitclub-admin.php:415 inc/widgets.php:818
 msgid "TG: Featured Posts"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:421 inc/widgets.php:692
+#: inc/admin/class-fitclub-admin.php:420 inc/widgets.php:692
 msgid "TG: Our Team Widget"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:426 inc/widgets.php:127
+#: inc/admin/class-fitclub-admin.php:425 inc/widgets.php:127
 msgid "TG: Service Widget"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:431 inc/widgets.php:535
+#: inc/admin/class-fitclub-admin.php:430 inc/widgets.php:535
 msgid "TG: Testimonial Widget"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:436
+#: inc/admin/class-fitclub-admin.php:435
 msgid "TG: Call to Action Video Widget"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:441
+#: inc/admin/class-fitclub-admin.php:440
 msgid "TG: Contact Widget"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:446
+#: inc/admin/class-fitclub-admin.php:445
 msgid "TG: FAQ Widget"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:451
+#: inc/admin/class-fitclub-admin.php:450
 msgid "TG: Logos"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:456
+#: inc/admin/class-fitclub-admin.php:455
 msgid "TG: Opening Hours Widget"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:461
+#: inc/admin/class-fitclub-admin.php:460
 msgid "TG: Products Widget"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:466
+#: inc/admin/class-fitclub-admin.php:465
 msgid "TG: Stats Counter Widget"
 msgstr ""
 
@@ -405,7 +405,7 @@ msgstr ""
 msgid "Our Team Designation"
 msgstr ""
 
-#: inc/admin/meta-boxes.php:30 inc/customizer.php:239
+#: inc/admin/meta-boxes.php:30 inc/customizer.php:240
 msgid "Default Layout"
 msgstr ""
 
@@ -457,191 +457,197 @@ msgstr ""
 msgid "Upload logo"
 msgstr ""
 
-#: inc/customizer.php:147
+#: inc/customizer.php:128
+msgid ""
+"%sInfo:%s This option will be removed in upcoming update. Please go to Site "
+"Identity section to upload the theme logo."
+msgstr ""
+
+#: inc/customizer.php:148
 msgid "Choose the required option"
 msgstr ""
 
-#: inc/customizer.php:151
+#: inc/customizer.php:152
 msgid "Header Logo Only"
 msgstr ""
 
-#: inc/customizer.php:152
+#: inc/customizer.php:153
 msgid "Header Text Only"
 msgstr ""
 
-#: inc/customizer.php:153
+#: inc/customizer.php:154
 msgid "Show both header logo and text"
 msgstr ""
 
-#: inc/customizer.php:154
+#: inc/customizer.php:155
 msgid "Disable"
 msgstr ""
 
-#: inc/customizer.php:164
+#: inc/customizer.php:165
 msgid "Change Slider Settings here"
 msgstr ""
 
-#: inc/customizer.php:166
+#: inc/customizer.php:167
 msgid "Slider Options"
 msgstr ""
 
-#: inc/customizer.php:175
+#: inc/customizer.php:176
 msgid "Slider Settings"
 msgstr ""
 
-#: inc/customizer.php:176
+#: inc/customizer.php:177
 msgid "Note"
 msgstr ""
 
-#: inc/customizer.php:176
+#: inc/customizer.php:177
 msgid ""
 "1. To display the Slider first check Enable the slider below. Now create "
 "the page for each slider and enter title, text and featured image. Choose "
 "that pages in the dropdown options."
 msgstr ""
 
-#: inc/customizer.php:176
+#: inc/customizer.php:177
 msgid ""
 "2. The recommended size for the slider image is 1920 x 1000 pixels. For "
 "better functioning of slider use equal size images for each slide."
 msgstr ""
 
-#: inc/customizer.php:176
+#: inc/customizer.php:177
 msgid ""
 "3. If page do not have featured Image than that page will not included in "
 "slider show."
 msgstr ""
 
-#: inc/customizer.php:194
+#: inc/customizer.php:195
 msgid "Enable Slider"
 msgstr ""
 
-#: inc/customizer.php:215
+#: inc/customizer.php:216
 msgid "Slide "
 msgstr ""
 
-#: inc/customizer.php:228
+#: inc/customizer.php:229
 msgid "Design Related Settings"
 msgstr ""
 
-#: inc/customizer.php:230
+#: inc/customizer.php:231
 msgid "Design Options"
 msgstr ""
 
-#: inc/customizer.php:258
+#: inc/customizer.php:259
 msgid ""
 "Select default layout. This layout will be reflected in whole site "
 "archives, categories, search page etc. The layout for a single post and "
 "page can be controlled from below options"
 msgstr ""
 
-#: inc/customizer.php:276
+#: inc/customizer.php:277
 msgid "Default Page Layout"
 msgstr ""
 
-#: inc/customizer.php:295
+#: inc/customizer.php:296
 msgid ""
 "Select default layout for pages. This layout will be reflected in all pages "
 "unless unique layout is set for specific page"
 msgstr ""
 
-#: inc/customizer.php:313
+#: inc/customizer.php:314
 msgid "Default Single Post Layout"
 msgstr ""
 
-#: inc/customizer.php:332
+#: inc/customizer.php:333
 msgid ""
 "Select default layout for single posts. This layout will be reflected in "
 "all single posts unless unique layout is set for specific post"
 msgstr ""
 
-#: inc/customizer.php:370
+#: inc/customizer.php:371
 msgid ""
 "This will reflect in links, buttons and many others. Choose a color to "
 "match your site"
 msgstr ""
 
-#: inc/customizer.php:381
+#: inc/customizer.php:383
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:401
+#: inc/customizer.php:403
 msgid "Write your Custom CSS here"
 msgstr ""
 
-#: inc/customizer.php:412
+#: inc/customizer.php:415
 msgid "Footer Widgets"
 msgstr ""
 
-#: inc/customizer.php:429
+#: inc/customizer.php:432
 msgid "Choose the number of widget area you want in footer"
 msgstr ""
 
-#: inc/customizer.php:433
+#: inc/customizer.php:436
 msgid "1 Footer Widget Area"
 msgstr ""
 
-#: inc/customizer.php:434
+#: inc/customizer.php:437
 msgid "2 Footer Widget Area"
 msgstr ""
 
-#: inc/customizer.php:435
+#: inc/customizer.php:438
 msgid "3 Footer Widget Area"
 msgstr ""
 
-#: inc/customizer.php:436
+#: inc/customizer.php:439
 msgid "4 Footer Widget Area"
 msgstr ""
 
-#: inc/customizer.php:446
+#: inc/customizer.php:449
 msgid "Some additional settings."
 msgstr ""
 
-#: inc/customizer.php:448
+#: inc/customizer.php:451
 msgid "Additional Options"
 msgstr ""
 
-#: inc/customizer.php:457
+#: inc/customizer.php:460
 msgid "Excerpt/Full Content Option"
 msgstr ""
 
-#: inc/customizer.php:475
+#: inc/customizer.php:478
 msgid "Toggle between displaying excerpts and full posts on your blog and archives."
 msgstr ""
 
-#: inc/customizer.php:480
+#: inc/customizer.php:483
 msgid "Show Full Post Content"
 msgstr ""
 
-#: inc/customizer.php:481
+#: inc/customizer.php:484
 msgid "Show Excerpt"
 msgstr ""
 
-#: inc/customizer.php:491
+#: inc/customizer.php:494
 msgid "Post Meta Settings"
 msgstr ""
 
-#: inc/customizer.php:509
+#: inc/customizer.php:512
 msgid "Hide all post meta data under post title."
 msgstr ""
 
-#: inc/customizer.php:529
+#: inc/customizer.php:532
 msgid "Hide date under post title."
 msgstr ""
 
-#: inc/customizer.php:549
+#: inc/customizer.php:552
 msgid "Hide author under post title."
 msgstr ""
 
-#: inc/customizer.php:569
+#: inc/customizer.php:572
 msgid "Hide comment count under post title."
 msgstr ""
 
-#: inc/customizer.php:589
+#: inc/customizer.php:592
 msgid "Hide category under post title."
 msgstr ""
 
-#: inc/customizer.php:609
+#: inc/customizer.php:612
 msgid "Hide tags under post title."
 msgstr ""
 
@@ -911,7 +917,7 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: page-templates/template-team-collection.php:78
+#: page-templates/template-team-collection.php:77
 #: template-parts/content-slider.php:39
 msgid "Read More"
 msgstr ""
