@@ -47,7 +47,7 @@ IF you want to translate the theme to your language, please refer here: https://
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.1.0 - 2017-5-10 =
 * Tweaks - Add TGMPA to recommend ThemeGrill Demo Importer plugin
 
 = Version - 1.0.9 - 2017-4-28 =
