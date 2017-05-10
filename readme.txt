@@ -19,6 +19,7 @@ Resources packed within the theme.
 * HTML5 Shiv @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
 * Bxslider by Steven Wanderski released under the MIT license
 * Other custom js files are our own creation and is licensed under the same license as this theme.
+* TGM-Plugin-Activation by Thomas Griffin, Gary Jones, Juliette Reinders Folmer | GPL v2 Licensed
 
 All other resources and theme elements are licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
 
@@ -46,6 +47,8 @@ IF you want to translate the theme to your language, please refer here: https://
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Tweaks - Add TGMPA to recommend ThemeGrill Demo Importer plugin
 
 = Version - 1.0.9 - 2017-4-28 =
 * Feature: Added Support for Video Header introduced in WordPress 4.7
