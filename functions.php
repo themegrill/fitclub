@@ -200,8 +200,8 @@ require get_template_directory() . '/inc/custom-header.php';
 /**
  * Load TGMPA Configs.
  */
-require_once( ACCELERATE_INCLUDES_DIR . '/tgm-plugin-activation/class-tgm-plugin-activation.php' );
-require_once( ACCELERATE_INCLUDES_DIR . '/tgm-plugin-activation/tgmpa-fitclub.php' );
+require get_template_directory() . '/inc/tgm-plugin-activation/class-tgm-plugin-activation.php';
+require get_template_directory() . '/inc/tgm-plugin-activation/tgmpa-fitclub.php';
 
 /**
  * Load Demo Importer Configs.
