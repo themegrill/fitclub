@@ -120,7 +120,7 @@
 			</div> <!-- header-wrapper end -->
 		</header>
 
-		<?php if ( function_exists( 'the_custom_header_markup' ) && ( ( get_theme_mod( 'fitclub_slider_activation', '' ) == 0 ) || ( ( get_theme_mod( 'fitclub_slider_activation', '' ) == 1 ) && ! is_front_page() ) ) || ( function_exists( 'the_custom_header_markup' ) && is_home() ) ) :
+		<?php if ( ( function_exists( 'the_custom_header_markup' ) && ( ( get_theme_mod( 'fitclub_slider_activation', '' ) == 0 ) || ( ( get_theme_mod( 'fitclub_slider_activation', '' ) == 1 ) && ! is_front_page() ) ) ) || ( function_exists( 'the_custom_header_markup' ) && is_home() ) ) :
 			do_action( 'himalayas_header_image_markup_render' );
 			the_custom_header_markup();
 		else :
