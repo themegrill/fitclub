@@ -47,6 +47,9 @@ IF you want to translate the theme to your language, please refer here: https://
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Tweaks - Updated bxslider to `v4.2.12`
+
 = Version 1.1.0 - 2017-5-10 =
 * Tweaks - Add TGMPA to recommend ThemeGrill Demo Importer plugin
 
