@@ -1,3 +1,10 @@
+/**
+ * bxSlider v4.2.12
+ * Copyright 2013-2015 Steven Wanderski
+ * Written while drinking Belgian ales and listening to jazz
+ * Licensed under MIT (http://opensource.org/licenses/MIT)
+ */
+
 ;(function($) {
 
   var defaults = {
@@ -218,12 +225,6 @@
       slider.viewport.parent().css({
         maxWidth: getViewportMaxWidth()
       });
-      // make modification to the wrapper (.bx-wrapper)
-      if (!slider.settings.pager && !slider.settings.controls) {
-        slider.viewport.parent().css({
-          margin: '0 auto 0px'
-        });
-      }
       // apply css to all slider children
       slider.children.css({
         float: slider.settings.mode === 'horizontal' ? 'left' : 'none',
@@ -282,7 +283,7 @@
         $(this).one('load error', function() {
           if (++count === total) { callback(); }
         }).each(function() {
-          if (this.complete) { $(this).load(); }
+          if (this.complete) { $(this).trigger('load'); }
         });
       });
     };
@@ -1100,6 +1101,11 @@
         slider.touch.originalPos = el.position();
         var orig = e.originalEvent,
         touchPoints = (typeof orig.changedTouches !== 'undefined') ? orig.changedTouches : [orig];
+
+         var chromePointerEvents = typeof PointerEvent === 'function';
+         if (chromePointerEvents && orig.pointerId === undefined) {
+           return;
+         }
         // record the starting touch x, y coordinates
         slider.touch.start.x = touchPoints[0].pageX;
         slider.touch.start.y = touchPoints[0].pageY;
