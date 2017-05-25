@@ -46,10 +46,10 @@ IF you want to translate the theme to your language, please refer here: https://
 
 /**********************************************************/
 
-== Changelog ==
+== Version 1.1.1 - 2017-5-25 ==
 = Version TBD =
 * Tweaks - Updated bxslider to `v4.2.12`
-
+* Fix - Custom Header function
 = Version 1.1.0 - 2017-5-10 =
 * Tweaks - Add TGMPA to recommend ThemeGrill Demo Importer plugin
 
