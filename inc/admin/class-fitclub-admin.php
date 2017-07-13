@@ -115,7 +115,7 @@ class FitClub_Admin {
 
 			<a href="<?php echo esc_url( apply_filters( 'fitclub_pro_theme_url', 'http://themegrill.com/themes/fitclub-pro/' ) ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View Pro', 'fitclub' ); ?></a>
 
-			<a href="<?php echo esc_url( apply_filters( 'fitclub_pro_theme_url', 'http://wordpress.org/support/view/theme-reviews/fitclub?filter=5' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'fitclub' ); ?></a>
+			<a href="<?php echo esc_url( apply_filters( 'fitclub_pro_theme_url', 'https://wordpress.org/support/theme/fitclub/reviews/?filter=5' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'fitclub' ); ?></a>
 		</p>
 
 		<h2 class="nav-tab-wrapper">

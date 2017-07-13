@@ -53,7 +53,7 @@ function fitclub_customize_register( $wp_customize ) {
 				'text' => esc_html__('View Demo', 'fitclub'),
 			),
 			'rating' => array(
-				'link' => esc_url('http://wordpress.org/support/view/theme-reviews/fitclub?filter=5'),
+				'link' => esc_url('https://wordpress.org/support/theme/fitclub/reviews/?filter=5'),
 				'text' => esc_html__('Rate this theme', 'fitclub'),
 			),
 			);
