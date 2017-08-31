@@ -49,7 +49,9 @@ IF you want to translate the theme to your language, please refer here: https://
 == Version 1.1.1 - 2017-5-25 ==
 = Version TBD =
 * Tweaks - Updated bxslider to `v4.2.12`
-* Fix - Custom Header function
+* Fix 	 - Custom Header function
+* Tweaks - Introduce selective refresh for site title and description
+
 = Version 1.1.0 - 2017-5-10 =
 * Tweaks - Add TGMPA to recommend ThemeGrill Demo Importer plugin
 
