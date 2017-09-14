@@ -252,3 +252,10 @@ function fitclub_events_opening_div() {
 function fitclub_events_closing_div() {
 	echo '</div>';
 }
+
+/**
+ * Load Jetpack compatibility file.
+ */
+if ( defined( 'JETPACK__VERSION' ) ) {
+	require_once get_template_directory() . '/inc/jetpack.php';
+}
