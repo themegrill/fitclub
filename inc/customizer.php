@@ -382,6 +382,7 @@ function fitclub_customize_register( $wp_customize ) {
 		array(
 			'default'              => '#b5d043',
 			'capability'           => 'edit_theme_options',
+			'transport'            => 'postMessage',
 			'sanitize_callback'    => 'fitclub_hex_color_sanitize',
 			'sanitize_js_callback' => 'fitclub_color_escaping_sanitize'
 		)
