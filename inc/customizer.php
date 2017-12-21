@@ -24,6 +24,9 @@ add_action( 'customize_register', 'fitclub_custom_controls' );
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function fitclub_customize_register( $wp_customize ) {
+	// Transport postMessage variable set
+    $customizer_selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
+
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -197,6 +200,7 @@ function fitclub_customize_register( $wp_customize ) {
 		array(
 			'default'            => '',
 			'capability'         => 'edit_theme_options',
+			'transport'          => $customizer_selective_refresh,
 			'sanitize_callback'  => 'fitclub_sanitize_checkbox'
 		)
 	);
@@ -210,6 +214,14 @@ function fitclub_customize_register( $wp_customize ) {
 			'priority' => 10
 		)
 	);
+
+	// Selective refresh for slider activation
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial( 'fitclub_slider_activation', array(
+			'selector'        => '#home-slider',
+			'render_callback' => '',
+		) );
+	}
 
 	// Slider Images Selection Setting
 	for( $i = 1; $i <= 4; $i++ ) {
@@ -370,6 +382,7 @@ function fitclub_customize_register( $wp_customize ) {
 		array(
 			'default'              => '#b5d043',
 			'capability'           => 'edit_theme_options',
+			'transport'            => 'postMessage',
 			'sanitize_callback'    => 'fitclub_hex_color_sanitize',
 			'sanitize_js_callback' => 'fitclub_color_escaping_sanitize'
 		)
@@ -671,6 +684,16 @@ function fitclub_customize_register( $wp_customize ) {
 }
 
 add_action( 'customize_register', 'fitclub_customize_register' );
+
+/**
+ * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ *
+ * @since fitclub 1.1.2
+ */
+function fitclub_customize_preview_js() {
+   wp_enqueue_script( 'fitclub-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), false, true );
+}
+add_action( 'customize_preview_init', 'fitclub_customize_preview_js' );
 
 /**
  * Render the site title for the selective refresh partial.

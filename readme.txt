@@ -47,6 +47,7 @@ IF you want to translate the theme to your language, please refer here: https://
 /**********************************************************/
 = Version TBD =
 * Tweak - Add theme support for Jetpack Responsive Videos.
+* Tweak - Add selective refresh and live js for customizer option.
 
 == Version 1.1.1 - 2017-5-25 ==
 * Tweaks - Updated bxslider to `v4.2.12`
