@@ -673,6 +673,16 @@ function fitclub_customize_register( $wp_customize ) {
 add_action( 'customize_register', 'fitclub_customize_register' );
 
 /**
+ * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ *
+ * @since fitclub 1.1.2
+ */
+function fitclub_customize_preview_js() {
+   wp_enqueue_script( 'explore-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), false, true );
+}
+add_action( 'customize_preview_init', 'fitclub_customize_preview_js' );
+
+/**
  * Render the site title for the selective refresh partial.
  *
  * @return void
