@@ -24,6 +24,9 @@ add_action( 'customize_register', 'fitclub_custom_controls' );
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function fitclub_customize_register( $wp_customize ) {
+	// Transport postMessage variable set
+    $customizer_selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
+
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -197,6 +200,7 @@ function fitclub_customize_register( $wp_customize ) {
 		array(
 			'default'            => '',
 			'capability'         => 'edit_theme_options',
+			'transport'          => $customizer_selective_refresh,
 			'sanitize_callback'  => 'fitclub_sanitize_checkbox'
 		)
 	);
@@ -210,6 +214,14 @@ function fitclub_customize_register( $wp_customize ) {
 			'priority' => 10
 		)
 	);
+
+	// Selective refresh for slider activation
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial( 'fitclub_slider_activation', array(
+			'selector'        => '#home-slider',
+			'render_callback' => '',
+		) );
+	}
 
 	// Slider Images Selection Setting
 	for( $i = 1; $i <= 4; $i++ ) {
