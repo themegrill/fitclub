@@ -45,7 +45,7 @@ All available options can be used from Appearance-> Customize
 IF you want to translate the theme to your language, please refer here: https://translate.wordpress.org/projects/wp-themes/fitclub
 
 /**********************************************************/
-= Version TBD =
+= Version 1.1.2 - 2017-3-28 =
 * Tweak - Add theme support for Jetpack Responsive Videos.
 * Fix - Slider anchors unclickable in Firefox browsers versioned 59+.
 
