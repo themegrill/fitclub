@@ -47,6 +47,7 @@ IF you want to translate the theme to your language, please refer here: https://
 /**********************************************************/
 = Version TBD =
 * Tweak - Add theme support for Jetpack Responsive Videos.
+* Fix - Slider anchors unclickable in Firefox browsers versioned 59+.
 
 == Version 1.1.1 - 2017-5-25 ==
 * Tweaks - Updated bxslider to `v4.2.12`
