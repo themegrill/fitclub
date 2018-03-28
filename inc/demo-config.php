@@ -16,6 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Setup demo importer packages.
  *
  * @param  array $packages
+ *
  * @return array
  */
 function fitclub_demo_importer_packages( $packages ) {
@@ -24,8 +25,14 @@ function fitclub_demo_importer_packages( $packages ) {
 			'name'    => esc_html__( 'FitClub', 'fitclub' ),
 			'preview' => 'https://demo.themegrill.com/fitclub/',
 		),
+		'fitclub-pro'  => array(
+			'name'     => esc_html__( 'FitClub Pro', 'fitclub' ),
+			'preview'  => 'https://demo.themegrill.com/fitclub-pro/',
+			'pro_link' => 'https://themegrill.com/themes/fitclub/',
+		),
 	);
 
 	return array_merge( $new_packages, $packages );
 }
+
 add_filter( 'themegrill_demo_importer_packages', 'fitclub_demo_importer_packages' );
