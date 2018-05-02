@@ -203,7 +203,7 @@ if ( ! function_exists( 'fitclub_footer_copyright_info' ) ) :
 function fitclub_footer_copyright_info() {
    $site_link = '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" >' . get_bloginfo( 'name', 'display' ) . '</a>';
 
-   $tg_link =  '<a href="'. 'https://themegrill.com/themes/fitclub' .'" target="_blank" title="'.esc_attr__( 'ThemeGrill', 'fitclub' ).'" rel="designer">'.esc_html__( 'ThemeGrill', 'fitclub') .'</a>';
+   $tg_link =  '<a href="'. 'https://themegrill.com/themes/fitclub' .'" target="_blank" title="'.esc_attr__( 'ThemeGrill', 'fitclub' ).'" rel="author">'.esc_html__( 'ThemeGrill', 'fitclub') .'</a>';
 
    $default_footer_value = '<span class="copyright-text">' . sprintf( esc_html__( 'Copyright &copy; %1$s %2$s.', 'fitclub' ), date( 'Y' ), $site_link ).' '.sprintf( esc_html__( 'Design By: %1$s', 'fitclub' ), $tg_link ) . '</span>';
 
