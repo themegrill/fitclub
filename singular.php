@@ -38,6 +38,9 @@ get_header(); ?>
 								get_template_part( 'template-parts/content', 'single' );
 							}
 
+							if ( ( ! is_page() ) && ( get_theme_mod( 'fitclub_related_posts_activate', 0 ) == 1 ) ) {
+								get_template_part( 'inc/related-posts' );
+							}
 							do_action( 'fitclub_before_comments_template' );
 
 							// If comments are open or we have at least one comment, load up the comment template.
