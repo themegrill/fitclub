@@ -768,6 +768,28 @@ article.hentry .entry-footer > span {
 	width: 100%;
 }
 
+/* author-bio */
+
+.author-box {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+}
+
+.author-box .avatar {
+    border: 3px solid #b5d043;
+    border-radius: 100%;
+    float: left;
+}
+
+.author-description-wrapper {
+	margin-left: 120px;
+}
+
+.author-description-wrapper .author-name {
+	clear: none;
+}
+
 /* Other */
 
 .sticky {
@@ -4430,6 +4452,15 @@ iframe#wp-custom-header-video {
 		margin: 10px auto;
 		padding: 10px 0 0;
 		text-align: center;
+	}
+
+	.author-box .avatar {
+		float: none;
+		margin-bottom: 20px;
+	}
+
+	.author-description-wrapper {
+		margin-left: 0;
 	}
 }
 

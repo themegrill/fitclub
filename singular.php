@@ -40,7 +40,7 @@ get_header(); ?>
 
 							if ( ( ! is_page() ) && ( ( get_theme_mod( 'fitclub_author_bio_setting', 0 ) == 1 ) && ( get_the_author_meta( 'description' ) ) ) ) {
 							?>
-								<div class="author-box">
+								<div class="author-box clearfix">
 									<div class="author-img"><?php echo get_avatar( get_the_author_meta( 'user_email' ), '100' ); ?></div>
 									<div class="author-description-wrapper">
 										<h4 class="author-name"><?php the_author_meta( 'display_name' ); ?></h4>
