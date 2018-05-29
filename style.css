@@ -768,6 +768,48 @@ article.hentry .entry-footer > span {
 	width: 100%;
 }
 
+.related-posts-wrapper .related-posts-main-title {
+	margin-bottom: 30px;
+}
+
+.related-posts-wrapper .related-posts {
+	margin-left: -3%;
+}
+
+.related-posts-wrapper .post-thumbnails{
+	margin-bottom: 10px;
+}
+
+.related-posts-wrapper .entry-title {
+	font-size: 16px;
+}
+
+.related-posts-wrapper .entry-meta .posted-on {
+	width: auto;
+}
+
+.related-posts-wrapper .entry-meta .posted-on .date,
+.related-posts-wrapper .entry-meta .posted-on .month {
+	background-color: transparent;
+	border-radius: 0;
+	box-shadow: 0 0 0 0 transparent ;
+	padding: 0;
+	margin: 0;
+	color: inherit;
+	font-size: inherit;
+	transition: all 0s;
+}
+
+.related-posts-wrapper .entry-meta .posted-on:hover .date,
+.related-posts-wrapper .entry-meta .posted-on:hover .month {
+	background-color: transparent;
+	color: inherit;
+}
+
+.related-posts-wrapper .entry-meta .posted-on:hover a {
+	background-color: transparent;
+	color: #faa71d;
+}
 /* Other */
 
 .sticky {
