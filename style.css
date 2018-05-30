@@ -817,6 +817,7 @@ article.hentry .entry-footer > span {
 	border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 20px;
     position: relative;
+    margin-bottom: 30px;
 }
 
 .author-box .avatar {
