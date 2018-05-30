@@ -464,6 +464,26 @@ function fitclub_customize_register( $wp_customize ) {
 			)
 		);
 
+	// Author bio.
+	$wp_customize->add_section( 'fitclub_author_bio_section', array(
+		'priority' => 7,
+		'title'    => esc_html__( 'Author Bio Option', 'fitclub' ),
+		'panel'    => 'fitclub_additional_options',
+	) );
+
+	$wp_customize->add_setting( 'fitclub_author_bio_setting', array(
+		'default'           => 0,
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'fitclub_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'fitclub_author_bio_setting', array(
+		'type'    => 'checkbox',
+		'label'   => esc_html__( 'Check to display the author bio.', 'fitclub' ),
+		'setting' => 'fitclub_author_bio_setting',
+		'section' => 'fitclub_author_bio_section',
+	) );
+
 	// Content Selection Section
 	$wp_customize->add_section(
 		'fitclub_content_setting',
