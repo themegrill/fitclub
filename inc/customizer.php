@@ -472,7 +472,7 @@ function fitclub_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'fitclub_author_bio_setting', array(
-		'default'           => 3,
+		'default'           => 0,
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'fitclub_sanitize_checkbox',
 	) );
