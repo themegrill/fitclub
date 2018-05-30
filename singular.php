@@ -38,6 +38,9 @@ get_header(); ?>
 								get_template_part( 'template-parts/content', 'single' );
 							}
 
+							if ( ( ! is_page() ) && ( get_theme_mod( 'fitclub_related_posts_activate', 0 ) == 1 ) ) {
+								get_template_part( 'inc/related-posts' );
+							}
 							if ( ( ! is_page() ) && ( ( get_theme_mod( 'fitclub_author_bio_setting', 0 ) == 1 ) && ( get_the_author_meta( 'description' ) ) ) ) {
 							?>
 								<div class="author-box clearfix">

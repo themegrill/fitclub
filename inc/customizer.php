@@ -628,6 +628,43 @@ function fitclub_customize_register( $wp_customize ) {
 		)
 	);
 
+		//Related post
+	$wp_customize->add_section( 'fitclub_related_posts_section', array(
+		'priority' => 5,
+		'title'    => esc_html__( 'Related Posts', 'fitclub' ),
+		'panel'    => 'fitclub_additional_options',
+	) );
+
+	$wp_customize->add_setting( 'fitclub_related_posts_activate', array(
+		'default'           => 0,
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'fitclub_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'fitclub_related_posts_activate', array(
+		'type'     => 'checkbox',
+		'label'    => esc_html__( 'Check to activate the related posts', 'fitclub' ),
+		'section'  => 'fitclub_related_posts_section',
+		'settings' => 'fitclub_related_posts_activate',
+	) );
+
+	$wp_customize->add_setting( 'fitclub_related_posts', array(
+		'default'           => 'categories',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'fitclub_radio_sanitize',
+	) );
+
+	$wp_customize->add_control( 'fitclub_related_posts', array(
+		'type'     => 'radio',
+		'label'    => esc_html__( 'Related Posts Must Be Shown As:', 'fitclub' ),
+		'section'  => 'fitclub_related_posts_section',
+		'settings' => 'fitclub_related_posts',
+		'choices'  => array(
+			'categories' => esc_html__( 'Related Posts By Categories', 'fitclub' ),
+			'tags'       => esc_html__( 'Related Posts By Tags', 'fitclub' ),
+		),
+	) );
+
 	// Post Meta Tags Setting
 	$wp_customize->add_setting(
 		'fitclub_postmeta_tags',
