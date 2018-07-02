@@ -46,6 +46,9 @@ IF you want to translate the theme to your language, please refer here: https://
 
 /**********************************************************/
 == CHANGE LOG ==
+= TBD =
+* Fix - Image upload button in customize option
+
 = Version 1.1.3 - 2018-05-30 =
 * Feature - Added Author Bio display option
 * Feature - Added Related posts display option
