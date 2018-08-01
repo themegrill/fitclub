@@ -204,11 +204,9 @@ require get_template_directory() . '/inc/tgm-plugin-activation/class-tgm-plugin-
 require get_template_directory() . '/inc/tgm-plugin-activation/tgmpa-fitclub.php';
 
 /**
- * Load Demo Importer Configs.
+ * Load Demo Importer compatibility file.
  */
-if ( class_exists( 'TG_Demo_Importer' ) ) {
-	require get_template_directory() . '/inc/demo-config.php';
-}
+require get_template_directory() . '/inc/demo-importer/class-demo-importer.php';
 
 /**
  * FitClub About Page
