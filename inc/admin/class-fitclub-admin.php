@@ -122,7 +122,7 @@ if ( ! class_exists( 'FitClub_Admin' ) ) :
 
 				<a href="<?php echo esc_url( apply_filters( 'fitclub_pro_theme_url', 'http://demo.themegrill.com/fitclub/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'fitclub' ); ?></a>
 
-				<a href="<?php echo esc_url( apply_filters( 'fitclub_pro_theme_url', 'http://themegrill.com/themes/fitclub-pro/' ) ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View Pro', 'fitclub' ); ?></a>
+				<a href="<?php echo esc_url( apply_filters( 'fitclub_pro_theme_url', 'https://themegrill.com/themes/fitclub/?utm_source=fitclub-about&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro' ) ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View Pro', 'fitclub' ); ?></a>
 
 				<a href="<?php echo esc_url( apply_filters( 'fitclub_pro_theme_url', 'https://wordpress.org/support/theme/fitclub/reviews/?filter=5' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'fitclub' ); ?></a>
 			</p>
@@ -216,7 +216,7 @@ if ( ! class_exists( 'FitClub_Admin' ) ) :
 							<h3><?php esc_html_e( 'Need more features?', 'fitclub' ); ?></h3>
 							<p><?php esc_html_e( 'Upgrade to PRO version for more exciting features.', 'fitclub' ) ?></p>
 							<p>
-								<a href="<?php echo esc_url( 'http://themegrill.com/themes/fitclub-pro/' ); ?>" class="button button-secondary"><?php esc_html_e( 'View Pro', 'fitclub' ); ?></a>
+								<a href="<?php echo esc_url( 'https://themegrill.com/themes/fitclub/?utm_source=fitclub-about&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'View Pro', 'fitclub' ); ?></a>
 							</p>
 						</div>
 
@@ -517,7 +517,7 @@ if ( ! class_exists( 'FitClub_Admin' ) ) :
 						<td></td>
 						<td></td>
 						<td class="btn-wrapper">
-							<a href="<?php echo esc_url( apply_filters( 'fitclub_pro_theme_url', 'http://themegrill.com/themes/fitclub-pro/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php _e( 'View Pro', 'fitclub' ); ?></a>
+							<a href="<?php echo esc_url( apply_filters( 'fitclub_pro_theme_url', 'https://themegrill.com/themes/fitclub/?utm_source=fitclub-free-vs-pro-table&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro' ) ); ?>" class="button button-secondary docs" target="_blank"><?php _e( 'View Pro', 'fitclub' ); ?></a>
 						</td>
 					</tr>
 					</tbody>
