@@ -29,73 +29,63 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
-    $wp_customize->selective_refresh->add_partial( 'blogname', array(
-       'selector'        => '#site-title a',
-       'render_callback' => 'fitclub_customize_partial_blogname',
-    ) );
+		$wp_customize->selective_refresh->add_partial( 'blogname', array(
+			'selector'        => '#site-title a',
+			'render_callback' => 'fitclub_customize_partial_blogname',
+		) );
 
-    $wp_customize->selective_refresh->add_partial( 'blogdescription', array(
-       'selector'        => '#site-description',
-       'render_callback' => 'fitclub_customize_partial_blogdescription',
-    ) );
-   }
+		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+			'selector'        => '#site-description',
+			'render_callback' => 'fitclub_customize_partial_blogdescription',
+		) );
+	}
 
-	// Theme important links
-	class FitClub_Important_Links extends WP_Customize_Control {
+	/**
+	 * Class to include upsell link campaign for theme.
+	 *
+	 * Class FITCLUB_Upsell_Section
+	 */
+	class FITCLUB_Upsell_Section extends WP_Customize_Section {
+		public $type = 'fitclub-upsell-section';
+		public $url  = '';
+		public $id   = '';
 
-		public $type = "fitclub-important-links";
+		/**
+		 * Gather the parameters passed to client JavaScript via JSON.
+		 *
+		 * @return array The array to be exported to the client as JSON.
+		 */
+		public function json() {
+			$json        = parent::json();
+			$json['url'] = esc_url( $this->url );
+			$json['id']  = $this->id;
 
-		public function render_content() {
-			//Add Theme instruction, Support Forum, Demo Link, Rating Link
-			$important_links = array(
-			'view-pro' => array(
-				'link' => esc_url('https://themegrill.com/themes/fitclub/'),
-				'text' => esc_html__('View Pro', 'fitclub'),
-			),
-			'support' => array(
-				'link' => esc_url('https://themegrill.com/support-forum/'),
-				'text' => esc_html__('Support', 'fitclub'),
-			),
-			'documentation' => array(
-				'link' => esc_url('https://docs.themegrill.com/fitclub/'),
-				'text' => esc_html__('Documentation', 'fitclub'),
-			),
-			'demo' => array(
-				'link' => esc_url('https://demo.themegrill.com/fitclub/'),
-				'text' => esc_html__('View Demo', 'fitclub'),
-			),
-			'rating' => array(
-				'link' => esc_url('https://wordpress.org/support/theme/fitclub/reviews/?filter=5'),
-				'text' => esc_html__('Rate this theme', 'fitclub'),
-			),
-			);
-			foreach ($important_links as $important_link) {
-				echo '<p><a target="_blank" href="' . $important_link['link'] . '" >' . esc_attr($important_link['text']) . ' </a></p>';
-			}
+			return $json;
+		}
+
+		/**
+		 * An Underscore (JS) template for rendering this section.
+		 */
+		protected function render_template() {
+			?>
+			<li id="accordion-section-{{ data.id }}" class="fitclub-upsell-accordion-section control-section-{{ data.type }} cannot-expand accordion-section">
+				<h3 class="accordion-section-title"><a href="{{{ data.url }}}" target="_blank">{{ data.title }}</a></h3>
+			</li>
+			<?php
 		}
 	}
 
-	$wp_customize->add_section('fitclub_important_links',
-		array(
-			'priority' => 1,
-			'title'    => esc_html__('FitClub Important Links', 'fitclub'),
-		)
-	);
+// Register `FITCLUB_Upsell_Section` type section.
+	$wp_customize->register_section_type( 'FITCLUB_Upsell_Section' );
 
-	$wp_customize->add_setting('fitclub_important_links',
-		array(
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'fitclub_links_sanitize'
-		)
-	);
-
-	$wp_customize->add_control(
-		new fitclub_Important_Links($wp_customize,
-			'important_links',
+// Add `FITCLUB_Upsell_Section` to display pro link.
+	$wp_customize->add_section(
+		new FITCLUB_Upsell_Section( $wp_customize, 'fitclub_upsell_section',
 			array(
-				'label'    => esc_html__('Important Links', 'fitclub'),
-				'section'  => 'fitclub_important_links',
-				'settings' => 'fitclub_important_links'
+				'title'      => esc_html__( 'View PRO version', 'fitclub' ),
+				'url'        => 'https://themegrill.com/themes/fitclub/?utm_source=fitclub-customizer&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro',
+				'capability' => 'edit_theme_options',
+				'priority'   => 1,
 			)
 		)
 	);
@@ -107,27 +97,27 @@ function fitclub_customize_register( $wp_customize ) {
 			'capabitity'  => 'edit_theme_options',
 			'description' => esc_html__( 'Change Header Settings here', 'fitclub' ),
 			'priority'    => 160,
-			'title'       => esc_html__( 'Header Options', 'fitclub' )
-			)
-		);
+			'title'       => esc_html__( 'Header Options', 'fitclub' ),
+		)
+	);
 
 	// Logo Section
 	$wp_customize->add_section(
 		'fitclub_header_logo',
 		array(
-			'priority'   => 10,
-			'title'      => esc_html__( 'Header Logo', 'fitclub' ),
-			'panel'      => 'fitclub_header_options'
+			'priority' => 10,
+			'title'    => esc_html__( 'Header Logo', 'fitclub' ),
+			'panel'    => 'fitclub_header_options',
 		)
 	);
-	if ( ! function_exists('the_custom_logo') ) {
+	if ( ! function_exists( 'the_custom_logo' ) ) {
 		// Logo Upload
 		$wp_customize->add_setting(
 			'fitclub_logo',
 			array(
-				'default'            => '',
-				'capability'         => 'edit_theme_options',
-				'sanitize_callback'  => 'esc_url_raw'
+				'default'           => '',
+				'capability'        => 'edit_theme_options',
+				'sanitize_callback' => 'esc_url_raw',
 			)
 		);
 
@@ -136,10 +126,10 @@ function fitclub_customize_register( $wp_customize ) {
 				$wp_customize,
 				'fitclub_logo',
 				array(
-					'label'    => esc_html__( 'Upload logo' , 'fitclub' ),
-					'description' => sprintf(__( '%sInfo:%s This option will be removed in upcoming update. Please go to Site Identity section to upload the theme logo.', 'fitclub'  ), '<strong>', '</strong>'),
-					'section'  => 'fitclub_header_logo',
-					'setting'  => 'fitclub_logo'
+					'label'       => esc_html__( 'Upload logo', 'fitclub' ),
+					'description' => sprintf( __( '%sInfo:%s This option will be removed in upcoming update. Please go to Site Identity section to upload the theme logo.', 'fitclub' ), '<strong>', '</strong>' ),
+					'section'     => 'fitclub_header_logo',
+					'setting'     => 'fitclub_logo',
 				)
 			)
 		);
@@ -148,24 +138,24 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'fitclub_logo_placement',
 		array(
-			'default'            => '',
-			'capability'         => 'edit_theme_options',
-			'sanitize_callback'  => 'fitclub_radio_sanitize'
+			'default'           => '',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'fitclub_radio_sanitize',
 		)
 	);
 
 	$wp_customize->add_control(
 		'fitclub_logo_placement',
 		array(
-			'label'    => esc_html__( 'Choose the required option', 'fitclub' ),
-			'section'  => 'fitclub_header_logo',
-			'type'     => 'radio',
-			'choices'  => array(
+			'label'   => esc_html__( 'Choose the required option', 'fitclub' ),
+			'section' => 'fitclub_header_logo',
+			'type'    => 'radio',
+			'choices' => array(
 				'header_logo_only' => esc_html__( 'Header Logo Only', 'fitclub' ),
 				'header_text_only' => esc_html__( 'Header Text Only', 'fitclub' ),
 				'show_both'        => esc_html__( 'Show both header logo and text', 'fitclub' ),
-				'disable'          => esc_html__( 'Disable', 'fitclub' )
-			)
+				'disable'          => esc_html__( 'Disable', 'fitclub' ),
+			),
 		)
 	);
 
@@ -176,9 +166,9 @@ function fitclub_customize_register( $wp_customize ) {
 			'capabitity'  => 'edit_theme_options',
 			'description' => esc_html__( 'Change Slider Settings here', 'fitclub' ),
 			'priority'    => 180,
-			'title'       => esc_html__( 'Slider Options', 'fitclub' )
-			)
-		);
+			'title'       => esc_html__( 'Slider Options', 'fitclub' ),
+		)
+	);
 
 	// Slider Section
 	$wp_customize->add_section(
@@ -186,8 +176,8 @@ function fitclub_customize_register( $wp_customize ) {
 		array(
 			'priority'    => 10,
 			'title'       => esc_html__( 'Slider Settings', 'fitclub' ),
-			'description' => '<strong>'.esc_html__( 'Note', 'fitclub').'</strong><br/>'.esc_html__( '1. To display the Slider first check Enable the slider below. Now create the page for each slider and enter title, text and featured image. Choose that pages in the dropdown options.', 'fitclub').'<br/>'.esc_html__( '2. The recommended size for the slider image is 1920 x 1000 pixels. For better functioning of slider use equal size images for each slide.', 'fitclub' ).'<br/>'.esc_html__( '3. If page do not have featured Image than that page will not included in slider show.', 'fitclub' ),
-			'panel'       => 'fitclub_slider_options'
+			'description' => '<strong>' . esc_html__( 'Note', 'fitclub' ) . '</strong><br/>' . esc_html__( '1. To display the Slider first check Enable the slider below. Now create the page for each slider and enter title, text and featured image. Choose that pages in the dropdown options.', 'fitclub' ) . '<br/>' . esc_html__( '2. The recommended size for the slider image is 1920 x 1000 pixels. For better functioning of slider use equal size images for each slide.', 'fitclub' ) . '<br/>' . esc_html__( '3. If page do not have featured Image than that page will not included in slider show.', 'fitclub' ),
+			'panel'       => 'fitclub_slider_options',
 		)
 	);
 
@@ -195,40 +185,40 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'fitclub_slider_activation',
 		array(
-			'default'            => '',
-			'capability'         => 'edit_theme_options',
-			'sanitize_callback'  => 'fitclub_sanitize_checkbox'
+			'default'           => '',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'fitclub_sanitize_checkbox',
 		)
 	);
 
 	$wp_customize->add_control(
 		'fitclub_slider_activation',
 		array(
-			'label'    => esc_html__( 'Enable Slider' , 'fitclub' ),
+			'label'    => esc_html__( 'Enable Slider', 'fitclub' ),
 			'section'  => 'fitclub_header_slider',
 			'type'     => 'checkbox',
-			'priority' => 10
+			'priority' => 10,
 		)
 	);
 
 	// Slider Images Selection Setting
-	for( $i = 1; $i <= 4; $i++ ) {
+	for ( $i = 1; $i <= 4; $i ++ ) {
 		$wp_customize->add_setting(
-			'fitclub_slide'.$i,
+			'fitclub_slide' . $i,
 			array(
-				'default'            => '',
-				'capability'         => 'edit_theme_options',
-				'sanitize_callback'  => 'fitclub_sanitize_integer'
+				'default'           => '',
+				'capability'        => 'edit_theme_options',
+				'sanitize_callback' => 'fitclub_sanitize_integer',
 			)
 		);
 
 		$wp_customize->add_control(
-			'fitclub_slide'.$i,
+			'fitclub_slide' . $i,
 			array(
-				'label'    => esc_html__( 'Slide ' , 'fitclub' ).$i,
+				'label'    => esc_html__( 'Slide ', 'fitclub' ) . $i,
 				'section'  => 'fitclub_header_slider',
 				'type'     => 'dropdown-pages',
-				'priority' =>  $i+10
+				'priority' => $i + 10,
 			)
 		);
 	}
@@ -240,7 +230,7 @@ function fitclub_customize_register( $wp_customize ) {
 			'capability'  => 'edit_theme_options',
 			'description' => esc_html__( 'Design Related Settings', 'fitclub' ),
 			'priority'    => 180,
-			'title'       => esc_html__( 'Design Options', 'fitclub' )
+			'title'       => esc_html__( 'Design Options', 'fitclub' ),
 		)
 	);
 
@@ -248,9 +238,9 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'fitclub_default_layout_section',
 		array(
-			'priority'  => 10,
-			'title'     => esc_html__( 'Default Layout', 'fitclub' ),
-			'panel'     => 'fitclub_design_options'
+			'priority' => 10,
+			'title'    => esc_html__( 'Default Layout', 'fitclub' ),
+			'panel'    => 'fitclub_design_options',
 		)
 	);
 
@@ -259,7 +249,7 @@ function fitclub_customize_register( $wp_customize ) {
 		array(
 			'default'           => 'right_sidebar',
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'fitclub_radio_sanitize'
+			'sanitize_callback' => 'fitclub_radio_sanitize',
 		)
 	);
 
@@ -275,8 +265,8 @@ function fitclub_customize_register( $wp_customize ) {
 					'right_sidebar'               => FitClub_ADMIN_IMAGES_URL . '/right-sidebar.png',
 					'left_sidebar'                => FitClub_ADMIN_IMAGES_URL . '/left-sidebar.png',
 					'no_sidebar_full_width'       => FitClub_ADMIN_IMAGES_URL . '/no-sidebar-full-width-layout.png',
-					'no_sidebar_content_centered' => FitClub_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png'
-				)
+					'no_sidebar_content_centered' => FitClub_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png',
+				),
 			)
 		)
 	);
@@ -285,9 +275,9 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'fitclub_default_page_layout_section',
 		array(
-			'priority'  => 20,
-			'title'     => esc_html__( 'Default Page Layout', 'fitclub' ),
-			'panel'     => 'fitclub_design_options'
+			'priority' => 20,
+			'title'    => esc_html__( 'Default Page Layout', 'fitclub' ),
+			'panel'    => 'fitclub_design_options',
 		)
 	);
 
@@ -296,7 +286,7 @@ function fitclub_customize_register( $wp_customize ) {
 		array(
 			'default'           => 'right_sidebar',
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'fitclub_radio_sanitize'
+			'sanitize_callback' => 'fitclub_radio_sanitize',
 		)
 	);
 
@@ -312,8 +302,8 @@ function fitclub_customize_register( $wp_customize ) {
 					'right_sidebar'               => FitClub_ADMIN_IMAGES_URL . '/right-sidebar.png',
 					'left_sidebar'                => FitClub_ADMIN_IMAGES_URL . '/left-sidebar.png',
 					'no_sidebar_full_width'       => FitClub_ADMIN_IMAGES_URL . '/no-sidebar-full-width-layout.png',
-					'no_sidebar_content_centered' => FitClub_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png'
-				)
+					'no_sidebar_content_centered' => FitClub_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png',
+				),
 			)
 		)
 	);
@@ -322,9 +312,9 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'fitclub_default_single_post_layout_section',
 		array(
-			'priority'  => 30,
-			'title'     => esc_html__( 'Default Single Post Layout', 'fitclub' ),
-			'panel'     => 'fitclub_design_options'
+			'priority' => 30,
+			'title'    => esc_html__( 'Default Single Post Layout', 'fitclub' ),
+			'panel'    => 'fitclub_design_options',
 		)
 	);
 
@@ -333,7 +323,7 @@ function fitclub_customize_register( $wp_customize ) {
 		array(
 			'default'           => 'right_sidebar',
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'fitclub_radio_sanitize'
+			'sanitize_callback' => 'fitclub_radio_sanitize',
 		)
 	);
 
@@ -349,8 +339,8 @@ function fitclub_customize_register( $wp_customize ) {
 					'right_sidebar'               => FitClub_ADMIN_IMAGES_URL . '/right-sidebar.png',
 					'left_sidebar'                => FitClub_ADMIN_IMAGES_URL . '/left-sidebar.png',
 					'no_sidebar_full_width'       => FitClub_ADMIN_IMAGES_URL . '/no-sidebar-full-width-layout.png',
-					'no_sidebar_content_centered' => FitClub_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png'
-				)
+					'no_sidebar_content_centered' => FitClub_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png',
+				),
 			)
 		)
 	);
@@ -359,9 +349,9 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'fitclub_primary_color_section',
 		array(
-			'priority'   => 40,
-			'title'      => esc_html__( 'Primary Color Option', 'fitclub' ),
-			'panel'      => 'fitclub_design_options'
+			'priority' => 40,
+			'title'    => esc_html__( 'Primary Color Option', 'fitclub' ),
+			'panel'    => 'fitclub_design_options',
 		)
 	);
 
@@ -371,7 +361,7 @@ function fitclub_customize_register( $wp_customize ) {
 			'default'              => '#b5d043',
 			'capability'           => 'edit_theme_options',
 			'sanitize_callback'    => 'fitclub_hex_color_sanitize',
-			'sanitize_js_callback' => 'fitclub_color_escaping_sanitize'
+			'sanitize_js_callback' => 'fitclub_color_escaping_sanitize',
 		)
 	);
 
@@ -380,8 +370,8 @@ function fitclub_customize_register( $wp_customize ) {
 			$wp_customize,
 			'fitclub_primary_color',
 			array(
-				'label'    => esc_html__( 'This will reflect in links, buttons and many others. Choose a color to match your site', 'fitclub' ),
-				'section'  => 'fitclub_primary_color_section'
+				'label'   => esc_html__( 'This will reflect in links, buttons and many others. Choose a color to match your site', 'fitclub' ),
+				'section' => 'fitclub_primary_color_section',
 			)
 		)
 	);
@@ -391,9 +381,9 @@ function fitclub_customize_register( $wp_customize ) {
 		$wp_customize->add_section(
 			'fitclub_custom_css_section',
 			array(
-				'priority'  => 50,
-				'title'     => esc_html__( 'Custom CSS', 'fitclub' ),
-				'panel'     => 'fitclub_design_options'
+				'priority' => 50,
+				'title'    => esc_html__( 'Custom CSS', 'fitclub' ),
+				'panel'    => 'fitclub_design_options',
 			)
 		);
 
@@ -403,7 +393,7 @@ function fitclub_customize_register( $wp_customize ) {
 				'default'              => '',
 				'capability'           => 'edit_theme_options',
 				'sanitize_callback'    => 'wp_filter_nohtml_kses',
-				'sanitize_js_callback' => 'wp_filter_nohtml_kses'
+				'sanitize_js_callback' => 'wp_filter_nohtml_kses',
 			)
 		);
 
@@ -413,7 +403,7 @@ function fitclub_customize_register( $wp_customize ) {
 				'fitclub_custom_css',
 				array(
 					'label'   => esc_html__( 'Write your Custom CSS here', 'fitclub' ),
-					'section' => 'fitclub_custom_css_section'
+					'section' => 'fitclub_custom_css_section',
 				)
 			)
 		);
@@ -423,32 +413,32 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'fitclub_footer_widget_section',
 		array(
-			'priority'   => 60,
-			'title'      => esc_html__( 'Footer Widgets', 'fitclub' ),
-			'panel'      => 'fitclub_design_options'
+			'priority' => 60,
+			'title'    => esc_html__( 'Footer Widgets', 'fitclub' ),
+			'panel'    => 'fitclub_design_options',
 		)
 	);
 
 	$wp_customize->add_setting(
 		'fitclub_footer_widgets',
 		array(
-			'default'            => 4,
-			'capability'         => 'edit_theme_options',
-			'sanitize_callback'  => 'fitclub_sanitize_integer'
+			'default'           => 4,
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'fitclub_sanitize_integer',
 		)
 	);
 
 	$wp_customize->add_control(
 		'fitclub_footer_widgets',
 		array(
-			'label'    => esc_html__( 'Choose the number of widget area you want in footer', 'fitclub' ),
-			'section'  => 'fitclub_footer_widget_section',
-			'type'     => 'select',
-			'choices'    => array(
-				'1' => esc_html__('1 Footer Widget Area', 'fitclub'),
-				'2' => esc_html__('2 Footer Widget Area', 'fitclub'),
-				'3' => esc_html__('3 Footer Widget Area', 'fitclub'),
-				'4' => esc_html__('4 Footer Widget Area', 'fitclub')
+			'label'   => esc_html__( 'Choose the number of widget area you want in footer', 'fitclub' ),
+			'section' => 'fitclub_footer_widget_section',
+			'type'    => 'select',
+			'choices' => array(
+				'1' => esc_html__( '1 Footer Widget Area', 'fitclub' ),
+				'2' => esc_html__( '2 Footer Widget Area', 'fitclub' ),
+				'3' => esc_html__( '3 Footer Widget Area', 'fitclub' ),
+				'4' => esc_html__( '4 Footer Widget Area', 'fitclub' ),
 			),
 		)
 	);
@@ -460,9 +450,9 @@ function fitclub_customize_register( $wp_customize ) {
 			'capability'  => 'edit_theme_options',
 			'description' => esc_html__( 'Some additional settings.', 'fitclub' ),
 			'priority'    => 180,
-			'title'       => esc_html__( 'Additional Options', 'fitclub' )
-			)
-		);
+			'title'       => esc_html__( 'Additional Options', 'fitclub' ),
+		)
+	);
 
 	// Author bio.
 	$wp_customize->add_section( 'fitclub_author_bio_section', array(
@@ -488,9 +478,9 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'fitclub_content_setting',
 		array(
-			'priority'   => 10,
-			'title'      => esc_html__( 'Excerpt/Full Content Option', 'fitclub' ),
-			'panel'      => 'fitclub_additional_options'
+			'priority' => 10,
+			'title'    => esc_html__( 'Excerpt/Full Content Option', 'fitclub' ),
+			'panel'    => 'fitclub_additional_options',
 		)
 	);
 
@@ -498,23 +488,23 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'fitclub_content_show',
 		array(
-			'default'            => '',
-			'capability'         => 'edit_theme_options',
-			'sanitize_callback'  => 'fitclub_radio_sanitize'
+			'default'           => '',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'fitclub_radio_sanitize',
 		)
 	);
 
 	$wp_customize->add_control(
 		'fitclub_content_show',
 		array(
-			'label'    => esc_html__( 'Toggle between displaying excerpts and full posts on your blog and archives.' , 'fitclub' ),
+			'label'    => esc_html__( 'Toggle between displaying excerpts and full posts on your blog and archives.', 'fitclub' ),
 			'section'  => 'fitclub_content_setting',
 			'priority' => 10,
 			'type'     => 'radio',
 			'choices'  => array(
 				'show_fullcontent' => esc_html__( 'Show Full Post Content', 'fitclub' ),
-				'show_excerpt'     => esc_html__( 'Show Excerpt', 'fitclub' )
-			)
+				'show_excerpt'     => esc_html__( 'Show Excerpt', 'fitclub' ),
+			),
 		)
 	);
 
@@ -522,9 +512,9 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'fitclub_postmeta_section',
 		array(
-			'priority'   => 30,
-			'title'      => esc_html__( 'Post Meta Settings', 'fitclub'),
-			'panel'      => 'fitclub_additional_options'
+			'priority' => 30,
+			'title'    => esc_html__( 'Post Meta Settings', 'fitclub' ),
+			'panel'    => 'fitclub_additional_options',
 		)
 	);
 
@@ -532,19 +522,19 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'fitclub_postmeta',
 		array(
-			'default'            => '',
-			'capability'         => 'edit_theme_options',
-			'sanitize_callback'  => 'fitclub_sanitize_checkbox'
+			'default'           => '',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'fitclub_sanitize_checkbox',
 		)
 	);
 
 	$wp_customize->add_control(
 		'fitclub_postmeta',
 		array(
-			'label'    => esc_html__( 'Hide all post meta data under post title.' , 'fitclub' ),
+			'label'    => esc_html__( 'Hide all post meta data under post title.', 'fitclub' ),
 			'section'  => 'fitclub_postmeta_section',
 			'priority' => 10,
-			'type'     => 'checkbox'
+			'type'     => 'checkbox',
 		)
 	);
 
@@ -552,19 +542,19 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'fitclub_postmeta_date',
 		array(
-			'default'            => '',
-			'capability'         => 'edit_theme_options',
-			'sanitize_callback'  => 'fitclub_sanitize_checkbox'
+			'default'           => '',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'fitclub_sanitize_checkbox',
 		)
 	);
 
 	$wp_customize->add_control(
 		'fitclub_postmeta_date',
 		array(
-			'label'    => esc_html__( 'Hide date under post title.' , 'fitclub' ),
+			'label'    => esc_html__( 'Hide date under post title.', 'fitclub' ),
 			'section'  => 'fitclub_postmeta_section',
 			'priority' => 20,
-			'type'     => 'checkbox'
+			'type'     => 'checkbox',
 		)
 	);
 
@@ -572,19 +562,19 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'fitclub_postmeta_author',
 		array(
-			'default'            => '',
-			'capability'         => 'edit_theme_options',
-			'sanitize_callback'  => 'fitclub_sanitize_checkbox'
+			'default'           => '',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'fitclub_sanitize_checkbox',
 		)
 	);
 
 	$wp_customize->add_control(
 		'fitclub_postmeta_author',
 		array(
-			'label'    => esc_html__( 'Hide author under post title.' , 'fitclub' ),
+			'label'    => esc_html__( 'Hide author under post title.', 'fitclub' ),
 			'section'  => 'fitclub_postmeta_section',
 			'priority' => 30,
-			'type'     => 'checkbox'
+			'type'     => 'checkbox',
 		)
 	);
 
@@ -592,19 +582,19 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'fitclub_postmeta_comment',
 		array(
-			'default'            => '',
-			'capability'         => 'edit_theme_options',
-			'sanitize_callback'  => 'fitclub_sanitize_checkbox'
+			'default'           => '',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'fitclub_sanitize_checkbox',
 		)
 	);
 
 	$wp_customize->add_control(
 		'fitclub_postmeta_comment',
 		array(
-			'label'    => esc_html__( 'Hide comment count under post title.' , 'fitclub' ),
+			'label'    => esc_html__( 'Hide comment count under post title.', 'fitclub' ),
 			'section'  => 'fitclub_postmeta_section',
 			'priority' => 40,
-			'type'     => 'checkbox'
+			'type'     => 'checkbox',
 		)
 	);
 
@@ -612,23 +602,23 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'fitclub_postmeta_category',
 		array(
-			'default'            => '',
-			'capability'         => 'edit_theme_options',
-			'sanitize_callback'  => 'fitclub_sanitize_checkbox'
+			'default'           => '',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'fitclub_sanitize_checkbox',
 		)
 	);
 
 	$wp_customize->add_control(
 		'fitclub_postmeta_category',
 		array(
-			'label'    => esc_html__( 'Hide category under post title.' , 'fitclub' ),
+			'label'    => esc_html__( 'Hide category under post title.', 'fitclub' ),
 			'section'  => 'fitclub_postmeta_section',
 			'priority' => 50,
-			'type'     => 'checkbox'
+			'type'     => 'checkbox',
 		)
 	);
 
-		//Related post
+	//Related post
 	$wp_customize->add_section( 'fitclub_related_posts_section', array(
 		'priority' => 5,
 		'title'    => esc_html__( 'Related Posts', 'fitclub' ),
@@ -669,36 +659,38 @@ function fitclub_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'fitclub_postmeta_tags',
 		array(
-			'default'            => '',
-			'capability'         => 'edit_theme_options',
-			'sanitize_callback'  => 'fitclub_sanitize_checkbox'
+			'default'           => '',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'fitclub_sanitize_checkbox',
 		)
 	);
 
 	$wp_customize->add_control(
 		'fitclub_postmeta_tags',
 		array(
-			'label'    => esc_html__( 'Hide tags under post title.' , 'fitclub' ),
+			'label'    => esc_html__( 'Hide tags under post title.', 'fitclub' ),
 			'section'  => 'fitclub_postmeta_tags',
 			'priority' => 60,
-			'type'     => 'checkbox'
+			'type'     => 'checkbox',
 		)
 	);
 
 	// Checkbox sanitization
-	function fitclub_sanitize_checkbox($input) {
+	function fitclub_sanitize_checkbox( $input ) {
 		if ( $input == 1 ) {
 			return 1;
 		} else {
 			return '';
 		}
 	}
+
 	// Sanitize Integer
 	function fitclub_sanitize_integer( $input ) {
-		if( is_numeric( $input ) ) {
+		if ( is_numeric( $input ) ) {
 			return intval( $input );
 		}
 	}
+
 	// Sanitize Radio Button
 	function fitclub_radio_sanitize( $input, $setting ) {
 
@@ -711,13 +703,16 @@ function fitclub_customize_register( $wp_customize ) {
 		// If the input is a valid key, return it; otherwise, return the default.
 		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 	}
+
 	// Sanitize Color
 	function fitclub_hex_color_sanitize( $color ) {
 		return sanitize_hex_color( $color );
 	}
+
 	// Escape Color
 	function fitclub_color_escaping_sanitize( $input ) {
-		$input = esc_attr($input);
+		$input = esc_attr( $input );
+
 		return $input;
 	}
 
@@ -735,7 +730,7 @@ add_action( 'customize_register', 'fitclub_customize_register' );
  * @return void
  */
 function fitclub_customize_partial_blogname() {
-   bloginfo( 'name' );
+	bloginfo( 'name' );
 }
 
 /**
@@ -744,7 +739,7 @@ function fitclub_customize_partial_blogname() {
  * @return void
  */
 function fitclub_customize_partial_blogdescription() {
-   bloginfo( 'description' );
+	bloginfo( 'description' );
 }
 
 /*
@@ -753,32 +748,80 @@ function fitclub_customize_partial_blogdescription() {
 add_action( 'customize_controls_print_footer_scripts', 'fitclub_customizer_custom_scripts' );
 
 function fitclub_customizer_custom_scripts() { ?>
-<style>
-	/* Theme Instructions Panel CSS */
-	li#accordion-section-fitclub_important_links h3.accordion-section-title, li#accordion-section-fitclub_important_links h3.accordion-section-title:focus { background-color: #289DCC !important; color: #fff !important; }
-	li#accordion-section-fitclub_important_links h3.accordion-section-title:hover { background-color: #289DCC !important; color: #fff !important; }
-	li#accordion-section-fitclub_important_links h3.accordion-section-title:after { color: #fff !important; }
-	/* Upsell button CSS */
-	.customize-control-fitclub-important-links a {
-		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8fc800+0,8fc800+100;Green+Flat+%232 */
-		background: #008EC2;
-		color: #fff;
-		display: block;
-		margin: 15px 0 0;
-		padding: 5px 0;
-		text-align: center;
-		font-weight: 600;
-	}
+	<style>
+		/* Theme Instructions Panel CSS */
+		li#accordion-section-fitclub_upsell_section h3.accordion-section-title {
+			background-color: #289DCC !important;
+			border-left-color: #0d6386 !important;
+		}
 
-	.customize-control-fitclub-important-links a{
-		padding: 8px 0;
-	}
+		#accordion-section-fitclub_upsell_section h3 a:after {
+			content: '\f345';
+			color: #fff;
+			position: absolute;
+			top: 12px;
+			right: 10px;
+			z-index: 1;
+			font: 400 20px/1 dashicons;
+			speak: none;
+			display: block;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			text-decoration: none!important;
+		}
 
-	.customize-control-fitclub-important-links a:hover {
-		color: #ffffff;
-		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006e2e+0,006e2e+100;Green+Flat+%233 */
-		background:#2380BA;
-	}
-</style>
-<?php
+		li#accordion-section-fitclub_upsell_section h3.accordion-section-title a {
+			display: block;
+			color: #fff !important;
+			text-decoration: none;
+		}
+
+		li#accordion-section-fitclub_upsell_section h3.accordion-section-title a:focus {
+			box-shadow: none;
+		}
+
+		li#accordion-section-fitclub_upsell_section h3.accordion-section-title:hover {
+			background-color: #1c8bb7 !important;
+		}
+
+		/* Upsell button CSS */
+		.customize-control-fitclub-important-links a {
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8fc800+0,8fc800+100;Green+Flat+%232 */
+			background: #008EC2;
+			color: #fff;
+			display: block;
+			margin: 15px 0 0;
+			padding: 5px 0;
+			text-align: center;
+			font-weight: 600;
+		}
+
+		.customize-control-fitclub-important-links a {
+			padding: 8px 0;
+		}
+
+		.customize-control-fitclub-important-links a:hover {
+			color: #ffffff;
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006e2e+0,006e2e+100;Green+Flat+%233 */
+			background: #2380BA;
+		}
+	</style>
+
+	<script>
+		( function ( $, api ) {
+			api.sectionConstructor['fitclub-upsell-section'] = api.Section.extend( {
+
+				// No events for this type of section.
+				attachEvents : function () {
+				},
+
+				// Always make the section active.
+				isContextuallyActive : function () {
+					return true;
+				}
+			} );
+		} )( jQuery, wp.customize );
+
+	</script>
+	<?php
 }
