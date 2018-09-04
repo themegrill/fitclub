@@ -776,7 +776,7 @@ function fitclub_customizer_custom_scripts() { ?>
 			text-decoration: none;
 		}
 
-		li#accordion-section-accelerate_upsell_section h3.accordion-section-title a:focus {
+		li#accordion-section-fitclub_upsell_section h3.accordion-section-title a:focus {
 			box-shadow: none;
 		}
 
