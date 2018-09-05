@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: FitClub 1.1.3\n"
+"Project-Id-Version: FitClub 1.1.4\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2018-05-30 08:36:03+00:00\n"
+"POT-Creation-Date: 2018-09-05 08:22:08+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -107,16 +107,16 @@ msgstr ""
 msgid "Theme Info"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:123 inc/customizer.php:65
+#: inc/admin/class-fitclub-admin.php:123
 msgid "View Demo"
 msgstr ""
 
 #: inc/admin/class-fitclub-admin.php:125 inc/admin/class-fitclub-admin.php:219
-#: inc/admin/class-fitclub-admin.php:520 inc/customizer.php:53
+#: inc/admin/class-fitclub-admin.php:520
 msgid "View Pro"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:127 inc/customizer.php:69
+#: inc/admin/class-fitclub-admin.php:127
 msgid "Rate this theme"
 msgstr ""
 
@@ -145,7 +145,6 @@ msgid "Customize"
 msgstr ""
 
 #: inc/admin/class-fitclub-admin.php:200 inc/admin/class-fitclub-admin.php:203
-#: inc/customizer.php:61
 msgid "Documentation"
 msgstr ""
 
@@ -261,7 +260,7 @@ msgstr ""
 msgid "FitClub"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:372 inc/demo-config.php:29
+#: inc/admin/class-fitclub-admin.php:372 inc/demo-config.php:26
 msgid "FitClub Pro"
 msgstr ""
 
@@ -285,7 +284,7 @@ msgstr ""
 msgid "Color Palette"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:393 inc/customizer.php:363
+#: inc/admin/class-fitclub-admin.php:393 inc/customizer.php:353
 msgid "Primary Color Option"
 msgstr ""
 
@@ -333,7 +332,7 @@ msgstr ""
 msgid "Demo Content"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:442 inc/customizer.php:57
+#: inc/admin/class-fitclub-admin.php:442
 msgid "Support"
 msgstr ""
 
@@ -345,7 +344,8 @@ msgstr ""
 msgid "Forum Emails/Support Ticket"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:447 inc/widgets.php:253
+#: inc/admin/class-fitclub-admin.php:447
+#: inc/widgets/class-fitclub-about-us-widget.php:13
 msgid "TG: About Widget"
 msgstr ""
 
@@ -357,19 +357,23 @@ msgstr ""
 msgid "TG: Events Calendar"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:462 inc/widgets.php:818
+#: inc/admin/class-fitclub-admin.php:462
+#: inc/widgets/class-fitclub-featured-posts-widget.php:14
 msgid "TG: Featured Posts"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:467 inc/widgets.php:692
+#: inc/admin/class-fitclub-admin.php:467
+#: inc/widgets/class-fitclub-team-widget.php:14
 msgid "TG: Our Team Widget"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:472 inc/widgets.php:127
+#: inc/admin/class-fitclub-admin.php:472
+#: inc/widgets/class-fitclub-service-widget.php:13
 msgid "TG: Service Widget"
 msgstr ""
 
-#: inc/admin/class-fitclub-admin.php:477 inc/widgets.php:535
+#: inc/admin/class-fitclub-admin.php:477
+#: inc/widgets/class-fitclub-testimonial-widget.php:13
 msgid "TG: Testimonial Widget"
 msgstr ""
 
@@ -409,7 +413,7 @@ msgstr ""
 msgid "Our Team Designation"
 msgstr ""
 
-#: inc/admin/meta-boxes.php:30 inc/customizer.php:252
+#: inc/admin/meta-boxes.php:30 inc/customizer.php:242
 msgid "Default Layout"
 msgstr ""
 
@@ -437,249 +441,245 @@ msgstr ""
 msgid "Show designation in Our Team Widget."
 msgstr ""
 
-#: inc/customizer.php:81
-msgid "FitClub Important Links"
+#: inc/customizer.php:85
+msgid "View PRO version"
 msgstr ""
 
-#: inc/customizer.php:96
-msgid "Important Links"
-msgstr ""
-
-#: inc/customizer.php:108
+#: inc/customizer.php:98
 msgid "Change Header Settings here"
 msgstr ""
 
-#: inc/customizer.php:110
+#: inc/customizer.php:100
 msgid "Header Options"
 msgstr ""
 
-#: inc/customizer.php:119
+#: inc/customizer.php:109
 msgid "Header Logo"
 msgstr ""
 
-#: inc/customizer.php:139
+#: inc/customizer.php:129
 msgid "Upload logo"
 msgstr ""
 
-#: inc/customizer.php:140
+#: inc/customizer.php:130
 msgid ""
 "%sInfo:%s This option will be removed in upcoming update. Please go to Site "
 "Identity section to upload the theme logo."
 msgstr ""
 
-#: inc/customizer.php:160
+#: inc/customizer.php:150
 msgid "Choose the required option"
 msgstr ""
 
-#: inc/customizer.php:164
+#: inc/customizer.php:154
 msgid "Header Logo Only"
 msgstr ""
 
-#: inc/customizer.php:165
+#: inc/customizer.php:155
 msgid "Header Text Only"
 msgstr ""
 
-#: inc/customizer.php:166
+#: inc/customizer.php:156
 msgid "Show both header logo and text"
 msgstr ""
 
-#: inc/customizer.php:167
+#: inc/customizer.php:157
 msgid "Disable"
 msgstr ""
 
-#: inc/customizer.php:177
+#: inc/customizer.php:167
 msgid "Change Slider Settings here"
 msgstr ""
 
-#: inc/customizer.php:179
+#: inc/customizer.php:169
 msgid "Slider Options"
 msgstr ""
 
-#: inc/customizer.php:188
+#: inc/customizer.php:178
 msgid "Slider Settings"
 msgstr ""
 
-#: inc/customizer.php:189
+#: inc/customizer.php:179
 msgid "Note"
 msgstr ""
 
-#: inc/customizer.php:189
+#: inc/customizer.php:179
 msgid ""
 "1. To display the Slider first check Enable the slider below. Now create "
 "the page for each slider and enter title, text and featured image. Choose "
 "that pages in the dropdown options."
 msgstr ""
 
-#: inc/customizer.php:189
+#: inc/customizer.php:179
 msgid ""
 "2. The recommended size for the slider image is 1920 x 1000 pixels. For "
 "better functioning of slider use equal size images for each slide."
 msgstr ""
 
-#: inc/customizer.php:189
+#: inc/customizer.php:179
 msgid ""
 "3. If page do not have featured Image than that page will not included in "
 "slider show."
 msgstr ""
 
-#: inc/customizer.php:207
+#: inc/customizer.php:197
 msgid "Enable Slider"
 msgstr ""
 
-#: inc/customizer.php:228
+#: inc/customizer.php:218
 msgid "Slide "
 msgstr ""
 
-#: inc/customizer.php:241
+#: inc/customizer.php:231
 msgid "Design Related Settings"
 msgstr ""
 
-#: inc/customizer.php:243
+#: inc/customizer.php:233
 msgid "Design Options"
 msgstr ""
 
-#: inc/customizer.php:271
+#: inc/customizer.php:261
 msgid ""
 "Select default layout. This layout will be reflected in whole site "
 "archives, categories, search page etc. The layout for a single post and "
 "page can be controlled from below options"
 msgstr ""
 
-#: inc/customizer.php:289
+#: inc/customizer.php:279
 msgid "Default Page Layout"
 msgstr ""
 
-#: inc/customizer.php:308
+#: inc/customizer.php:298
 msgid ""
 "Select default layout for pages. This layout will be reflected in all pages "
 "unless unique layout is set for specific page"
 msgstr ""
 
-#: inc/customizer.php:326
+#: inc/customizer.php:316
 msgid "Default Single Post Layout"
 msgstr ""
 
-#: inc/customizer.php:345
+#: inc/customizer.php:335
 msgid ""
 "Select default layout for single posts. This layout will be reflected in "
 "all single posts unless unique layout is set for specific post"
 msgstr ""
 
-#: inc/customizer.php:383
+#: inc/customizer.php:373
 msgid ""
 "This will reflect in links, buttons and many others. Choose a color to "
 "match your site"
 msgstr ""
 
-#: inc/customizer.php:395
+#: inc/customizer.php:385
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:415
+#: inc/customizer.php:405
 msgid "Write your Custom CSS here"
 msgstr ""
 
-#: inc/customizer.php:427
+#: inc/customizer.php:417
 msgid "Footer Widgets"
 msgstr ""
 
-#: inc/customizer.php:444
+#: inc/customizer.php:434
 msgid "Choose the number of widget area you want in footer"
 msgstr ""
 
-#: inc/customizer.php:448
+#: inc/customizer.php:438
 msgid "1 Footer Widget Area"
 msgstr ""
 
-#: inc/customizer.php:449
+#: inc/customizer.php:439
 msgid "2 Footer Widget Area"
 msgstr ""
 
-#: inc/customizer.php:450
+#: inc/customizer.php:440
 msgid "3 Footer Widget Area"
 msgstr ""
 
-#: inc/customizer.php:451
+#: inc/customizer.php:441
 msgid "4 Footer Widget Area"
 msgstr ""
 
-#: inc/customizer.php:461
+#: inc/customizer.php:451
 msgid "Some additional settings."
 msgstr ""
 
-#: inc/customizer.php:463
+#: inc/customizer.php:453
 msgid "Additional Options"
 msgstr ""
 
-#: inc/customizer.php:470
+#: inc/customizer.php:460
 msgid "Author Bio Option"
 msgstr ""
 
-#: inc/customizer.php:482
+#: inc/customizer.php:472
 msgid "Check to display the author bio."
 msgstr ""
 
-#: inc/customizer.php:492
+#: inc/customizer.php:482
 msgid "Excerpt/Full Content Option"
 msgstr ""
 
-#: inc/customizer.php:510
+#: inc/customizer.php:500
 msgid "Toggle between displaying excerpts and full posts on your blog and archives."
 msgstr ""
 
-#: inc/customizer.php:515
+#: inc/customizer.php:505
 msgid "Show Full Post Content"
 msgstr ""
 
-#: inc/customizer.php:516
+#: inc/customizer.php:506
 msgid "Show Excerpt"
 msgstr ""
 
-#: inc/customizer.php:526
+#: inc/customizer.php:516
 msgid "Post Meta Settings"
 msgstr ""
 
-#: inc/customizer.php:544
+#: inc/customizer.php:534
 msgid "Hide all post meta data under post title."
 msgstr ""
 
-#: inc/customizer.php:564
+#: inc/customizer.php:554
 msgid "Hide date under post title."
 msgstr ""
 
-#: inc/customizer.php:584
+#: inc/customizer.php:574
 msgid "Hide author under post title."
 msgstr ""
 
-#: inc/customizer.php:604
+#: inc/customizer.php:594
 msgid "Hide comment count under post title."
 msgstr ""
 
-#: inc/customizer.php:624
+#: inc/customizer.php:614
 msgid "Hide category under post title."
 msgstr ""
 
-#: inc/customizer.php:634
+#: inc/customizer.php:624
 msgid "Related Posts"
 msgstr ""
 
-#: inc/customizer.php:646
+#: inc/customizer.php:636
 msgid "Check to activate the related posts"
 msgstr ""
 
-#: inc/customizer.php:659
+#: inc/customizer.php:649
 msgid "Related Posts Must Be Shown As:"
 msgstr ""
 
-#: inc/customizer.php:663
+#: inc/customizer.php:653
 msgid "Related Posts By Categories"
 msgstr ""
 
-#: inc/customizer.php:664
+#: inc/customizer.php:654
 msgid "Related Posts By Tags"
 msgstr ""
 
-#: inc/customizer.php:681
+#: inc/customizer.php:671
 msgid "Hide tags under post title."
 msgstr ""
 
@@ -1110,6 +1110,167 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
+#: inc/widgets/class-fitclub-about-us-widget.php:7
+msgid "Show your about page."
+msgstr ""
+
+#: inc/widgets/class-fitclub-about-us-widget.php:36
+#: inc/widgets/class-fitclub-call-to-action-widget.php:32
+#: inc/widgets/class-fitclub-testimonial-widget.php:31
+msgid "Design Settings:"
+msgstr ""
+
+#: inc/widgets/class-fitclub-about-us-widget.php:38
+#: inc/widgets/class-fitclub-call-to-action-widget.php:33
+#: inc/widgets/class-fitclub-testimonial-widget.php:32
+msgid "Background Color:"
+msgstr ""
+
+#: inc/widgets/class-fitclub-about-us-widget.php:42
+msgid "Background Image:"
+msgstr ""
+
+#: inc/widgets/class-fitclub-about-us-widget.php:51
+#: inc/widgets/class-fitclub-call-to-action-widget.php:46
+#: inc/widgets/class-fitclub-testimonial-widget.php:45
+msgid "Choose an image"
+msgstr ""
+
+#: inc/widgets/class-fitclub-about-us-widget.php:51
+#: inc/widgets/class-fitclub-call-to-action-widget.php:46
+#: inc/widgets/class-fitclub-testimonial-widget.php:45
+msgid "Use image"
+msgstr ""
+
+#: inc/widgets/class-fitclub-about-us-widget.php:51
+#: inc/widgets/class-fitclub-call-to-action-widget.php:46
+#: inc/widgets/class-fitclub-testimonial-widget.php:45
+msgid "Select an Image"
+msgstr ""
+
+#: inc/widgets/class-fitclub-about-us-widget.php:56
+#: inc/widgets/class-fitclub-featured-posts-widget.php:32
+#: inc/widgets/class-fitclub-service-widget.php:27
+#: inc/widgets/class-fitclub-team-widget.php:28
+#: inc/widgets/class-fitclub-testimonial-widget.php:49
+msgid "Title:"
+msgstr ""
+
+#: inc/widgets/class-fitclub-about-us-widget.php:60
+msgid "Select a page to display Title, Excerpt and Featured image."
+msgstr ""
+
+#: inc/widgets/class-fitclub-about-us-widget.php:61
+msgid "Page"
+msgstr ""
+
+#: inc/widgets/class-fitclub-about-us-widget.php:71
+#: inc/widgets/class-fitclub-call-to-action-widget.php:55
+msgid "Button Text:"
+msgstr ""
+
+#: inc/widgets/class-fitclub-about-us-widget.php:76
+#: inc/widgets/class-fitclub-call-to-action-widget.php:59
+msgid "Button Redirect Link:"
+msgstr ""
+
+#: inc/widgets/class-fitclub-about-us-widget.php:81
+msgid "Button Icon Class:"
+msgstr ""
+
+#: inc/widgets/class-fitclub-about-us-widget.php:88
+msgid "<a href=\"%s\" target=\"_blank\">Refer here</a> For Icon Class"
+msgstr ""
+
+#: inc/widgets/class-fitclub-about-us-widget.php:144
+#: inc/widgets/class-fitclub-featured-posts-widget.php:129
+#: template-parts/content.php:50 template-parts/content.php:55
+msgid "Read more"
+msgstr ""
+
+#: inc/widgets/class-fitclub-call-to-action-widget.php:7
+msgid "Use this widget to show the call to action section."
+msgstr ""
+
+#: inc/widgets/class-fitclub-call-to-action-widget.php:13
+msgid "TG: Call To Action Widget"
+msgstr ""
+
+#: inc/widgets/class-fitclub-call-to-action-widget.php:37
+#: inc/widgets/class-fitclub-testimonial-widget.php:36
+msgid "Image:"
+msgstr ""
+
+#: inc/widgets/class-fitclub-call-to-action-widget.php:50
+msgid "Other Settings :"
+msgstr ""
+
+#: inc/widgets/class-fitclub-call-to-action-widget.php:52
+msgid "Call to Action Main Text"
+msgstr ""
+
+#: inc/widgets/class-fitclub-featured-posts-widget.php:8
+msgid "Display latest posts or posts of specific category"
+msgstr ""
+
+#: inc/widgets/class-fitclub-featured-posts-widget.php:36
+msgid "Number of posts to display:"
+msgstr ""
+
+#: inc/widgets/class-fitclub-featured-posts-widget.php:41
+msgid "Show latest Posts"
+msgstr ""
+
+#: inc/widgets/class-fitclub-featured-posts-widget.php:42
+msgid "Show posts from a category"
+msgstr ""
+
+#: inc/widgets/class-fitclub-featured-posts-widget.php:46
+msgid "Select category"
+msgstr ""
+
+#: inc/widgets/class-fitclub-featured-posts-widget.php:117
+msgid "Blog Image"
+msgstr ""
+
+#: inc/widgets/class-fitclub-service-widget.php:7
+msgid "Display some pages as services."
+msgstr ""
+
+#: inc/widgets/class-fitclub-service-widget.php:32
+#: inc/widgets/class-fitclub-team-widget.php:33
+#: inc/widgets/class-fitclub-testimonial-widget.php:54
+msgid "Number of pages to display:"
+msgstr ""
+
+#: inc/widgets/class-fitclub-service-widget.php:36
+msgid ""
+"Note: Create the pages and select Service Template to display Services "
+"pages."
+msgstr ""
+
+#: inc/widgets/class-fitclub-service-widget.php:110
+msgid "Learn More"
+msgstr ""
+
+#: inc/widgets/class-fitclub-team-widget.php:7
+msgid "Show your Team Members."
+msgstr ""
+
+#: inc/widgets/class-fitclub-team-widget.php:36
+msgid "Note: Create the pages and select Team Template to display Our Team pages."
+msgstr ""
+
+#: inc/widgets/class-fitclub-testimonial-widget.php:7
+msgid "Display some pages as testimonial."
+msgstr ""
+
+#: inc/widgets/class-fitclub-testimonial-widget.php:58
+msgid ""
+"Note: Create the pages and select Testimonial Template to display "
+"Testimonial pages."
+msgstr ""
+
 #: inc/widgets.php:22
 msgid "Show widgets at Right side"
 msgstr ""
@@ -1152,148 +1313,6 @@ msgstr ""
 
 #: inc/widgets.php:97
 msgid "Footer Sidebar 4"
-msgstr ""
-
-#: inc/widgets.php:121
-msgid "Display some pages as services."
-msgstr ""
-
-#: inc/widgets.php:141 inc/widgets.php:296 inc/widgets.php:571
-#: inc/widgets.php:706 inc/widgets.php:836
-msgid "Title:"
-msgstr ""
-
-#: inc/widgets.php:146 inc/widgets.php:576 inc/widgets.php:711
-msgid "Number of pages to display:"
-msgstr ""
-
-#: inc/widgets.php:150
-msgid ""
-"Note: Create the pages and select Service Template to display Services "
-"pages."
-msgstr ""
-
-#: inc/widgets.php:224
-msgid "Learn More"
-msgstr ""
-
-#: inc/widgets.php:247
-msgid "Show your about page."
-msgstr ""
-
-#: inc/widgets.php:276 inc/widgets.php:440 inc/widgets.php:553
-msgid "Design Settings:"
-msgstr ""
-
-#: inc/widgets.php:278 inc/widgets.php:441 inc/widgets.php:554
-msgid "Background Color:"
-msgstr ""
-
-#: inc/widgets.php:282
-msgid "Background Image:"
-msgstr ""
-
-#: inc/widgets.php:291 inc/widgets.php:454 inc/widgets.php:567
-msgid "Choose an image"
-msgstr ""
-
-#: inc/widgets.php:291 inc/widgets.php:454 inc/widgets.php:567
-msgid "Use image"
-msgstr ""
-
-#: inc/widgets.php:291 inc/widgets.php:454 inc/widgets.php:567
-msgid "Select an Image"
-msgstr ""
-
-#: inc/widgets.php:300
-msgid "Select a page to display Title, Excerpt and Featured image."
-msgstr ""
-
-#: inc/widgets.php:301
-msgid "Page"
-msgstr ""
-
-#: inc/widgets.php:311 inc/widgets.php:463
-msgid "Button Text:"
-msgstr ""
-
-#: inc/widgets.php:316 inc/widgets.php:467
-msgid "Button Redirect Link:"
-msgstr ""
-
-#: inc/widgets.php:321
-msgid "Button Icon Class:"
-msgstr ""
-
-#: inc/widgets.php:328
-msgid "<a href=\"%s\" target=\"_blank\">Refer here</a> For Icon Class"
-msgstr ""
-
-#: inc/widgets.php:384 inc/widgets.php:933 template-parts/content.php:50
-#: template-parts/content.php:55
-msgid "Read more"
-msgstr ""
-
-#: inc/widgets.php:415
-msgid "Use this widget to show the call to action section."
-msgstr ""
-
-#: inc/widgets.php:421
-msgid "TG: Call To Action Widget"
-msgstr ""
-
-#: inc/widgets.php:445 inc/widgets.php:558
-msgid "Image:"
-msgstr ""
-
-#: inc/widgets.php:458
-msgid "Other Settings :"
-msgstr ""
-
-#: inc/widgets.php:460
-msgid "Call to Action Main Text"
-msgstr ""
-
-#: inc/widgets.php:529
-msgid "Display some pages as testimonial."
-msgstr ""
-
-#: inc/widgets.php:580
-msgid ""
-"Note: Create the pages and select Testimonial Template to display "
-"Testimonial pages."
-msgstr ""
-
-#: inc/widgets.php:685
-msgid "Show your Team Members."
-msgstr ""
-
-#: inc/widgets.php:714
-msgid "Note: Create the pages and select Team Template to display Our Team pages."
-msgstr ""
-
-#: inc/widgets.php:812
-msgid "Display latest posts or posts of specific category"
-msgstr ""
-
-#: inc/widgets.php:840
-msgid "Number of posts to display:"
-msgstr ""
-
-#: inc/widgets.php:845
-msgid "Show latest Posts"
-msgstr ""
-
-#: inc/widgets.php:846
-msgid "Show posts from a category"
-msgstr ""
-
-#: inc/widgets.php:850
-msgid "Select category"
-msgstr ""
-
-#: inc/widgets.php:921
-msgid "Blog Image"
 msgstr ""
 
 #: navigation.php:24 navigation.php:36
