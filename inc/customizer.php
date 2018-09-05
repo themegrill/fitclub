@@ -751,8 +751,8 @@ function fitclub_customizer_custom_scripts() { ?>
 	<style>
 		/* Theme Instructions Panel CSS */
 		li#accordion-section-fitclub_upsell_section h3.accordion-section-title {
-			background-color: #289DCC !important;
-			border-left-color: #0d6386 !important;
+			background-color: #b5d043 !important;
+			border-left-color: #899c36 !important;
 		}
 
 		#accordion-section-fitclub_upsell_section h3 a:after {
@@ -781,7 +781,7 @@ function fitclub_customizer_custom_scripts() { ?>
 		}
 
 		li#accordion-section-fitclub_upsell_section h3.accordion-section-title:hover {
-			background-color: #1c8bb7 !important;
+			background-color: #9fb53e !important;
 		}
 
 		/* Upsell button CSS */
