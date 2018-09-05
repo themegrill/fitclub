@@ -49,6 +49,7 @@ IF you want to translate the theme to your language, please refer here: https://
 = TBD =
 * Fix - Image upload button in customize option
 * Fix - Header image size
+* Update - Upsell link
 
 = Version 1.1.3 - 2018-05-30 =
 * Feature - Added Author Bio display option
