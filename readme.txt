@@ -46,6 +46,10 @@ IF you want to translate the theme to your language, please refer here: https://
 
 /**********************************************************/
 == CHANGE LOG ==
+= TBD =
+* Fix    - HTML tags on search result heading.
+* Tweaks - Hiding search box on esc key, autofocus on input.
+
 = Version 1.1.4 - 2018-09-05 =
 * Fix - Image upload button in customize option
 * Fix - Header image size
