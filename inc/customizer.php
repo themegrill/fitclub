@@ -148,7 +148,7 @@ function fitclub_customize_register( $wp_customize ) {
 		'fitclub_logo_placement',
 		array(
 			'label'   => esc_html__( 'Choose the required option', 'fitclub' ),
-			'section' => 'fitclub_header_logo',
+			'section' => 'title_tagline',
 			'type'    => 'radio',
 			'choices' => array(
 				'header_logo_only' => esc_html__( 'Header Logo Only', 'fitclub' ),
