@@ -246,7 +246,7 @@ function fitclub_header_title() {
 		$fitclub_header_title = '';
 	}
 
-	return esc_html($fitclub_header_title);
+	return $fitclub_header_title;
 
 }
 endif;
