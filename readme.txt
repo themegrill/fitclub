@@ -45,7 +45,7 @@ All available options can be used from Appearance-> Customize
 IF you want to translate the theme to your language, please refer here: https://translate.wordpress.org/projects/wp-themes/fitclub
 
 /**********************************************************/
-== CHANGE LOG ==
+== Changelog ==
 = Version 1.1.4 - 2018-09-05 =
 * Fix - Image upload button in customize option
 * Fix - Header image size
