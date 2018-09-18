@@ -110,30 +110,7 @@ function fitclub_customize_register( $wp_customize ) {
 			'panel'    => 'fitclub_header_options',
 		)
 	);
-	if ( ! function_exists( 'the_custom_logo' ) ) {
-		// Logo Upload
-		$wp_customize->add_setting(
-			'fitclub_logo',
-			array(
-				'default'           => '',
-				'capability'        => 'edit_theme_options',
-				'sanitize_callback' => 'esc_url_raw',
-			)
-		);
 
-		$wp_customize->add_control(
-			new WP_Customize_Image_Control(
-				$wp_customize,
-				'fitclub_logo',
-				array(
-					'label'       => esc_html__( 'Upload logo', 'fitclub' ),
-					'description' => sprintf( __( '%sInfo:%s This option will be removed in upcoming update. Please go to Site Identity section to upload the theme logo.', 'fitclub' ), '<strong>', '</strong>' ),
-					'section'     => 'fitclub_header_logo',
-					'setting'     => 'fitclub_logo',
-				)
-			)
-		);
-	}
 	// Logo Placement
 	$wp_customize->add_setting(
 		'fitclub_logo_placement',
@@ -767,7 +744,7 @@ function fitclub_customizer_custom_scripts() { ?>
 			display: block;
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: grayscale;
-			text-decoration: none!important;
+			text-decoration: none !important;
 		}
 
 		li#accordion-section-fitclub_upsell_section h3.accordion-section-title a {
