@@ -46,6 +46,9 @@ IF you want to translate the theme to your language, please refer here: https://
 
 /**********************************************************/
 == Changelog ==
+= TBD =
+* Remove - Backward compatible for header logo
+
 = Version 1.1.5 - 2018-09-17 =
 * Fix    - HTML tags on search result heading.
 * Tweaks - Hiding search box on esc key, autofocus on input.
