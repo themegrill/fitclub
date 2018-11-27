@@ -16,9 +16,17 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' );
 
 		if ( has_post_thumbnail() ) { ?>
+			<?php $title_attribute = esc_attr( get_the_title( $post->ID ) );
+			$thumb_id              = get_post_thumbnail_id( get_the_ID() );
+			$img_altr              = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );
+			$img_alt               = ! empty( $img_altr ) ? $img_altr : $title_attribute;
+			$post_thumbnail_attr   = array(
+				'title' => esc_attr( $title_attribute ),
+				'alt'   => esc_attr( $img_alt ),
+			); ?>
 			<div class="entry-thumbnail">
 			<?php
-			the_post_thumbnail( 'fitclub-featured-post' );
+			the_post_thumbnail( 'fitclub-featured-post', $post_thumbnail_attr );
 			?>
 			</div>
 		<?php } ?>
