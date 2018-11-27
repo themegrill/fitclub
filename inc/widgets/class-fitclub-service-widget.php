@@ -93,10 +93,14 @@ class fitclub_service_widget extends WP_Widget {
 										<?php
 										if( has_post_thumbnail() ) {
 											$image_class = 'class_img';
-											$services_top = get_the_post_thumbnail( $post->ID, 'fitclub-featured-image' );
+											$title_attribute            = esc_attr( get_the_title( $post->ID ) );
+											$post_thumbnail_attr = array(
+												'alt' => esc_attr( $title_attribute ),
+											);
+											$services_top = get_the_post_thumbnail( $post->ID, 'fitclub-featured-image', $post_thumbnail_attr );
 											?>
 											<figure class="<?php echo $image_class; ?>">
-												<a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>" alt="<?php the_title_attribute(); ?>"><?php echo $services_top; ?></a>
+												<a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>"><?php echo $services_top; ?></a>
 											</figure>
 										<?php } ?>
 
