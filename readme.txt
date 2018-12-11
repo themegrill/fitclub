@@ -47,6 +47,7 @@ IF you want to translate the theme to your language, please refer here: https://
 /**********************************************************/
 == Changelog ==
 = TBD =
+* Tweak - Add alt attributes to missed img tags
 * Remove - Backward compatible for header logo
 
 = Version 1.1.5 - 2018-09-17 =
