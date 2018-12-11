@@ -126,7 +126,14 @@ class fitclub_testimonial_widget extends WP_Widget {
 										<?php
 										if( has_post_thumbnail() ) {
 											$image_class = 'testimonial-image';
-											$testimonial_top = get_the_post_thumbnail( $post->ID, 'fitclub-testimonial' );
+											$title_attribute     = esc_attr( get_the_title( $post->ID ) );
+											$thumb_id = get_post_thumbnail_id( get_the_ID() );
+											$img_altr = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );
+											$img_alt = ! empty( $img_altr ) ? $img_altr : $title_attribute;
+											$post_thumbnail_attr = array(
+												'alt' => esc_attr( $img_alt ),
+											);
+											$testimonial_top = get_the_post_thumbnail( $post->ID, 'fitclub-testimonial', $post_thumbnail_attr );
 											?>
 											<figure class="<?php echo esc_attr($image_class); ?>">
 												<?php echo $testimonial_top; ?>

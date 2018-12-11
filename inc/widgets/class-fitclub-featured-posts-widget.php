@@ -112,7 +112,15 @@ class fitclub_featured_posts_widget extends WP_Widget {
 									<figure class="blog-img">
 										<?php
 										if( has_post_thumbnail() ) {
-											the_post_thumbnail('fitclub-featured-image');
+											$title_attribute     = esc_attr( get_the_title( $post->ID ) );
+											$thumb_id            = get_post_thumbnail_id( get_the_ID() );
+											$img_altr            = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );
+											$img_alt             = ! empty( $img_altr ) ? $img_altr : $title_attribute;
+											$post_thumbnail_attr = array(
+												'title' => esc_attr( $title_attribute ),
+												'alt'   => esc_attr( $img_alt ),
+											);
+											the_post_thumbnail('fitclub-featured-image', $post_thumbnail_attr);
 										} else { ?>
 											<img src='<?php echo get_template_directory_uri(); ?>/images/placeholder-blog.jpg' alt='<?php esc_attr_e('Blog Image', 'fitclub');?>' />
 										<?php } ?>

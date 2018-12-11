@@ -24,10 +24,13 @@
 
 		$i = 1;
 		while( $get_featured_posts->have_posts() ) : $get_featured_posts->the_post();
-			$fitclub_slider_title        = esc_html( get_the_title() );
-			$fitclub_slider_description  = get_the_excerpt();
-			$title_attribute             = esc_attr( get_the_title( $post->ID ) );
-			$fitclub_slider_image        = get_the_post_thumbnail($post->ID, '', array( 'title' => $title_attribute, 'alt' => $title_attribute ));
+			$fitclub_slider_title       = esc_html( get_the_title() );
+			$fitclub_slider_description = get_the_excerpt();
+			$title_attribute            = esc_attr( get_the_title( $post->ID ) );
+			$thumb_id                   = get_post_thumbnail_id( get_the_ID() );
+			$img_altr                   = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );
+			$img_alt                    = ! empty( $img_altr ) ? $img_altr : $title_attribute;
+			$fitclub_slider_image       = get_the_post_thumbnail($post->ID, '', array( 'title' => $title_attribute, 'alt' => $img_alt ));
 
 			if( !empty ( $fitclub_slider_image ) ): // Only continue if feature image is present
 
