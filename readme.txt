@@ -49,6 +49,7 @@ IF you want to translate the theme to your language, please refer here: https://
 = TBD =
 * Tweak - Add alt attributes to missed img tags
 * Remove - Backward compatible for header logo
+* Tweak - Modify pingback url autodiscovery for single posts, pages, or attachments.
 
 = Version 1.1.5 - 2018-09-17 =
 * Fix    - HTML tags on search result heading.
