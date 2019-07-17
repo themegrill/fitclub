@@ -73,7 +73,7 @@ module.exports = function( grunt ){
 		// Compress files and folders.
 		compress: {
 			options: {
-				archive: 'fitclub.zip'
+				archive: 'dist/fitclub.zip'
 			},
 			files: {
 				src: [
