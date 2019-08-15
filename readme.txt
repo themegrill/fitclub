@@ -49,6 +49,7 @@ IF you want to translate the theme to your language, please refer here: https://
 = Version TBD =
 * Tweak - Update `screen-reader-text` CSS.
 * Tweak - Added `skip-link` to content area.
+* Tweak - Modify menu CSS for keyboard accessibility.
 
 = Version 1.1.6 - 2019-03-22 =
 * Tweak - Add alt attributes to missed img tags
