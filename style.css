@@ -1658,7 +1658,8 @@ body {
 	z-index: 99;
 }
 
-#site-navigation ul li:hover > ul.sub-menu {
+#site-navigation ul li:hover > ul.sub-menu,
+#site-navigation ul li.focus > ul.sub-menu {
 	opacity: 1;
 	visibility: visible;
 	top: 200%;
@@ -1723,7 +1724,8 @@ body {
 	left: 60%;
 }
 
-#site-navigation ul ul li:hover > ul.sub-menu {
+#site-navigation ul ul li:hover > ul.sub-menu,
+#site-navigation ul ul li.focus > ul.sub-menu {
 	top: 0;
 	left: 50%;
 }
