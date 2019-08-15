@@ -106,6 +106,7 @@ if ( ( function_exists( 'the_custom_header_markup' ) && has_header_video() ) || 
 							array(
 								'theme_location' => 'primary',
 								'menu_id'        => 'primary-menu',
+								'menu_class'     => 'nav-menu'
 							)
 						);
 						?>
