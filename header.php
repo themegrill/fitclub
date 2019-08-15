@@ -44,6 +44,8 @@ if ( ( function_exists( 'the_custom_header_markup' ) && has_header_video() ) || 
 }
 ?>
 <div id="page" class="hfeed site <?php echo esc_attr( $class ); ?>">
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'fitclub' ); ?></a>
+
 	<?php do_action( 'fitclub_before_header' ); ?>
 
 	<header id="masthead" class="site-header" role="banner">
@@ -104,6 +106,7 @@ if ( ( function_exists( 'the_custom_header_markup' ) && has_header_video() ) || 
 							array(
 								'theme_location' => 'primary',
 								'menu_id'        => 'primary-menu',
+								'menu_class'     => 'nav-menu'
 							)
 						);
 						?>
