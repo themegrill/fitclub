@@ -186,6 +186,13 @@ require get_template_directory() . '/inc/widgets.php';
 require get_template_directory() . '/inc/fitclub.php';
 
 /**
+ * Admin.
+ */
+if ( is_admin() ) {
+	require get_template_directory() . '/inc/admin/tdi-notice.php';
+}
+
+/**
  * Constant Definition
  */
 define( 'FitClub_ADMIN_IMAGES_URL', get_template_directory_uri() . '/inc/admin/images');
