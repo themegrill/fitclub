@@ -4,7 +4,7 @@
  *
  * @author  ThemeGrill
  * @package Fitclub
- * @since   1.4.6
+ * @since   1.1.8
  */
 
 // Exit if accessed directly.
