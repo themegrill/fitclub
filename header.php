@@ -99,6 +99,16 @@ if ( ( function_exists( 'the_custom_header_markup' ) && has_header_video() ) || 
 				</div>
 
 				<div class="header-menu-wrapper clearfix">
+					<div class="search-wrapper">
+						<div class="search-icon">
+							<i class="fa fa-search"> </i>
+						</div> <!-- search-icon end -->
+						<div class="header-search-box">
+							<div class="close"><i class="fa fa-close"></i></div>
+							<?php get_search_form(); ?>
+						</div> <!-- header-search-box end -->
+					</div> <!-- search-wrapper end -->
+
 					<nav id="site-navigation" class="main-navigation" role="navigation">
 						<div class="menu-toggle hide"><?php esc_html_e( 'Menu', 'fitclub' ); ?></div>
 						<?php
@@ -111,17 +121,6 @@ if ( ( function_exists( 'the_custom_header_markup' ) && has_header_video() ) || 
 						);
 						?>
 					</nav><!-- #site-navigation -->
-
-					<div class="search-wrapper">
-						<div class="search-icon">
-							<i class="fa fa-search"> </i>
-						</div> <!-- search-icon end -->
-						<div class="header-search-box">
-							<div class="close"><i class="fa fa-close"></i></div>
-							<?php get_search_form(); ?>
-						</div> <!-- header-search-box end -->
-					</div> <!-- search-wrapper end -->
-
 				</div> <!-- header-menu-wrapper end -->
 			</div>
 		</div> <!-- header-wrapper end -->
