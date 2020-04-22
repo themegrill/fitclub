@@ -51,7 +51,7 @@ jQuery( document ).ready( function() {
 	 * Menu.
 	 */
 	jQuery( '#site-navigation .menu-toggle' ).click( function() {
-		jQuery( '#site-navigation .menu' ).slideToggle( 'slow' );
+		jQuery( '#site-navigation .nav-menu' ).slideToggle( 'slow' );
 	} );
 
 	jQuery( '#site-navigation .menu-item-has-children' ).append( '<span class="sub-toggle"> <i class="fa fa-angle-right"></i> </span>' );

@@ -3931,8 +3931,8 @@ iframe#wp-custom-header-video {
 		position: static;
 	}
 
-	.main-navigation {
-		float: right;
+	.nav-menu {
+		display: none;
 	}
 
 	#site-navigation .menu-toggle:before {
@@ -3958,7 +3958,7 @@ iframe#wp-custom-header-video {
 		display: block;
 		font: 0px/0 a;
 		position: relative;
-		right: 21px;
+		right: 14px;
 		top: 0;
 		width: 50px;
 		z-index: 9;
@@ -4068,10 +4068,7 @@ iframe#wp-custom-header-video {
 	}
 
 	.search-wrapper {
-		bottom: 15px;
-		position: absolute;
-		right: 2%;
-		z-index: 9999;
+		padding-top: 12px;
 	}
 
 	.slider-caption-wrapper .caption-sub,
