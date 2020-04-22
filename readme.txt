@@ -47,7 +47,8 @@ IF you want to translate the theme to your language, please refer here: https://
 /**********************************************************/
 == Changelog ==
 = Version 1.1.8 - TBD =
-* Fix - Menu not collapsing in mobile view
+* Fix   - Menu not collapsing in mobile view
+* Tweak - Remove unnecessary !important CSS declaration applied on input button.
 
 = Version 1.1.7 - 2020-02-21 =
 * Tweak - Update `screen-reader-text` CSS.
