@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: FitClub 1.1.7\n"
+"Project-Id-Version: FitClub 1.1.8\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2020-02-21 06:03:32+00:00\n"
+"POT-Creation-Date: 2020-04-23 08:59:27+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -73,7 +73,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:103
+#: header.php:113
 msgid "Menu"
 msgstr ""
 
@@ -157,6 +157,7 @@ msgid "Please view our documentation page to setup the theme."
 msgstr ""
 
 #: inc/admin/class-fitclub-admin.php:208
+#: inc/admin/class-fitclub-theme-review-notice.php:106
 msgid "Got theme support question?"
 msgstr ""
 
@@ -407,6 +408,28 @@ msgstr ""
 
 #: inc/admin/class-fitclub-admin.php:512
 msgid "TG: Stats Counter Widget"
+msgstr ""
+
+#: inc/admin/class-fitclub-theme-review-notice.php:79
+#. Translators: %1$s current user display name.
+msgid ""
+"Howdy, %1$s! It seems that you have been using this theme for more than 15 "
+"days. We hope you are happy with everything that the theme has to offer. If "
+"you can spare a minute, please help us by leaving a 5-star review on "
+"WordPress.org.  By spreading the love, we can continue to develop new "
+"amazing features in the future, for free!"
+msgstr ""
+
+#: inc/admin/class-fitclub-theme-review-notice.php:90
+msgid "Sure"
+msgstr ""
+
+#: inc/admin/class-fitclub-theme-review-notice.php:95
+msgid "Maybe later"
+msgstr ""
+
+#: inc/admin/class-fitclub-theme-review-notice.php:100
+msgid "I already did"
 msgstr ""
 
 #: inc/admin/meta-boxes.php:16 inc/admin/meta-boxes.php:18
