@@ -46,6 +46,9 @@ IF you want to translate the theme to your language, please refer here: https://
 
 /**********************************************************/
 == Changelog ==
+= Version TBD =
+* Add - Required header fields: `Tested up to` and `Requires PHP` in style.css.
+
 = Version 1.1.8 - 2020-04-23 =
 * Tweak - Add review notice message.
 * Fix   - Menu not collapsing in mobile view
