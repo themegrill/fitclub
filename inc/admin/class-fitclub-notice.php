@@ -18,7 +18,7 @@ class Fitclub_Notice {
 	 * @param string $dismiss_url Notice permanent dismiss URL.
 	 * @param string $temporary_dismiss_url Notice temporary dismiss URL.
 	 *
-	 * @since 1.3.0
+	 * @since 1.1.9
 	 *
 	 */
 	public function __construct( $name, $type, $dismiss_url, $temporary_dismiss_url ) {
@@ -26,7 +26,7 @@ class Fitclub_Notice {
 		$this->type                  = $type;
 		$this->dismiss_url           = $dismiss_url;
 		$this->temporary_dismiss_url = $temporary_dismiss_url;
-		$this->pricing_url           = 'https://themegrill.com/foodhunt-pricing/?utm_source=foodhunt-dashboard-message&utm_medium=view-pricing-link&utm_campaign=upgrade';
+		$this->pricing_url           = 'https://themegrill.com/fitclub-pricing/?utm_source=fitclub-dashboard-message&utm_medium=view-pricing-link&utm_campaign=upgrade';
 		$this->current_user_id       = get_current_user_id();
 
 		// Notice markup.
@@ -43,7 +43,7 @@ class Fitclub_Notice {
 	}
 
 	private function is_dismiss_notice() {
-		return apply_filters( 'fitclub' . $this->name . '_notice_dismiss', true );
+		return apply_filters( 'fitclub_' . $this->name . '_notice_dismiss', true );
 	}
 
 	public function notice_markup() {
@@ -54,39 +54,39 @@ class Fitclub_Notice {
 	 * Hide a notice if the GET variable is set.
 	 */
 	public function dismiss_notice() {
-		if ( isset( $_GET['fitclubnotice_dismiss'] ) && isset( $_GET['_fitclubupgrade_notice_dismiss_nonce'] ) ) { // WPCS: input var ok.
-			if ( ! wp_verify_nonce( wp_unslash( $_GET['_fitclubupgrade_notice_dismiss_nonce'] ), 'fitclubupgrade_notice_dismiss_nonce' ) ) { // phpcs:ignore WordPress.VIP.ValidatedSanitizedInput.InputNotSanitized
-				wp_die( __( 'Action failed. Please refresh the page and retry.', 'foodhunt' ) ); // WPCS: xss ok.
+		if ( isset( $_GET['fitclub_notice_dismiss'] ) && isset( $_GET['_fitclub_upgrade_notice_dismiss_nonce'] ) ) { // WPCS: input var ok.
+			if ( ! wp_verify_nonce( wp_unslash( $_GET['_fitclub_upgrade_notice_dismiss_nonce'] ), 'fitclub_upgrade_notice_dismiss_nonce' ) ) { // phpcs:ignore WordPress.VIP.ValidatedSanitizedInput.InputNotSanitized
+				wp_die( __( 'Action failed. Please refresh the page and retry.', 'fitclub' ) ); // WPCS: xss ok.
 			}
 
 			if ( ! current_user_can( 'publish_posts' ) ) {
-				wp_die( __( 'Cheatin&#8217; huh?', 'foodhunt' ) ); // WPCS: xss ok.
+				wp_die( __( 'Cheatin&#8217; huh?', 'fitclub' ) ); // WPCS: xss ok.
 			}
 
-			$dismiss_notice = sanitize_text_field( wp_unslash( $_GET['fitclubnotice_dismiss'] ) );
+			$dismiss_notice = sanitize_text_field( wp_unslash( $_GET['fitclub_notice_dismiss'] ) );
 
 			// Hide.
-			if ( $dismiss_notice === $_GET['fitclubnotice_dismiss'] ) {
-				add_user_meta( get_current_user_id(), 'fitclub' . $dismiss_notice . '_notice_dismiss', 'yes', true );
+			if ( $dismiss_notice === $_GET['fitclub_notice_dismiss'] ) {
+				add_user_meta( get_current_user_id(), 'fitclub_' . $dismiss_notice . '_notice_dismiss', 'yes', true );
 			}
 		}
 	}
 
 	public function dismiss_notice_temporary() {
-		if ( isset( $_GET['fitclubnotice_dismiss_temporary'] ) && isset( $_GET['_fitclubupgrade_notice_dismiss_temporary_nonce'] ) ) { // WPCS: input var ok.
-			if ( ! wp_verify_nonce( wp_unslash( $_GET['_fitclubupgrade_notice_dismiss_temporary_nonce'] ), 'fitclubupgrade_notice_dismiss_temporary_nonce' ) ) { // phpcs:ignore WordPress.VIP.ValidatedSanitizedInput.InputNotSanitized
-				wp_die( __( 'Action failed. Please refresh the page and retry.', 'foodhunt' ) ); // WPCS: xss ok.
+		if ( isset( $_GET['fitclub_notice_dismiss_temporary'] ) && isset( $_GET['_fitclub_upgrade_notice_dismiss_temporary_nonce'] ) ) { // WPCS: input var ok.
+			if ( ! wp_verify_nonce( wp_unslash( $_GET['_fitclub_upgrade_notice_dismiss_temporary_nonce'] ), 'fitclub_upgrade_notice_dismiss_temporary_nonce' ) ) { // phpcs:ignore WordPress.VIP.ValidatedSanitizedInput.InputNotSanitized
+				wp_die( __( 'Action failed. Please refresh the page and retry.', 'fitclub' ) ); // WPCS: xss ok.
 			}
 
 			if ( ! current_user_can( 'publish_posts' ) ) {
-				wp_die( __( 'Cheatin&#8217; huh?', 'foodhunt' ) ); // WPCS: xss ok.
+				wp_die( __( 'Cheatin&#8217; huh?', 'fitclub' ) ); // WPCS: xss ok.
 			}
 
-			$dismiss_notice = sanitize_text_field( wp_unslash( $_GET['fitclubnotice_dismiss_temporary'] ) );
+			$dismiss_notice = sanitize_text_field( wp_unslash( $_GET['fitclub_notice_dismiss_temporary'] ) );
 
 			// Hide.
-			if ( $dismiss_notice === $_GET['fitclubnotice_dismiss_temporary'] ) {
-				add_user_meta( get_current_user_id(), 'fitclub' . $dismiss_notice . '_notice_dismiss_temporary', 'yes', true );
+			if ( $dismiss_notice === $_GET['fitclub_notice_dismiss_temporary'] ) {
+				add_user_meta( get_current_user_id(), 'fitclub_' . $dismiss_notice . '_notice_dismiss_temporary', 'yes', true );
 			}
 		}
 	}
