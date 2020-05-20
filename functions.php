@@ -186,14 +186,6 @@ require get_template_directory() . '/inc/widgets.php';
 require get_template_directory() . '/inc/fitclub.php';
 
 /**
- * Admin.
- */
-if ( is_admin() ) {
-	require get_template_directory() . '/inc/admin/tdi-notice.php';
-	require get_template_directory() . '/inc/admin/class-fitclub-theme-review-notice.php';
-}
-
-/**
  * Constant Definition
  */
 define( 'FitClub_ADMIN_IMAGES_URL', get_template_directory_uri() . '/inc/admin/images');
@@ -226,6 +218,8 @@ if ( class_exists( 'TG_Demo_Importer' ) ) {
  */
 if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-fitclub-admin.php';
+	require get_template_directory() . '/inc/admin/tdi-notice.php';
+	require get_template_directory() . '/inc/admin/class-fitclub-welcome-notice.php';
 }
 
 
