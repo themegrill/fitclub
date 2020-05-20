@@ -226,10 +226,10 @@ define( 'FITCLUB_THEME_VERSION', $fitclub_theme->get( 'Version' ) );
 if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-fitclub-admin.php';
 	require get_template_directory() . '/inc/admin/tdi-notice.php';
-	require get_template_directory() . '/inc/admin/class-foodhunt-notice.php';
+	require get_template_directory() . '/inc/admin/class-fitclub-notice.php';
 	require get_template_directory() . '/inc/admin/class-fitclub-welcome-notice.php';
-	require get_template_directory() . '/inc/admin/class-foodhunt-upgrade-notice.php';
-	require get_template_directory() . '/inc/admin/class-foodhunt-theme-review-notice.php';
+	require get_template_directory() . '/inc/admin/class-fitclub-upgrade-notice.php';
+	require get_template_directory() . '/inc/admin/class-fitclub-theme-review-notice.php';
 }
 
 
