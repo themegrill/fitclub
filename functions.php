@@ -227,6 +227,7 @@ if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-fitclub-admin.php';
 	require get_template_directory() . '/inc/admin/tdi-notice.php';
 	require get_template_directory() . '/inc/admin/class-fitclub-welcome-notice.php';
+	require get_template_directory() . '/inc/admin/class-foodhunt-theme-review-notice.php';
 }
 
 
