@@ -214,6 +214,13 @@ if ( class_exists( 'TG_Demo_Importer' ) ) {
 }
 
 /**
+ * Assign the FoodHunt version to a variable.
+ */
+$fitclub_theme = wp_get_theme( 'fitclub' );
+
+define( 'FITCLUB_THEME_VERSION', $fitclub_theme->get( 'Version' ) );
+
+/**
  * FitClub About Page
  */
 if ( is_admin() ) {

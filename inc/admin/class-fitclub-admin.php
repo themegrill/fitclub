@@ -43,8 +43,8 @@ if ( ! class_exists( 'FitClub_Admin' ) ) :
 		 * Enqueue styles.
 		 */
 		public function enqueue_styles() {
-			global $fitclub_version;
-			wp_enqueue_style( 'fitclub-welcome', get_template_directory_uri() . '/css/admin/welcome.css', array(), $fitclub_version );
+
+			wp_enqueue_style( 'fitclub-welcome', get_template_directory_uri() . '/css/admin/welcome.css', array(), FITCLUB_THEME_VERSION );
 		}
 
 		/**
@@ -53,10 +53,10 @@ if ( ! class_exists( 'FitClub_Admin' ) ) :
 		 * @access private
 		 */
 		private function intro() {
-			global $fitclub_version;
+
 			$theme = wp_get_theme( get_template() );
 			// Drop minor version if 0
-			$major_version = substr( $fitclub_version, 0, 3 );
+			$major_version = substr( FITCLUB_THEME_VERSION, 0, 3 );
 			?>
 			<div class="fitclub-theme-info">
 				<h1>
@@ -85,7 +85,7 @@ if ( ! class_exists( 'FitClub_Admin' ) ) :
 			</p>
 
 			<h2 class="nav-tab-wrapper">
-				<a class="nav-tab 
+				<a class="nav-tab
 				<?php
 				if ( empty( $_GET['tab'] ) && $_GET['page'] == 'fitclub-welcome' ) {
 					echo 'nav-tab-active';
@@ -94,7 +94,7 @@ if ( ! class_exists( 'FitClub_Admin' ) ) :
 				" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'fitclub-welcome' ), 'themes.php' ) ) ); ?>">
 					<?php echo $theme->display( 'Name' ); ?>
 				</a>
-				<a class="nav-tab 
+				<a class="nav-tab
 				<?php
 				if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'supported_plugins' ) {
 					echo 'nav-tab-active';
@@ -117,7 +117,7 @@ if ( ! class_exists( 'FitClub_Admin' ) ) :
 				">
 					<?php esc_html_e( 'Supported Plugins', 'fitclub' ); ?>
 				</a>
-				<a class="nav-tab 
+				<a class="nav-tab
 				<?php
 				if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'free_vs_pro' ) {
 					echo 'nav-tab-active';
@@ -140,7 +140,7 @@ if ( ! class_exists( 'FitClub_Admin' ) ) :
 				">
 					<?php esc_html_e( 'Free Vs Pro', 'fitclub' ); ?>
 				</a>
-				<a class="nav-tab 
+				<a class="nav-tab
 				<?php
 				if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'changelog' ) {
 					echo 'nav-tab-active';
