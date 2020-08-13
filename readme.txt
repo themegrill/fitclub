@@ -48,6 +48,7 @@ IF you want to translate the theme to your language, please refer here: https://
 == Changelog ==
 = TBD =
 * Tweak - Add and improve theme-related notices.
+* Remove - TGMPA library to recommend plugins
 
 = Version 1.1.8 - 2020-04-23 =
 * Tweak - Add review notice message.
