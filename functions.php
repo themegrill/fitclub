@@ -229,6 +229,7 @@ if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-fitclub-notice.php';
 	require get_template_directory() . '/inc/admin/class-fitclub-welcome-notice.php';
 	require get_template_directory() . '/inc/admin/class-fitclub-upgrade-notice.php';
+	require get_template_directory() . '/inc/admin/class-fitclub-dashboard.php';
 	require get_template_directory() . '/inc/admin/class-fitclub-theme-review-notice.php';
 }
 
