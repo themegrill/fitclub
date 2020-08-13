@@ -96,17 +96,17 @@ class Fitclub_Dashboard {
 					<div class="welcome-panel-column">
 						<h3><?php esc_html_e( 'Next Steps', 'fitclub' ); ?></h3>
 						<ul>
-							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-media-text">' . esc_html__( 'Documentation', 'colormag' ) . '</a>', esc_url( 'https://docs.themegrill.com/colormag' ) ); ?></li>
-							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-layout">' . esc_html__( 'Starter Demos', 'colormag' ) . '</a>', esc_url( 'https://demo.themegrill.com/colormag-demos' ) ); ?></li>
-							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-migrate">' . esc_html__( 'Premium Version', 'colormag' ) . '</a>', esc_url( 'https://themegrill.com/themes/colormag' ) ); ?></li>
+							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-media-text">' . esc_html__( 'Documentation', 'fitclub' ) . '</a>', esc_url( 'https://docs.themegrill.com/fitclub' ) ); ?></li>
+							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-layout">' . esc_html__( 'Starter Demos', 'fitclub' ) . '</a>', esc_url( 'https://demo.themegrill.com/fitclub-demos' ) ); ?></li>
+							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-migrate">' . esc_html__( 'Premium Version', 'fitclub' ) . '</a>', esc_url( 'https://themegrill.com/themes/fitclub' ) ); ?></li>
 						</ul>
 					</div>
 
 					<div class="welcome-panel-column">
 						<h3><?php esc_html_e( 'Further Actions', 'fitclub' ); ?></h3>
 						<ul>
-							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-businesswoman">' . esc_html__( 'Got theme support question?', 'colormag' ) . '</a>', esc_url( 'https://wordpress.org/support/theme/colormag/' ) ); ?></li>
-							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-thumbs-up">' . esc_html__( 'Leave a review', 'colormag' ) . '</a>', esc_url( 'https://wordpress.org/support/theme/colormag/reviews/' ) ); ?></li>
+							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-businesswoman">' . esc_html__( 'Got theme support question?', 'fitclub' ) . '</a>', esc_url( 'https://wordpress.org/support/theme/fitclub/' ) ); ?></li>
+							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-thumbs-up">' . esc_html__( 'Leave a review', 'fitclub' ) . '</a>', esc_url( 'https://wordpress.org/support/theme/fitclub/reviews/' ) ); ?></li>
 						</ul>
 					</div>
 				</div>
