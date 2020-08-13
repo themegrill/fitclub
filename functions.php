@@ -30,8 +30,6 @@ function fitclub_content_width() {
 }
 add_action( 'template_redirect', 'fitclub_content_width' );
 
-
-
 if ( ! function_exists( 'fitclub_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -85,7 +83,6 @@ function fitclub_setup() {
 	add_image_size( 'fitclub-featured-image', 380, 240, true );
 	add_image_size( 'fitclub-featured-post', 870, 435, true);
 	add_image_size( 'fitclub-slider-thumb', 75, 75, true );
-
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -226,7 +223,6 @@ if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-fitclub-theme-review-notice.php';
 }
 
-
 /* Add Support for The Event Calendar Plugin by Modern Tribe */
 if( class_exists( 'Tribe__Events__Main' ) ) {
 	add_action( 'wp_footer', 'fitclub_events_scripts', 100 );
@@ -251,6 +247,7 @@ if ( typeof jQuery.fn.bxSlider !== 'undefined' ) {
 }
 </script>
 <?php }
+
 /**
  * The Event Calendar Div
  */
