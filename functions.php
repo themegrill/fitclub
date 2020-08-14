@@ -30,8 +30,6 @@ function fitclub_content_width() {
 }
 add_action( 'template_redirect', 'fitclub_content_width' );
 
-
-
 if ( ! function_exists( 'fitclub_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -85,7 +83,6 @@ function fitclub_setup() {
 	add_image_size( 'fitclub-featured-image', 380, 240, true );
 	add_image_size( 'fitclub-featured-post', 870, 435, true);
 	add_image_size( 'fitclub-slider-thumb', 75, 75, true );
-
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -186,14 +183,6 @@ require get_template_directory() . '/inc/widgets.php';
 require get_template_directory() . '/inc/fitclub.php';
 
 /**
- * Admin.
- */
-if ( is_admin() ) {
-	require get_template_directory() . '/inc/admin/tdi-notice.php';
-	require get_template_directory() . '/inc/admin/class-fitclub-theme-review-notice.php';
-}
-
-/**
  * Constant Definition
  */
 define( 'FitClub_ADMIN_IMAGES_URL', get_template_directory_uri() . '/inc/admin/images');
@@ -209,12 +198,6 @@ require get_template_directory() . '/inc/admin/meta-boxes.php';
 require get_template_directory() . '/inc/custom-header.php';
 
 /**
- * Load TGMPA Configs.
- */
-require get_template_directory() . '/inc/tgm-plugin-activation/class-tgm-plugin-activation.php';
-require get_template_directory() . '/inc/tgm-plugin-activation/tgmpa-fitclub.php';
-
-/**
  * Load Demo Importer Configs.
  */
 if ( class_exists( 'TG_Demo_Importer' ) ) {
@@ -222,12 +205,23 @@ if ( class_exists( 'TG_Demo_Importer' ) ) {
 }
 
 /**
+ * Assign the FoodHunt version to a variable.
+ */
+$fitclub_theme = wp_get_theme( 'fitclub' );
+
+define( 'FITCLUB_THEME_VERSION', $fitclub_theme->get( 'Version' ) );
+
+/**
  * FitClub About Page
  */
 if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-fitclub-admin.php';
+	require get_template_directory() . '/inc/admin/class-fitclub-notice.php';
+	require get_template_directory() . '/inc/admin/class-fitclub-welcome-notice.php';
+	require get_template_directory() . '/inc/admin/class-fitclub-upgrade-notice.php';
+	require get_template_directory() . '/inc/admin/class-fitclub-dashboard.php';
+	require get_template_directory() . '/inc/admin/class-fitclub-theme-review-notice.php';
 }
-
 
 /* Add Support for The Event Calendar Plugin by Modern Tribe */
 if( class_exists( 'Tribe__Events__Main' ) ) {
@@ -253,6 +247,7 @@ if ( typeof jQuery.fn.bxSlider !== 'undefined' ) {
 }
 </script>
 <?php }
+
 /**
  * The Event Calendar Div
  */
