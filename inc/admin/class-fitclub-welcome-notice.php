@@ -2,7 +2,7 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-class Fitclub_Welcome_Notice {
+class FitClub_Welcome_Notice {
 
 	public function __construct() {
 		add_action( 'wp_loaded', array( $this, 'welcome_notice' ), 20 );
@@ -20,10 +20,9 @@ class Fitclub_Welcome_Notice {
 	 * echo `Get started` CTA.
 	 *
 	 * @return string
-	 *
 	 */
 	public function import_button_html() {
-		$html = '<a class="btn-get-started button button-primary button-hero" href="#" data-name="' . esc_attr( 'themegrill-demo-importer' ) . '" data-slug="' . esc_attr( 'themegrill-demo-importer' ) . '" aria-label="' . esc_attr__( 'Get started with Fitclub', 'fitclub' ) . '">' . esc_html__( 'Get started with Fitclub', 'fitclub' ) . '</a>';
+		$html = '<a class="btn-get-started button button-primary button-hero" href="#" data-name="' . esc_attr( 'themegrill-demo-importer' ) . '" data-slug="' . esc_attr( 'themegrill-demo-importer' ) . '" aria-label="' . esc_attr__( 'Get started with fitclub', 'fitclub' ) . '">' . esc_html__( 'Get started with FitClub', 'fitclub' ) . '</a>';
 
 		return $html;
 	}
@@ -43,16 +42,16 @@ class Fitclub_Welcome_Notice {
 
 			<div class="fitclub-message__content">
 				<div class="fitclub-message__image">
-					<img class="fitclub-screenshot" src="<?php echo get_template_directory_uri(); ?>/screenshot.jpg" alt="<?php esc_html_e( 'Fitclub', 'fitclub' ); ?>" /><?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped, Squiz.PHP.EmbeddedPhp.SpacingBeforeClose ?>
+					<img class="fitclub-screenshot" src="<?php echo esc_url( get_template_directory_uri() ); ?>/screenshot.png" alt="<?php esc_attr_e( 'fitclub', 'fitclub' ); ?>"/><?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped, Squiz.PHP.EmbeddedPhp.SpacingBeforeClose ?>
 				</div>
 
 				<div class="fitclub-message__text">
 					<h2 class="fitclub-message__heading">
 						<?php
 						printf(
-							/* translators: 1: welcome page link starting html tag, 2: welcome page link ending html tag. */
-							esc_html__( 'Welcome! Thank you for choosing Fitclub! To fully take advantage of the best our theme can offer please make sure you visit our %1$swelcome page%2$s.', 'fitclub' ),
-							'<a href="' . esc_url( admin_url( 'themes.php?page=fitclub-welcome' ) ) . '">',
+						/* translators: 1: welcome page link starting html tag, 2: welcome page link ending html tag. */
+							esc_html__( 'Welcome! Thank you for choosing FitClub! To fully take advantage of the best our theme can offer please make sure you visit our %1$swelcome page%2$s.', 'fitclub' ),
+							'<a href="' . esc_url( admin_url( 'themes.php?page=fitclub-options' ) ) . '">',
 							'</a>'
 						);
 						?>
@@ -60,7 +59,7 @@ class Fitclub_Welcome_Notice {
 
 					<div class="fitclub-message__cta">
 						<?php echo $this->import_button_html(); ?>
-						<span class="plugin-install-notice"><?php esc_html_e( 'Clicking the button will install and activate the ThemeGrill demo importer plugin.', 'imalayas' ); ?></span>
+						<span class="plugin-install-notice"><?php esc_html_e( 'Clicking the button will install and activate the ThemeGrill demo importer plugin.', 'fitclub' ); ?></span>
 					</div>
 				</div>
 			</div>
@@ -167,4 +166,4 @@ class Fitclub_Welcome_Notice {
 	}
 }
 
-new Fitclub_Welcome_Notice();
+new FitClub_Welcome_Notice();
