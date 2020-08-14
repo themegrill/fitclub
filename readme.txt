@@ -47,7 +47,9 @@ IF you want to translate the theme to your language, please refer here: https://
 /**********************************************************/
 == Changelog ==
 = TBD =
-* Fix - Invalid characters passed for attempted conversion, these have been ignored.
+* Tweak - Add and improve theme-related notices.
+* Fix - PHP notice for Invalid characters passed for attempted conversion, these have been ignored, utilized for hex conversion
+* Remove - TGMPA library to recommend plugins
 
 = Version 1.1.8 - 2020-04-23 =
 * Tweak - Add review notice message.
