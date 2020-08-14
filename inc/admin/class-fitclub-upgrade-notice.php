@@ -2,7 +2,7 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-class Fitclub_Upgrade_Notice extends Fitclub_Notice {
+class FitClub_Upgrade_Notice extends FitClub_Notice {
 
 	public function __construct() {
 		if ( ! current_user_can( 'publish_posts' ) ) {
@@ -77,7 +77,7 @@ class Fitclub_Upgrade_Notice extends Fitclub_Notice {
 						'fitclub'
 					),
 					'<strong>' . esc_html( $current_user->display_name ) . '</strong>',
-					'Fitclub',
+					'FitClub',
 					'<code class="coupon-code">upgrade15</code>',
 					'15%'
 				);
@@ -105,4 +105,4 @@ class Fitclub_Upgrade_Notice extends Fitclub_Notice {
 	}
 }
 
-new Fitclub_Upgrade_Notice();
+new FitClub_Upgrade_Notice();
