@@ -3,7 +3,7 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-class Fitclub_Dashboard {
+class FitClub_Dashboard {
 	private static $instance;
 
 	public static function instance() {
@@ -65,7 +65,7 @@ class Fitclub_Dashboard {
 			<h1>
 				<?php
 				/* translators: %s: Theme version. */
-				echo sprintf( esc_html__( 'Fitclub %s', 'fitclub' ), $theme->Version );
+				echo sprintf( esc_html__( 'FitClub %s', 'fitclub' ), $theme->Version );
 				?>
 			</h1>
 		</div>
@@ -116,4 +116,4 @@ class Fitclub_Dashboard {
 	}
 }
 
-Fitclub_Dashboard::instance();
+FitClub_Dashboard::instance();

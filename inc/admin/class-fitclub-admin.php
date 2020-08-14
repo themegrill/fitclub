@@ -6,10 +6,13 @@
  * @package FitClub
  * @since   1.0.7
  */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
 if ( ! class_exists( 'FitClub_Admin' ) ) :
+
 	/**
 	 * FitClub_Admin Class.
 	 */
