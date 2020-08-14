@@ -2,7 +2,7 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-class Fitclub_Notice {
+class FitClub_Notice {
 	public $name;
 	public $type;
 	public $dismiss_url;
@@ -19,7 +19,6 @@ class Fitclub_Notice {
 	 * @param string $temporary_dismiss_url Notice temporary dismiss URL.
 	 *
 	 * @since 1.1.9
-	 *
 	 */
 	public function __construct( $name, $type, $dismiss_url, $temporary_dismiss_url ) {
 		$this->name                  = $name;
