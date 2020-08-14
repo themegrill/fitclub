@@ -122,7 +122,7 @@ class fitclub_featured_posts_widget extends WP_Widget {
 											);
 											the_post_thumbnail('fitclub-featured-image', $post_thumbnail_attr);
 										} else { ?>
-											<img src='<?php echo get_template_directory_uri(); ?>/images/placeholder-blog.jpg' alt='<?php esc_attr_e('Blog Image', 'fitclub');?>' />
+											<img src='<?php echo esc_url(get_template_directory_uri() ); ?>/images/placeholder-blog.jpg' alt='<?php esc_attr_e('Blog Image', 'fitclub');?>' />
 										<?php } ?>
 									</figure>
 

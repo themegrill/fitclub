@@ -13,13 +13,9 @@ External resources linked to the theme.
 Resources packed within the theme.
 * Font Awesome by Dave Gandy http://fortawesome.github.io/Font-Awesome/
   SIL OFL 1.1 http://scripts.sil.org/OFL.
-* Image in the screenshot is from public domain https://pixabay.com
-  Slider Image: https://pixabay.com/en/training-muscles-arms-blonde-828726/
-  Class we provide Image: https://pixabay.com/en/training-train-lime-barbell-601214/
 * HTML5 Shiv @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
 * Bxslider by Steven Wanderski released under the MIT license
 * Other custom js files are our own creation and is licensed under the same license as this theme.
-* TGM-Plugin-Activation by Thomas Griffin, Gary Jones, Juliette Reinders Folmer | GPL v2 Licensed
 
 All other resources and theme elements are licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
 
@@ -46,7 +42,7 @@ IF you want to translate the theme to your language, please refer here: https://
 
 /**********************************************************/
 == Changelog ==
-= TBD =
+= Version 1.1.9 - 2020-08-14 =
 * Tweak - Add and improve theme-related notices.
 * Fix - PHP notice for Invalid characters passed for attempted conversion, these have been ignored, utilized for hex conversion
 * Remove - TGMPA library to recommend plugins
