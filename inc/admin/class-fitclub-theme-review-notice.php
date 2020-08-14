@@ -1,10 +1,10 @@
 <?php
 /**
- * Fitclub Theme Review Notice Class.
+ * FitClub Theme Review Notice Class.
  *
  * @author  ThemeGrill
- * @package Fitclub
- * @since   1.1.9
+ * @package FitClub
+ * @since   1.1.8
  */
 
 // Exit if accessed directly.
@@ -13,14 +13,14 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Class to display the theme review notice after certain period.
  *
- * Class Fitclub_Theme_Review_Notice
+ * Class FitClub_Theme_Review_Notice
  */
-class Fitclub_Theme_Review_Notice {
+class FitClub_Theme_Review_Notice {
 
 	/**
 	 * Constructor function to include the required functionality for the class.
 	 *
-	 * Fitclub_Theme_Review_Notice constructor.
+	 * FitClub_Theme_Review_Notice constructor.
 	 */
 	public function __construct() {
 		add_action( 'after_setup_theme', array( $this, 'review_notice' ) );
@@ -151,4 +151,4 @@ class Fitclub_Theme_Review_Notice {
 	}
 }
 
-new Fitclub_Theme_Review_Notice();
+new FitClub_Theme_Review_Notice();
