@@ -42,6 +42,9 @@ IF you want to translate the theme to your language, please refer here: https://
 
 /**********************************************************/
 == Changelog ==
+= TBD =
+* Tweak - Remove deprecate Custom CSS customize option provided via theme.
+
 = Version 1.1.9 - 2020-08-14 =
 * Tweak - Add and improve theme-related notices.
 * Fix - PHP notice for Invalid characters passed for attempted conversion, these have been ignored, utilized for hex conversion
