@@ -11,7 +11,6 @@
 function fitclub_custom_controls() {
 
 	require_once get_template_directory() . '/inc/admin/customize-image-radio-control.php';
-	require_once get_template_directory() . '/inc/admin/customize-custom-css-control.php';
 
 }
 
@@ -352,39 +351,6 @@ function fitclub_customize_register( $wp_customize ) {
 			)
 		)
 	);
-
-	// Custom CSS Section
-	if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
-		$wp_customize->add_section(
-			'fitclub_custom_css_section',
-			array(
-				'priority' => 50,
-				'title'    => esc_html__( 'Custom CSS', 'fitclub' ),
-				'panel'    => 'fitclub_design_options',
-			)
-		);
-
-		$wp_customize->add_setting(
-			'fitclub_custom_css',
-			array(
-				'default'              => '',
-				'capability'           => 'edit_theme_options',
-				'sanitize_callback'    => 'wp_filter_nohtml_kses',
-				'sanitize_js_callback' => 'wp_filter_nohtml_kses',
-			)
-		);
-
-		$wp_customize->add_control(
-			new FitClub_Custom_CSS_Control(
-				$wp_customize,
-				'fitclub_custom_css',
-				array(
-					'label'   => esc_html__( 'Write your Custom CSS here', 'fitclub' ),
-					'section' => 'fitclub_custom_css_section',
-				)
-			)
-		);
-	}
 
 	// Footer Widget Section
 	$wp_customize->add_section(
