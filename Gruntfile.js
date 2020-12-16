@@ -140,7 +140,7 @@ module.exports = function( grunt ){
 
 	grunt.registerTask( 'update', [
 		'bower',
-		'copy',
+		'copy'
 	]);
 
 	grunt.registerTask( 'dev', [
