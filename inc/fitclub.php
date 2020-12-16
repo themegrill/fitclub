@@ -18,15 +18,20 @@ if ( ! function_exists( 'fitclub_entry_meta' ) ) :
 			?>
 			<?php if ( get_theme_mod( 'fitclub_postmeta_author', '' ) == '' ) { ?>
 			<span class="byline author vcard"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo get_the_author(); ?>"><i class="fa fa-user"></i><?php echo esc_html( get_the_author() ); ?></a></span>
-		<?php }
+				<?php
+			}
 
-			if ( ! post_password_required() && comments_open() && get_theme_mod( 'fitclub_postmeta_comment', '' ) == '' ) { ?>
+			if ( ! post_password_required() && comments_open() && get_theme_mod( 'fitclub_postmeta_comment', '' ) == '' ) {
+				?>
 				<span class="comments-link"><i class="fa fa-comments-o"></i><?php comments_popup_link( esc_html__( '0 Comment', 'fitclub' ), esc_html__( '1 Comment', 'fitclub' ), esc_html__( ' % Comments', 'fitclub' ) ); ?></span>
-			<?php }
+				<?php
+			}
 
-			if ( has_category() && get_theme_mod( 'fitclub_postmeta_category', '' ) == '' ) { ?>
+			if ( has_category() && get_theme_mod( 'fitclub_postmeta_category', '' ) == '' ) {
+				?>
 				<span class="cat-links"><i class="fa fa-folder-open"></i><?php the_category( ', ' ); ?></span>
-			<?php }
+				<?php
+			}
 
 			$tags_list = get_the_tag_list( '<span class="tag-links">', ', ', '</span>' );
 			if ( $tags_list && get_theme_mod( 'fitclub_postmeta_tags', '' ) == '' ) {
@@ -163,7 +168,11 @@ endif;
  */
 function fitclub_hex2rgb( $hexstr ) {
 	$int = hexdec( str_replace( '#', '', $hexstr ) );
-	$rgb = array( "red" => 0xFF & ( $int >> 0x10 ), "green" => 0xFF & ( $int >> 0x8 ), "blue" => 0xFF & $int );
+	$rgb = array(
+		'red'   => 0xFF & ( $int >> 0x10 ),
+		'green' => 0xFF & ( $int >> 0x8 ),
+		'blue'  => 0xFF & $int,
+	);
 	$r   = $rgb['red'];
 	$g   = $rgb['green'];
 	$b   = $rgb['blue'];
@@ -190,8 +199,8 @@ function fitclub_darkcolor( $hex, $steps ) {
 	$return      = '#';
 
 	foreach ( $color_parts as $color ) {
-		$color  = hexdec( $color ); // Convert to decimal
-		$color  = max( 0, min( 255, $color + $steps ) ); // Adjust color
+		$color   = hexdec( $color ); // Convert to decimal
+		$color   = max( 0, min( 255, $color + $steps ) ); // Adjust color
 		$return .= str_pad( dechex( $color ), 2, '0', STR_PAD_LEFT ); // Make two char hex code
 	}
 
@@ -231,9 +240,11 @@ if ( ! function_exists( 'fitclub_footer_copyright_info' ) ) :
 	function fitclub_footer_copyright_info() {
 		$site_link = '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" >' . get_bloginfo( 'name', 'display' ) . '</a>';
 
-		$tg_link = '<a href="' . 'https://themegrill.com/themes/fitclub' . '" target="_blank" title="' . esc_attr__( 'ThemeGrill', 'fitclub' ) . '" rel="author">' . esc_html__( 'ThemeGrill', 'fitclub' ) . '</a>';
+		$tg_link = '<a href="' . 'https://themegrill.com/themes/fitclub/' . '" target="_blank" title="' . esc_attr__( 'FitClub', 'fitclub' ) . '" rel="nofollow">' . esc_html__( 'FitClub', 'fitclub' ) . '</a>';
 
-		$default_footer_value = '<span class="copyright-text">' . sprintf( esc_html__( 'Copyright &copy; %1$s %2$s.', 'fitclub' ), date( 'Y' ), $site_link ) . ' ' . sprintf( esc_html__( 'Design By: %1$s', 'fitclub' ), $tg_link ) . '</span>';
+		$wp_link = '<a href="' . esc_url( 'https://wordpress.org' ) . '" target="_blank" title="' . esc_attr__( 'WordPress', 'fitclub' ) . '" rel="nofollow"><span>' . esc_html__( 'WordPress', 'fitclub' ) . '</span></a>';
+
+		$default_footer_value = '<span class="copyright-text">' . sprintf( esc_html__( 'Copyright &copy; %1$s %2$s. All rights reserved.', 'fitclub' ), date( 'Y' ), $site_link ) . ' ' . sprintf( esc_html__( 'Theme: %1$s by %2$s.', 'fitclub' ), $tg_link, 'ThemeGrill' ) . ' ' . esc_html__( 'Powered by ', 'estore' ) . $wp_link . '.' . '</span>';
 
 		$fitclub_footer_copyright_info = '<div class="copyright">' . $default_footer_value . '</div>';
 		echo $fitclub_footer_copyright_info;
