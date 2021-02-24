@@ -43,7 +43,7 @@ IF you want to translate the theme to your language, please refer here: https://
 
 /**********************************************************/
 == Changelog ==
-= TBD =
+= Version 1.2.1 - 2021-02-24 =
 * Tweak - Update Screenshot Image.
 
 = Version 1.2.0 - 2020-12-16 =
