@@ -43,6 +43,9 @@ IF you want to translate the theme to your language, please refer here: https://
 
 /**********************************************************/
 == Changelog ==
+= TBD =
+* Tweak - Update Screenshot Image.
+
 = Version 1.2.0 - 2020-12-16 =
 * Tweak - Update footer credit link with `rel="nofollow"` attributes.
 * Tweak - Remove deprecate Custom CSS customize option provided via theme.
