@@ -49,6 +49,9 @@ IF you want to translate the theme to your language, please refer here: https://
 
 /**********************************************************/
 == Changelog ==
+= TBD =
+* Tweak - Update screenshot image source link.
+
 = Version 1.2.1 - 2021-02-24 =
 * Tweak - Update Screenshot Image.
 
