@@ -74,7 +74,7 @@ IF you want to translate the theme to your language, please refer here: https://
 = Version 1.1.5 - 2018-09-17 =
 * Fix    - HTML tags on search result heading.
 * Tweaks - Hiding search box on esc key, autofocus on input.
-* Move   - Header logo option in site identity section
+* Move   - Header logo option in site identity section.
 
 = Version 1.1.4 - 2018-09-05 =
 * Fix - Image upload button in customize option
