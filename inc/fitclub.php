@@ -244,7 +244,7 @@ if ( ! function_exists( 'fitclub_footer_copyright_info' ) ) :
 
 		$wp_link = '<a href="' . esc_url( 'https://wordpress.org' ) . '" target="_blank" title="' . esc_attr__( 'WordPress', 'fitclub' ) . '" rel="nofollow"><span>' . esc_html__( 'WordPress', 'fitclub' ) . '</span></a>';
 
-		$default_footer_value = '<span class="copyright-text">' . sprintf( esc_html__( 'Copyright &copy; %1$s %2$s. All rights reserved.', 'fitclub' ), date( 'Y' ), $site_link ) . ' ' . sprintf( esc_html__( 'Theme: %1$s by %2$s.', 'fitclub' ), $tg_link, 'ThemeGrill' ) . ' ' . esc_html__( 'Powered by ', 'estore' ) . $wp_link . '.' . '</span>';
+		$default_footer_value = '<span class="copyright-text">' . sprintf( esc_html__( 'Copyright &copy; %1$s %2$s. All rights reserved.', 'fitclub' ), date( 'Y' ), $site_link ) . ' ' . sprintf( esc_html__( 'Theme: %1$s by %2$s.', 'fitclub' ), $tg_link, 'ThemeGrill' ) . ' ' . esc_html__( 'Powered by ', 'fitclub' ) . $wp_link . '.' . '</span>';
 
 		$fitclub_footer_copyright_info = '<div class="copyright">' . $default_footer_value . '</div>';
 		echo $fitclub_footer_copyright_info;
