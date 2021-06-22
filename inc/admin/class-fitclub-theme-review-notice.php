@@ -80,20 +80,20 @@ class FitClub_Theme_Review_Notice {
 					<p>(
 						<?php
 						printf(
-						/* translators: %s: Smile icon */
+							/* translators: %s: Smile icon */
 							esc_html__( 'The above word is just to draw your attention. %s', 'fitclub' ),
 							'<span class="dashicons dashicons-smiley smile-icon"></span>'
 						);
 						?>
-						)</p>
+					)</p>
 					<p>
 						<?php
-						printf(
-						/* translators: %1$s: Opening of strong tag, %2$s: Theme's Name, %3$s: Closing of strong tag  */
-							esc_html__( 'Hope you are having a nice experience with %1$s %2$s %3$s theme. Please provide this theme a nice review.', 'fitclub' ),
-							'<strong>',
-							esc_html( wp_get_theme( get_template() ) ),
-							'</strong>'
+							printf(
+								/* translators: %1$s: Opening of strong tag, %2$s: Theme's Name, %3$s: Closing of strong tag  */
+								esc_html__( 'Hope you are having a nice experience with %1$s %2$s %3$s theme. Please provide this theme a nice review.', 'fitclub' ),
+								'<strong>',
+								esc_html( wp_get_theme( get_template() ) ),
+								'</strong>'
 						);
 						?>
 					</p>
@@ -102,10 +102,10 @@ class FitClub_Theme_Review_Notice {
 					</strong>
 					<p>
 						<?php
-						printf(
-						/* translators: %s: Smiley icon */
-							esc_html__( 'Basically, it would encourage us to release updates regularly with new features & bug fixes so that you can keep on using the theme without any issues and also to provide free support like we have been doing. %s', 'fitclub' ),
-							'<span class="dashicons dashicons-smiley smile-icon"></span>'
+							printf(
+								/* translators: %s: Smiley icon */
+								esc_html__( 'Basically, it would encourage us to release updates regularly with new features & bug fixes so that you can keep on using the theme without any issues and also to provide free support like we have been doing. %s', 'fitclub' ),
+								'<span class="dashicons dashicons-smiley smile-icon"></span>'
 						);
 						?>
 					</p>
@@ -136,6 +136,7 @@ class FitClub_Theme_Review_Notice {
 				<a class="notice-dismiss" href="<?php echo esc_url( $dismiss_url ); ?>"></a>
 
 			</div> <!-- /.fitclub-message__content -->
+
 		</div> <!-- /.theme-review-notice -->
 		<?php
 	}
@@ -144,6 +145,7 @@ class FitClub_Theme_Review_Notice {
 	 * `I already did` button or `dismiss` button: remove the review notice permanently.
 	 */
 	public function ignore_theme_review_notice() {
+
 		/* If user clicks to ignore the notice, add that to their user meta */
 		if ( isset( $_GET['nag_fitclub_ignore_theme_review_notice'] ) && isset( $_GET['_fitclub_ignore_theme_review_notice_nonce'] ) ) {
 
@@ -161,6 +163,7 @@ class FitClub_Theme_Review_Notice {
 	 * `Maybe later` button: remove the review notice partially.
 	 */
 	public function ignore_theme_review_notice_partially() {
+
 		/* If user clicks to ignore the notice, add that to their user meta */
 		if ( isset( $_GET['nag_fitclub_ignore_theme_review_notice_partially'] ) && isset( $_GET['_fitclub_ignore_theme_review_notice_nonce'] ) ) {
 
