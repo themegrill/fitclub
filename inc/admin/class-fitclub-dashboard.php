@@ -97,7 +97,7 @@ class FitClub_Dashboard {
 						<h3><?php esc_html_e( 'Next Steps', 'fitclub' ); ?></h3>
 						<ul>
 							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-media-text">' . esc_html__( 'Documentation', 'fitclub' ) . '</a>', esc_url( 'https://docs.themegrill.com/fitclub' ) ); ?></li>
-							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-layout">' . esc_html__( 'Starter Demos', 'fitclub' ) . '</a>', esc_url( 'https://demo.themegrill.com/fitclub-demos' ) ); ?></li>
+							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-layout">' . esc_html__( 'Starter Demos', 'fitclub' ) . '</a>', esc_url( 'https://themegrilldemos.com/fitclub-demos/' ) ); ?></li>
 							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-migrate">' . esc_html__( 'Premium Version', 'fitclub' ) . '</a>', esc_url( 'https://themegrill.com/themes/fitclub' ) ); ?></li>
 						</ul>
 					</div>
