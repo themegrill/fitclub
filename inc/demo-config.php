@@ -20,11 +20,11 @@ function fitclub_demo_importer_packages( $packages ) {
 	$new_packages = array(
 		'fitclub-free' => array(
 			'name'    => esc_html__( 'FitClub', 'fitclub' ),
-			'preview' => 'https://demo.themegrill.com/fitclub/',
+			'preview' => 'https://themegrilldemos.com/fitclub/',
 		),
 		'fitclub-pro'  => array(
 			'name'     => esc_html__( 'FitClub Pro', 'fitclub' ),
-			'preview'  => 'https://demo.themegrill.com/fitclub-pro/',
+			'preview'  => 'https://themegrilldemos.com/fitclub-pro/',
 			'pro_link' => 'https://themegrill.com/themes/fitclub/',
 		),
 	);
