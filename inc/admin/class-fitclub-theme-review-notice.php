@@ -61,11 +61,11 @@ class FitClub_Theme_Review_Notice {
 		/**
 		 * Return from notice display if:
 		 *
-		 * 1. The theme installed is less than 15 days ago.
-		 * 2. If the user has ignored the message partially for 15 days.
+		 * 1. The theme installed is less than 14 days ago.
+		 * 2. If the user has ignored the message partially for 14 days.
 		 * 3. Dismiss always if clicked on 'I Already Did' button.
 		 */
-		if ( ( get_option( 'fitclub_theme_installed_time' ) > strtotime( '-15 day' ) ) || ( $ignored_notice_partially > strtotime( '-15 day' ) ) || ( $ignored_notice ) ) {
+		if ( ( get_option( 'fitclub_theme_installed_time' ) > strtotime( '-14 day' ) ) || ( $ignored_notice_partially > strtotime( '-14 day' ) ) || ( $ignored_notice ) ) {
 			return;
 		}
 		?>
@@ -94,7 +94,7 @@ class FitClub_Theme_Review_Notice {
 								'<strong>',
 								esc_html( wp_get_theme( get_template() ) ),
 								'</strong>'
-						);
+							);
 						?>
 					</p>
 					<strong>
@@ -106,7 +106,7 @@ class FitClub_Theme_Review_Notice {
 								/* translators: %s: Smiley icon */
 								esc_html__( 'Basically, it would encourage us to release updates regularly with new features & bug fixes so that you can keep on using the theme without any issues and also to provide free support like we have been doing. %s', 'fitclub' ),
 								'<span class="dashicons dashicons-smiley smile-icon"></span>'
-						);
+							);
 						?>
 					</p>
 
