@@ -49,6 +49,9 @@ IF you want to translate the theme to your language, please refer here: https://
 
 /**********************************************************/
 == Changelog ==
+= Version TBD =
+* Enhancement - Added CSS font-display property and swap value for better performance.
+
 = Version 1.2.2 - 2021-05-14 =
 * Tweak - Update Screenshot Image.
 * Tweak - Update screenshot image source link.

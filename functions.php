@@ -125,7 +125,7 @@ add_action( 'after_setup_theme', 'fitclub_setup' );
  * Enqueue scripts and styles.
  */
 function fitclub_scripts() {
-	wp_enqueue_style( 'fitclub-google-font', '//fonts.googleapis.com/css?family=Open+Sans' );
+	wp_enqueue_style( 'fitclub-google-font', '//fonts.googleapis.com/css?family=Open+Sans&display=swap' );
 
 	wp_enqueue_style( 'fitclub-style', get_stylesheet_uri() );
 
