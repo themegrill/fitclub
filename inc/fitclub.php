@@ -17,7 +17,7 @@ if ( ! function_exists( 'fitclub_entry_meta' ) ) :
 
 			?>
 			<?php if ( get_theme_mod( 'fitclub_postmeta_author', '' ) == '' ) { ?>
-			<span class="byline author vcard"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo get_the_author(); ?>"><i class="fa fa-user"></i><?php echo esc_html( get_the_author() ); ?></a></span>
+			<span class="byline author vcard"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo esc_attr( get_the_author() ); ?>"><i class="fa fa-user"></i><?php echo esc_html( get_the_author() ); ?></a></span>
 				<?php
 			}
 

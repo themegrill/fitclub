@@ -49,6 +49,9 @@ IF you want to translate the theme to your language, please refer here: https://
 
 /**********************************************************/
 == Changelog ==
+= Version TBD =
+* Enhancement - General security measures.
+
 = Version 1.2.4 - 2023-09-18 =
 * Tweak - Updated WordPress tested upto version to 6.3.
 
