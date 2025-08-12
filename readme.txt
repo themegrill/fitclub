@@ -49,6 +49,9 @@ IF you want to translate the theme to your language, please refer here: https://
 
 /**********************************************************/
 == Changelog ==
+= Version 1.2.6 - 2025-08-12 =
+* Enhancement - General security measures.
+
 = Version 1.2.5 - 2024-04-02 =
 * Enhancement - General security measures.
 

@@ -31,6 +31,11 @@ class FitClub_Welcome_Notice {
 	 * Show welcome notice.
 	 */
 	public function welcome_notice_markup() {
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return;
+		}
+
 		$dismiss_url = wp_nonce_url(
 			remove_query_arg( array( 'activated' ), add_query_arg( 'fitclub-hide-notice', 'welcome' ) ),
 			'fitclub_hide_notices_nonce',
@@ -96,6 +101,16 @@ class FitClub_Welcome_Notice {
 	 */
 	public function welcome_notice_import_handler() {
 		check_ajax_referer( 'fitclub_demo_import_nonce', 'security' );
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error(
+				array(
+					'errorCode'    => 'permission_denied',
+					'errorMessage' => __( 'You do not have permission to perform this action.', 'fitclub' ),
+				)
+			);
+			exit;
+		}
 
 		$state = '';
 
