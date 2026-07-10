@@ -31,8 +31,9 @@ class FitClub_Notice {
 		// Notice markup.
 		add_action( 'admin_notices', array( $this, 'notice' ) );
 
-		$this->dismiss_notice();
-		$this->dismiss_notice_temporary();
+
+		add_action( 'admin_init', array( $this, 'dismiss_notice' ) );
+		add_action( 'admin_init', array( $this, 'dismiss_notice_temporary' ) );
 	}
 
 	public function notice() {

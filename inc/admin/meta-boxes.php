@@ -23,40 +23,53 @@ function fitclub_add_custom_box() {
 /****************************************************************************************/
 
 global $fitclub_page_layout, $fitclub_metabox_field_icons, $fitclub_metabox_field_designation;
-$fitclub_page_layout = array(
-							'default-layout' 	=> array(
-														'id'			=> 'fitclub_page_layout',
-														'value' 		=> 'default_layout',
-														'label' 		=> esc_html__( 'Default Layout', 'fitclub' )
-														),
-							'right-sidebar' 	=> array(
-														'id'			=> 'fitclub_page_layout',
-														'value' 		=> 'right_sidebar',
-														'label' 		=> esc_html__( 'Right Sidebar', 'fitclub' )
-														),
-							'left-sidebar' 	=> array(
-														'id'			=> 'fitclub_page_layout',
-														'value' 		=> 'left_sidebar',
-														'label' 		=> esc_html__( 'Left Sidebar', 'fitclub' )
-														),
-							'no-sidebar-full-width' => array(
-															'id'			=> 'fitclub_page_layout',
-															'value' 		=> 'no_sidebar_full_width',
-															'label' 		=> esc_html__( 'No Sidebar Full Width', 'fitclub' )
-															),
-							'no-sidebar-content-centered' => array(
-															'id'			=> 'fitclub_page_layout',
-															'value' 		=> 'no_sidebar_content_centered',
-															'label' 		=> esc_html__( 'No Sidebar Content Centered', 'fitclub' )
-															)
-						);
 
-$fitclub_metabox_field_designation = array(
-	array(
-		'id'			=> 'fitclub_designation',
-		'label' 		=> esc_html__( 'Team designation', 'fitclub' )
-	)
-);
+/**
+ * Populate the metabox field globals.
+ *
+ * Deferred to the `init` hook (rather than running at file scope) because the
+ * labels below are translated strings, and translations must not be loaded
+ * before `init`.
+ */
+function fitclub_metabox_fields_init() {
+	global $fitclub_page_layout, $fitclub_metabox_field_designation;
+
+	$fitclub_page_layout = array(
+								'default-layout' 	=> array(
+															'id'			=> 'fitclub_page_layout',
+															'value' 		=> 'default_layout',
+															'label' 		=> esc_html__( 'Default Layout', 'fitclub' )
+															),
+								'right-sidebar' 	=> array(
+															'id'			=> 'fitclub_page_layout',
+															'value' 		=> 'right_sidebar',
+															'label' 		=> esc_html__( 'Right Sidebar', 'fitclub' )
+															),
+								'left-sidebar' 	=> array(
+															'id'			=> 'fitclub_page_layout',
+															'value' 		=> 'left_sidebar',
+															'label' 		=> esc_html__( 'Left Sidebar', 'fitclub' )
+															),
+								'no-sidebar-full-width' => array(
+																'id'			=> 'fitclub_page_layout',
+																'value' 		=> 'no_sidebar_full_width',
+																'label' 		=> esc_html__( 'No Sidebar Full Width', 'fitclub' )
+																),
+								'no-sidebar-content-centered' => array(
+																'id'			=> 'fitclub_page_layout',
+																'value' 		=> 'no_sidebar_content_centered',
+																'label' 		=> esc_html__( 'No Sidebar Content Centered', 'fitclub' )
+																)
+							);
+
+	$fitclub_metabox_field_designation = array(
+		array(
+			'id'			=> 'fitclub_designation',
+			'label' 		=> esc_html__( 'Team designation', 'fitclub' )
+		)
+	);
+}
+add_action( 'init', 'fitclub_metabox_fields_init' );
 
 /****************************************************************************************/
 
