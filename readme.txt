@@ -17,7 +17,7 @@ Resources packed within the theme.
   https://pxhere.com/en/photo/755447
   https://pxhere.com/en/photo/903198
   https://pxhere.com/en/photo/1052041
-  
+
 * Font Awesome by Dave Gandy http://fortawesome.github.io/Font-Awesome/
   SIL OFL 1.1 http://scripts.sil.org/OFL.
 * HTML5 Shiv @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
@@ -49,6 +49,11 @@ IF you want to translate the theme to your language, please refer here: https://
 
 /**********************************************************/
 == Changelog ==
+= Version 1.2.7 - 2026-07-10 =
+* Fix   - Notice for translation loading triggered too early on metabox fields.
+* Fix   - Deprecated notice for conditional comments script data on html5shiv.
+* Tweak - Updated WordPress tested up to version to 7.0.
+
 = Version 1.2.6 - 2025-08-12 =
 * Enhancement - General security measures.
 
